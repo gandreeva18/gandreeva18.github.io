@@ -1,0 +1,14 @@
+h1 {
+    font-family: 'arial', 'helvetica', sans-serif;
+    font-size: 60 px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#button {
+  border-radius: 20px;
+  border: 0px solid black;
+  height: 150px;
+  width: 200px;
+  margin-left: 20%;
+}
