@@ -1,7 +1,9 @@
 <!doctype html>
+<html>
   <head>
     <meta charset ="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+
   </head>
 
   <body>
@@ -10,17 +12,45 @@
       <div id="quiz">
         <h1> Select a City to Find Your Ideal Job! </h1>
           <p> The City You Would Most Like to Live in is: </p>
-          <button onclick="newFunction=myFunction(0)"> New York City </button>
-          <br>
-          <button onclick="newFunction=myFunction(1)"> London </button>
-          <br>
-          <button onclick="newFunction=myFunction(2)"> Tokyo </button>
-          <br>
-          <button onclick="newFunction=myFunction(3)">  </button>
-          <br>
+          <script>
+            function myFunction(param){
+              value=param;
+              console.log(value);
+              images = ['motion.gif','graphic.gif','productdesign.gif','webdevelop.gif'];
+              text = '';
+
+              switch (value) {
+                case 0:
+                text = 'New York City, you  must love the motion of the big city. Your Ideal job is motion graphics artist';
+                break;
+
+                case 1:
+                text = 'Paris, what a romantic place to be. Your Ideal Job is Wedding Invitation Designer'
+                break;
+
+                case 2:
+                text = 'Tokyo is the epicenter of innovative technology. Your Ideal Job is Product designer'
+                break;
+
+                case 3:
+                text = 'Your Ideal Job is Front End Web Developer '
+              }
+              document.getElementById("text").innerHTML= text;
+              document.getElementById("Job").src= images [value];
+            }
+          </script>
+
+          <button class="button" onclick="myFunction(0)"> New York City </button>
+          <button class="button" onclick="myFunction(1)"> Paris </button>
+          <button class="button" onclick="myFunction(2)"> Tokyo </button>
+          <button class="button" onclick="myFunction(3)"> London </button>
       </div>
 
       <div id="result">
+        <h1> Results: </h1>
+          <p id="text"> </p>
+          <p id="Job"> </p>
+          <img src=(unknown)margin="auto">
       </div>
     </div>
 
