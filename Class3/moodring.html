@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <button id ="button" onclick='randomMood()' value ="0"> Click to reveal your mood </button>
+    <button id ="button" onclick='randomMood()' value ="0"> What's my mood? </button>
     <div id="moodring">
 
       <p id="result"></p>
@@ -79,7 +79,7 @@
 
           else if (button.value == '7') {
             button = document.getElementById('button')
-            text = "Who are you jealous of?"
+            text = "Envious?"
             document.getElementById('result').innerHTML = text;
             document.getElementById('moodring').style.backgroundColor = "#00b26e"
             document.body.style.backgroundColor = "#55d6a5"
