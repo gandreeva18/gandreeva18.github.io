@@ -1,0 +1,44 @@
+<!doctype>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <script>
+      // another go at a for loop //
+      var listOfSouthAmericanCountries = [
+        "Argentina",
+        "Bolivia",
+        "Brazil",
+        "Chile",
+        "Colombia",
+        "Ecuador",
+        "Guyana",
+        "Paraguay",
+        "Peru",
+        "Suriname",
+        "Uruguay",
+        "Venezuela"
+      ];
+
+      var text = ""
+      function firstForFunction () {
+        for (i=0; i<listOfSouthAmericanCountries.length; i++) {
+          total= 1;
+          text += "the country is " + listOfSouthAmericanCountries[i] + "<br>"
+          document.getElementById("button").innerHTML = text;
+        }
+
+    }
+
+
+
+    </script>
+
+    <button onclick="firstForFunction()"> Click this button </button>
+    <p id="button"> </p>
+
+  </body>
+
+</html>

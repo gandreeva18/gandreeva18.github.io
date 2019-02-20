@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+  </head>
+
+  <body>
+    <script>
+      // My first while loop //
+      function bePositive (){
+        i=0;
+        var total= document.documentElement.clientHeight -10;
+        var positiveText="I'm good enough right now just like this"
+
+        while(i<total) {
+          existingAffirms = document.getElementById("affirmation")
+          addAffirms = existingAffirms + <br> + 
+          document.getElementById("affirmation").innerHTML = positiveText;
+          i++;
+
+        }
+
+      }
+    </script>
+
+    <p id="affirmation"> </p>
+  </body>
+
+</html>

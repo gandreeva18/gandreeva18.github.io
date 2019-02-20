@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mood Ring</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <button id ="button" onclick='randomMood()' value ="0"> Click to reveal your mood </button>
+    <div id="moodring">
+
+      <p id="result"></p>
+
+      <script>
+        text = ""
+        function randomMood() {
+          button = document.getElementById('button')
+          if (button.value == '0') {
+            text = "Nervous, much?"
+            document.getElementById('result').innerHTML = text;
+            button.value = '1';
+            document.getElementById('moodring').style.backgroundColor = "#f49842";
+            document.body.style.backgroundColor = "#ffc691";
+          }
+
+          else if (button.value == '1') {
+            button = document.getElementById('button')
+            text = "Under the weather"
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#7af442"
+            document.body.style.backgroundColor = "#a4ff7a";
+            button.value = '2';
+          }
+
+          else if (button.value == '2') {
+            button = document.getElementById('button')
+            text = "SO Happy!!"
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#f4f441"
+            document.body.style.backgroundColor = "#ffff89";
+            button.value = '3';
+          }
+
+          else if (button.value == '3') {
+            button = document.getElementById('button')
+            text = "Down in the dump"
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#41bef4"
+            document.body.style.backgroundColor = "#89fffd"
+            button.value = '4';
+          }
+
+          else if (button.value == '4') {
+            button = document.getElementById('button')
+            text = "Feeling out of it "
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#f76c16"
+            document.body.style.backgroundColor = "#ff904c"
+            button.value = '5';
+          }
+
+          else if (button.value == '5') {
+            button = document.getElementById('button')
+            text = "You're feeling angry"
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#f20000"
+            document.body.style.backgroundColor = "#ff4949"
+            button.value = '6';
+          }
+
+          else if (button.value == '6') {
+            button = document.getElementById('button')
+            text = "In LOVE <3"
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#ff006a"
+            document.body.style.backgroundColor = "#ff4f98"
+            button.value = '7';
+          }
+
+          else if (button.value == '7') {
+            button = document.getElementById('button')
+            text = "Who are you jealous of?"
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#00b26e"
+            document.body.style.backgroundColor = "#55d6a5"
+            button.value = '8';
+          }
+
+          else if (button.value == '8') {
+            button = document.getElementById('button')
+            text = "Amazed"
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#6dfff0"
+            document.body.style.backgroundColor = "#cefffa"
+            button.value = '9';
+          }
+
+          else {
+            button = document.getElementById('button')
+            text = "Now You're Bored"
+            document.getElementById('result').innerHTML = text;
+            document.getElementById('moodring').style.backgroundColor = "#f1f2f2"
+            document.body.style.backgroundColor = "#ffffff";
+            button.value = '10';
+          }
+
+
+        }
+
+      </script>
+    </div>
+
+  </body>
+</html>
