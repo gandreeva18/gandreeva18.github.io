@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>my first Object stuffs</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      var computer = {
+        brand: "apple",
+        size: "13inch",
+        style: "thin",
+        notice: function() {
+          alert("HELLO");
+      }
+    }
+
+    </script>
+
+    <button onclick="computer.notice()"> Click me </button>
+
+
+
+  </body>
+</html>

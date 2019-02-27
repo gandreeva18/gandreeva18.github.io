@@ -2,26 +2,77 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>my first Object stuffs</title>
+    <title>Canvas</title>
   </head>
   <body>
+    <style media="screen">
+      #canvas {
+        height: 100%;
+        width: 100%;
+      }
+       body {
+         margin: 0;
+         height: 100%;
+         width: 100%;
+       }
+    </style>
+
+    <canvas id="canvas"> hello </canvas>
 
     <script type="text/javascript">
+      var canvas = document.querySelector('canvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-      var computer = {
-        brand: "apple",
-        size: "13inch",
-        style: "thin",
-        notice: function() {
-          alert("HELLO");
+      console.log('canvas');
+
+      var c = canvas.getContext('2d');
+
+      // rect
+      // c.fillStyle = "rgba(89, 152, 255, 0.35)";
+      // c.fillRect(0, 0, 1400, 1000);
+      // c.fillStyle = "rgba(89, 255, 108, 0.35)";
+      // c.fillRect(0, 0, 400, 1000);
+      // c.fillStyle = "rgba(89, 255, 108, 0.35)";
+      // c.fillRect(0, 0, 400, 1000);
+
+      // random placement of arc with for loop
+      //// random colored circles
+      for (var i = 0; i < 50; i++) {
+          var x = Math.random() * window.innerWidth;
+          var y = Math.random() * window.innerHeight;
+          c.beginPath();
+          c.arc(x, y, 30, 0, Math.PI * 2, false);
+          c.fillStyle = 'rgba('+Math.random()*255+','+Math.random()*255+','+Math.random()*255+','+Math.random()+')';﻿
+          c.fill();
       }
-    }
+
+      // animation bouncing off the page //
+      //   function animate() {
+      //     requestAnimationFrame(animate);
+      //     c.clearRect(0, 0, innerWidth, innerHeight);
+      //
+      //     c.beginPath();
+      //     //c.arc(x, y, radius, 0, Math.PI * 2, false);
+      //     //c.strokeStyle = 'blue';
+      //     c.stroke();
+      //     if (x + radius > innerWidth || x - radius < 0) {
+      //       dx = -dx;
+      //     }
+      //
+      //     if (y + radius > innerHeight || y - radius < 0) {
+      //       dy = -dy;
+      //     }
+      //
+      //     x += dx;
+      //     y += dy;
+      //   }
+      //
+      //   animate ();
+      // }
+
+
 
     </script>
-
-    <button onclick="computer.notice()"> Click me </button>
-
-
-
   </body>
 </html>
