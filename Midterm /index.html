@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+  </head>
+  <body>
+    <style media="screen">
+      #canvas {
+        height: 100%;
+        width: 100%;
+      }
+       body {
+         margin: 0;
+         height: 100%;
+         width: 100%;
+       }
+    </style>
+
+    <canvas id="canvas"> hello </canvas>
+
+    <script type="text/javascript">
+      var canvas = document.querySelector('canvas');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      // console.log('canvas');
+
+      var c = canvas.getContext('2d');
+
+      // rect
+      // c.fillStyle = "rgba(89, 152, 255, 0.35)";
+      // c.fillRect(0, 0, 1400, 1000);
+      // c.fillStyle = "rgba(89, 255, 108, 0.35)";
+      // c.fillRect(0, 0, 400, 1000);
+      // c.fillStyle = "rgba(89, 255, 108, 0.35)";
+      // c.fillRect(0, 0, 400, 1000);
+
+      // random placement of arc with for loop
+      //// random colored circles
+      // for (var i = 0; i < 50; i++) {
+      //     var x = Math.random() * window.innerWidth;
+      //     var y = Math.random() * window.innerHeight;
+      //     c.beginPath();
+      //     c.arc(x, y, 150, 0, Math.PI * 2, false);
+      //     c.fillStyle = 'rgba('+Math.random()*255+','+Math.random()*255+','+Math.random()*255+','+Math.random()+')';﻿
+      //     c.fill();
+      // }
+
+      // animation bouncing off the page //
+
+      var mouse = {
+        x: undefined,
+        y: undefined,
+      }
+      window.addEventListener('mousemove', function (event) {
+        console.log(event);
+        mouse.x = event.x;
+        mouse.y = event.y;
+        console.log(mouse);
+      })
+
+      var colorPalette = [
+        "rgba(114, 168, 255, 0.5)", // blue //
+        "rgba(255, 113, 113, 0.5)", // salmon //
+        "rgba(203, 113, 255, 0.5)", // purple //
+        "rgba(255, 113, 184, 0.5)", // pink //
+        "rgba(255, 169, 113, 0.5)", // peach //
+        "rgba(255, 248, 132, 0.5)", // yellow //
+        "rgba(140, 255, 131, 0.5)", // pastel green //
+        "rgba(131, 255, 226, 0.5)", // aqua //
+        "rgba(94, 129, 255, 0.5)", // dark blue//
+        "rgba(228, 232, 146, 0.5)", // beige//
+      ];
+      var minRadius = 30;
+      var maxRadius = 50;
+      function Circle(x , y, dx, dy, radius) {
+        this.x = x;
+        this.y = y;
+        this.dx = dx;
+        this.dy = dy;
+        this.radius = radius;
+        this.minRadius = minRadius;
+        this.color = colorPalette[Math.floor(Math.random() * 10)];
+
+        this.draw = function() {
+          c.beginPath();
+          c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+          c.fillStyle = this.color;
+          c.fill();
+        }
+
+        this.update = function() {
+          this.draw();
+          if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+            this.dx = -this.dx;
+          }
+
+          if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+            this.dy = -this.dy;
+          }
+
+          this.x += this.dx;
+          this.y += this.dy;
+
+          // ineractive mouse//
+          if (mouse.x-this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
+            if (this.radius < maxRadius) {
+              this.radius += 1;
+            }
+          }
+          else if (this.radius > this.minRadius){
+            this.radius -=1;
+          }
+        }
+
+      }
+
+      var circleArray = [];
+
+      for (var i = 0; i < 500; i++) {
+        var radius = Math.random() * 4 + 4;
+        var x = Math.random() * (innerWidth - radius * 2) + radius;
+        var y = Math.random() * (innerHeight - radius * 2) + radius;
+        var dx = (Math.random() - 0.5) * 10;
+        var dy = (Math.random() - 0.5) * 7;
+
+        circleArray.push(new Circle(x, y, dx, dy, radius));
+      }
+      console.log(circleArray);
+
+        function animate() {
+          requestAnimationFrame(animate);
+          c.clearRect(0, 0, innerWidth, innerHeight);
+
+          for (var i = 0; i < circleArray.length; i++){
+            circleArray[i].update();
+
+          }
+        }
+        animate ();
+
+    </script>
+  </body>
+</html>
