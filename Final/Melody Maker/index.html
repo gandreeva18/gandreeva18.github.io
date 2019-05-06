@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Melody Maker</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var cNote = document.getElementById('cNote');
+        $('#c').mouseover(function(event) {
+          cNote.currentTime = 0;
+          cNote.play();
+        });
+
+      var dNote = document.getElementById('dNote');
+        $('#d').mouseover(function(event) {
+          dNote.currentTime = 0;
+          dNote.play();
+        });
+
+      var eNote = document.getElementById('eNote');
+        $('#e').mouseover(function(event) {
+          eNote.currentTime = 0;
+          eNote.play();
+        });
+
+      var fNote = document.getElementById('fNote');
+        $('#f').mouseover(function(event) {
+          fNote.currentTime = 0;
+          fNote.play();
+        });
+
+      var gNote = document.getElementById('gNote');
+        $('#g').mouseover(function(event) {
+          gNote.currentTime = 0;
+          gNote.play();
+        });
+      var hNote = document.getElementById('hNote');
+        $('#h').mouseover(function(event) {
+          hNote.currentTime = 0;
+          hNote.play();
+        });
+
+      var aNote = document.getElementById('aNote');
+        $('#a').mouseover(function(event) {
+          aNote.currentTime = 0;
+          aNote.play();
+        });
+
+      var bNote = document.getElementById('bNote');
+        $('#b').mouseover(function(event) {
+          bNote.currentTime = 0;
+          bNote.play();
+        });
+
+        var audio = document.querySelector('audio');
+        audio.addEventListener('pause',function (){
+          document.getElementsByClassName('box').style.backgroundColor = 'transparent';
+        })
+
+        $.getJSON("Info.json", function(json) {
+          
+        });
+        });
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+      <div class="audiofilez">
+        <audio id="cNote">
+          <source src="cnote.wav" type="audio/wav">
+        </audio>
+
+        <audio id="dNote">
+          <source src="dnote.wav" type="audio/wav">
+        </audio>
+
+        <audio id="eNote">
+          <source src="enote.wav" type="audio/wav">
+        </audio>
+
+        <audio id="fNote">
+          <source src="fnote.wav" type="audio/wav">
+        </audio>
+
+        <audio id="gNote">
+          <source src="gnote.wav" type="audio/wav">
+        </audio>
+
+        <audio id="aNote">
+          <source src="anote.wav" type="audio/wav">
+        </audio>
+
+        <audio id="bNote">
+          <source src="bnote.wav" type="audio/wav">
+        </audio>
+
+        <audio id="hNote">
+          <source src="hnote.wav" type="audio/wav">
+        </audio>
+      </div>
+
+
+
+        <script type="text/javascript">
+            document.body.onkeyup = function(e){
+              if(e.keyCode == 67){
+                cNote.play();
+                document.getElementById('c').style.backgroundColor = "#661920";
+                }
+              if(e.keyCode == 68){
+                dNote.play();
+                document.getElementById('d').style.backgroundColor = "#6e2819";
+              }
+              if(e.keyCode == 69){
+                eNote.play();
+                document.getElementById('e').style.backgroundColor = "#735b20";
+              }
+              if(e.keyCode == 70){
+                fNote.play();
+                document.getElementById('f').style.backgroundColor = "#1b613b";
+              }
+              if(e.keyCode == 71){
+                gNote.play();
+                document.getElementById('g').style.backgroundColor = "#184d65";
+              }
+              if(e.keyCode == 72){
+                hNote.play();
+                document.getElementById('h').style.backgroundColor = "#261b61";
+              }
+              if(e.keyCode == 65){
+                aNote.play();
+                document.getElementById('a').style.backgroundColor = "#4e2753";
+              }
+              if(e.keyCode == 66){
+                bNote.play();
+                document.getElementById('b').style.backgroundColor = "#6f3a62";
+              }
+
+            }
+
+        </script>
+
+
+
+
+    <h1>MelodyMaker</h1>
+    <div id="music">
+      <div id="c" class="box"><h3>c</h3></div>
+      <div id="d" class="box"><h3>d</h3></div>
+      <div id="e" class="box"><h3>e</h3></div>
+      <div id="f" class="box"><h3>f</h3></div>
+      <div id="g" class="box"><h3>g</h3></div>
+      <div id="h" class="box"><h3>h</h3></div>
+      <div id="a" class="box"> <h3>a</h3></div>
+      <div id="b" class="box"> <h3>b</h3></div>
+    </div>
+
+
+    <h2>Scroll over note to play it </h2>
+    <h2>or press the key corresponding key on your keyboard</h2>
+
+
+
+</html>

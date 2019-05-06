@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Practice 1 </title>
+
+    <!-- <link rel="stylesheet" href="/js/jquery-ui.js">
+    <link rel="stylesheet" href="/js/jquery-ui.css">
+    <link rel="stylesheet" href="/js/jquery-ui.structure.css">
+    <link rel="stylesheet" href="/js/jquery-ui.theme.css"> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+      nycstats = ""
+
+      $(document).ready(function(){
+
+        var nycstats = "https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.json?accessType=DOWNLOAD";
+
+          $.getJSON(nycstats, function(json){
+              tags = "zip code";
+              format = json;
+              listZipCodes(nycstats);
+          });
+
+
+      });
+    </script>
+
+  </head>
+  <body>
+
+
+    <div id="accordion">
+      <h3>Zip Codes</h3>
+      <div>
+        <ul id="nycstats">
+
+        </ul>
+      </div>
+
+      <h3>2</h3>
+        <div>
+          <p>hello world</p>
+
+        </div>
+
+        <h3>3</h3>
+          <div>
+            <p>hello world again</p>
+
+          </div>
+
+          <h3>4</h3>
+            <div>
+              <p>hello world last time</p>
+
+            </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function(){
+        $(#accordion).accordion()
+      });
+
+      function listZipCodes(data){
+        for (nycstat in data) {
+          $(#nycstats).append(
+            "<li>" + data[0] + "</li>"
+          );
+        }
+        console.log(data)
+      }
+    </script>
+
+  </body>
+</html>

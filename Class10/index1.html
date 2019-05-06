@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JqueryUI</title>
+    <!-- <link rel="stylesheet" href="/js/jquery-ui.js">
+    <link rel="stylesheet" href="/js/jquery-ui.css">
+    <link rel="stylesheet" href="/js/jquery-ui.structure.css">
+    <link rel="stylesheet" href="/js/jquery-ui.theme.css"> -->
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#accordion" ).accordion();
+      } );
+      </script>
+  </head>
+  <body>
+    <style media="screen">
+      div {
+        font-family: helvetica, arial, sans-serif;
+      }
+
+      #accordion {
+        width: 800px;
+        margin: 0px auto;
+      }
+    </style>
+
+    <div id="accordion" closed>
+      <h3>Hipster Cat</h3>
+      <div>
+        <p>
+          <img src="hamiltonthehipster.jpg" width="500px">
+        </p>
+      </div>
+      <h3>Grey cat</h3>
+      <div>
+        <p>
+          <img src="pets.jpg" width="500px">
+        </p>
+      </div>
+      <h3>Another cat</h3>
+      <div>
+        <p>
+          <img src="greeneyes.jpeg" width="500px">
+        </p>
+      </div>
+
+    </div>
+  </body>
+</html>

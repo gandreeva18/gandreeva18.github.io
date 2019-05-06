@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Jquery#1 </title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        console.log("ready!");
+        $(".red").click(function() {
+          //alert("you got red");
+          $(".yellow").fadeIn(1000)
+        });
+        $(".blue").click(function(){
+          //alert("you got blue")
+          $(".yellow").fadeOut(1000) 
+        });
+      });
+
+
+    </script>
+
+    <style media="screen">
+      .red {
+        background-color: red;
+        padding: 5px;
+        height: 200px;
+        width: 200px;
+        border-radius: 2px solid black;
+        margin: 10px;
+        text-align: center;
+        font-family: "Helvetica", Arial, Sansserif;
+        color: white;
+      }
+
+      .blue {
+        background-color: blue;
+        margin: 10px;
+        padding: 5px;
+        height: 200px;
+        width: 200px;
+        border-radius: 2px solid black;
+        text-align: center;
+        font-family: "Helvetica", Arial, Sansserif;
+        color: white;
+      }
+
+      .yellow {
+        background-color: yellow;
+        margin: 10px;
+        padding: 5px;
+        height: 200px;
+        width: 200px;
+        border-radius: 2px solid black;
+        text-align: center;
+        font-family: "Helvetica", Arial, Sansserif;
+        color: black;
+        display: none;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="red">
+      <p> this is a red box </p>
+    </div>
+
+    <div class="blue">
+      <p> this is a blue box </p>
+    </div>
+
+    <div class="yellow">
+      <p> this is a yellow box </p>
+    </div>
+
+  </body>
+</html>

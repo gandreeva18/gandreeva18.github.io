@@ -1,0 +1,60 @@
+{
+  "music": [
+    {
+      "id": "buttonC",
+      "note": "c" ,
+       "fileName": "c_note.wav",
+       "description": "mystical"
+    },
+
+    {
+      "id":"buttonD",
+      "note": "d" ,
+       "fileName": "d_note.wav",
+       "description": "searching"
+    },
+
+    {
+      "id":"buttonE",
+      "note": "e" ,
+       "fileName": "e_note.wav",
+       "description": "funky"
+    },
+
+    {
+      "id":"buttonF",
+      "note": "f" ,
+       "fileName": "f_note.wav",
+       "description": "deep bass"
+    },
+
+    {
+      "id":"buttonG",
+      "note": "g" ,
+       "fileName": "g_note.wav",
+       "description": "hip hop"
+    },
+
+    {
+      "id":"buttonH",
+      "note": "h" ,
+       "fileName": "g_note.wav",
+       "description": "fast"
+    },
+
+    {
+      "id":"buttonA",
+      "note": "a" ,
+       "fileName": "a_note.wav",
+       "description": "uplifting"
+    },
+
+    {
+      "id":"buttonB",
+      "note": "b" ,
+       "fileName": "b_note.wav",
+       "description": "isolated"
+    }
+
+  ]
+}

@@ -1,0 +1,166 @@
+body {
+  background-color: black;
+}
+
+#music {
+  height: 300px;
+  width: 1200px;
+  padding-top: 100px;
+  padding-left: 130px;
+  margin: auto;
+  position: absolute;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-left: 15px;
+  float: left;
+}
+
+/* Regular box styles */
+#c {
+  border: 3px solid #f44242;
+  color: #f44242;
+  font-variant: small-caps;
+}
+
+#d {
+  border: 3px solid #f48341;
+  color: #f48341;
+  font-variant: small-caps;
+}
+
+#e {
+  border: 3px solid #f4e241;
+  color: #f4e241;
+  font-variant: small-caps;
+}
+
+#f {
+  border: 3px solid #82f441;
+  color: #82f441;
+  font-variant: small-caps;
+}
+
+#g {
+  border: 3px solid #41f4b8;
+  color: #41f4b8;
+  font-variant: small-caps;
+}
+
+#h {
+  border: 3px solid #419df4;
+  color: #419df4;
+  font-variant: small-caps;
+}
+
+#a {
+  border: 3px solid #9441f4;
+  color: #9441f4;
+  font-variant: small-caps;
+}
+
+#b {
+  border: 3px solid #f441df;
+  color: #f441df;
+  font-variant: small-caps;
+}
+
+/* Hover selectors  */
+
+#c:hover {
+  background-color:#661920;
+}
+
+#d:hover {
+  background-color:#6e2819;
+}
+
+#e:hover {
+  background-color:#735b20;
+}
+
+#f:hover {
+  background-color:#1b613b;
+}
+
+#g:hover {
+  background-color:#184d65;
+}
+
+#h:hover {
+  background-color:#261b61;
+}
+
+#a:hover {
+  background-color:#4e2753;
+}
+
+#b:hover {
+  background-color:#6f3a62;
+}
+
+/* When clicked, active selector */
+
+#c:active {
+  background-color: #f44242;
+}
+
+#d:active {
+  background-color: #f48341;
+}
+
+#e:active {
+  background-color: #f4e241;
+}
+
+#f:active {
+  background-color: #82f441;
+}
+
+#g:active {
+  background-color: #41f4b8;
+}
+
+#h:active {
+  background-color: #419df4;
+}
+
+#a:active {
+  background-color: #9441f4;
+}
+
+#b:active {
+  background-color: #f441df;
+}
+
+h3{
+  font-family: helvetica, arial, sans-serif;
+  /* color: white; */
+  text-align: center;
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+h1 {
+  color: white;
+  font-size: 60px;
+  font-weight: bolder;
+  font-family: 'Josefin Slab', serif;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: 18px;
+  font-family: helvetica,arial, sans-serif;
+  text-align:center;
+  font-weight: lighter;
+}
+
+h2:hover {
+  font-weight: bold;
+}

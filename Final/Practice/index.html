@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>getJSON</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $("#button").click(function(event){
+          $.getJSON('result.json', function(jd){
+            $("#stage").html('<p> Name:' + jd.name + '</p>');
+            $("#stage").append('<p> Name:' + jd.sex + '</p>');
+          })
+        })
+      });
+
+    </script>
+  </head>
+  <body>
+    <p>Click on the button to load result.html file – </p>
+
+    <div id="stage">
+
+    </div>
+    <button id ="button" type="button" name="button">Click me</button>
+  </body>
+</html>

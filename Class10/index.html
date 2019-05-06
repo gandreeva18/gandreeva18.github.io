@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Practice1</title>
+    <script type="text/javascript"> </script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+console.log('in here');
+
+      var flickerAPI = "https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=APIKEY&gallery_id=66911286-72157647277042064&format=json&nojsoncallback=1";
+      $.getJSON('flickerAPI', {
+        tags: "cats",
+        tagmode: "any",
+        format: "json"
+      }).done(function(data){
+        console.log('done')
+      });
+
+
+    });
+
+
+    </script>
+    
+  </head>
+
+  <body>
+    <div id="images">
+    </div>
+
+  </body>
+</html>

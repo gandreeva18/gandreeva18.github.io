@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cat Slideshow</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        console.log("ready!");
+        $("#slideshow > div:gt(0)").hide();
+
+        setInterval(function() {
+            $('#slideshow > div:first')
+              .fadeOut(1000)
+              .next()
+              .fadeIn(1000)
+              .end()
+              .appendTo('#slideshow');
+          },  3000);
+      });
+      </script>
+
+      <style media="screen">
+        #slideshow {
+          margin: 50px auto;
+          position: relative;
+          width: 650px;
+          height: 650px;
+          padding: 10px;
+          box-shadow: 0 0 20px rgba(0,0,0,0.4);
+          overflow: hidden;
+        }
+
+        #slideshow > div {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          bottom: 10px;
+        }
+
+        img {
+          margin: auto;
+          width: inherit;
+          height: 650px;
+        }
+      </style>
+  </head>
+  <body>
+    <div id="slideshow">
+      <div>
+        <img src="pets.jpg">
+      </div>
+
+      <div>
+        <img src="nala.jpg">
+      </div>
+
+      <div>
+        <img src="hamiltonthehipster.jpg" alt="">
+      </div>
+
+      <div>
+        <img src="outdoor.jpg" alt="">
+      </div>
+    </div>
+
+  </body>
+</html>

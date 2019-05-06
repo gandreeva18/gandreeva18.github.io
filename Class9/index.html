@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Currency Converter</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        console.log("ready!");
+        convertCurrency();
+
+        endpoint = 'convert';
+        access_key = '3a1142c8f95a88e76a93078b7072c5b6';
+        startCurrency = 'USD';
+        EndCurrency = 'EUR';
+        amount = '1';
+
+        $.ajax({
+          url: 'http://data.fixer.io/api/' + endpoint + '?access_key=' + access_key +'&startCurrency=' + startCurrency + '&EndCurrency=' + EndCurrency + '&amount=' + amount,
+          dataType: 'jsonp',
+          success: function(data) {
+
+          // access the conversion result in json.result
+          alert(json.result);
+        }
+
+      });
+
+      </script>
+
+    <script type="text/javascript">
+      function convertCurrency() {
+        var startValue= document.getElementById('startCurrency').value;
+        var endValue = document.getElementById('EndCurrency').value;
+  };
+
+
+
+
+    </script>
+
+
+
+      <style media="screen">
+        body {
+          background-color: #87c16a;
+        }
+        #converter {
+          height: 500px;
+          width: 500px;
+          background-color: #a5ff82;
+          border: 2px solid green;
+          /* padding-left: 50px;
+          padding-top: 50px; */
+          margin: auto;
+          border-radius: 100%;
+
+        }
+
+        h1 {
+          font-family: Helvetica, Arial, sans-serif;
+          margin-top: 100px;
+          color: green;
+          text-align: center;
+        }
+
+        table {
+          margin: 0px auto;
+        }
+
+      </style>
+
+
+
+
+  </head>
+  <body onload="convertCurrency()">
+    <div id="converter">
+      <h1 onload="convertCurrency">$ Currency Converter $</h1>
+      <table>
+        <tr>
+          <td> <input type="text" id="startAmount" size="15" value="1"> </td>
+            <td>
+              <select id="startCurrency " onchange="convertCurrency()">
+                  <option value="AED">UAE Dirham</option>
+                  <option value="BGN">Bulgarian Lev</option>
+                  <option value="EUR">Euro</option>
+                  <option value="FJD">Fiji Dollar</option>
+                  <option value="INR">Indian Rupee</option>
+                  <option value="ILS">Israeli New Shekel</option>
+                  <option value="PKR">Pakistan Rupee</option>
+                  <option value="USD" selected>US Dollar</option>
+              </select>
+            </td>
+        </tr>
+
+        <tr>
+          <td> <input type="text" id="endAmount" size="15" disabled> </td>
+          <td>
+            <select id="EndCurrency" onchange="convertCurrency()">
+                <option value="AED">UAE Dirham</option>
+                <option value="BGN">Bulgarian Lev</option>
+                <option value="EUR" selected>Euro</option>
+                <option value="FJD">Fiji Dollar</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="ILS">Israeli New Shekel</option>
+                <option value="MXN">Mexican Peso</option>
+                <option value="PKR">Pakistan Rupee</option>
+                <option value="USD">US Dollar</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+</html>
