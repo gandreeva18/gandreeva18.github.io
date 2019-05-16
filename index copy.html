@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exact Location API</title>
+    <link rel="stylesheet" type= "text/css" href="style.css">
+    <link rel="stylesheet" type= "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css">
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3_IcswYStSYbmrCGAtQikjtI1zmqu8QM&libraries=visualization,geometry"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+          $.getJSON("https://extreme-ip-lookup.com/json/", function(data){
+                var country = data.country;
+                var city = data.city;
+                var ip = data.query;
+                var contCode = "flag-icon flag-icon-"+data.countryCode.toLowerCase();
+                var latitude = data.lat;
+                var longitude = data.lon;
+
+                $("#country").text(country);
+                $("#city").text(city);
+                $("#IP").text(ip);
+                $("#flag").addClass(contCode);
+
+                var startPosition = new google.maps.LatLng(latitude,longitude);
+
+                var mapOptions = {
+                  zoom: 12,
+                  center: startPosition
+                }
+
+                $.ajax({
+                    url: "https://data.cityofnewyork.us/resource/kmub-vria.json",
+                    type: "GET",
+                    data: {
+                      "$limit" : 5000,
+                      "$$app_token" : "9vbZi9vLnyKUsDgKTXwDRp9rY"
+                    }
+                  }).done(function(data) {
+                      alert("Retrieved");
+                      console.log(data);
+                      function mapStart () {
+                        var map;
+                        map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                        var geoDataURL = "https://data.cityofnewyork.us/resource/9s4h-37hy.geojson";
+                        map.data.loadGeoJson(geoDataURL);
+                        map.data.setStyle({fillColor: "blue"});
+                        var styledMapType = new google.maps.StyledMapType(
+                          [
+                            {
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                                  "color": "#1d2c4d"
+                                }
+                              ]
+                            },
+                            {
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                                  "color": "#8ec3b9"
+                                }
+                              ]
+                            },
+                            {
+                              "elementType": "labels.text.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#1a3646"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "administrative.country",
+                              "elementType": "geometry.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#4b6878"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "administrative.land_parcel",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                                  "color": "#64779e"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "administrative.province",
+                              "elementType": "geometry.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#4b6878"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "landscape.man_made",
+                              "elementType": "geometry.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#334e87"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "landscape.natural",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                                  "color": "#023e58"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                                  "color": "#283d6a"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                                  "color": "#6f9ba5"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi",
+                              "elementType": "labels.text.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#1d2c4d"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi.park",
+                              "elementType": "geometry.fill",
+                              "stylers": [
+                                {
+                                  "color": "#023e58"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi.park",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                                  "color": "#3C7680"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                                  "color": "#304a7d"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                                  "color": "#98a5be"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road",
+                              "elementType": "labels.text.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#1d2c4d"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road.highway",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                                  "color": "#2c6675"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road.highway",
+                              "elementType": "geometry.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#255763"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road.highway",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                                  "color": "#b0d5ce"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road.highway",
+                              "elementType": "labels.text.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#023e58"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "transit",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                                  "color": "#98a5be"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "transit",
+                              "elementType": "labels.text.stroke",
+                              "stylers": [
+                                {
+                                  "color": "#1d2c4d"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "transit.line",
+                              "elementType": "geometry.fill",
+                              "stylers": [
+                                {
+                                  "color": "#283d6a"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "transit.station",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                                  "color": "#3a4762"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "water",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                                  "color": "#0e1626"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "water",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                                  "color": "#4e6d70"
+                                }
+                              ]
+                            }
+                          ],
+                          {name: "styled_map"});
+
+                          map.mapTypes.set('styled_map',styledMapType);
+                          map.setMapTypeId('styled_map');
+
+                          function callback(data) {
+                                var heatmapData = [];
+                                for (var i = 0; i < data.features.length; i++) {
+                                  var coords = data.features[i].geometry.coordinates;
+                                  var latLng = new google.maps.LatLng(coords[1], coords[0]);
+                                  heatmapData.push(latLng);
+                                }
+                                var heatmap = new google.maps.visualization.HeatmapLayer({
+                                  data: heatmapData,
+                                  dissipating: false,
+                                  map: map
+                                });
+                              }
+
+                      };
+
+
+                      window.onload=mapStart();
+
+
+                      });
+
+                });
+
+
+
+              });
+
+        ;
+    </script>
+  </head>
+
+  <body>
+    <div id="info">
+      <p><b>Your Country is</b>
+        <span id="flag"></span>
+        <span id="country">Unites States of America</span>
+      </p>
+
+      <p><b>Your City is</b>
+        <span id="city">Flushing, NY</span>
+      </p>
+
+      <p><b>Your IP is</b>
+        <span class=""id="IP">123.2.3..3..222</span>
+      </p>
+    </div>
+
+    <div id="googleMap">
+
+    </div>
+  </body>
+</html>

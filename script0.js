@@ -1,0 +1,18232 @@
+$(document).ready(function() {
+
+    var latitude = null;
+    var longitude = null;
+  $.getJSON("https://extreme-ip-lookup.com/json/", function(data){
+        var country = data.country;
+        var city = data.city;
+        var ip = data.query;
+        var contCode = "flag-icon flag-icon-"+data.countryCode.toLowerCase();
+        var latitude = data.lat;
+        var longitude = data.lon;
+
+        $("#country").text(country);
+        $("#city").text(city);
+        $("#IP").text(ip);
+        $("#flag").addClass(contCode);
+
+        var data = [{
+  "latitude": "41.000400",
+  "longitude": "-74.102500",
+  "weight": 1,
+  "zip": "07423-1307"
+}, {
+  "latitude": "48.149500",
+  "longitude": "-104.513200",
+  "weight": 3,
+  "zip": "59218-0753"
+}, {
+  "latitude": "36.173000",
+  "longitude": "-115.066900",
+  "weight": 1,
+  "zip": "89110"
+}, {
+  "latitude": "34.115900",
+  "longitude": "-117.770800",
+  "weight": 1,
+  "zip": "91750-3247"
+}, {
+  "latitude": "53.658076",
+  "longitude": "-113.617674",
+  "weight": 1,
+  "zip": "T8N 7B1"
+}, {
+  "latitude": "41.919400",
+  "longitude": "-88.307000",
+  "weight": 1,
+  "zip": "60174-5815"
+}, {
+  "latitude": "26.618200",
+  "longitude": "-80.056000",
+  "weight": 2,
+  "zip": "33460-5129"
+}, {
+  "latitude": "33.941300",
+  "longitude": "-118.035600",
+  "weight": 2,
+  "zip": "90605-3606"
+}, {
+  "latitude": "34.001100",
+  "longitude": "-118.037100",
+  "weight": 1,
+  "zip": "90601-1203"
+}, {
+  "latitude": "34.775700",
+  "longitude": "-112.473100",
+  "weight": 1,
+  "zip": "86323"
+}, {
+  "latitude": "42.559700",
+  "longitude": "-83.113800",
+  "weight": 1,
+  "zip": "48083-4407"
+}, {
+  "latitude": "37.013900",
+  "longitude": "-121.577300",
+  "weight": 1,
+  "zip": "95020-7402"
+}, {
+  "latitude": "41.960200",
+  "longitude": "-87.981000",
+  "weight": 1,
+  "zip": "60191-1537"
+}, {
+  "latitude": "41.939400",
+  "longitude": "-88.121200",
+  "weight": 1,
+  "zip": "60133-3923"
+}, {
+  "latitude": "46.593400",
+  "longitude": "-120.531100",
+  "weight": 1,
+  "zip": "98902-7305"
+}, {
+  "latitude": "37.949500",
+  "longitude": "-86.715600",
+  "weight": 1,
+  "zip": "47520-6796"
+}, {
+  "latitude": "35.963100",
+  "longitude": "-78.931500",
+  "weight": 1,
+  "zip": "27707-1944"
+}, {
+  "latitude": "41.467700",
+  "longitude": "-75.601500",
+  "weight": 1,
+  "zip": "18447-1233"
+}, {
+  "latitude": "42.144900",
+  "longitude": "-83.358900",
+  "weight": 1,
+  "zip": "48164-9646"
+}, {
+  "latitude": "42.620600",
+  "longitude": "-82.960800",
+  "weight": 1,
+  "zip": "48038-5712"
+}, {
+  "latitude": "37.560500",
+  "longitude": "-121.999900",
+  "weight": 1,
+  "zip": "94536"
+}, {
+  "latitude": "40.505100",
+  "longitude": "-79.952800",
+  "weight": 1,
+  "zip": "15223-1930"
+}, {
+  "latitude": "40.174200",
+  "longitude": "-79.513400",
+  "weight": 1,
+  "zip": "15666-1712"
+}, {
+  "latitude": "38.934800",
+  "longitude": "-92.363900",
+  "weight": 1,
+  "zip": "65203-7200"
+}, {
+  "latitude": "39.256300",
+  "longitude": "-75.050600",
+  "weight": 1,
+  "zip": "08349-3230"
+}, {
+  "latitude": "41.691300",
+  "longitude": "-70.935500",
+  "weight": 1,
+  "zip": "02745-1002"
+}, {
+  "latitude": "30.271700",
+  "longitude": "-87.758900",
+  "weight": 1,
+  "zip": "36542-9152"
+}, {
+  "latitude": "43.139200",
+  "longitude": "-115.696300",
+  "weight": 1,
+  "zip": "83647-5790"
+}, {
+  "latitude": "40.714900",
+  "longitude": "-73.556100",
+  "weight": 3,
+  "zip": "11554-2112"
+}, {
+  "latitude": "33.214100",
+  "longitude": "-96.753300",
+  "weight": 2,
+  "zip": "75071-2429"
+}, {
+  "latitude": "56.741485",
+  "longitude": "-111.471804",
+  "weight": 1,
+  "zip": "T9K 1V4"
+}, {
+  "latitude": "29.201200",
+  "longitude": "-81.037100",
+  "weight": 7,
+  "zip": "32114-1491"
+}, {
+  "latitude": "34.192100",
+  "longitude": "-118.235000",
+  "weight": 1,
+  "zip": "91208-2612"
+}, {
+  "latitude": "42.762600",
+  "longitude": "-105.385500",
+  "weight": 2,
+  "zip": "82633-2519"
+}, {
+  "latitude": "55.138294",
+  "longitude": "-118.760921",
+  "weight": 3,
+  "zip": "T8W 2P5"
+}, {
+  "latitude": "40.676900",
+  "longitude": "-73.844800",
+  "weight": 1,
+  "zip": "11417"
+}, {
+  "latitude": "33.137700",
+  "longitude": "-96.752400",
+  "weight": 1,
+  "zip": "75035-1603"
+}, {
+  "latitude": "44.992700",
+  "longitude": "-123.016700",
+  "weight": 1,
+  "zip": "97303-6310"
+}, {
+  "latitude": "43.326800",
+  "longitude": "-78.830700",
+  "weight": 1,
+  "zip": "14302-7099"
+}, {
+  "latitude": "38.802000",
+  "longitude": "-90.853400",
+  "weight": 1,
+  "zip": "63385-4990"
+}, {
+  "latitude": "40.668500",
+  "longitude": "-73.553600",
+  "weight": 1,
+  "zip": "11566-1026"
+}, {
+  "latitude": "45.498500",
+  "longitude": "-122.778700",
+  "weight": 1,
+  "zip": "97225-7217"
+}, {
+  "latitude": "37.717400",
+  "longitude": "-89.873700",
+  "weight": 1,
+  "zip": "63775-7179"
+}, {
+  "latitude": "41.886000",
+  "longitude": "-88.311000",
+  "weight": 1,
+  "zip": "60134-6215"
+}, {
+  "latitude": "34.043400",
+  "longitude": "-118.271600",
+  "weight": 2,
+  "zip": "90015-3830"
+}, {
+  "latitude": "40.016100",
+  "longitude": "-75.718300",
+  "weight": 1,
+  "zip": "19335-3508"
+}, {
+  "latitude": "34.658300",
+  "longitude": "-120.450600",
+  "weight": 3,
+  "zip": "93436-7714"
+}, {
+  "latitude": "36.130400",
+  "longitude": "-109.603700",
+  "weight": 2,
+  "zip": "86503-0872"
+}, {
+  "latitude": "42.845800",
+  "longitude": "-106.316600",
+  "weight": 1,
+  "zip": "82601-6641"
+}, {
+  "latitude": "47.759100",
+  "longitude": "-97.603800",
+  "weight": 1,
+  "zip": "58267-0134"
+}, {
+  "latitude": "37.624700",
+  "longitude": "-122.429000",
+  "weight": 1,
+  "zip": "94066-6033"
+}, {
+  "latitude": "44.749700",
+  "longitude": "-93.202900",
+  "weight": 1,
+  "zip": "55124-5197"
+}, {
+  "latitude": "40.108300",
+  "longitude": "-76.510300",
+  "weight": 1,
+  "zip": "17552-1196"
+}, {
+  "latitude": "47.895400",
+  "longitude": "-122.071600",
+  "weight": 1,
+  "zip": "98290"
+}, {
+  "latitude": "50.451050",
+  "longitude": "-104.566421",
+  "weight": 1,
+  "zip": "S4N 1W4"
+}, {
+  "latitude": "40.002000",
+  "longitude": "-75.296600",
+  "weight": 3,
+  "zip": "19003-1128"
+}, {
+  "latitude": "30.035200",
+  "longitude": "-90.737400",
+  "weight": 1,
+  "zip": "70763-2530"
+}, {
+  "latitude": "45.163500",
+  "longitude": "-98.319300",
+  "weight": 1,
+  "zip": "57429-0013"
+}, {
+  "latitude": "45.963962",
+  "longitude": "-73.110303",
+  "weight": 1,
+  "zip": "J0G 1T0"
+}, {
+  "latitude": "34.591500",
+  "longitude": "-98.369800",
+  "weight": 1,
+  "zip": "73501-7428"
+}, {
+  "latitude": "41.009300",
+  "longitude": "-80.618300",
+  "weight": 1,
+  "zip": "44514-1028"
+}, {
+  "latitude": "38.962100",
+  "longitude": "-94.595900",
+  "weight": 2,
+  "zip": "64114-2552"
+}, {
+  "latitude": "38.810800",
+  "longitude": "-76.989800",
+  "weight": 1,
+  "zip": "20745-1205"
+}, {
+  "latitude": "33.021100",
+  "longitude": "-97.212700",
+  "weight": 1,
+  "zip": "76262-5430"
+}, {
+  "latitude": "33.692700",
+  "longitude": "-117.303000",
+  "weight": 1,
+  "zip": "92532-2902"
+}, {
+  "latitude": "40.085700",
+  "longitude": "-91.289900",
+  "weight": 1,
+  "zip": "62351-1311"
+}, {
+  "latitude": "33.576100",
+  "longitude": "-112.234400",
+  "weight": 1,
+  "zip": "85345-4336"
+}, {
+  "latitude": "41.872900",
+  "longitude": "-71.390700",
+  "weight": 1,
+  "zip": "02860-3468"
+}, {
+  "latitude": "40.587600",
+  "longitude": "-83.127100",
+  "weight": 1,
+  "zip": "43302-6561"
+}, {
+  "latitude": "49.789161",
+  "longitude": "-112.149368",
+  "weight": 1,
+  "zip": "T1G 0A8"
+}, {
+  "latitude": "30.710700",
+  "longitude": "-85.548600",
+  "weight": 1,
+  "zip": "32428-4209"
+}, {
+  "latitude": "45.691400",
+  "longitude": "-122.580500",
+  "weight": 3,
+  "zip": "98662-4008"
+}, {
+  "latitude": "42.420200",
+  "longitude": "-71.156500",
+  "weight": 1,
+  "zip": "02474-6915"
+}, {
+  "latitude": "39.877000",
+  "longitude": "-84.331900",
+  "weight": 1,
+  "zip": "45322-1824"
+}, {
+  "latitude": "36.038400",
+  "longitude": "-115.085700",
+  "weight": 1,
+  "zip": "89074-7098"
+}, {
+  "latitude": "53.002340",
+  "longitude": "-122.517650",
+  "weight": 1,
+  "zip": "V2J 3R1"
+}, {
+  "latitude": "31.681200",
+  "longitude": "-84.159300",
+  "weight": 1,
+  "zip": "31763-3234"
+}, {
+  "latitude": "42.785600",
+  "longitude": "-71.072100",
+  "weight": 1,
+  "zip": "01830-4117"
+}, {
+  "latitude": "40.855900",
+  "longitude": "-82.318900",
+  "weight": 2,
+  "zip": "44805-2061"
+}, {
+  "latitude": "35.249500",
+  "longitude": "-81.133000",
+  "weight": 2,
+  "zip": "28054-1106"
+}, {
+  "latitude": "31.128200",
+  "longitude": "-97.746900",
+  "weight": 1,
+  "zip": "76544-4017"
+}, {
+  "latitude": "33.240700",
+  "longitude": "-117.302500",
+  "weight": 5,
+  "zip": "92057-1939"
+}, {
+  "latitude": "35.055100",
+  "longitude": "-89.676700",
+  "weight": 5,
+  "zip": "38017-1715"
+}, {
+  "latitude": "39.566200",
+  "longitude": "-76.597900",
+  "weight": 1,
+  "zip": "21111-1307"
+}, {
+  "latitude": "41.606000",
+  "longitude": "-109.230000",
+  "weight": 1,
+  "zip": "82901-6883"
+}, {
+  "latitude": "43.798900",
+  "longitude": "-91.217500",
+  "weight": 1,
+  "zip": "54601-6441"
+}, {
+  "latitude": "42.780300",
+  "longitude": "-105.871900",
+  "weight": 1,
+  "zip": "82637"
+}, {
+  "latitude": "46.407500",
+  "longitude": "-105.833200",
+  "weight": 1,
+  "zip": "59301-4318"
+}, {
+  "latitude": "49.587220",
+  "longitude": "-124.889986",
+  "weight": 2,
+  "zip": "V0R 3B0"
+}, {
+  "latitude": "37.302700",
+  "longitude": "-78.407600",
+  "weight": 1,
+  "zip": "23901-2994"
+}, {
+  "latitude": "40.869900",
+  "longitude": "-73.044800",
+  "weight": 2,
+  "zip": "11784-3928"
+}, {
+  "latitude": "47.260100",
+  "longitude": "-95.628300",
+  "weight": 1,
+  "zip": "56566-9303"
+}, {
+  "latitude": "33.933500",
+  "longitude": "-84.395800",
+  "weight": 2,
+  "zip": "30328-6746"
+}, {
+  "latitude": "55.694083",
+  "longitude": "-121.616667",
+  "weight": 1,
+  "zip": "V0C 1J0"
+}, {
+  "latitude": "55.830774",
+  "longitude": "-121.771324",
+  "weight": 3,
+  "zip": "V0C 1X0"
+}, {
+  "latitude": "41.322900",
+  "longitude": "-73.080000",
+  "weight": 1,
+  "zip": "06418-1326"
+}, {
+  "latitude": "53.584511",
+  "longitude": "-116.437593",
+  "weight": 2,
+  "zip": "T7E 1T5"
+}, {
+  "latitude": "29.412000",
+  "longitude": "-95.251500",
+  "weight": 7,
+  "zip": "77511-2362"
+}, {
+  "latitude": "39.354000",
+  "longitude": "-95.612700",
+  "weight": 2,
+  "zip": "66419"
+}, {
+  "latitude": "27.975000",
+  "longitude": "-82.701900",
+  "weight": 1,
+  "zip": "33759-1138"
+}, {
+  "latitude": "36.571600",
+  "longitude": "-87.737800",
+  "weight": 1,
+  "zip": "37023-3033"
+}, {
+  "latitude": "43.759810",
+  "longitude": "-79.331351",
+  "weight": 1,
+  "zip": "M3A 1Y4"
+}, {
+  "latitude": "31.767700",
+  "longitude": "-106.301600",
+  "weight": 1,
+  "zip": "79936-2328"
+}, {
+  "latitude": "41.469400",
+  "longitude": "-81.851200",
+  "weight": 1,
+  "zip": "44116-2631"
+}, {
+  "latitude": "41.437900",
+  "longitude": "-83.855200",
+  "weight": 1,
+  "zip": "43522-9230"
+}, {
+  "latitude": "42.769000",
+  "longitude": "-71.412100",
+  "weight": 1,
+  "zip": "03051"
+}, {
+  "latitude": "41.537200",
+  "longitude": "-74.052600",
+  "weight": 1,
+  "zip": "12550-1640"
+}, {
+  "latitude": "26.183100",
+  "longitude": "-97.746800",
+  "weight": 7,
+  "zip": "78552-4136"
+}, {
+  "latitude": "53.502564",
+  "longitude": "-113.638058",
+  "weight": 1,
+  "zip": "T5T 1Z2"
+}, {
+  "latitude": "36.331200",
+  "longitude": "-92.375300",
+  "weight": 1,
+  "zip": "72653-2914"
+}, {
+  "latitude": "40.593700",
+  "longitude": "-74.316400",
+  "weight": 1,
+  "zip": "07067-3012"
+}, {
+  "latitude": "40.870500",
+  "longitude": "-73.082200",
+  "weight": 1,
+  "zip": "11720-1030"
+}, {
+  "latitude": "42.575700",
+  "longitude": "-71.290200",
+  "weight": 2,
+  "zip": "01862-2510"
+}, {
+  "latitude": "43.823500",
+  "longitude": "-93.267100",
+  "weight": 1,
+  "zip": "56035-0010"
+}, {
+  "latitude": "39.649100",
+  "longitude": "-75.515500",
+  "weight": 4,
+  "zip": "08070-2520"
+}, {
+  "latitude": "40.744500",
+  "longitude": "-74.032900",
+  "weight": 1,
+  "zip": "07030-6586"
+}, {
+  "latitude": "43.873400",
+  "longitude": "-88.510000",
+  "weight": 1,
+  "zip": "54979"
+}, {
+  "latitude": "39.497800",
+  "longitude": "-82.087100",
+  "weight": 2,
+  "zip": "45732-9018"
+}, {
+  "latitude": "42.806800",
+  "longitude": "-102.204900",
+  "weight": 2,
+  "zip": "69343-1045"
+}, {
+  "latitude": "36.052000",
+  "longitude": "-94.153400",
+  "weight": 1,
+  "zip": "72701-9492"
+}, {
+  "latitude": "39.794300",
+  "longitude": "-76.981200",
+  "weight": 2,
+  "zip": "17331-3922"
+}, {
+  "latitude": "42.559700",
+  "longitude": "-83.113800",
+  "weight": 1,
+  "zip": "48083-1764"
+}, {
+  "latitude": "40.193700",
+  "longitude": "-79.924100",
+  "weight": 1,
+  "zip": "15063-9667"
+}, {
+  "latitude": "40.603700",
+  "longitude": "-112.041100",
+  "weight": 1,
+  "zip": "84081-4114"
+}, {
+  "latitude": "31.681200",
+  "longitude": "-84.159300",
+  "weight": 1,
+  "zip": "31763-3139"
+}, {
+  "latitude": "56.250929",
+  "longitude": "-117.298903",
+  "weight": 1,
+  "zip": "T8S 1A6"
+}, {
+  "latitude": "40.569000",
+  "longitude": "-84.177400",
+  "weight": 1,
+  "zip": "45895-1018"
+}, {
+  "latitude": "42.643800",
+  "longitude": "-83.407600",
+  "weight": 1,
+  "zip": "48327-1531"
+}, {
+  "latitude": "54.826720",
+  "longitude": "-113.537274",
+  "weight": 1,
+  "zip": "T9S 1S1"
+}, {
+  "latitude": "56.254548",
+  "longitude": "-118.590060",
+  "weight": 1,
+  "zip": "T0H 0G0"
+}, {
+  "latitude": "40.171700",
+  "longitude": "-80.256000",
+  "weight": 1,
+  "zip": "15301-1411"
+}, {
+  "latitude": "60.481800",
+  "longitude": "-151.135800",
+  "weight": 1,
+  "zip": "99669"
+}, {
+  "latitude": "40.460800",
+  "longitude": "-78.586100",
+  "weight": 2,
+  "zip": "16630-1230"
+}, {
+  "latitude": "40.894300",
+  "longitude": "-73.977200",
+  "weight": 1,
+  "zip": "07631-1217"
+}, {
+  "latitude": "41.946400",
+  "longitude": "-87.704200",
+  "weight": 1,
+  "zip": "60618-2503"
+}, {
+  "latitude": "41.616000",
+  "longitude": "-74.143900",
+  "weight": 1,
+  "zip": "12589-4516"
+}, {
+  "latitude": "41.984200",
+  "longitude": "-76.521800",
+  "weight": 1,
+  "zip": "18840-9267"
+}, {
+  "latitude": "27.677000",
+  "longitude": "-97.365000",
+  "weight": 1,
+  "zip": "78414-5795"
+}, {
+  "latitude": "33.007300",
+  "longitude": "-111.932400",
+  "weight": 2,
+  "zip": "85138-8654"
+}, {
+  "latitude": "39.480200",
+  "longitude": "-88.376200",
+  "weight": 1,
+  "zip": "61938-6138"
+}, {
+  "latitude": "41.366500",
+  "longitude": "-75.836200",
+  "weight": 3,
+  "zip": "18643-2627"
+}, {
+  "latitude": "43.993653",
+  "longitude": "-77.240610",
+  "weight": 1,
+  "zip": "K0K 1G0"
+}, {
+  "latitude": "29.844000",
+  "longitude": "-95.662300",
+  "weight": 1,
+  "zip": "77084-5926"
+}, {
+  "latitude": "35.501800",
+  "longitude": "-82.991300",
+  "weight": 1,
+  "zip": "28786-1406"
+}, {
+  "latitude": "26.451700",
+  "longitude": "-80.158000",
+  "weight": 2,
+  "zip": "33446-1041"
+}, {
+  "latitude": "29.677900",
+  "longitude": "-90.090100",
+  "weight": 2,
+  "zip": "70059-3596"
+}, {
+  "latitude": "54.116152",
+  "longitude": "-111.920018",
+  "weight": 1,
+  "zip": "T0A 3L0"
+}, {
+  "latitude": "43.081400",
+  "longitude": "-96.180000",
+  "weight": 1,
+  "zip": "51250-1506"
+}, {
+  "latitude": "29.923800",
+  "longitude": "-98.378800",
+  "weight": 1,
+  "zip": "78070-7217"
+}, {
+  "latitude": "51.120145",
+  "longitude": "-97.768030",
+  "weight": 2,
+  "zip": "R0C 2R0"
+}, {
+  "latitude": "43.482500",
+  "longitude": "-89.746200",
+  "weight": 2,
+  "zip": "53913-2934"
+}, {
+  "latitude": "41.678700",
+  "longitude": "-87.500500",
+  "weight": 1,
+  "zip": "46394-1908"
+}, {
+  "latitude": "51.270325",
+  "longitude": "-113.987704",
+  "weight": 1,
+  "zip": "T4A 0B4"
+}, {
+  "latitude": "43.558806",
+  "longitude": "-80.238511",
+  "weight": 1,
+  "zip": "N1E 4N9"
+}, {
+  "latitude": "34.684500",
+  "longitude": "-78.023400",
+  "weight": 2,
+  "zip": "28478-8397"
+}, {
+  "latitude": "26.933900",
+  "longitude": "-80.120100",
+  "weight": 1,
+  "zip": "33458-3811"
+}, {
+  "latitude": "43.049600",
+  "longitude": "-115.865600",
+  "weight": 1,
+  "zip": "83648"
+}, {
+  "latitude": "41.181400",
+  "longitude": "-96.065800",
+  "weight": 1,
+  "zip": "68128-4279"
+}, {
+  "latitude": "51.011370",
+  "longitude": "-114.194648",
+  "weight": 2,
+  "zip": "T3H 4N7"
+}, {
+  "latitude": "33.905800",
+  "longitude": "-117.786500",
+  "weight": 1,
+  "zip": "92886-5115"
+}, {
+  "latitude": "40.974800",
+  "longitude": "-75.584200",
+  "weight": 1,
+  "zip": "18210"
+}, {
+  "latitude": "42.216500",
+  "longitude": "-88.076900",
+  "weight": 1,
+  "zip": "60047-8322"
+}, {
+  "latitude": "40.796400",
+  "longitude": "-73.071800",
+  "weight": 1,
+  "zip": "11741-5211"
+}, {
+  "latitude": "42.021200",
+  "longitude": "-71.217800",
+  "weight": 1,
+  "zip": "02048-1796"
+}, {
+  "latitude": "45.605800",
+  "longitude": "-122.414200",
+  "weight": 1,
+  "zip": "98607-8237"
+}, {
+  "latitude": "42.994900",
+  "longitude": "-88.036400",
+  "weight": 1,
+  "zip": "53227-4348"
+}, {
+  "latitude": "31.834100",
+  "longitude": "-102.416200",
+  "weight": 1,
+  "zip": "79763-2937"
+}, {
+  "latitude": "47.615000",
+  "longitude": "-122.166300",
+  "weight": 1,
+  "zip": "98005-3433"
+}, {
+  "latitude": "39.492600",
+  "longitude": "-77.461200",
+  "weight": 2,
+  "zip": "21702-4150"
+}, {
+  "latitude": "53.552659",
+  "longitude": "-113.421057",
+  "weight": 2,
+  "zip": "T8A 5V1"
+}, {
+  "latitude": "44.038200",
+  "longitude": "-123.351600",
+  "weight": 1,
+  "zip": "97487-9522"
+}, {
+  "latitude": "40.193700",
+  "longitude": "-79.924100",
+  "weight": 1,
+  "zip": "15063-3645"
+}, {
+  "latitude": "40.722100",
+  "longitude": "-74.046900",
+  "weight": 10,
+  "zip": "07302-1902"
+}, {
+  "latitude": "43.163343",
+  "longitude": "-79.276722",
+  "weight": 1,
+  "zip": "L2W 1B9"
+}, {
+  "latitude": "36.910800",
+  "longitude": "-111.502000",
+  "weight": 1,
+  "zip": "86040"
+}, {
+  "latitude": "46.654265",
+  "longitude": "-71.307794",
+  "weight": 2,
+  "zip": "G6J 1L1"
+}, {
+  "latitude": "35.808200",
+  "longitude": "-110.284500",
+  "weight": 1,
+  "zip": "86034-2032"
+}, {
+  "latitude": "32.767600",
+  "longitude": "-97.751600",
+  "weight": 1,
+  "zip": "76085-6779"
+}, {
+  "latitude": "40.089700",
+  "longitude": "-74.978100",
+  "weight": 1,
+  "zip": "19154-1905"
+}, {
+  "latitude": "26.150200",
+  "longitude": "-80.274500",
+  "weight": 1,
+  "zip": "33322-2910"
+}, {
+  "latitude": "39.717100",
+  "longitude": "-84.134200",
+  "weight": 1,
+  "zip": "45420-2636"
+}, {
+  "latitude": "32.414100",
+  "longitude": "-93.874200",
+  "weight": 1,
+  "zip": "71129-8811"
+}, {
+  "latitude": "45.214621",
+  "longitude": "-75.158660",
+  "weight": 1,
+  "zip": "K0A 1R0"
+}, {
+  "latitude": "40.208400",
+  "longitude": "-74.829100",
+  "weight": 1,
+  "zip": "19067-4630"
+}, {
+  "latitude": "34.042500",
+  "longitude": "-84.026200",
+  "weight": 1,
+  "zip": "30024-4139"
+}, {
+  "latitude": "33.579800",
+  "longitude": "-85.081200",
+  "weight": 1,
+  "zip": "30117-4978"
+}, {
+  "latitude": "36.741200",
+  "longitude": "-108.179700",
+  "weight": 2,
+  "zip": "87401-2126"
+}, {
+  "latitude": "49.874072",
+  "longitude": "-125.133432",
+  "weight": 3,
+  "zip": "V9H 1C2"
+}, {
+  "latitude": "29.137200",
+  "longitude": "-81.024100",
+  "weight": 1,
+  "zip": "32129-5243"
+}, {
+  "latitude": "38.567700",
+  "longitude": "-109.527100",
+  "weight": 1,
+  "zip": "84532-2351"
+}, {
+  "latitude": "35.868400",
+  "longitude": "-80.315000",
+  "weight": 1,
+  "zip": "27295-6920"
+}, {
+  "latitude": "33.055000",
+  "longitude": "-96.736500",
+  "weight": 1,
+  "zip": "75023-1025"
+}, {
+  "latitude": "41.780300",
+  "longitude": "-72.618000",
+  "weight": 1,
+  "zip": "06108-2913"
+}, {
+  "latitude": "44.855000",
+  "longitude": "-92.631300",
+  "weight": 1,
+  "zip": "54022-5783"
+}, {
+  "latitude": "29.156500",
+  "longitude": "-82.209500",
+  "weight": 1,
+  "zip": "34474-6264"
+}, {
+  "latitude": "42.911700",
+  "longitude": "-83.987700",
+  "weight": 1,
+  "zip": "48429-1800"
+}, {
+  "latitude": "36.811300",
+  "longitude": "-114.123500",
+  "weight": 1,
+  "zip": "89027-5168"
+}, {
+  "latitude": "51.042836",
+  "longitude": "-113.827124",
+  "weight": 1,
+  "zip": "T1X 1C3"
+}, {
+  "latitude": "40.029300",
+  "longitude": "-91.076900",
+  "weight": 3,
+  "zip": "62320-2017"
+}, {
+  "latitude": "43.649800",
+  "longitude": "-116.430600",
+  "weight": 2,
+  "zip": "83646-3823"
+}, {
+  "latitude": "38.746900",
+  "longitude": "-93.556400",
+  "weight": 1,
+  "zip": "65336-2047"
+}, {
+  "latitude": "38.187900",
+  "longitude": "-90.428600",
+  "weight": 4,
+  "zip": "63028"
+}, {
+  "latitude": "26.029600",
+  "longitude": "-80.248900",
+  "weight": 1,
+  "zip": "33024-2903"
+}, {
+  "latitude": "39.227900",
+  "longitude": "-108.814900",
+  "weight": 3,
+  "zip": "81524-9447"
+}, {
+  "latitude": "37.207700",
+  "longitude": "-89.518100",
+  "weight": 1,
+  "zip": "63780-2913"
+}, {
+  "latitude": "43.323100",
+  "longitude": "-87.952100",
+  "weight": 1,
+  "zip": "53024-2104"
+}, {
+  "latitude": "34.862400",
+  "longitude": "-77.586300",
+  "weight": 1,
+  "zip": "28574-9202"
+}, {
+  "latitude": "41.643800",
+  "longitude": "-95.311100",
+  "weight": 1,
+  "zip": "51537-2026"
+}, {
+  "latitude": "42.719800",
+  "longitude": "-73.820700",
+  "weight": 1,
+  "zip": "12205-3008"
+}, {
+  "latitude": "44.943000",
+  "longitude": "-68.675000",
+  "weight": 1,
+  "zip": "04468-4300"
+}, {
+  "latitude": "33.998500",
+  "longitude": "-83.711500",
+  "weight": 1,
+  "zip": "30680-7458"
+}, {
+  "latitude": "38.512700",
+  "longitude": "-89.984700",
+  "weight": 1,
+  "zip": "62220-4833"
+}, {
+  "latitude": "47.574600",
+  "longitude": "-122.393400",
+  "weight": 2,
+  "zip": "98116-4293"
+}, {
+  "latitude": "39.796600",
+  "longitude": "-93.550900",
+  "weight": 1,
+  "zip": "64601-8403"
+}, {
+  "latitude": "32.325400",
+  "longitude": "-95.292200",
+  "weight": 2,
+  "zip": "75701-9146"
+}, {
+  "latitude": "43.303400",
+  "longitude": "-88.002900",
+  "weight": 11,
+  "zip": "53012-9404"
+}, {
+  "latitude": "41.752300",
+  "longitude": "-88.245300",
+  "weight": 1,
+  "zip": "60504-4717"
+}, {
+  "latitude": "44.855000",
+  "longitude": "-92.631300",
+  "weight": 2,
+  "zip": "54022-3127"
+}, {
+  "latitude": "40.929700",
+  "longitude": "-72.742300",
+  "weight": 4,
+  "zip": "11933-1439"
+}, {
+  "latitude": "40.768700",
+  "longitude": "-80.359200",
+  "weight": 2,
+  "zip": "15010"
+}, {
+  "latitude": "46.977600",
+  "longitude": "-114.061900",
+  "weight": 1,
+  "zip": "59808-5217"
+}, {
+  "latitude": "42.955900",
+  "longitude": "-87.993300",
+  "weight": 2,
+  "zip": "53220-2316"
+}, {
+  "latitude": "32.380800",
+  "longitude": "-96.837400",
+  "weight": 1,
+  "zip": "75165-5347"
+}, {
+  "latitude": "38.379600",
+  "longitude": "-77.534900",
+  "weight": 1,
+  "zip": "22406-4231"
+}, {
+  "latitude": "45.085836",
+  "longitude": "-64.483331",
+  "weight": 1,
+  "zip": "B4N 1W6"
+}, {
+  "latitude": "52.246919",
+  "longitude": "-113.761117",
+  "weight": 5,
+  "zip": "T4R 2P1"
+}, {
+  "latitude": "41.700500",
+  "longitude": "-79.034800",
+  "weight": 1,
+  "zip": "16347-9428"
+}, {
+  "latitude": "33.967900",
+  "longitude": "-84.438500",
+  "weight": 1,
+  "zip": "30068-4131"
+}, {
+  "latitude": "52.277993",
+  "longitude": "-113.854864",
+  "weight": 2,
+  "zip": "T4P 0C5"
+}, {
+  "latitude": "44.871800",
+  "longitude": "-91.926500",
+  "weight": 1,
+  "zip": "54751-1135"
+}, {
+  "latitude": "44.347168",
+  "longitude": "-79.708630",
+  "weight": 1,
+  "zip": "L4N 7V5"
+}, {
+  "latitude": "29.919000",
+  "longitude": "-95.556900",
+  "weight": 1,
+  "zip": "77064-8101"
+}, {
+  "latitude": "40.528500",
+  "longitude": "-75.566600",
+  "weight": 2,
+  "zip": "18062-1151"
+}, {
+  "latitude": "41.593000",
+  "longitude": "-93.859200",
+  "weight": 1,
+  "zip": "50263-8381"
+}, {
+  "latitude": "37.259300",
+  "longitude": "-93.291200",
+  "weight": 1,
+  "zip": "65803-4328"
+}, {
+  "latitude": "33.207200",
+  "longitude": "-117.357300",
+  "weight": 2,
+  "zip": "92054-4728"
+}, {
+  "latitude": "41.752300",
+  "longitude": "-88.245300",
+  "weight": 1,
+  "zip": "60504-6886"
+}, {
+  "latitude": "32.593400",
+  "longitude": "-83.641600",
+  "weight": 1,
+  "zip": "31088-8112"
+}, {
+  "latitude": "49.272439",
+  "longitude": "-123.132715",
+  "weight": 2,
+  "zip": "V6J 0B8"
+}, {
+  "latitude": "37.387900",
+  "longitude": "-89.651900",
+  "weight": 1,
+  "zip": "63755-3014"
+}, {
+  "latitude": "42.917034",
+  "longitude": "-78.914412",
+  "weight": 4,
+  "zip": "L2A 3N1"
+}, {
+  "latitude": "43.632200",
+  "longitude": "-116.205200",
+  "weight": 1,
+  "zip": "83702-4438"
+}, {
+  "latitude": "49.848468",
+  "longitude": "-97.157301",
+  "weight": 2,
+  "zip": "R3T 0X4"
+}, {
+  "latitude": "30.231500",
+  "longitude": "-97.722300",
+  "weight": 1,
+  "zip": "78741-3122"
+}, {
+  "latitude": "54.623364",
+  "longitude": "-97.769214",
+  "weight": 1,
+  "zip": "R0B 0J0"
+}, {
+  "latitude": "43.201400",
+  "longitude": "-96.310300",
+  "weight": 1,
+  "zip": "51247-7472"
+}, {
+  "latitude": "52.958278",
+  "longitude": "-113.386249",
+  "weight": 1,
+  "zip": "T9A 2Y1"
+}, {
+  "latitude": "60.536200",
+  "longitude": "-145.753400",
+  "weight": 1,
+  "zip": "99574-1592"
+}, {
+  "latitude": "60.614500",
+  "longitude": "-151.254600",
+  "weight": 1,
+  "zip": "99611-6428"
+}, {
+  "latitude": "46.856400",
+  "longitude": "-96.812300",
+  "weight": 1,
+  "zip": "58103-1197"
+}, {
+  "latitude": "41.486100",
+  "longitude": "-93.657300",
+  "weight": 1,
+  "zip": "50211-9755"
+}, {
+  "latitude": "41.394600",
+  "longitude": "-74.330200",
+  "weight": 2,
+  "zip": "10924-1029"
+}, {
+  "latitude": "39.381900",
+  "longitude": "-75.683400",
+  "weight": 3,
+  "zip": "19734-2026"
+}, {
+  "latitude": "39.543700",
+  "longitude": "-104.969100",
+  "weight": 1,
+  "zip": "80126-3224"
+}, {
+  "latitude": "41.147200",
+  "longitude": "-73.996200",
+  "weight": 1,
+  "zip": "10956-6434"
+}, {
+  "latitude": "34.196200",
+  "longitude": "-101.725900",
+  "weight": 2,
+  "zip": "79072"
+}, {
+  "latitude": "31.648900",
+  "longitude": "-82.198200",
+  "weight": 1,
+  "zip": "31563-3135"
+}, {
+  "latitude": "35.295800",
+  "longitude": "-96.960100",
+  "weight": 1,
+  "zip": "74801-4908"
+}, {
+  "latitude": "44.832200",
+  "longitude": "-124.050300",
+  "weight": 1,
+  "zip": "97341-1257"
+}, {
+  "latitude": "34.753200",
+  "longitude": "-120.517100",
+  "weight": 3,
+  "zip": "93437-1430"
+}, {
+  "latitude": "31.767700",
+  "longitude": "-106.301600",
+  "weight": 1,
+  "zip": "79936-0911"
+}, {
+  "latitude": "45.728100",
+  "longitude": "-94.968200",
+  "weight": 1,
+  "zip": "56378"
+}, {
+  "latitude": "40.002300",
+  "longitude": "-76.771200",
+  "weight": 1,
+  "zip": "17404"
+}, {
+  "latitude": "47.129100",
+  "longitude": "-122.409400",
+  "weight": 1,
+  "zip": "98445-1795"
+}, {
+  "latitude": "32.212700",
+  "longitude": "-110.882900",
+  "weight": 2,
+  "zip": "85711-2014"
+}, {
+  "latitude": "44.949000",
+  "longitude": "-123.004000",
+  "weight": 1,
+  "zip": "97301-0423"
+}, {
+  "latitude": "37.412600",
+  "longitude": "-76.546400",
+  "weight": 1,
+  "zip": "23061-5161"
+}, {
+  "latitude": "35.239600",
+  "longitude": "-96.242100",
+  "weight": 1,
+  "zip": "74883-6118"
+}, {
+  "latitude": "40.947100",
+  "longitude": "-74.246600",
+  "weight": 1,
+  "zip": "07470-3803"
+}, {
+  "latitude": "53.576157",
+  "longitude": "-113.545947",
+  "weight": 1,
+  "zip": "T5L 2T8"
+}, {
+  "latitude": "54.266142",
+  "longitude": "-110.779884",
+  "weight": 1,
+  "zip": "T9N 0H1"
+}, {
+  "latitude": "40.366600",
+  "longitude": "-74.640800",
+  "weight": 1,
+  "zip": "08540-2419"
+}, {
+  "latitude": "49.837995",
+  "longitude": "-119.609413",
+  "weight": 1,
+  "zip": "V4T 2Z9"
+}, {
+  "latitude": "30.440400",
+  "longitude": "-88.780100",
+  "weight": 1,
+  "zip": "39564-4041"
+}, {
+  "latitude": "50.579504",
+  "longitude": "-113.869024",
+  "weight": 3,
+  "zip": "T1V 1N3"
+}, {
+  "latitude": "33.245900",
+  "longitude": "-86.364100",
+  "weight": 1,
+  "zip": "35044-5259"
+}, {
+  "latitude": "43.170700",
+  "longitude": "-76.096200",
+  "weight": 1,
+  "zip": "13039-8740"
+}, {
+  "latitude": "39.492600",
+  "longitude": "-77.461200",
+  "weight": 1,
+  "zip": "21702-8719"
+}, {
+  "latitude": "50.581692",
+  "longitude": "-113.868900",
+  "weight": 2,
+  "zip": "T1V 1P6"
+}, {
+  "latitude": "40.878900",
+  "longitude": "-74.108100",
+  "weight": 1,
+  "zip": "07026-3568"
+}, {
+  "latitude": "29.740400",
+  "longitude": "-95.830400",
+  "weight": 1,
+  "zip": "77494-2408"
+}, {
+  "latitude": "33.293200",
+  "longitude": "-86.768000",
+  "weight": 4,
+  "zip": "35124-3507"
+}, {
+  "latitude": "64.828300",
+  "longitude": "-147.655700",
+  "weight": 2,
+  "zip": "99703-1401"
+}, {
+  "latitude": "34.199300",
+  "longitude": "-84.419900",
+  "weight": 1,
+  "zip": "30115"
+}, {
+  "latitude": "42.882700",
+  "longitude": "-73.192300",
+  "weight": 1,
+  "zip": "05201-2512"
+}, {
+  "latitude": "40.588000",
+  "longitude": "-74.687400",
+  "weight": 1,
+  "zip": "08876-2750"
+}, {
+  "latitude": "39.952300",
+  "longitude": "-83.078000",
+  "weight": 1,
+  "zip": "43204-2734"
+}, {
+  "latitude": "42.973100",
+  "longitude": "-78.845000",
+  "weight": 1,
+  "zip": "14223-1036"
+}, {
+  "latitude": "33.436800",
+  "longitude": "-112.383400",
+  "weight": 4,
+  "zip": "85338-3359"
+}, {
+  "latitude": "38.348200",
+  "longitude": "-121.953800",
+  "weight": 1,
+  "zip": "95687-5127"
+}, {
+  "latitude": "40.732600",
+  "longitude": "-92.872800",
+  "weight": 1,
+  "zip": "52544-8348"
+}, {
+  "latitude": "34.528900",
+  "longitude": "-82.055100",
+  "weight": 1,
+  "zip": "29360"
+}, {
+  "latitude": "41.185000",
+  "longitude": "-74.533200",
+  "weight": 1,
+  "zip": "07462-2576"
+}, {
+  "latitude": "36.142800",
+  "longitude": "-80.306900",
+  "weight": 7,
+  "zip": "27106-8641"
+}, {
+  "latitude": "39.674700",
+  "longitude": "-76.894100",
+  "weight": 1,
+  "zip": "21102-2059"
+}, {
+  "latitude": "45.630000",
+  "longitude": "-68.572800",
+  "weight": 3,
+  "zip": "04430-1037"
+}, {
+  "latitude": "42.174300",
+  "longitude": "-91.989200",
+  "weight": 1,
+  "zip": "52349-9268"
+}, {
+  "latitude": "33.240700",
+  "longitude": "-117.302500",
+  "weight": 1,
+  "zip": "92057-4833"
+}, {
+  "latitude": "37.892800",
+  "longitude": "-85.948900",
+  "weight": 1,
+  "zip": "40121-4501"
+}, {
+  "latitude": "38.859100",
+  "longitude": "-94.631400",
+  "weight": 10,
+  "zip": "66224"
+}, {
+  "latitude": "38.802000",
+  "longitude": "-90.853400",
+  "weight": 1,
+  "zip": "63385-3060"
+}, {
+  "latitude": "40.593700",
+  "longitude": "-74.316400",
+  "weight": 3,
+  "zip": "07067-4104"
+}, {
+  "latitude": "27.081300",
+  "longitude": "-80.150900",
+  "weight": 1,
+  "zip": "33455-8962"
+}, {
+  "latitude": "40.044900",
+  "longitude": "-111.732100",
+  "weight": 7,
+  "zip": "84651-1715"
+}, {
+  "latitude": "42.658300",
+  "longitude": "-83.237500",
+  "weight": 1,
+  "zip": "48326-1654"
+}, {
+  "latitude": "42.928200",
+  "longitude": "-83.626400",
+  "weight": 1,
+  "zip": "48439-8727"
+}, {
+  "latitude": "33.077500",
+  "longitude": "-97.070400",
+  "weight": 2,
+  "zip": "75077-6933"
+}, {
+  "latitude": "38.187900",
+  "longitude": "-90.428600",
+  "weight": 1,
+  "zip": "63028-5402"
+}, {
+  "latitude": "40.455700",
+  "longitude": "-82.263900",
+  "weight": 1,
+  "zip": "43014-9577"
+}, {
+  "latitude": "39.120600",
+  "longitude": "-76.495000",
+  "weight": 1,
+  "zip": "21122-1812"
+}, {
+  "latitude": "31.938600",
+  "longitude": "-106.407300",
+  "weight": 1,
+  "zip": "79934-3175"
+}, {
+  "latitude": "32.550700",
+  "longitude": "-93.565700",
+  "weight": 7,
+  "zip": "71037-9243"
+}, {
+  "latitude": "45.020077",
+  "longitude": "-75.650297",
+  "weight": 1,
+  "zip": "K0G 1J0"
+}, {
+  "latitude": "50.023895",
+  "longitude": "-113.584832",
+  "weight": 2,
+  "zip": "T0L 0T0"
+}, {
+  "latitude": "43.843100",
+  "longitude": "-121.576400",
+  "weight": 1,
+  "zip": "97707"
+}, {
+  "latitude": "49.083876",
+  "longitude": "-122.647079",
+  "weight": 1,
+  "zip": "V3A 2H7"
+}, {
+  "latitude": "39.735400",
+  "longitude": "-74.986400",
+  "weight": 1,
+  "zip": "08081-3061"
+}, {
+  "latitude": "39.365200",
+  "longitude": "-94.362100",
+  "weight": 1,
+  "zip": "64060"
+}, {
+  "latitude": "43.921768",
+  "longitude": "-78.851538",
+  "weight": 3,
+  "zip": "L1K 1R6"
+}, {
+  "latitude": "37.832100",
+  "longitude": "-121.916700",
+  "weight": 2,
+  "zip": "94506-6044"
+}, {
+  "latitude": "36.522000",
+  "longitude": "-87.349000",
+  "weight": 1,
+  "zip": "37040-6119"
+}, {
+  "latitude": "39.071300",
+  "longitude": "-84.375800",
+  "weight": 1,
+  "zip": "45230"
+}, {
+  "latitude": "53.020915",
+  "longitude": "-112.825119",
+  "weight": 1,
+  "zip": "T4V 1X7"
+}, {
+  "latitude": "39.193800",
+  "longitude": "-96.585800",
+  "weight": 1,
+  "zip": "66502"
+}, {
+  "latitude": "32.890600",
+  "longitude": "-111.754000",
+  "weight": 3,
+  "zip": "85122-2048"
+}, {
+  "latitude": "38.789400",
+  "longitude": "-77.281800",
+  "weight": 2,
+  "zip": "22015-3706"
+}, {
+  "latitude": "38.844800",
+  "longitude": "-77.467000",
+  "weight": 1,
+  "zip": "20120-4348"
+}, {
+  "latitude": "50.239912",
+  "longitude": "-117.791790",
+  "weight": 1,
+  "zip": "V0G 1R0"
+}, {
+  "latitude": "41.900800",
+  "longitude": "-88.754800",
+  "weight": 2,
+  "zip": "60115-8548"
+}, {
+  "latitude": "44.636400",
+  "longitude": "-88.743000",
+  "weight": 1,
+  "zip": "54929"
+}, {
+  "latitude": "45.028733",
+  "longitude": "-76.378700",
+  "weight": 2,
+  "zip": "K0G 1K0"
+}, {
+  "latitude": "42.559700",
+  "longitude": "-83.113800",
+  "weight": 2,
+  "zip": "48083-5720"
+}, {
+  "latitude": "32.303800",
+  "longitude": "-89.964000",
+  "weight": 1,
+  "zip": "39042-8253"
+}, {
+  "latitude": "41.559600",
+  "longitude": "-74.176400",
+  "weight": 1,
+  "zip": "12586-1111"
+}, {
+  "latitude": "47.146400",
+  "longitude": "-122.457200",
+  "weight": 1,
+  "zip": "98444-2634"
+}, {
+  "latitude": "41.641800",
+  "longitude": "-83.471400",
+  "weight": 1,
+  "zip": "43616-3323"
+}, {
+  "latitude": "50.807592",
+  "longitude": "-116.244996",
+  "weight": 1,
+  "zip": "V0A 1L0"
+}, {
+  "latitude": "43.065300",
+  "longitude": "-83.631000",
+  "weight": 1,
+  "zip": "48506-4360"
+}, {
+  "latitude": "35.116100",
+  "longitude": "-98.430300",
+  "weight": 4,
+  "zip": "73038-9378"
+}, {
+  "latitude": "30.281700",
+  "longitude": "-98.879900",
+  "weight": 2,
+  "zip": "78624-9743"
+}, {
+  "latitude": "41.311200",
+  "longitude": "-111.968900",
+  "weight": 1,
+  "zip": "84414-1569"
+}, {
+  "latitude": "42.746200",
+  "longitude": "-73.763000",
+  "weight": 2,
+  "zip": "12110-4517"
+}, {
+  "latitude": "29.832300",
+  "longitude": "-95.736000",
+  "weight": 1,
+  "zip": "77449"
+}, {
+  "latitude": "35.058300",
+  "longitude": "-79.008000",
+  "weight": 1,
+  "zip": "28314-2733"
+}, {
+  "latitude": "44.194500",
+  "longitude": "-72.493600",
+  "weight": 1,
+  "zip": "05641-5503"
+}, {
+  "latitude": "50.473936",
+  "longitude": "-104.642729",
+  "weight": 1,
+  "zip": "S4R 0X1"
+}, {
+  "latitude": "38.989600",
+  "longitude": "-77.153800",
+  "weight": 1,
+  "zip": "20817-5551"
+}, {
+  "latitude": "39.632000",
+  "longitude": "-77.737200",
+  "weight": 1,
+  "zip": "21740-5337"
+}, {
+  "latitude": "50.435761",
+  "longitude": "-104.622608",
+  "weight": 2,
+  "zip": "S4T 2L6"
+}, {
+  "latitude": "40.545700",
+  "longitude": "-74.179200",
+  "weight": 1,
+  "zip": "10312-2216"
+}, {
+  "latitude": "49.499989",
+  "longitude": "-115.756840",
+  "weight": 1,
+  "zip": "V1C 3Y1"
+}, {
+  "latitude": "31.797900",
+  "longitude": "-83.523500",
+  "weight": 1,
+  "zip": "31783-2814"
+}, {
+  "latitude": "36.501800",
+  "longitude": "-86.876900",
+  "weight": 1,
+  "zip": "37172-3447"
+}, {
+  "latitude": "30.443800",
+  "longitude": "-91.177500",
+  "weight": 1,
+  "zip": "70802"
+}, {
+  "latitude": "53.547112",
+  "longitude": "-113.890366",
+  "weight": 3,
+  "zip": "T7X 2B2"
+}, {
+  "latitude": "41.311200",
+  "longitude": "-111.968900",
+  "weight": 1,
+  "zip": "84414-7033"
+}, {
+  "latitude": "29.458900",
+  "longitude": "-98.569900",
+  "weight": 1,
+  "zip": "78228-6617"
+}, {
+  "latitude": "32.402900",
+  "longitude": "-89.594900",
+  "weight": 1,
+  "zip": "39117-8692"
+}, {
+  "latitude": "28.597400",
+  "longitude": "-81.303600",
+  "weight": 1,
+  "zip": "32792-2004"
+}, {
+  "latitude": "39.254700",
+  "longitude": "-94.635400",
+  "weight": 1,
+  "zip": "64154"
+}, {
+  "latitude": "45.466650",
+  "longitude": "-73.836047",
+  "weight": 1,
+  "zip": "H9R 4W1"
+}, {
+  "latitude": "35.580800",
+  "longitude": "-82.607800",
+  "weight": 2,
+  "zip": "28806-6801"
+}, {
+  "latitude": "46.130200",
+  "longitude": "-107.595800",
+  "weight": 1,
+  "zip": "59024-9735"
+}, {
+  "latitude": "41.618900",
+  "longitude": "-80.308600",
+  "weight": 1,
+  "zip": "16316-4323"
+}, {
+  "latitude": "32.932200",
+  "longitude": "-96.835300",
+  "weight": 1,
+  "zip": "75244-6522"
+}, {
+  "latitude": "33.418300",
+  "longitude": "-99.813700",
+  "weight": 1,
+  "zip": "79529-2224"
+}, {
+  "latitude": "41.772800",
+  "longitude": "-87.975700",
+  "weight": 1,
+  "zip": "60559-2099"
+}, {
+  "latitude": "41.704000",
+  "longitude": "-88.195200",
+  "weight": 1,
+  "zip": "60564-7135"
+}, {
+  "latitude": "37.732500",
+  "longitude": "-83.029800",
+  "weight": 1,
+  "zip": "41465"
+}, {
+  "latitude": "40.603900",
+  "longitude": "-78.337200",
+  "weight": 1,
+  "zip": "16617-1322"
+}, {
+  "latitude": "36.106400",
+  "longitude": "-79.816500",
+  "weight": 3,
+  "zip": "27408-3316"
+}, {
+  "latitude": "39.180600",
+  "longitude": "-120.144500",
+  "weight": 1,
+  "zip": "96145-7470"
+}, {
+  "latitude": "39.380900",
+  "longitude": "-119.685900",
+  "weight": 1,
+  "zip": "89521-4377"
+}, {
+  "latitude": "40.668200",
+  "longitude": "-73.458800",
+  "weight": 2,
+  "zip": "11758-1461"
+}, {
+  "latitude": "39.277900",
+  "longitude": "-123.224300",
+  "weight": 1,
+  "zip": "95470-9655"
+}, {
+  "latitude": "32.971300",
+  "longitude": "-93.296300",
+  "weight": 1,
+  "zip": "71072-2410"
+}, {
+  "latitude": "41.500700",
+  "longitude": "-90.412600",
+  "weight": 1,
+  "zip": "61282-1026"
+}, {
+  "latitude": "38.813600",
+  "longitude": "-121.267700",
+  "weight": 1,
+  "zip": "95765-5802"
+}, {
+  "latitude": "45.052300",
+  "longitude": "-93.254100",
+  "weight": 2,
+  "zip": "55421-3137"
+}, {
+  "latitude": "32.269100",
+  "longitude": "-110.984500",
+  "weight": 1,
+  "zip": "85705-1213"
+}, {
+  "latitude": "45.838403",
+  "longitude": "-64.191321",
+  "weight": 1,
+  "zip": "B4H 4W7"
+}, {
+  "latitude": "33.637200",
+  "longitude": "-96.618400",
+  "weight": 1,
+  "zip": "75092-8728"
+}, {
+  "latitude": "30.216600",
+  "longitude": "-97.850800",
+  "weight": 1,
+  "zip": "78749-1947"
+}, {
+  "latitude": "32.949200",
+  "longitude": "-96.441800",
+  "weight": 1,
+  "zip": "75087-0236"
+}, {
+  "latitude": "40.279500",
+  "longitude": "-74.691200",
+  "weight": 1,
+  "zip": "08648-3929"
+}, {
+  "latitude": "40.021000",
+  "longitude": "-82.807900",
+  "weight": 1,
+  "zip": "43004-9651"
+}, {
+  "latitude": "39.979200",
+  "longitude": "-85.794600",
+  "weight": 1,
+  "zip": "46064-7509"
+}, {
+  "latitude": "42.785100",
+  "longitude": "-83.729400",
+  "weight": 1,
+  "zip": "48430-9372"
+}, {
+  "latitude": "40.351400",
+  "longitude": "-110.275400",
+  "weight": 1,
+  "zip": "84001-0395"
+}, {
+  "latitude": "43.077500",
+  "longitude": "-89.383100",
+  "weight": 1,
+  "zip": "53703-3646"
+}, {
+  "latitude": "36.595700",
+  "longitude": "-80.670500",
+  "weight": 1,
+  "zip": "24317-4034"
+}, {
+  "latitude": "49.104883",
+  "longitude": "-122.849874",
+  "weight": 1,
+  "zip": "V3X 2Z6"
+}, {
+  "latitude": "50.397845",
+  "longitude": "-105.507863",
+  "weight": 1,
+  "zip": "S6H 7H5"
+}, {
+  "latitude": "41.777700",
+  "longitude": "-72.524400",
+  "weight": 1,
+  "zip": "06040-4550"
+}, {
+  "latitude": "39.392600",
+  "longitude": "-104.860200",
+  "weight": 1,
+  "zip": "80104-5467"
+}, {
+  "latitude": "55.140908",
+  "longitude": "-118.771851",
+  "weight": 1,
+  "zip": "T8W 1C2"
+}, {
+  "latitude": "51.676212",
+  "longitude": "-105.465630",
+  "weight": 1,
+  "zip": "S0K 4T0"
+}, {
+  "latitude": "36.661300",
+  "longitude": "-78.075400",
+  "weight": 6,
+  "zip": "23950-1764"
+}, {
+  "latitude": "30.095600",
+  "longitude": "-81.621700",
+  "weight": 1,
+  "zip": "32259-7245"
+}, {
+  "latitude": "42.018800",
+  "longitude": "-91.661200",
+  "weight": 2,
+  "zip": "52402"
+}, {
+  "latitude": "47.684900",
+  "longitude": "-122.296800",
+  "weight": 1,
+  "zip": "98115-2618"
+}, {
+  "latitude": "35.446900",
+  "longitude": "-79.138000",
+  "weight": 1,
+  "zip": "27332-2383"
+}, {
+  "latitude": "40.440600",
+  "longitude": "-109.546900",
+  "weight": 1,
+  "zip": "84078-7809"
+}, {
+  "latitude": "40.878900",
+  "longitude": "-74.108100",
+  "weight": 3,
+  "zip": "07026-3405"
+}, {
+  "latitude": "53.023472",
+  "longitude": "-112.838380",
+  "weight": 1,
+  "zip": "T4V 2G2"
+}, {
+  "latitude": "41.349800",
+  "longitude": "-83.118100",
+  "weight": 1,
+  "zip": "43420-9749"
+}, {
+  "latitude": "38.946000",
+  "longitude": "-90.206000",
+  "weight": 1,
+  "zip": "62035-3323"
+}, {
+  "latitude": "43.069500",
+  "longitude": "-77.514100",
+  "weight": 1,
+  "zip": "14534-4135"
+}, {
+  "latitude": "33.876800",
+  "longitude": "-78.650800",
+  "weight": 1,
+  "zip": "29566-9101"
+}, {
+  "latitude": "33.906700",
+  "longitude": "-118.010100",
+  "weight": 1,
+  "zip": "90638-1234"
+}, {
+  "latitude": "41.141600",
+  "longitude": "-96.013100",
+  "weight": 1,
+  "zip": "68133-3393"
+}, {
+  "latitude": "34.262100",
+  "longitude": "-86.912500",
+  "weight": 1,
+  "zip": "35179-6615"
+}, {
+  "latitude": "35.858000",
+  "longitude": "-84.119400",
+  "weight": 1,
+  "zip": "37922-5700"
+}, {
+  "latitude": "43.928200",
+  "longitude": "-105.549200",
+  "weight": 1,
+  "zip": "82718-4133"
+}, {
+  "latitude": "48.535000",
+  "longitude": "-68.363297",
+  "weight": 1,
+  "zip": "G0K 1P0"
+}, {
+  "latitude": "38.549500",
+  "longitude": "-90.381100",
+  "weight": 1,
+  "zip": "63126-1112"
+}, {
+  "latitude": "27.635700",
+  "longitude": "-99.592300",
+  "weight": 1,
+  "zip": "78045-1975"
+}, {
+  "latitude": "40.093300",
+  "longitude": "-74.899100",
+  "weight": 2,
+  "zip": "19021-6022"
+}, {
+  "latitude": "42.620600",
+  "longitude": "-82.960800",
+  "weight": 1,
+  "zip": "48038-2928"
+}, {
+  "latitude": "49.245266",
+  "longitude": "-123.118389",
+  "weight": 1,
+  "zip": "V5V 2R9"
+}, {
+  "latitude": "40.148300",
+  "longitude": "-74.837100",
+  "weight": 1,
+  "zip": "19055-1723"
+}, {
+  "latitude": "31.767700",
+  "longitude": "-106.301600",
+  "weight": 2,
+  "zip": "79936"
+}, {
+  "latitude": "35.539300",
+  "longitude": "-82.518000",
+  "weight": 2,
+  "zip": "28803-2406"
+}, {
+  "latitude": "38.003100",
+  "longitude": "-121.917200",
+  "weight": 1,
+  "zip": "94565-4815"
+}, {
+  "latitude": "28.801300",
+  "longitude": "-81.285000",
+  "weight": 1,
+  "zip": "32771-7269"
+}, {
+  "latitude": "33.546600",
+  "longitude": "-101.887100",
+  "weight": 1,
+  "zip": "79413-3036"
+}, {
+  "latitude": "36.656000",
+  "longitude": "-108.735500",
+  "weight": 1,
+  "zip": "87420-0551"
+}, {
+  "latitude": "35.082100",
+  "longitude": "-89.850100",
+  "weight": 1,
+  "zip": "38119-5413"
+}, {
+  "latitude": "44.867000",
+  "longitude": "-91.675200",
+  "weight": 1,
+  "zip": "54739-9765"
+}, {
+  "latitude": "29.398600",
+  "longitude": "-99.176200",
+  "weight": 1,
+  "zip": "78861"
+}, {
+  "latitude": "43.006000",
+  "longitude": "-87.942900",
+  "weight": 1,
+  "zip": "53215-5105"
+}, {
+  "latitude": "32.867400",
+  "longitude": "-79.804900",
+  "weight": 2,
+  "zip": "29466-9378"
+}, {
+  "latitude": "35.386300",
+  "longitude": "-119.170000",
+  "weight": 1,
+  "zip": "93314-8089"
+}, {
+  "latitude": "37.814000",
+  "longitude": "-121.966000",
+  "weight": 1,
+  "zip": "94526-4438"
+}, {
+  "latitude": "40.208000",
+  "longitude": "-79.180600",
+  "weight": 1,
+  "zip": "15655-1008"
+}, {
+  "latitude": "44.747600",
+  "longitude": "-92.753500",
+  "weight": 1,
+  "zip": "54021-1088"
+}, {
+  "latitude": "44.370300",
+  "longitude": "-92.036100",
+  "weight": 1,
+  "zip": "55981-2154"
+}, {
+  "latitude": "43.585100",
+  "longitude": "-116.219100",
+  "weight": 1,
+  "zip": "83705-3423"
+}, {
+  "latitude": "43.776883",
+  "longitude": "-79.393198",
+  "weight": 1,
+  "zip": "M2N 5L2"
+}, {
+  "latitude": "40.703300",
+  "longitude": "-79.663000",
+  "weight": 1,
+  "zip": "16229-1911"
+}, {
+  "latitude": "49.678988",
+  "longitude": "-112.896859",
+  "weight": 1,
+  "zip": "T1K 7Z3"
+}, {
+  "latitude": "32.732900",
+  "longitude": "-116.959600",
+  "weight": 1,
+  "zip": "91978-1512"
+}, {
+  "latitude": "25.762800",
+  "longitude": "-80.361100",
+  "weight": 1,
+  "zip": "33174"
+}, {
+  "latitude": "38.567700",
+  "longitude": "-109.527100",
+  "weight": 1,
+  "zip": "84532-3742"
+}, {
+  "latitude": "35.594400",
+  "longitude": "-87.856700",
+  "weight": 2,
+  "zip": "37096-3018"
+}, {
+  "latitude": "38.093600",
+  "longitude": "-78.561100",
+  "weight": 1,
+  "zip": "22901-3181"
+}, {
+  "latitude": "34.925100",
+  "longitude": "-80.727800",
+  "weight": 3,
+  "zip": "28173-6553"
+}, {
+  "latitude": "51.658963",
+  "longitude": "-114.137831",
+  "weight": 5,
+  "zip": "T0M 0W0"
+}, {
+  "latitude": "40.773200",
+  "longitude": "-76.343000",
+  "weight": 1,
+  "zip": "17921-9230"
+}, {
+  "latitude": "43.441770",
+  "longitude": "-80.520054",
+  "weight": 3,
+  "zip": "N2M 2B7"
+}, {
+  "latitude": "38.899400",
+  "longitude": "-77.189500",
+  "weight": 1,
+  "zip": "22043-3421"
+}, {
+  "latitude": "39.611100",
+  "longitude": "-104.953200",
+  "weight": 1,
+  "zip": "80121-3422"
+}, {
+  "latitude": "41.733100",
+  "longitude": "-84.945200",
+  "weight": 1,
+  "zip": "46737-7614"
+}, {
+  "latitude": "42.574000",
+  "longitude": "-71.989800",
+  "weight": 1,
+  "zip": "01440-1757"
+}, {
+  "latitude": "33.160200",
+  "longitude": "-117.325000",
+  "weight": 1,
+  "zip": "92008-4655"
+}, {
+  "latitude": "29.201200",
+  "longitude": "-81.037100",
+  "weight": 3,
+  "zip": "32114-1479"
+}, {
+  "latitude": "37.036800",
+  "longitude": "-88.593400",
+  "weight": 1,
+  "zip": "42003-0983"
+}, {
+  "latitude": "42.483700",
+  "longitude": "-89.029800",
+  "weight": 1,
+  "zip": "61080-9291"
+}, {
+  "latitude": "36.501800",
+  "longitude": "-86.876900",
+  "weight": 1,
+  "zip": "37172-2339"
+}, {
+  "latitude": "46.355200",
+  "longitude": "-104.266700",
+  "weight": 1,
+  "zip": "59313-0486"
+}, {
+  "latitude": "30.207700",
+  "longitude": "-92.065600",
+  "weight": 1,
+  "zip": "70506"
+}, {
+  "latitude": "35.924400",
+  "longitude": "-84.001500",
+  "weight": 1,
+  "zip": "37919-8747"
+}, {
+  "latitude": "29.813500",
+  "longitude": "-82.472000",
+  "weight": 1,
+  "zip": "32615-8052"
+}, {
+  "latitude": "51.019347",
+  "longitude": "-93.828645",
+  "weight": 1,
+  "zip": "P0V 2M0"
+}, {
+  "latitude": "42.101400",
+  "longitude": "-88.868500",
+  "weight": 3,
+  "zip": "60146-8450"
+}, {
+  "latitude": "33.941600",
+  "longitude": "-118.130600",
+  "weight": 1,
+  "zip": "90241-3435"
+}, {
+  "latitude": "42.719800",
+  "longitude": "-73.820700",
+  "weight": 4,
+  "zip": "12205-2823"
+}, {
+  "latitude": "50.023507",
+  "longitude": "-125.246584",
+  "weight": 1,
+  "zip": "V9W 2W1"
+}, {
+  "latitude": "43.857000",
+  "longitude": "-70.103100",
+  "weight": 1,
+  "zip": "04032-5842"
+}, {
+  "latitude": "47.553429",
+  "longitude": "-65.584800",
+  "weight": 3,
+  "zip": "E8L 1T4"
+}, {
+  "latitude": "32.803600",
+  "longitude": "-117.026100",
+  "weight": 3,
+  "zip": "92119-2634"
+}, {
+  "latitude": "37.843700",
+  "longitude": "-122.124200",
+  "weight": 2,
+  "zip": "94556-1474"
+}, {
+  "latitude": "44.710700",
+  "longitude": "-93.410100",
+  "weight": 1,
+  "zip": "55372-2759"
+}, {
+  "latitude": "41.247100",
+  "longitude": "-81.828000",
+  "weight": 1,
+  "zip": "44212-3916"
+}, {
+  "latitude": "40.453800",
+  "longitude": "-74.482300",
+  "weight": 1,
+  "zip": "08902-2551"
+}, {
+  "latitude": "41.710100",
+  "longitude": "-85.972900",
+  "weight": 1,
+  "zip": "46514-6909"
+}, {
+  "latitude": "40.196400",
+  "longitude": "-88.392800",
+  "weight": 1,
+  "zip": "61853-9388"
+}, {
+  "latitude": "49.775005",
+  "longitude": "-100.471686",
+  "weight": 4,
+  "zip": "R0M 0S0"
+}, {
+  "latitude": "43.996818",
+  "longitude": "-79.480563",
+  "weight": 1,
+  "zip": "L4G 3L9"
+}, {
+  "latitude": "39.152600",
+  "longitude": "-77.074900",
+  "weight": 3,
+  "zip": "20832-1535"
+}, {
+  "latitude": "55.121500",
+  "longitude": "-131.579000",
+  "weight": 1,
+  "zip": "99926-0453"
+}, {
+  "latitude": "45.061600",
+  "longitude": "-94.069500",
+  "weight": 1,
+  "zip": "55349-5663"
+}, {
+  "latitude": "35.599000",
+  "longitude": "-97.625100",
+  "weight": 1,
+  "zip": "73142-2514"
+}, {
+  "latitude": "39.760000",
+  "longitude": "-74.866500",
+  "weight": 1,
+  "zip": "08004-3006"
+}, {
+  "latitude": "33.832000",
+  "longitude": "-84.385100",
+  "weight": 2,
+  "zip": "30305-2918"
+}, {
+  "latitude": "39.888300",
+  "longitude": "-84.202300",
+  "weight": 1,
+  "zip": "45377-1619"
+}, {
+  "latitude": "32.440100",
+  "longitude": "-88.678300",
+  "weight": 1,
+  "zip": "39305-4530"
+}, {
+  "latitude": "44.305600",
+  "longitude": "-96.791400",
+  "weight": 2,
+  "zip": "57006-1540"
+}, {
+  "latitude": "40.108800",
+  "longitude": "-82.974200",
+  "weight": 1,
+  "zip": "43235-8023"
+}, {
+  "latitude": "41.617800",
+  "longitude": "-74.326300",
+  "weight": 1,
+  "zip": "12566-5207"
+}, {
+  "latitude": "37.739500",
+  "longitude": "-77.478400",
+  "weight": 1,
+  "zip": "23005-8162"
+}, {
+  "latitude": "33.402600",
+  "longitude": "-111.724200",
+  "weight": 1,
+  "zip": "85206-1980"
+}, {
+  "latitude": "32.392300",
+  "longitude": "-84.931500",
+  "weight": 1,
+  "zip": "31905-6527"
+}, {
+  "latitude": "34.485400",
+  "longitude": "-91.548700",
+  "weight": 1,
+  "zip": "72160-6506"
+}, {
+  "latitude": "30.915600",
+  "longitude": "-101.915200",
+  "weight": 1,
+  "zip": "79744-0394"
+}, {
+  "latitude": "40.370700",
+  "longitude": "-74.008400",
+  "weight": 1,
+  "zip": "07760-2341"
+}, {
+  "latitude": "36.558200",
+  "longitude": "-87.122600",
+  "weight": 1,
+  "zip": "37010"
+}, {
+  "latitude": "43.013500",
+  "longitude": "-85.602700",
+  "weight": 1,
+  "zip": "49525-9449"
+}, {
+  "latitude": "41.940400",
+  "longitude": "-124.158700",
+  "weight": 1,
+  "zip": "95567-9309"
+}, {
+  "latitude": "28.730400",
+  "longitude": "-82.307700",
+  "weight": 2,
+  "zip": "34436-3358"
+}, {
+  "latitude": "39.539400",
+  "longitude": "-76.356400",
+  "weight": 2,
+  "zip": "21014-4146"
+}, {
+  "latitude": "43.127623",
+  "longitude": "-80.299329",
+  "weight": 3,
+  "zip": "N3T 6S9"
+}, {
+  "latitude": "36.494200",
+  "longitude": "-87.878700",
+  "weight": 1,
+  "zip": "37058-0760"
+}, {
+  "latitude": "39.040700",
+  "longitude": "-76.681900",
+  "weight": 1,
+  "zip": "21054-1403"
+}, {
+  "latitude": "36.820500",
+  "longitude": "-108.011000",
+  "weight": 1,
+  "zip": "87410-9510"
+}, {
+  "latitude": "42.849900",
+  "longitude": "-73.785100",
+  "weight": 1,
+  "zip": "12065-1670"
+}, {
+  "latitude": "39.634100",
+  "longitude": "-106.758800",
+  "weight": 1,
+  "zip": "81631-4706"
+}, {
+  "latitude": "49.874889",
+  "longitude": "-97.309318",
+  "weight": 1,
+  "zip": "R3K 0M1"
+}, {
+  "latitude": "43.089200",
+  "longitude": "-77.436000",
+  "weight": 1,
+  "zip": "14450-1438"
+}, {
+  "latitude": "41.311100",
+  "longitude": "-82.612600",
+  "weight": 1,
+  "zip": "44846-0386"
+}, {
+  "latitude": "35.106000",
+  "longitude": "-114.594700",
+  "weight": 1,
+  "zip": "86442-4727"
+}, {
+  "latitude": "42.534000",
+  "longitude": "-83.528500",
+  "weight": 1,
+  "zip": "48393"
+}, {
+  "latitude": "46.944800",
+  "longitude": "-116.914100",
+  "weight": 1,
+  "zip": "83855-8763"
+}, {
+  "latitude": "29.517300",
+  "longitude": "-95.096300",
+  "weight": 1,
+  "zip": "77573-1884"
+}, {
+  "latitude": "41.945300",
+  "longitude": "-87.747400",
+  "weight": 1,
+  "zip": "60641-3174"
+}, {
+  "latitude": "53.553155",
+  "longitude": "-113.438116",
+  "weight": 1,
+  "zip": "T6H 2B3"
+}, {
+  "latitude": "34.045100",
+  "longitude": "-118.185900",
+  "weight": 1,
+  "zip": "90063-2834"
+}, {
+  "latitude": "34.737500",
+  "longitude": "-77.462800",
+  "weight": 4,
+  "zip": "28540-6053"
+}, {
+  "latitude": "33.216400",
+  "longitude": "-105.774300",
+  "weight": 1,
+  "zip": "88340"
+}, {
+  "latitude": "51.789218",
+  "longitude": "-114.130377",
+  "weight": 1,
+  "zip": "T4H 1X9"
+}, {
+  "latitude": "42.458600",
+  "longitude": "-83.136300",
+  "weight": 1,
+  "zip": "48220-3417"
+}, {
+  "latitude": "38.976600",
+  "longitude": "-76.805300",
+  "weight": 1,
+  "zip": "20769"
+}, {
+  "latitude": "47.793300",
+  "longitude": "-117.311700",
+  "weight": 1,
+  "zip": "99021-9375"
+}, {
+  "latitude": "39.264000",
+  "longitude": "-78.198900",
+  "weight": 1,
+  "zip": "22603-3568"
+}, {
+  "latitude": "40.656800",
+  "longitude": "-111.890400",
+  "weight": 2,
+  "zip": "84107-2448"
+}, {
+  "latitude": "49.838529",
+  "longitude": "-119.652966",
+  "weight": 1,
+  "zip": "V4T 1H3"
+}, {
+  "latitude": "34.299800",
+  "longitude": "-110.000000",
+  "weight": 1,
+  "zip": "85901-4301"
+}, {
+  "latitude": "37.309200",
+  "longitude": "-113.476200",
+  "weight": 4,
+  "zip": "84771-0157"
+}, {
+  "latitude": "37.306600",
+  "longitude": "-122.000200",
+  "weight": 1,
+  "zip": "95129-2513"
+}, {
+  "latitude": "39.019100",
+  "longitude": "-77.007600",
+  "weight": 1,
+  "zip": "20901-1657"
+}, {
+  "latitude": "37.478200",
+  "longitude": "-77.585400",
+  "weight": 3,
+  "zip": "23236-3192"
+}, {
+  "latitude": "35.068400",
+  "longitude": "-108.833600",
+  "weight": 4,
+  "zip": "87327-0024"
+}, {
+  "latitude": "40.760900",
+  "longitude": "-72.987100",
+  "weight": 1,
+  "zip": "11772-5704"
+}, {
+  "latitude": "56.723096",
+  "longitude": "-111.429922",
+  "weight": 1,
+  "zip": "T9H 3B3"
+}, {
+  "latitude": "35.083100",
+  "longitude": "-80.659700",
+  "weight": 1,
+  "zip": "28079-5238"
+}, {
+  "latitude": "37.211700",
+  "longitude": "-93.299000",
+  "weight": 1,
+  "zip": "65802-2694"
+}, {
+  "latitude": "45.518700",
+  "longitude": "-107.481700",
+  "weight": 1,
+  "zip": "59031-0142"
+}, {
+  "latitude": "34.775700",
+  "longitude": "-112.473100",
+  "weight": 1,
+  "zip": "86323-7054"
+}, {
+  "latitude": "35.538000",
+  "longitude": "-100.957900",
+  "weight": 2,
+  "zip": "79065-4302"
+}, {
+  "latitude": "40.335500",
+  "longitude": "-104.923600",
+  "weight": 5,
+  "zip": "80534-4614"
+}, {
+  "latitude": "35.485200",
+  "longitude": "-94.779000",
+  "weight": 1,
+  "zip": "74955-3214"
+}, {
+  "latitude": "34.508700",
+  "longitude": "-82.510100",
+  "weight": 6,
+  "zip": "29627-9119"
+}, {
+  "latitude": "52.119228",
+  "longitude": "-106.401350",
+  "weight": 5,
+  "zip": "S7K 3J6"
+}, {
+  "latitude": "41.533500",
+  "longitude": "-87.422800",
+  "weight": 1,
+  "zip": "46319-1413"
+}, {
+  "latitude": "55.167119",
+  "longitude": "-118.780265",
+  "weight": 1,
+  "zip": "T8V 0H6"
+}, {
+  "latitude": "44.097100",
+  "longitude": "-87.682300",
+  "weight": 1,
+  "zip": "54220-2816"
+}, {
+  "latitude": "40.784500",
+  "longitude": "-73.640300",
+  "weight": 1,
+  "zip": "11577-2026"
+}, {
+  "latitude": "40.263500",
+  "longitude": "-75.617200",
+  "weight": 1,
+  "zip": "19464-1937"
+}, {
+  "latitude": "39.061900",
+  "longitude": "-96.787300",
+  "weight": 5,
+  "zip": "66442-5036"
+}, {
+  "latitude": "43.962770",
+  "longitude": "-78.180354",
+  "weight": 1,
+  "zip": "K9A 4X7"
+}, {
+  "latitude": "61.275300",
+  "longitude": "-149.675500",
+  "weight": 1,
+  "zip": "99505-1223"
+}, {
+  "latitude": "41.087900",
+  "longitude": "-111.970400",
+  "weight": 3,
+  "zip": "84041-2631"
+}, {
+  "latitude": "44.276700",
+  "longitude": "-121.189600",
+  "weight": 1,
+  "zip": "97756-2376"
+}, {
+  "latitude": "41.092800",
+  "longitude": "-74.265900",
+  "weight": 1,
+  "zip": "07456-1018"
+}, {
+  "latitude": "35.981500",
+  "longitude": "-78.539200",
+  "weight": 2,
+  "zip": "27587-5452"
+}, {
+  "latitude": "40.029000",
+  "longitude": "-74.883500",
+  "weight": 1,
+  "zip": "08046-2204"
+}, {
+  "latitude": "38.833800",
+  "longitude": "-90.293600",
+  "weight": 1,
+  "zip": "63034-3210"
+}, {
+  "latitude": "43.608491",
+  "longitude": "-79.592994",
+  "weight": 1,
+  "zip": "L4Y 2G8"
+}, {
+  "latitude": "45.124300",
+  "longitude": "-93.499600",
+  "weight": 1,
+  "zip": "55311-4542"
+}, {
+  "latitude": "36.139600",
+  "longitude": "-97.063000",
+  "weight": 1,
+  "zip": "74075-8105"
+}, {
+  "latitude": "32.531600",
+  "longitude": "-97.309000",
+  "weight": 1,
+  "zip": "76028-2589"
+}, {
+  "latitude": "36.763400",
+  "longitude": "-76.339700",
+  "weight": 1,
+  "zip": "23323-6672"
+}, {
+  "latitude": "40.292600",
+  "longitude": "-79.410300",
+  "weight": 1,
+  "zip": "15650-1612"
+}, {
+  "latitude": "39.388100",
+  "longitude": "-77.172300",
+  "weight": 1,
+  "zip": "21771-2842"
+}, {
+  "latitude": "32.577300",
+  "longitude": "-97.141600",
+  "weight": 1,
+  "zip": "76063-8104"
+}, {
+  "latitude": "34.758000",
+  "longitude": "-76.622800",
+  "weight": 1,
+  "zip": "28516-7500"
+}, {
+  "latitude": "54.549334",
+  "longitude": "-128.666797",
+  "weight": 1,
+  "zip": "V8G 0C8"
+}, {
+  "latitude": "43.867300",
+  "longitude": "-92.454700",
+  "weight": 1,
+  "zip": "55976"
+}, {
+  "latitude": "44.100707",
+  "longitude": "-79.430029",
+  "weight": 1,
+  "zip": "L0G 1V0"
+}, {
+  "latitude": "26.047600",
+  "longitude": "-80.144700",
+  "weight": 1,
+  "zip": "33004-5838"
+}, {
+  "latitude": "30.420700",
+  "longitude": "-90.058900",
+  "weight": 1,
+  "zip": "70471-3338"
+}, {
+  "latitude": "40.282500",
+  "longitude": "-74.342400",
+  "weight": 1,
+  "zip": "07726-2935"
+}, {
+  "latitude": "39.946600",
+  "longitude": "-74.076500",
+  "weight": 1,
+  "zip": "08751-1822"
+}, {
+  "latitude": "34.902400",
+  "longitude": "-82.705800",
+  "weight": 1,
+  "zip": "29671-9213"
+}, {
+  "latitude": "44.828800",
+  "longitude": "-93.039100",
+  "weight": 1,
+  "zip": "55076-4340"
+}, {
+  "latitude": "26.047600",
+  "longitude": "-80.144700",
+  "weight": 2,
+  "zip": "33004-4238"
+}, {
+  "latitude": "32.821100",
+  "longitude": "-97.175600",
+  "weight": 1,
+  "zip": "76053-6507"
+}, {
+  "latitude": "38.618500",
+  "longitude": "-90.256400",
+  "weight": 1,
+  "zip": "63110-2202"
+}, {
+  "latitude": "35.823100",
+  "longitude": "-80.262000",
+  "weight": 4,
+  "zip": "27292-6028"
+}, {
+  "latitude": "33.624300",
+  "longitude": "-117.088500",
+  "weight": 3,
+  "zip": "92596-9163"
+}, {
+  "latitude": "40.413900",
+  "longitude": "-79.576400",
+  "weight": 1,
+  "zip": "15626-1583"
+}, {
+  "latitude": "38.716800",
+  "longitude": "-112.065700",
+  "weight": 4,
+  "zip": "84711-0334"
+}, {
+  "latitude": "42.230800",
+  "longitude": "-88.332400",
+  "weight": 1,
+  "zip": "60014-6022"
+}, {
+  "latitude": "42.733400",
+  "longitude": "-78.838900",
+  "weight": 1,
+  "zip": "14075"
+}, {
+  "latitude": "40.495400",
+  "longitude": "-111.944400",
+  "weight": 1,
+  "zip": "84065-7801"
+}, {
+  "latitude": "41.635000",
+  "longitude": "-87.736200",
+  "weight": 1,
+  "zip": "60445-1288"
+}, {
+  "latitude": "44.438800",
+  "longitude": "-88.080600",
+  "weight": 1,
+  "zip": "54115-2401"
+}, {
+  "latitude": "52.252781",
+  "longitude": "-113.793611",
+  "weight": 1,
+  "zip": "T4N 0N1"
+}, {
+  "latitude": "41.132600",
+  "longitude": "-100.774600",
+  "weight": 1,
+  "zip": "69101-5118"
+}, {
+  "latitude": "47.755600",
+  "longitude": "-117.414600",
+  "weight": 1,
+  "zip": "99218-1711"
+}, {
+  "latitude": "35.491600",
+  "longitude": "-84.339500",
+  "weight": 1,
+  "zip": "37354-5864"
+}, {
+  "latitude": "30.050500",
+  "longitude": "-95.469500",
+  "weight": 2,
+  "zip": "77388-4060"
+}, {
+  "latitude": "35.965600",
+  "longitude": "-86.504800",
+  "weight": 1,
+  "zip": "37167-2724"
+}, {
+  "latitude": "36.254000",
+  "longitude": "-82.625000",
+  "weight": 4,
+  "zip": "37681-0067"
+}, {
+  "latitude": "38.360400",
+  "longitude": "-86.929500",
+  "weight": 1,
+  "zip": "47546-3839"
+}, {
+  "latitude": "56.728408",
+  "longitude": "-111.454376",
+  "weight": 1,
+  "zip": "T9K 1G8"
+}, {
+  "latitude": "33.284800",
+  "longitude": "-111.656100",
+  "weight": 1,
+  "zip": "85142-3068"
+}, {
+  "latitude": "49.240351",
+  "longitude": "-117.688602",
+  "weight": 1,
+  "zip": "V1N 3Z9"
+}, {
+  "latitude": "38.661600",
+  "longitude": "-90.830200",
+  "weight": 1,
+  "zip": "63341-2402"
+}, {
+  "latitude": "39.923000",
+  "longitude": "-82.866400",
+  "weight": 1,
+  "zip": "43232-6490"
+}, {
+  "latitude": "48.624407",
+  "longitude": "-93.651898",
+  "weight": 1,
+  "zip": "P0W 1C0"
+}, {
+  "latitude": "38.989800",
+  "longitude": "-76.550100",
+  "weight": 1,
+  "zip": "21401-7259"
+}, {
+  "latitude": "33.515900",
+  "longitude": "-101.934400",
+  "weight": 3,
+  "zip": "79424-4002"
+}, {
+  "latitude": "39.322800",
+  "longitude": "-82.259400",
+  "weight": 1,
+  "zip": "45766-9502"
+}, {
+  "latitude": "31.686200",
+  "longitude": "-91.867800",
+  "weight": 1,
+  "zip": "71343-0006"
+}, {
+  "latitude": "40.668500",
+  "longitude": "-73.553600",
+  "weight": 1,
+  "zip": "11566-4626"
+}, {
+  "latitude": "39.107200",
+  "longitude": "-84.502000",
+  "weight": 1,
+  "zip": "45202-5801"
+}, {
+  "latitude": "39.024800",
+  "longitude": "-94.682600",
+  "weight": 1,
+  "zip": "66202-2316"
+}, {
+  "latitude": "42.904700",
+  "longitude": "-88.121400",
+  "weight": 1,
+  "zip": "53150-2940"
+}, {
+  "latitude": "40.635700",
+  "longitude": "-88.806200",
+  "weight": 2,
+  "zip": "61753"
+}, {
+  "latitude": "43.544100",
+  "longitude": "-116.566000",
+  "weight": 3,
+  "zip": "83686-2922"
+}, {
+  "latitude": "39.852000",
+  "longitude": "-75.500700",
+  "weight": 1,
+  "zip": "19060-1111"
+}, {
+  "latitude": "34.045100",
+  "longitude": "-118.185900",
+  "weight": 1,
+  "zip": "90063-3202"
+}, {
+  "latitude": "36.060000",
+  "longitude": "-90.525100",
+  "weight": 1,
+  "zip": "72450-8673"
+}, {
+  "latitude": "53.888377",
+  "longitude": "-114.900112",
+  "weight": 1,
+  "zip": "T0E 2A0"
+}, {
+  "latitude": "26.472200",
+  "longitude": "-81.812200",
+  "weight": 1,
+  "zip": "33967-5785"
+}, {
+  "latitude": "40.999900",
+  "longitude": "-79.352700",
+  "weight": 1,
+  "zip": "16242-1229"
+}, {
+  "latitude": "45.668100",
+  "longitude": "-111.240400",
+  "weight": 1,
+  "zip": "59718-6835"
+}, {
+  "latitude": "50.730793",
+  "longitude": "-111.907697",
+  "weight": 1,
+  "zip": "T0J 0Z0"
+}, {
+  "latitude": "45.659600",
+  "longitude": "-68.710100",
+  "weight": 1,
+  "zip": "04462-1527"
+}, {
+  "latitude": "41.030200",
+  "longitude": "-74.519800",
+  "weight": 1,
+  "zip": "07438-8887"
+}, {
+  "latitude": "34.695300",
+  "longitude": "-99.917700",
+  "weight": 2,
+  "zip": "73550-3034"
+}, {
+  "latitude": "33.752900",
+  "longitude": "-112.089300",
+  "weight": 1,
+  "zip": "85085-6653"
+}, {
+  "latitude": "37.470300",
+  "longitude": "-105.878600",
+  "weight": 1,
+  "zip": "81101-9709"
+}, {
+  "latitude": "49.458798",
+  "longitude": "-119.598842",
+  "weight": 1,
+  "zip": "V2A 6J7"
+}, {
+  "latitude": "39.737800",
+  "longitude": "-104.815200",
+  "weight": 1,
+  "zip": "80011-3618"
+}, {
+  "latitude": "50.482697",
+  "longitude": "-104.663873",
+  "weight": 1,
+  "zip": "S4R 5N2"
+}, {
+  "latitude": "40.009100",
+  "longitude": "-76.367100",
+  "weight": 1,
+  "zip": "17603"
+}, {
+  "latitude": "36.189700",
+  "longitude": "-86.502300",
+  "weight": 1,
+  "zip": "37122-7461"
+}, {
+  "latitude": "40.674700",
+  "longitude": "-95.861900",
+  "weight": 1,
+  "zip": "68410-1237"
+}, {
+  "latitude": "39.479900",
+  "longitude": "-84.459800",
+  "weight": 1,
+  "zip": "45067-1087"
+}, {
+  "latitude": "42.473500",
+  "longitude": "-83.522400",
+  "weight": 1,
+  "zip": "48374-2370"
+}, {
+  "latitude": "48.824792",
+  "longitude": "-124.051837",
+  "weight": 1,
+  "zip": "V0R 2G0"
+}, {
+  "latitude": "34.542600",
+  "longitude": "-77.403800",
+  "weight": 1,
+  "zip": "28460-9652"
+}, {
+  "latitude": "35.035200",
+  "longitude": "-107.433900",
+  "weight": 1,
+  "zip": "87007-0612"
+}, {
+  "latitude": "48.324347",
+  "longitude": "-89.357848",
+  "weight": 1,
+  "zip": "P7J 1H6"
+}, {
+  "latitude": "37.646500",
+  "longitude": "-84.774700",
+  "weight": 1,
+  "zip": "40422-2900"
+}, {
+  "latitude": "37.620600",
+  "longitude": "-87.059100",
+  "weight": 1,
+  "zip": "42376"
+}, {
+  "latitude": "32.805900",
+  "longitude": "-94.365500",
+  "weight": 1,
+  "zip": "75657-2132"
+}, {
+  "latitude": "38.881200",
+  "longitude": "-78.047800",
+  "weight": 4,
+  "zip": "22642-6460"
+}, {
+  "latitude": "33.648300",
+  "longitude": "-117.915500",
+  "weight": 1,
+  "zip": "92627-5765"
+}, {
+  "latitude": "36.510700",
+  "longitude": "-87.275700",
+  "weight": 1,
+  "zip": "37043-1620"
+}, {
+  "latitude": "55.152776",
+  "longitude": "-119.141842",
+  "weight": 1,
+  "zip": "T0H 3S0"
+}, {
+  "latitude": "50.157880",
+  "longitude": "-115.813966",
+  "weight": 5,
+  "zip": "V0B 1B0"
+}, {
+  "latitude": "28.752500",
+  "longitude": "-97.033800",
+  "weight": 1,
+  "zip": "77905-2720"
+}, {
+  "latitude": "35.294400",
+  "longitude": "-118.905200",
+  "weight": 1,
+  "zip": "93222-5318"
+}, {
+  "latitude": "39.049600",
+  "longitude": "-77.120400",
+  "weight": 1,
+  "zip": "20852-4448"
+}, {
+  "latitude": "43.522773",
+  "longitude": "-79.846572",
+  "weight": 2,
+  "zip": "L9T 8L7"
+}, {
+  "latitude": "41.100900",
+  "longitude": "-79.688900",
+  "weight": 1,
+  "zip": "16049-5237"
+}, {
+  "latitude": "44.080387",
+  "longitude": "-77.395527",
+  "weight": 1,
+  "zip": "K0K 1A0"
+}, {
+  "latitude": "41.550300",
+  "longitude": "-72.996300",
+  "weight": 2,
+  "zip": "06705-3414"
+}, {
+  "latitude": "36.723800",
+  "longitude": "-79.914200",
+  "weight": 3,
+  "zip": "24078-2960"
+}, {
+  "latitude": "39.070500",
+  "longitude": "-89.744800",
+  "weight": 2,
+  "zip": "62069-1819"
+}, {
+  "latitude": "44.965400",
+  "longitude": "-89.706600",
+  "weight": 1,
+  "zip": "54401-8619"
+}, {
+  "latitude": "36.012900",
+  "longitude": "-115.211800",
+  "weight": 2,
+  "zip": "89139-5381"
+}, {
+  "latitude": "47.517300",
+  "longitude": "-120.503300",
+  "weight": 1,
+  "zip": "98815-1248"
+}, {
+  "latitude": "37.671700",
+  "longitude": "-120.948200",
+  "weight": 3,
+  "zip": "95355-4222"
+}, {
+  "latitude": "41.427400",
+  "longitude": "-75.646500",
+  "weight": 1,
+  "zip": "18509-2043"
+}, {
+  "latitude": "39.552000",
+  "longitude": "-77.695700",
+  "weight": 2,
+  "zip": "21713-2141"
+}, {
+  "latitude": "41.886000",
+  "longitude": "-88.311000",
+  "weight": 1,
+  "zip": "60134-3905"
+}, {
+  "latitude": "44.977900",
+  "longitude": "-93.219900",
+  "weight": 2,
+  "zip": "55414-1431"
+}, {
+  "latitude": "42.723500",
+  "longitude": "-71.489300",
+  "weight": 1,
+  "zip": "03062-2858"
+}, {
+  "latitude": "42.999300",
+  "longitude": "-88.219600",
+  "weight": 2,
+  "zip": "53186-2934"
+}, {
+  "latitude": "41.476700",
+  "longitude": "-120.545600",
+  "weight": 6,
+  "zip": "96101-3046"
+}, {
+  "latitude": "52.990430",
+  "longitude": "-108.152668",
+  "weight": 1,
+  "zip": "S0M 0M0"
+}, {
+  "latitude": "42.615800",
+  "longitude": "-73.837300",
+  "weight": 1,
+  "zip": "12054-2540"
+}, {
+  "latitude": "33.848200",
+  "longitude": "-84.358200",
+  "weight": 9,
+  "zip": "30326-4801"
+}, {
+  "latitude": "49.723162",
+  "longitude": "-112.636087",
+  "weight": 1,
+  "zip": "T1M 0B4"
+}, {
+  "latitude": "43.939900",
+  "longitude": "-93.704300",
+  "weight": 1,
+  "zip": "56091-2603"
+}, {
+  "latitude": "38.733400",
+  "longitude": "-88.080900",
+  "weight": 1,
+  "zip": "62450-6918"
+}, {
+  "latitude": "41.116400",
+  "longitude": "-74.586500",
+  "weight": 1,
+  "zip": "07416-1604"
+}, {
+  "latitude": "35.904500",
+  "longitude": "-100.384100",
+  "weight": 1,
+  "zip": "79014-0402"
+}, {
+  "latitude": "40.768500",
+  "longitude": "-73.958800",
+  "weight": 1,
+  "zip": "10021-4674"
+}, {
+  "latitude": "32.454100",
+  "longitude": "-80.600300",
+  "weight": 1,
+  "zip": "29907-1266"
+}, {
+  "latitude": "43.010325",
+  "longitude": "-81.237428",
+  "weight": 1,
+  "zip": "N5Y 4G4"
+}, {
+  "latitude": "39.245800",
+  "longitude": "-96.633600",
+  "weight": 1,
+  "zip": "66503-8031"
+}, {
+  "latitude": "36.003600",
+  "longitude": "-80.003600",
+  "weight": 3,
+  "zip": "27265-7309"
+}, {
+  "latitude": "41.488400",
+  "longitude": "-88.157200",
+  "weight": 2,
+  "zip": "60436-1103"
+}, {
+  "latitude": "41.424000",
+  "longitude": "-73.471600",
+  "weight": 1,
+  "zip": "06811-3887"
+}, {
+  "latitude": "40.301400",
+  "longitude": "-109.863700",
+  "weight": 1,
+  "zip": "84026-0095"
+}, {
+  "latitude": "40.679500",
+  "longitude": "-73.491000",
+  "weight": 1,
+  "zip": "11783-3638"
+}, {
+  "latitude": "49.729252",
+  "longitude": "-112.816556",
+  "weight": 1,
+  "zip": "T1H 5X7"
+}, {
+  "latitude": "44.860500",
+  "longitude": "-85.813800",
+  "weight": 2,
+  "zip": "49621-9316"
+}, {
+  "latitude": "38.463100",
+  "longitude": "-122.990000",
+  "weight": 1,
+  "zip": "94927-2201"
+}, {
+  "latitude": "32.528600",
+  "longitude": "-92.106100",
+  "weight": 1,
+  "zip": "71201-3045"
+}, {
+  "latitude": "34.256000",
+  "longitude": "-90.634800",
+  "weight": 1,
+  "zip": "38614-2705"
+}, {
+  "latitude": "43.551400",
+  "longitude": "-96.737500",
+  "weight": 1,
+  "zip": "57104-4720"
+}, {
+  "latitude": "40.904800",
+  "longitude": "-74.216800",
+  "weight": 1,
+  "zip": "07512-1665"
+}, {
+  "latitude": "40.964600",
+  "longitude": "-91.561400",
+  "weight": 1,
+  "zip": "52641-2636"
+}, {
+  "latitude": "46.004309",
+  "longitude": "-60.171349",
+  "weight": 4,
+  "zip": "B1K 3M5"
+}, {
+  "latitude": "40.913600",
+  "longitude": "-73.046400",
+  "weight": 6,
+  "zip": "11776-2954"
+}, {
+  "latitude": "40.734500",
+  "longitude": "-75.618600",
+  "weight": 1,
+  "zip": "18080"
+}, {
+  "latitude": "52.121498",
+  "longitude": "-106.586764",
+  "weight": 1,
+  "zip": "S7H 4G3"
+}, {
+  "latitude": "38.432500",
+  "longitude": "-90.202700",
+  "weight": 1,
+  "zip": "62236-2678"
+}, {
+  "latitude": "41.505800",
+  "longitude": "-71.621100",
+  "weight": 1,
+  "zip": "02892-1158"
+}, {
+  "latitude": "33.342500",
+  "longitude": "-111.635300",
+  "weight": 1,
+  "zip": "85212-3633"
+}, {
+  "latitude": "33.603500",
+  "longitude": "-86.466800",
+  "weight": 1,
+  "zip": "35004-3021"
+}, {
+  "latitude": "28.313400",
+  "longitude": "-80.731900",
+  "weight": 1,
+  "zip": "32955-6318"
+}, {
+  "latitude": "42.994900",
+  "longitude": "-88.036400",
+  "weight": 3,
+  "zip": "53227-4718"
+}, {
+  "latitude": "43.323300",
+  "longitude": "-78.381100",
+  "weight": 1,
+  "zip": "14098-9741"
+}, {
+  "latitude": "40.822300",
+  "longitude": "-74.456900",
+  "weight": 2,
+  "zip": "07927-1215"
+}, {
+  "latitude": "39.742300",
+  "longitude": "-76.684100",
+  "weight": 5,
+  "zip": "17349-9507"
+}, {
+  "latitude": "26.152000",
+  "longitude": "-80.316500",
+  "weight": 1,
+  "zip": "33323"
+}, {
+  "latitude": "49.892157",
+  "longitude": "-119.460649",
+  "weight": 1,
+  "zip": "V1Y 4K8"
+}, {
+  "latitude": "34.250500",
+  "longitude": "-84.490900",
+  "weight": 4,
+  "zip": "30114-6100"
+}, {
+  "latitude": "42.368300",
+  "longitude": "-72.768800",
+  "weight": 1,
+  "zip": "01027-2038"
+}, {
+  "latitude": "37.674600",
+  "longitude": "-121.011300",
+  "weight": 2,
+  "zip": "95350-0472"
+}, {
+  "latitude": "36.046700",
+  "longitude": "-95.884100",
+  "weight": 1,
+  "zip": "74133-5635"
+}, {
+  "latitude": "33.502500",
+  "longitude": "-80.859300",
+  "weight": 1,
+  "zip": "29115-5336"
+}, {
+  "latitude": "46.975483",
+  "longitude": "-71.016973",
+  "weight": 1,
+  "zip": "G0A 1N0"
+}, {
+  "latitude": "40.171700",
+  "longitude": "-80.256000",
+  "weight": 1,
+  "zip": "15301-2116"
+}, {
+  "latitude": "39.907200",
+  "longitude": "-77.636000",
+  "weight": 1,
+  "zip": "17202-7944"
+}, {
+  "latitude": "29.629900",
+  "longitude": "-90.726800",
+  "weight": 1,
+  "zip": "70364-2344"
+}, {
+  "latitude": "41.597000",
+  "longitude": "-72.982800",
+  "weight": 1,
+  "zip": "06716-2011"
+}, {
+  "latitude": "52.777405",
+  "longitude": "-111.693159",
+  "weight": 2,
+  "zip": "T0B 4C0"
+}, {
+  "latitude": "52.108333",
+  "longitude": "-101.266909",
+  "weight": 1,
+  "zip": "R0L 1Z0"
+}, {
+  "latitude": "33.941300",
+  "longitude": "-118.035600",
+  "weight": 1,
+  "zip": "90605-2302"
+}, {
+  "latitude": "42.070200",
+  "longitude": "-72.622700",
+  "weight": 1,
+  "zip": "01001-2231"
+}, {
+  "latitude": "40.508500",
+  "longitude": "-74.244500",
+  "weight": 5,
+  "zip": "10307-2313"
+}, {
+  "latitude": "39.927400",
+  "longitude": "-104.954800",
+  "weight": 2,
+  "zip": "80241-3001"
+}, {
+  "latitude": "28.854700",
+  "longitude": "-82.666900",
+  "weight": 5,
+  "zip": "34429-7694"
+}, {
+  "latitude": "33.304800",
+  "longitude": "-108.774300",
+  "weight": 1,
+  "zip": "88039-9704"
+}, {
+  "latitude": "52.604723",
+  "longitude": "-94.042358",
+  "weight": 2,
+  "zip": "P0V 1N0"
+}, {
+  "latitude": "40.247700",
+  "longitude": "-83.362200",
+  "weight": 1,
+  "zip": "43040-7016"
+}, {
+  "latitude": "38.429300",
+  "longitude": "-76.725400",
+  "weight": 1,
+  "zip": "20659-3639"
+}, {
+  "latitude": "35.999000",
+  "longitude": "-79.929300",
+  "weight": 1,
+  "zip": "27282-9231"
+}, {
+  "latitude": "45.561038",
+  "longitude": "-62.720080",
+  "weight": 2,
+  "zip": "B0K 2A0"
+}, {
+  "latitude": "39.953100",
+  "longitude": "-84.324200",
+  "weight": 2,
+  "zip": "45383-9602"
+}, {
+  "latitude": "41.027700",
+  "longitude": "-74.640700",
+  "weight": 1,
+  "zip": "07871-3460"
+}, {
+  "latitude": "50.710218",
+  "longitude": "-103.012896",
+  "weight": 1,
+  "zip": "S4P 2Z3"
+}, {
+  "latitude": "35.055200",
+  "longitude": "-80.819500",
+  "weight": 1,
+  "zip": "28277-4121"
+}, {
+  "latitude": "34.196200",
+  "longitude": "-101.725900",
+  "weight": 1,
+  "zip": "79072-7058"
+}, {
+  "latitude": "39.298900",
+  "longitude": "-94.436300",
+  "weight": 3,
+  "zip": "64068-1253"
+}, {
+  "latitude": "38.863500",
+  "longitude": "-77.193900",
+  "weight": 4,
+  "zip": "22042-3833"
+}, {
+  "latitude": "29.459700",
+  "longitude": "-98.655500",
+  "weight": 1,
+  "zip": "78251-2520"
+}, {
+  "latitude": "41.108400",
+  "longitude": "-104.810700",
+  "weight": 1,
+  "zip": "82007-2715"
+}, {
+  "latitude": "42.453100",
+  "longitude": "-73.247100",
+  "weight": 1,
+  "zip": "01201-7115"
+}, {
+  "latitude": "34.029000",
+  "longitude": "-118.400500",
+  "weight": 4,
+  "zip": "90034-5868"
+}, {
+  "latitude": "35.303900",
+  "longitude": "-119.105600",
+  "weight": 1,
+  "zip": "93311-2196"
+}, {
+  "latitude": "40.808300",
+  "longitude": "-73.130500",
+  "weight": 1,
+  "zip": "11779-6231"
+}, {
+  "latitude": "21.345300",
+  "longitude": "-158.087000",
+  "weight": 1,
+  "zip": "96707"
+}, {
+  "latitude": "42.472300",
+  "longitude": "-85.703500",
+  "weight": 1,
+  "zip": "49078-1599"
+}, {
+  "latitude": "43.771880",
+  "longitude": "-79.261551",
+  "weight": 1,
+  "zip": "M1P 5B4"
+}, {
+  "latitude": "42.913500",
+  "longitude": "-82.481300",
+  "weight": 1,
+  "zip": "48040-1736"
+}, {
+  "latitude": "27.829300",
+  "longitude": "-82.135700",
+  "weight": 1,
+  "zip": "33547-3935"
+}, {
+  "latitude": "39.537000",
+  "longitude": "-83.455000",
+  "weight": 3,
+  "zip": "43160-2533"
+}, {
+  "latitude": "32.388600",
+  "longitude": "-89.958400",
+  "weight": 1,
+  "zip": "39047-8155"
+}, {
+  "latitude": "37.354900",
+  "longitude": "-108.583700",
+  "weight": 1,
+  "zip": "81321-2869"
+}, {
+  "latitude": "41.595000",
+  "longitude": "-73.887600",
+  "weight": 1,
+  "zip": "12590-7029"
+}, {
+  "latitude": "44.670468",
+  "longitude": "-63.581629",
+  "weight": 1,
+  "zip": "B3A 1L4"
+}, {
+  "latitude": "33.939200",
+  "longitude": "-94.295900",
+  "weight": 1,
+  "zip": "71842-8957"
+}, {
+  "latitude": "41.285400",
+  "longitude": "-82.043100",
+  "weight": 1,
+  "zip": "44044-1215"
+}, {
+  "latitude": "33.979500",
+  "longitude": "-84.341100",
+  "weight": 3,
+  "zip": "30350-2472"
+}, {
+  "latitude": "37.425900",
+  "longitude": "-77.071100",
+  "weight": 1,
+  "zip": "23140-3560"
+}, {
+  "latitude": "49.721546",
+  "longitude": "-112.630581",
+  "weight": 1,
+  "zip": "T1M 0B3"
+}, {
+  "latitude": "51.067936",
+  "longitude": "-114.148841",
+  "weight": 1,
+  "zip": "T2T 4H4"
+}, {
+  "latitude": "40.174800",
+  "longitude": "-74.851900",
+  "weight": 1,
+  "zip": "19030-3236"
+}, {
+  "latitude": "34.171700",
+  "longitude": "-118.323100",
+  "weight": 1,
+  "zip": "91506-2953"
+}, {
+  "latitude": "35.141600",
+  "longitude": "-79.002500",
+  "weight": 1,
+  "zip": "28307-2148"
+}, {
+  "latitude": "42.233100",
+  "longitude": "-71.378700",
+  "weight": 4,
+  "zip": "01770-1053"
+}, {
+  "latitude": "40.625100",
+  "longitude": "-74.030300",
+  "weight": 2,
+  "zip": "11209-2903"
+}, {
+  "latitude": "40.768100",
+  "longitude": "-89.602600",
+  "weight": 4,
+  "zip": "61614-1729"
+}, {
+  "latitude": "43.765000",
+  "longitude": "-88.605700",
+  "weight": 1,
+  "zip": "54937-7101"
+}, {
+  "latitude": "39.298900",
+  "longitude": "-94.436300",
+  "weight": 1,
+  "zip": "64068-1377"
+}, {
+  "latitude": "36.888100",
+  "longitude": "-76.144600",
+  "weight": 1,
+  "zip": "23455-6233"
+}, {
+  "latitude": "34.106000",
+  "longitude": "-84.511700",
+  "weight": 1,
+  "zip": "30188-2216"
+}, {
+  "latitude": "40.889700",
+  "longitude": "-74.484400",
+  "weight": 1,
+  "zip": "07834-3025"
+}, {
+  "latitude": "42.728700",
+  "longitude": "-73.668300",
+  "weight": 1,
+  "zip": "12180-6980"
+}, {
+  "latitude": "36.446100",
+  "longitude": "-77.673100",
+  "weight": 3,
+  "zip": "27870"
+}, {
+  "latitude": "41.979800",
+  "longitude": "-88.085700",
+  "weight": 3,
+  "zip": "60172-1718"
+}, {
+  "latitude": "58.362800",
+  "longitude": "-134.529400",
+  "weight": 1,
+  "zip": "99801-8430"
+}, {
+  "latitude": "39.441300",
+  "longitude": "-84.365200",
+  "weight": 1,
+  "zip": "45050-1171"
+}, {
+  "latitude": "44.078200",
+  "longitude": "-116.920300",
+  "weight": 1,
+  "zip": "83661"
+}, {
+  "latitude": "42.680900",
+  "longitude": "-70.849400",
+  "weight": 3,
+  "zip": "01938-1805"
+}, {
+  "latitude": "33.990300",
+  "longitude": "-80.999700",
+  "weight": 1,
+  "zip": "29205-2521"
+}, {
+  "latitude": "33.309200",
+  "longitude": "-111.919800",
+  "weight": 1,
+  "zip": "85226-2631"
+}, {
+  "latitude": "40.888700",
+  "longitude": "-81.577300",
+  "weight": 1,
+  "zip": "44614"
+}, {
+  "latitude": "29.571400",
+  "longitude": "-98.541400",
+  "weight": 4,
+  "zip": "78231-1642"
+}, {
+  "latitude": "40.021000",
+  "longitude": "-82.807900",
+  "weight": 1,
+  "zip": "43004-8321"
+}, {
+  "latitude": "36.944200",
+  "longitude": "-76.252000",
+  "weight": 1,
+  "zip": "23503-4434"
+}, {
+  "latitude": "42.170500",
+  "longitude": "-87.859000",
+  "weight": 2,
+  "zip": "60015-5059"
+}, {
+  "latitude": "42.882100",
+  "longitude": "-97.398600",
+  "weight": 2,
+  "zip": "57078-2074"
+}, {
+  "latitude": "49.655292",
+  "longitude": "-103.859995",
+  "weight": 1,
+  "zip": "S4H 1Z3"
+}, {
+  "latitude": "36.522000",
+  "longitude": "-87.349000",
+  "weight": 1,
+  "zip": "37040-5458"
+}, {
+  "latitude": "39.970100",
+  "longitude": "-76.184800",
+  "weight": 1,
+  "zip": "17579-1014"
+}, {
+  "latitude": "42.437900",
+  "longitude": "-75.567300",
+  "weight": 1,
+  "zip": "13830-0175"
+}, {
+  "latitude": "32.631500",
+  "longitude": "-116.940800",
+  "weight": 1,
+  "zip": "91915-1596"
+}, {
+  "latitude": "31.876700",
+  "longitude": "-102.437500",
+  "weight": 1,
+  "zip": "79764-6868"
+}, {
+  "latitude": "41.593000",
+  "longitude": "-93.859200",
+  "weight": 1,
+  "zip": "50263-7021"
+}, {
+  "latitude": "37.763900",
+  "longitude": "-97.426900",
+  "weight": 1,
+  "zip": "67205-2144"
+}, {
+  "latitude": "54.588336",
+  "longitude": "-112.803156",
+  "weight": 2,
+  "zip": "T0A 0M0"
+}, {
+  "latitude": "43.194300",
+  "longitude": "-112.361500",
+  "weight": 1,
+  "zip": "83221"
+}, {
+  "latitude": "38.384900",
+  "longitude": "-82.503600",
+  "weight": 1,
+  "zip": "25704-9135"
+}, {
+  "latitude": "53.358536",
+  "longitude": "-106.602781",
+  "weight": 1,
+  "zip": "S0J 0K0"
+}, {
+  "latitude": "52.174847",
+  "longitude": "-106.634129",
+  "weight": 1,
+  "zip": "S7K 6T2"
+}, {
+  "latitude": "45.916100",
+  "longitude": "-89.253100",
+  "weight": 2,
+  "zip": "54521-8428"
+}, {
+  "latitude": "53.801340",
+  "longitude": "-113.643533",
+  "weight": 1,
+  "zip": "T8R 0C6"
+}, {
+  "latitude": "45.774500",
+  "longitude": "-108.500500",
+  "weight": 1,
+  "zip": "59101-0225"
+}, {
+  "latitude": "49.863395",
+  "longitude": "-97.164212",
+  "weight": 2,
+  "zip": "R3M 1L7"
+}, {
+  "latitude": "26.330400",
+  "longitude": "-81.587100",
+  "weight": 1,
+  "zip": "34120-4406"
+}, {
+  "latitude": "36.050100",
+  "longitude": "-83.922600",
+  "weight": 2,
+  "zip": "37918-2382"
+}, {
+  "latitude": "41.679000",
+  "longitude": "-88.140300",
+  "weight": 1,
+  "zip": "60490-3108"
+}, {
+  "latitude": "42.287500",
+  "longitude": "-71.357400",
+  "weight": 3,
+  "zip": "01760-4333"
+}, {
+  "latitude": "36.073200",
+  "longitude": "-102.517700",
+  "weight": 1,
+  "zip": "79022-2907"
+}, {
+  "latitude": "49.283081",
+  "longitude": "-112.209015",
+  "weight": 1,
+  "zip": "T0K 2L0"
+}, {
+  "latitude": "41.837900",
+  "longitude": "-87.821300",
+  "weight": 2,
+  "zip": "60546-1008"
+}, {
+  "latitude": "40.208400",
+  "longitude": "-74.829100",
+  "weight": 1,
+  "zip": "19067-1254"
+}, {
+  "latitude": "40.866200",
+  "longitude": "-73.900300",
+  "weight": 3,
+  "zip": "10468-4815"
+}, {
+  "latitude": "36.791800",
+  "longitude": "-119.880100",
+  "weight": 1,
+  "zip": "93722-3084"
+}, {
+  "latitude": "47.002000",
+  "longitude": "-88.554600",
+  "weight": 1,
+  "zip": "49916-9206"
+}, {
+  "latitude": "43.678513",
+  "longitude": "-79.342595",
+  "weight": 1,
+  "zip": "M4J 1K5"
+}, {
+  "latitude": "34.137600",
+  "longitude": "-117.599900",
+  "weight": 1,
+  "zip": "91701-6408"
+}, {
+  "latitude": "44.661500",
+  "longitude": "-90.178400",
+  "weight": 1,
+  "zip": "54449-8744"
+}, {
+  "latitude": "43.000598",
+  "longitude": "-81.316926",
+  "weight": 1,
+  "zip": "N6G 3P6"
+}, {
+  "latitude": "53.523780",
+  "longitude": "-113.262577",
+  "weight": 1,
+  "zip": "T8A 6G9"
+}, {
+  "latitude": "41.837100",
+  "longitude": "-87.963800",
+  "weight": 1,
+  "zip": "60523-1041"
+}, {
+  "latitude": "35.304700",
+  "longitude": "-99.642900",
+  "weight": 2,
+  "zip": "73662-2635"
+}, {
+  "latitude": "40.376500",
+  "longitude": "-75.264800",
+  "weight": 1,
+  "zip": "18944-1030"
+}, {
+  "latitude": "39.013500",
+  "longitude": "-89.785700",
+  "weight": 1,
+  "zip": "62088-1703"
+}, {
+  "latitude": "34.107400",
+  "longitude": "-118.365200",
+  "weight": 2,
+  "zip": "90046-5076"
+}, {
+  "latitude": "47.507300",
+  "longitude": "-122.181900",
+  "weight": 1,
+  "zip": "98056-2439"
+}, {
+  "latitude": "41.344400",
+  "longitude": "-87.611500",
+  "weight": 3,
+  "zip": "60401-3776"
+}, {
+  "latitude": "45.169700",
+  "longitude": "-93.188900",
+  "weight": 2,
+  "zip": "55449-5340"
+}, {
+  "latitude": "45.571300",
+  "longitude": "-94.203600",
+  "weight": 1,
+  "zip": "56303-1365"
+}, {
+  "latitude": "40.826100",
+  "longitude": "-73.819600",
+  "weight": 3,
+  "zip": "10465-1403"
+}, {
+  "latitude": "48.470030",
+  "longitude": "-123.440500",
+  "weight": 3,
+  "zip": "V9B 6N1"
+}, {
+  "latitude": "30.475400",
+  "longitude": "-99.747300",
+  "weight": 1,
+  "zip": "76849-4413"
+}, {
+  "latitude": "39.980300",
+  "longitude": "-90.741400",
+  "weight": 1,
+  "zip": "62353-0040"
+}, {
+  "latitude": "42.779000",
+  "longitude": "-71.474800",
+  "weight": 7,
+  "zip": "03064-2689"
+}, {
+  "latitude": "31.091700",
+  "longitude": "-97.364800",
+  "weight": 1,
+  "zip": "76504-3846"
+}, {
+  "latitude": "33.643700",
+  "longitude": "-117.686800",
+  "weight": 1,
+  "zip": "92630-5408"
+}, {
+  "latitude": "30.448500",
+  "longitude": "-91.130000",
+  "weight": 1,
+  "zip": "70806-7733"
+}, {
+  "latitude": "39.081100",
+  "longitude": "-76.557700",
+  "weight": 1,
+  "zip": "21146-3105"
+}, {
+  "latitude": "40.528500",
+  "longitude": "-75.566600",
+  "weight": 1,
+  "zip": "18062-9273"
+}, {
+  "latitude": "40.717300",
+  "longitude": "-73.879200",
+  "weight": 1,
+  "zip": "11379-2834"
+}, {
+  "latitude": "45.591849",
+  "longitude": "-73.766384",
+  "weight": 2,
+  "zip": "H7L 0B1"
+}, {
+  "latitude": "40.657100",
+  "longitude": "-74.643200",
+  "weight": 1,
+  "zip": "07921-1842"
+}, {
+  "latitude": "26.243500",
+  "longitude": "-80.260100",
+  "weight": 1,
+  "zip": "33071-8036"
+}, {
+  "latitude": "56.721692",
+  "longitude": "-111.436926",
+  "weight": 1,
+  "zip": "T9H 3V2"
+}, {
+  "latitude": "53.773609",
+  "longitude": "-78.893467",
+  "weight": 2,
+  "zip": "J0M 1E0"
+}, {
+  "latitude": "42.276800",
+  "longitude": "-83.375800",
+  "weight": 1,
+  "zip": "48184-1605"
+}, {
+  "latitude": "53.393993",
+  "longitude": "-117.579334",
+  "weight": 1,
+  "zip": "T7V 1J6"
+}, {
+  "latitude": "44.710990",
+  "longitude": "-63.546768",
+  "weight": 1,
+  "zip": "B2X 2P7"
+}, {
+  "latitude": "32.114700",
+  "longitude": "-90.324100",
+  "weight": 1,
+  "zip": "39170-9789"
+}, {
+  "latitude": "39.927400",
+  "longitude": "-104.954800",
+  "weight": 1,
+  "zip": "80241"
+}, {
+  "latitude": "36.147200",
+  "longitude": "-119.079200",
+  "weight": 1,
+  "zip": "93267-9641"
+}, {
+  "latitude": "30.946000",
+  "longitude": "-83.247400",
+  "weight": 1,
+  "zip": "31605-7752"
+}, {
+  "latitude": "43.476000",
+  "longitude": "-72.411000",
+  "weight": 1,
+  "zip": "05089-1325"
+}, {
+  "latitude": "43.563532",
+  "longitude": "-80.921457",
+  "weight": 1,
+  "zip": "N0K 1M0"
+}, {
+  "latitude": "28.683100",
+  "longitude": "-81.281400",
+  "weight": 1,
+  "zip": "32708-5176"
+}, {
+  "latitude": "45.528700",
+  "longitude": "-122.636300",
+  "weight": 1,
+  "zip": "97232-3339"
+}, {
+  "latitude": "35.697500",
+  "longitude": "-105.982100",
+  "weight": 1,
+  "zip": "87501"
+}, {
+  "latitude": "35.026800",
+  "longitude": "-97.951800",
+  "weight": 1,
+  "zip": "73018-9607"
+}, {
+  "latitude": "40.447300",
+  "longitude": "-75.818500",
+  "weight": 1,
+  "zip": "19522-1712"
+}, {
+  "latitude": "41.907200",
+  "longitude": "-95.055600",
+  "weight": 1,
+  "zip": "51455-8022"
+}, {
+  "latitude": "49.776770",
+  "longitude": "-92.836502",
+  "weight": 1,
+  "zip": "P8N 2B8"
+}, {
+  "latitude": "48.165300",
+  "longitude": "-99.432500",
+  "weight": 5,
+  "zip": "58346-7115"
+}, {
+  "latitude": "40.215100",
+  "longitude": "-76.868900",
+  "weight": 1,
+  "zip": "17070-3018"
+}, {
+  "latitude": "42.999300",
+  "longitude": "-88.219600",
+  "weight": 1,
+  "zip": "53186-2860"
+}, {
+  "latitude": "40.703400",
+  "longitude": "-89.419400",
+  "weight": 1,
+  "zip": "61571-9656"
+}, {
+  "latitude": "41.181400",
+  "longitude": "-96.065800",
+  "weight": 1,
+  "zip": "68128-2482"
+}, {
+  "latitude": "51.056967",
+  "longitude": "-113.395376",
+  "weight": 2,
+  "zip": "T1P 1E1"
+}, {
+  "latitude": "40.653200",
+  "longitude": "-74.192500",
+  "weight": 2,
+  "zip": "07206-2103"
+}, {
+  "latitude": "35.449900",
+  "longitude": "-108.770500",
+  "weight": 1,
+  "zip": "87305-1570"
+}, {
+  "latitude": "53.208752",
+  "longitude": "-106.784831",
+  "weight": 1,
+  "zip": "S0J 1X0"
+}, {
+  "latitude": "30.317200",
+  "longitude": "-81.722000",
+  "weight": 1,
+  "zip": "32205-4544"
+}, {
+  "latitude": "39.048700",
+  "longitude": "-104.814000",
+  "weight": 2,
+  "zip": "80921-3669"
+}, {
+  "latitude": "41.209100",
+  "longitude": "-73.208600",
+  "weight": 3,
+  "zip": "06606-3124"
+}, {
+  "latitude": "36.756300",
+  "longitude": "-121.670300",
+  "weight": 1,
+  "zip": "93907-2027"
+}, {
+  "latitude": "43.426200",
+  "longitude": "-95.112300",
+  "weight": 1,
+  "zip": "51360-1503"
+}, {
+  "latitude": "32.881300",
+  "longitude": "-83.302900",
+  "weight": 1,
+  "zip": "31031-3713"
+}, {
+  "latitude": "30.180200",
+  "longitude": "-97.666700",
+  "weight": 1,
+  "zip": "78719-2718"
+}, {
+  "latitude": "38.905000",
+  "longitude": "-104.698200",
+  "weight": 1,
+  "zip": "80922-6118"
+}, {
+  "latitude": "40.310200",
+  "longitude": "-110.010800",
+  "weight": 1,
+  "zip": "84066-9736"
+}, {
+  "latitude": "39.120600",
+  "longitude": "-76.495000",
+  "weight": 1,
+  "zip": "21122-3156"
+}, {
+  "latitude": "51.307890",
+  "longitude": "-116.973746",
+  "weight": 1,
+  "zip": "V0A 1H2"
+}, {
+  "latitude": "26.150200",
+  "longitude": "-80.274500",
+  "weight": 2,
+  "zip": "33322-6515"
+}, {
+  "latitude": "40.307800",
+  "longitude": "-78.896900",
+  "weight": 2,
+  "zip": "15902-1649"
+}, {
+  "latitude": "36.741200",
+  "longitude": "-108.179700",
+  "weight": 1,
+  "zip": "87401-2305"
+}, {
+  "latitude": "45.309900",
+  "longitude": "-122.968500",
+  "weight": 3,
+  "zip": "97132-2011"
+}, {
+  "latitude": "42.398900",
+  "longitude": "-123.353800",
+  "weight": 1,
+  "zip": "97527"
+}, {
+  "latitude": "49.879406",
+  "longitude": "-97.286878",
+  "weight": 1,
+  "zip": "R3K 1C4"
+}, {
+  "latitude": "40.369600",
+  "longitude": "-80.043900",
+  "weight": 1,
+  "zip": "15228-2618"
+}, {
+  "latitude": "47.329400",
+  "longitude": "-68.332800",
+  "weight": 1,
+  "zip": "04756-1332"
+}, {
+  "latitude": "41.398900",
+  "longitude": "-112.031700",
+  "weight": 3,
+  "zip": "84340-9506"
+}, {
+  "latitude": "34.426200",
+  "longitude": "-118.449000",
+  "weight": 1,
+  "zip": "91351-3810"
+}, {
+  "latitude": "32.890600",
+  "longitude": "-111.754000",
+  "weight": 2,
+  "zip": "85122-6776"
+}, {
+  "latitude": "42.889200",
+  "longitude": "-87.902700",
+  "weight": 4,
+  "zip": "53154-8339"
+}, {
+  "latitude": "39.311300",
+  "longitude": "-94.543100",
+  "weight": 1,
+  "zip": "64165-1080"
+}, {
+  "latitude": "33.445900",
+  "longitude": "-86.750200",
+  "weight": 1,
+  "zip": "35243-2857"
+}, {
+  "latitude": "35.595700",
+  "longitude": "-84.430400",
+  "weight": 1,
+  "zip": "37874-3211"
+}, {
+  "latitude": "47.425300",
+  "longitude": "-120.327300",
+  "weight": 2,
+  "zip": "98801-8000"
+}, {
+  "latitude": "33.467900",
+  "longitude": "-84.480600",
+  "weight": 1,
+  "zip": "30214-4766"
+}, {
+  "latitude": "49.572830",
+  "longitude": "-101.699005",
+  "weight": 1,
+  "zip": "S0C 2H0"
+}, {
+  "latitude": "27.422900",
+  "longitude": "-97.840700",
+  "weight": 1,
+  "zip": "78363"
+}, {
+  "latitude": "40.906900",
+  "longitude": "-74.120900",
+  "weight": 1,
+  "zip": "07407-3202"
+}, {
+  "latitude": "42.231700",
+  "longitude": "-83.267300",
+  "weight": 1,
+  "zip": "48180-3490"
+}, {
+  "latitude": "41.002200",
+  "longitude": "-79.716000",
+  "weight": 3,
+  "zip": "16041-1408"
+}, {
+  "latitude": "48.353400",
+  "longitude": "-114.178400",
+  "weight": 1,
+  "zip": "59912-4018"
+}, {
+  "latitude": "50.007747",
+  "longitude": "-119.400020",
+  "weight": 1,
+  "zip": "V4V 1R7"
+}, {
+  "latitude": "35.621500",
+  "longitude": "-97.473300",
+  "weight": 1,
+  "zip": "73013-3503"
+}, {
+  "latitude": "46.608692",
+  "longitude": "-81.012070",
+  "weight": 1,
+  "zip": "P3N 1J8"
+}, {
+  "latitude": "40.686800",
+  "longitude": "-73.823000",
+  "weight": 1,
+  "zip": "11419"
+}, {
+  "latitude": "34.968100",
+  "longitude": "-81.048900",
+  "weight": 1,
+  "zip": "29732-8267"
+}, {
+  "latitude": "40.744200",
+  "longitude": "-89.718400",
+  "weight": 1,
+  "zip": "61612-9455"
+}, {
+  "latitude": "40.939000",
+  "longitude": "-74.661600",
+  "weight": 3,
+  "zip": "07843-1147"
+}, {
+  "latitude": "39.078600",
+  "longitude": "-120.173400",
+  "weight": 3,
+  "zip": "96141"
+}, {
+  "latitude": "43.952600",
+  "longitude": "-73.466500",
+  "weight": 1,
+  "zip": "12928-0135"
+}, {
+  "latitude": "40.703900",
+  "longitude": "-82.408700",
+  "weight": 1,
+  "zip": "44843-9519"
+}, {
+  "latitude": "26.670000",
+  "longitude": "-80.058200",
+  "weight": 1,
+  "zip": "33405-4106"
+}, {
+  "latitude": "56.724120",
+  "longitude": "-111.464384",
+  "weight": 1,
+  "zip": "T9H 5H1"
+}, {
+  "latitude": "47.505800",
+  "longitude": "-122.115700",
+  "weight": 1,
+  "zip": "98059-4598"
+}, {
+  "latitude": "51.052618",
+  "longitude": "-114.099518",
+  "weight": 1,
+  "zip": "T2N 0H5"
+}, {
+  "latitude": "51.029757",
+  "longitude": "-114.064988",
+  "weight": 6,
+  "zip": "T2S 0M3"
+}, {
+  "latitude": "33.369800",
+  "longitude": "-97.688500",
+  "weight": 2,
+  "zip": "76225-5638"
+}, {
+  "latitude": "46.415100",
+  "longitude": "-84.285400",
+  "weight": 1,
+  "zip": "49783-2133"
+}, {
+  "latitude": "29.791400",
+  "longitude": "-95.131700",
+  "weight": 1,
+  "zip": "77530"
+}, {
+  "latitude": "49.263946",
+  "longitude": "-102.280746",
+  "weight": 1,
+  "zip": "S0C 0Y0"
+}, {
+  "latitude": "40.331600",
+  "longitude": "-76.397600",
+  "weight": 1,
+  "zip": "17042-5108"
+}, {
+  "latitude": "33.728700",
+  "longitude": "-116.035700",
+  "weight": 2,
+  "zip": "92201-5822"
+}, {
+  "latitude": "42.728700",
+  "longitude": "-73.668300",
+  "weight": 1,
+  "zip": "12180-2109"
+}, {
+  "latitude": "36.073200",
+  "longitude": "-102.517700",
+  "weight": 1,
+  "zip": "79022-5400"
+}, {
+  "latitude": "36.040300",
+  "longitude": "-80.193300",
+  "weight": 7,
+  "zip": "27107-1568"
+}, {
+  "latitude": "39.620600",
+  "longitude": "-105.090100",
+  "weight": 2,
+  "zip": "80123-3103"
+}, {
+  "latitude": "36.756300",
+  "longitude": "-121.670300",
+  "weight": 1,
+  "zip": "93907-1634"
+}, {
+  "latitude": "51.556560",
+  "longitude": "-107.992654",
+  "weight": 1,
+  "zip": "S0K 2V0"
+}, {
+  "latitude": "49.104738",
+  "longitude": "-122.815336",
+  "weight": 1,
+  "zip": "V3S 1B6"
+}, {
+  "latitude": "36.688300",
+  "longitude": "-110.265200",
+  "weight": 1,
+  "zip": "86033-0962"
+}, {
+  "latitude": "44.922500",
+  "longitude": "-123.320000",
+  "weight": 1,
+  "zip": "97338-2776"
+}, {
+  "latitude": "38.760200",
+  "longitude": "-77.306400",
+  "weight": 1,
+  "zip": "22039-2900"
+}, {
+  "latitude": "41.146500",
+  "longitude": "-85.123200",
+  "weight": 2,
+  "zip": "46825-1702"
+}, {
+  "latitude": "39.949200",
+  "longitude": "-76.801800",
+  "weight": 1,
+  "zip": "17408-9418"
+}, {
+  "latitude": "44.282000",
+  "longitude": "-105.497400",
+  "weight": 1,
+  "zip": "82716-5146"
+}, {
+  "latitude": "30.440400",
+  "longitude": "-88.780100",
+  "weight": 4,
+  "zip": "39564-9488"
+}, {
+  "latitude": "39.001200",
+  "longitude": "-90.962400",
+  "weight": 1,
+  "zip": "63379-2397"
+}, {
+  "latitude": "32.760400",
+  "longitude": "-117.011500",
+  "weight": 2,
+  "zip": "91941-4204"
+}, {
+  "latitude": "32.679600",
+  "longitude": "-97.333600",
+  "weight": 2,
+  "zip": "76115-4412"
+}, {
+  "latitude": "36.510700",
+  "longitude": "-87.275700",
+  "weight": 1,
+  "zip": "37043-7306"
+}, {
+  "latitude": "53.615212",
+  "longitude": "-113.445660",
+  "weight": 3,
+  "zip": "T6V 1R7"
+}, {
+  "latitude": "40.870200",
+  "longitude": "-73.849500",
+  "weight": 1,
+  "zip": "10469-5703"
+}, {
+  "latitude": "27.060600",
+  "longitude": "-82.352000",
+  "weight": 1,
+  "zip": "34293-5837"
+}, {
+  "latitude": "35.082300",
+  "longitude": "-92.468300",
+  "weight": 2,
+  "zip": "72034-5604"
+}, {
+  "latitude": "42.330400",
+  "longitude": "-74.085700",
+  "weight": 1,
+  "zip": "12405-0048"
+}, {
+  "latitude": "30.321700",
+  "longitude": "-95.528500",
+  "weight": 3,
+  "zip": "77304-3550"
+}, {
+  "latitude": "29.883600",
+  "longitude": "-95.702500",
+  "weight": 1,
+  "zip": "77433-3348"
+}, {
+  "latitude": "45.749800",
+  "longitude": "-107.607500",
+  "weight": 2,
+  "zip": "59034-2262"
+}, {
+  "latitude": "46.805700",
+  "longitude": "-102.756500",
+  "weight": 1,
+  "zip": "58601-5545"
+}, {
+  "latitude": "29.198900",
+  "longitude": "-82.087400",
+  "weight": 1,
+  "zip": "34470-9509"
+}, {
+  "latitude": "29.548500",
+  "longitude": "-90.608700",
+  "weight": 1,
+  "zip": "70343-5000"
+}, {
+  "latitude": "53.623752",
+  "longitude": "-113.635656",
+  "weight": 1,
+  "zip": "T8N 1A5"
+}, {
+  "latitude": "40.115900",
+  "longitude": "-74.853600",
+  "weight": 1,
+  "zip": "19007-2016"
+}, {
+  "latitude": "44.554800",
+  "longitude": "-68.412100",
+  "weight": 1,
+  "zip": "04605-5241"
+}, {
+  "latitude": "41.872100",
+  "longitude": "-88.016000",
+  "weight": 1,
+  "zip": "60148-4892"
+}, {
+  "latitude": "60.762250",
+  "longitude": "-135.120238",
+  "weight": 1,
+  "zip": "Y1A 5J3"
+}, {
+  "latitude": "39.835300",
+  "longitude": "-84.112300",
+  "weight": 1,
+  "zip": "45424-6040"
+}, {
+  "latitude": "36.038400",
+  "longitude": "-115.085700",
+  "weight": 4,
+  "zip": "89074-5845"
+}, {
+  "latitude": "58.188386",
+  "longitude": "-116.412822",
+  "weight": 3,
+  "zip": "T0H 2H0"
+}, {
+  "latitude": "48.438407",
+  "longitude": "-89.238384",
+  "weight": 1,
+  "zip": "P7B 3W4"
+}, {
+  "latitude": "36.696100",
+  "longitude": "-101.477800",
+  "weight": 1,
+  "zip": "73942-5051"
+}, {
+  "latitude": "60.130000",
+  "longitude": "-162.173900",
+  "weight": 2,
+  "zip": "99559-0383"
+}, {
+  "latitude": "51.260579",
+  "longitude": "-114.031335",
+  "weight": 2,
+  "zip": "T4B 0Y3"
+}, {
+  "latitude": "32.392000",
+  "longitude": "-99.774600",
+  "weight": 1,
+  "zip": "79606"
+}, {
+  "latitude": "42.325257",
+  "longitude": "-82.883205",
+  "weight": 1,
+  "zip": "N8N 3H7"
+}, {
+  "latitude": "35.310600",
+  "longitude": "-79.347200",
+  "weight": 1,
+  "zip": "28326-6381"
+}, {
+  "latitude": "36.797800",
+  "longitude": "-76.175900",
+  "weight": 4,
+  "zip": "23464-1599"
+}, {
+  "latitude": "37.353000",
+  "longitude": "-79.155700",
+  "weight": 1,
+  "zip": "24501-7178"
+}, {
+  "latitude": "43.078400",
+  "longitude": "-89.201700",
+  "weight": 1,
+  "zip": "53527-9591"
+}, {
+  "latitude": "43.857000",
+  "longitude": "-70.103100",
+  "weight": 1,
+  "zip": "04032-1147"
+}, {
+  "latitude": "37.083100",
+  "longitude": "-76.360000",
+  "weight": 1,
+  "zip": "23665-2469"
+}, {
+  "latitude": "34.003100",
+  "longitude": "-84.012600",
+  "weight": 1,
+  "zip": "30043-4790"
+}, {
+  "latitude": "41.117700",
+  "longitude": "-74.124100",
+  "weight": 6,
+  "zip": "10901-3613"
+}, {
+  "latitude": "41.191000",
+  "longitude": "-80.970100",
+  "weight": 1,
+  "zip": "44444-1242"
+}, {
+  "latitude": "41.922600",
+  "longitude": "-79.656700",
+  "weight": 1,
+  "zip": "16407-2015"
+}, {
+  "latitude": "32.419000",
+  "longitude": "-99.822100",
+  "weight": 3,
+  "zip": "79607"
+}, {
+  "latitude": "49.512209",
+  "longitude": "-115.788921",
+  "weight": 5,
+  "zip": "V1C 6T6"
+}, {
+  "latitude": "39.257300",
+  "longitude": "-85.766500",
+  "weight": 1,
+  "zip": "47246"
+}, {
+  "latitude": "55.210076",
+  "longitude": "-119.419696",
+  "weight": 1,
+  "zip": "T0H 0C0"
+}, {
+  "latitude": "30.506000",
+  "longitude": "-97.747200",
+  "weight": 2,
+  "zip": "78717-5438"
+}, {
+  "latitude": "53.088721",
+  "longitude": "-109.291432",
+  "weight": 1,
+  "zip": "S0M 1M0"
+}, {
+  "latitude": "36.522000",
+  "longitude": "-87.349000",
+  "weight": 2,
+  "zip": "37040-2895"
+}, {
+  "latitude": "32.760700",
+  "longitude": "-117.072100",
+  "weight": 1,
+  "zip": "92115-3516"
+}, {
+  "latitude": "53.912342",
+  "longitude": "-122.798627",
+  "weight": 1,
+  "zip": "V2M 4E8"
+}, {
+  "latitude": "32.099700",
+  "longitude": "-89.219900",
+  "weight": 1,
+  "zip": "39338-4756"
+}, {
+  "latitude": "41.268500",
+  "longitude": "-78.495200",
+  "weight": 1,
+  "zip": "15868-2423"
+}, {
+  "latitude": "36.669200",
+  "longitude": "-94.476600",
+  "weight": 1,
+  "zip": "64831-7272"
+}, {
+  "latitude": "34.446600",
+  "longitude": "-118.537400",
+  "weight": 1,
+  "zip": "91354-1906"
+}, {
+  "latitude": "35.717400",
+  "longitude": "-106.935800",
+  "weight": 1,
+  "zip": "87018"
+}, {
+  "latitude": "41.519600",
+  "longitude": "-109.471400",
+  "weight": 1,
+  "zip": "82935-4009"
+}, {
+  "latitude": "57.603600",
+  "longitude": "-153.375100",
+  "weight": 1,
+  "zip": "99615-9403"
+}, {
+  "latitude": "40.927700",
+  "longitude": "-74.342800",
+  "weight": 2,
+  "zip": "07082-1452"
+}, {
+  "latitude": "41.442900",
+  "longitude": "-81.853000",
+  "weight": 2,
+  "zip": "44126-1021"
+}, {
+  "latitude": "33.514600",
+  "longitude": "-101.879500",
+  "weight": 1,
+  "zip": "79423-3133"
+}, {
+  "latitude": "43.499500",
+  "longitude": "-87.850900",
+  "weight": 1,
+  "zip": "53004-9602"
+}, {
+  "latitude": "32.955700",
+  "longitude": "-97.337200",
+  "weight": 1,
+  "zip": "76052-3387"
+}, {
+  "latitude": "42.070200",
+  "longitude": "-72.622700",
+  "weight": 2,
+  "zip": "01001-1807"
+}, {
+  "latitude": "34.138800",
+  "longitude": "-80.889200",
+  "weight": 1,
+  "zip": "29229-9261"
+}, {
+  "latitude": "53.789997",
+  "longitude": "-113.639369",
+  "weight": 1,
+  "zip": "T8R 1T8"
+}, {
+  "latitude": "40.620500",
+  "longitude": "-73.923900",
+  "weight": 1,
+  "zip": "11234-6801"
+}, {
+  "latitude": "33.498300",
+  "longitude": "-117.095800",
+  "weight": 4,
+  "zip": "92592-2433"
+}, {
+  "latitude": "45.237700",
+  "longitude": "-93.272400",
+  "weight": 1,
+  "zip": "55304-4030"
+}, {
+  "latitude": "32.751500",
+  "longitude": "-96.283100",
+  "weight": 1,
+  "zip": "75160-1537"
+}, {
+  "latitude": "34.724400",
+  "longitude": "-82.470200",
+  "weight": 1,
+  "zip": "29673-7612"
+}, {
+  "latitude": "48.859400",
+  "longitude": "-99.613400",
+  "weight": 1,
+  "zip": "58367-7219"
+}, {
+  "latitude": "40.625100",
+  "longitude": "-74.030300",
+  "weight": 1,
+  "zip": "11209-8126"
+}, {
+  "latitude": "40.245800",
+  "longitude": "-74.276800",
+  "weight": 1,
+  "zip": "07728-4947"
+}, {
+  "latitude": "29.420300",
+  "longitude": "-95.453700",
+  "weight": 1,
+  "zip": "77583-2073"
+}, {
+  "latitude": "39.374100",
+  "longitude": "-74.611800",
+  "weight": 1,
+  "zip": "08234-4827"
+}, {
+  "latitude": "41.389700",
+  "longitude": "-81.735100",
+  "weight": 1,
+  "zip": "44129-2928"
+}, {
+  "latitude": "41.676200",
+  "longitude": "-73.009200",
+  "weight": 1,
+  "zip": "06786-4614"
+}, {
+  "latitude": "41.302400",
+  "longitude": "-82.991800",
+  "weight": 1,
+  "zip": "43410-2014"
+}, {
+  "latitude": "34.805900",
+  "longitude": "-92.230500",
+  "weight": 3,
+  "zip": "72116-6416"
+}, {
+  "latitude": "41.538500",
+  "longitude": "-90.561300",
+  "weight": 1,
+  "zip": "52803-2233"
+}, {
+  "latitude": "50.052509",
+  "longitude": "-110.683316",
+  "weight": 1,
+  "zip": "T1A 5S9"
+}, {
+  "latitude": "47.360700",
+  "longitude": "-122.600100",
+  "weight": 2,
+  "zip": "98332-9794"
+}, {
+  "latitude": "41.619400",
+  "longitude": "-87.842200",
+  "weight": 1,
+  "zip": "60462-1436"
+}, {
+  "latitude": "44.458900",
+  "longitude": "-103.637000",
+  "weight": 1,
+  "zip": "57793-7030"
+}, {
+  "latitude": "40.714300",
+  "longitude": "-79.742400",
+  "weight": 1,
+  "zip": "16055-9737"
+}, {
+  "latitude": "42.164100",
+  "longitude": "-88.306400",
+  "weight": 1,
+  "zip": "60102-4418"
+}, {
+  "latitude": "36.626100",
+  "longitude": "-121.655500",
+  "weight": 1,
+  "zip": "93962-7175"
+}, {
+  "latitude": "41.428900",
+  "longitude": "-78.550500",
+  "weight": 1,
+  "zip": "15857-3006"
+}, {
+  "latitude": "35.386800",
+  "longitude": "-96.933100",
+  "weight": 1,
+  "zip": "74804-1239"
+}, {
+  "latitude": "29.555100",
+  "longitude": "-98.744200",
+  "weight": 1,
+  "zip": "78254-1868"
+}, {
+  "latitude": "41.473000",
+  "longitude": "-73.497800",
+  "weight": 1,
+  "zip": "06812-2711"
+}, {
+  "latitude": "34.026800",
+  "longitude": "-84.242200",
+  "weight": 3,
+  "zip": "30022-5585"
+}, {
+  "latitude": "39.844400",
+  "longitude": "-74.197300",
+  "weight": 1,
+  "zip": "08731-3727"
+}, {
+  "latitude": "38.893300",
+  "longitude": "-89.405200",
+  "weight": 7,
+  "zip": "62246-1032"
+}, {
+  "latitude": "53.703691",
+  "longitude": "-113.953511",
+  "weight": 1,
+  "zip": "T0G 0J0"
+}, {
+  "latitude": "36.910800",
+  "longitude": "-111.502000",
+  "weight": 1,
+  "zip": "86040-3962"
+}, {
+  "latitude": "41.837800",
+  "longitude": "-71.322400",
+  "weight": 1,
+  "zip": "02771-1418"
+}, {
+  "latitude": "42.556000",
+  "longitude": "-87.870500",
+  "weight": 3,
+  "zip": "53142-8109"
+}, {
+  "latitude": "31.576500",
+  "longitude": "-97.178600",
+  "weight": 1,
+  "zip": "76708-0494"
+}, {
+  "latitude": "39.931300",
+  "longitude": "-77.657900",
+  "weight": 2,
+  "zip": "17201-1509"
+}, {
+  "latitude": "40.775700",
+  "longitude": "-74.392800",
+  "weight": 1,
+  "zip": "07932"
+}, {
+  "latitude": "41.428900",
+  "longitude": "-87.977100",
+  "weight": 1,
+  "zip": "60442-1416"
+}, {
+  "latitude": "44.080500",
+  "longitude": "-93.219100",
+  "weight": 1,
+  "zip": "55060-6103"
+}, {
+  "latitude": "30.169300",
+  "longitude": "-93.221800",
+  "weight": 1,
+  "zip": "70605-2574"
+}, {
+  "latitude": "42.473100",
+  "longitude": "-92.336500",
+  "weight": 3,
+  "zip": "50702-3927"
+}, {
+  "latitude": "29.402700",
+  "longitude": "-98.643300",
+  "weight": 1,
+  "zip": "78227-1710"
+}, {
+  "latitude": "41.568600",
+  "longitude": "-87.262200",
+  "weight": 2,
+  "zip": "46405-2042"
+}, {
+  "latitude": "41.076800",
+  "longitude": "-73.485300",
+  "weight": 4,
+  "zip": "06820-5819"
+}, {
+  "latitude": "31.348000",
+  "longitude": "-85.721400",
+  "weight": 1,
+  "zip": "36362-0261"
+}, {
+  "latitude": "39.881400",
+  "longitude": "-83.083900",
+  "weight": 1,
+  "zip": "43123-8200"
+}, {
+  "latitude": "41.564200",
+  "longitude": "-88.217800",
+  "weight": 2,
+  "zip": "60586-6381"
+}, {
+  "latitude": "33.786800",
+  "longitude": "-117.793400",
+  "weight": 1,
+  "zip": "92869-3217"
+}, {
+  "latitude": "42.071800",
+  "longitude": "-72.675100",
+  "weight": 1,
+  "zip": "01030-2557"
+}, {
+  "latitude": "32.269100",
+  "longitude": "-110.984500",
+  "weight": 2,
+  "zip": "85705"
+}, {
+  "latitude": "41.996900",
+  "longitude": "-88.298600",
+  "weight": 1,
+  "zip": "60177-2303"
+}, {
+  "latitude": "41.146500",
+  "longitude": "-85.123200",
+  "weight": 1,
+  "zip": "46825-2287"
+}, {
+  "latitude": "35.160800",
+  "longitude": "-110.511400",
+  "weight": 1,
+  "zip": "86047-2157"
+}, {
+  "latitude": "36.422900",
+  "longitude": "-86.791400",
+  "weight": 1,
+  "zip": "37073-4951"
+}, {
+  "latitude": "49.191586",
+  "longitude": "-122.753571",
+  "weight": 2,
+  "zip": "V4N 4N2"
+}, {
+  "latitude": "29.951100",
+  "longitude": "-90.206000",
+  "weight": 1,
+  "zip": "70123-3030"
+}, {
+  "latitude": "48.183769",
+  "longitude": "-53.982258",
+  "weight": 1,
+  "zip": "A0E 2A0"
+}, {
+  "latitude": "37.900800",
+  "longitude": "-91.880700",
+  "weight": 3,
+  "zip": "65550-9198"
+}, {
+  "latitude": "38.458600",
+  "longitude": "-77.430600",
+  "weight": 2,
+  "zip": "22554-2513"
+}, {
+  "latitude": "40.398000",
+  "longitude": "-74.323600",
+  "weight": 2,
+  "zip": "08857-2455"
+}, {
+  "latitude": "39.212500",
+  "longitude": "-76.080200",
+  "weight": 1,
+  "zip": "21620-3753"
+}, {
+  "latitude": "40.145400",
+  "longitude": "-82.981700",
+  "weight": 1,
+  "zip": "43240-6004"
+}, {
+  "latitude": "62.437012",
+  "longitude": "-114.419430",
+  "weight": 1,
+  "zip": "X1A 3E5"
+}, {
+  "latitude": "44.958700",
+  "longitude": "-91.319500",
+  "weight": 1,
+  "zip": "54729-5028"
+}, {
+  "latitude": "47.505800",
+  "longitude": "-122.115700",
+  "weight": 1,
+  "zip": "98059-3635"
+}, {
+  "latitude": "36.859800",
+  "longitude": "-107.060200",
+  "weight": 1,
+  "zip": "87528-0224"
+}, {
+  "latitude": "42.287500",
+  "longitude": "-71.357400",
+  "weight": 1,
+  "zip": "01760-3256"
+}, {
+  "latitude": "46.890700",
+  "longitude": "-96.925800",
+  "weight": 1,
+  "zip": "58078-3304"
+}, {
+  "latitude": "26.177100",
+  "longitude": "-98.187000",
+  "weight": 7,
+  "zip": "78577-7851"
+}, {
+  "latitude": "34.250500",
+  "longitude": "-84.490900",
+  "weight": 2,
+  "zip": "30114-4532"
+}, {
+  "latitude": "35.228600",
+  "longitude": "-99.863500",
+  "weight": 1,
+  "zip": "73645-0742"
+}, {
+  "latitude": "42.905000",
+  "longitude": "-78.704100",
+  "weight": 1,
+  "zip": "14043-2123"
+}, {
+  "latitude": "41.990900",
+  "longitude": "-87.662900",
+  "weight": 1,
+  "zip": "60660-1353"
+}, {
+  "latitude": "32.745100",
+  "longitude": "-100.917500",
+  "weight": 1,
+  "zip": "79549-2441"
+}, {
+  "latitude": "42.287500",
+  "longitude": "-71.357400",
+  "weight": 2,
+  "zip": "01760-4921"
+}, {
+  "latitude": "40.535200",
+  "longitude": "-74.211600",
+  "weight": 1,
+  "zip": "10309-2629"
+}, {
+  "latitude": "43.426200",
+  "longitude": "-95.112300",
+  "weight": 1,
+  "zip": "51360-1329"
+}, {
+  "latitude": "42.889400",
+  "longitude": "-85.621900",
+  "weight": 1,
+  "zip": "49508"
+}, {
+  "latitude": "51.086298",
+  "longitude": "-114.213749",
+  "weight": 1,
+  "zip": "T3B 5N2"
+}, {
+  "latitude": "38.823900",
+  "longitude": "-90.742700",
+  "weight": 1,
+  "zip": "63366-7596"
+}, {
+  "latitude": "39.477600",
+  "longitude": "-86.466800",
+  "weight": 8,
+  "zip": "46151-8793"
+}, {
+  "latitude": "54.799078",
+  "longitude": "-127.133188",
+  "weight": 1,
+  "zip": "V0J 2N7"
+}, {
+  "latitude": "42.575700",
+  "longitude": "-71.290200",
+  "weight": 1,
+  "zip": "01862-1712"
+}, {
+  "latitude": "26.133700",
+  "longitude": "-97.644700",
+  "weight": 1,
+  "zip": "78586"
+}, {
+  "latitude": "47.572000",
+  "longitude": "-94.801300",
+  "weight": 1,
+  "zip": "56601-2206"
+}, {
+  "latitude": "34.156100",
+  "longitude": "-117.404200",
+  "weight": 5,
+  "zip": "92377-2869"
+}, {
+  "latitude": "32.868100",
+  "longitude": "-96.862200",
+  "weight": 2,
+  "zip": "75220-3609"
+}, {
+  "latitude": "34.529900",
+  "longitude": "-83.979800",
+  "weight": 5,
+  "zip": "30533-5741"
+}, {
+  "latitude": "48.088100",
+  "longitude": "-123.119800",
+  "weight": 1,
+  "zip": "98382-4700"
+}, {
+  "latitude": "37.046500",
+  "longitude": "-94.510300",
+  "weight": 1,
+  "zip": "64804-4226"
+}, {
+  "latitude": "28.133100",
+  "longitude": "-80.711200",
+  "weight": 1,
+  "zip": "32934-2823"
+}, {
+  "latitude": "40.866200",
+  "longitude": "-73.900300",
+  "weight": 2,
+  "zip": "10468-1116"
+}, {
+  "latitude": "38.408000",
+  "longitude": "-89.918100",
+  "weight": 1,
+  "zip": "62243-1608"
+}, {
+  "latitude": "54.705016",
+  "longitude": "-113.288395",
+  "weight": 1,
+  "zip": "T9S 2A2"
+}, {
+  "latitude": "39.230100",
+  "longitude": "-85.885500",
+  "weight": 2,
+  "zip": "47203-1301"
+}, {
+  "latitude": "32.922900",
+  "longitude": "-86.545000",
+  "weight": 1,
+  "zip": "35046-4224"
+}, {
+  "latitude": "39.938800",
+  "longitude": "-83.046300",
+  "weight": 3,
+  "zip": "43223-6277"
+}, {
+  "latitude": "40.568100",
+  "longitude": "-74.539700",
+  "weight": 6,
+  "zip": "08805-1647"
+}, {
+  "latitude": "44.494400",
+  "longitude": "-70.443500",
+  "weight": 3,
+  "zip": "04290-3224"
+}, {
+  "latitude": "41.050800",
+  "longitude": "-80.598500",
+  "weight": 3,
+  "zip": "44471-1722"
+}, {
+  "latitude": "50.634190",
+  "longitude": "-104.252713",
+  "weight": 1,
+  "zip": "S0G 1K0"
+}, {
+  "latitude": "40.409900",
+  "longitude": "-79.023200",
+  "weight": 1,
+  "zip": "15954-8645"
+}, {
+  "latitude": "46.701600",
+  "longitude": "-92.091200",
+  "weight": 1,
+  "zip": "54880"
+}, {
+  "latitude": "49.036701",
+  "longitude": "-122.293218",
+  "weight": 2,
+  "zip": "V2S 3M9"
+}, {
+  "latitude": "33.214100",
+  "longitude": "-96.753300",
+  "weight": 1,
+  "zip": "75071-2714"
+}, {
+  "latitude": "61.251500",
+  "longitude": "-149.812700",
+  "weight": 1,
+  "zip": "99506-3504"
+}, {
+  "latitude": "41.322200",
+  "longitude": "-81.499600",
+  "weight": 4,
+  "zip": "44056-1260"
+}, {
+  "latitude": "44.107800",
+  "longitude": "-92.405300",
+  "weight": 2,
+  "zip": "55906-7622"
+}, {
+  "latitude": "28.514000",
+  "longitude": "-81.357000",
+  "weight": 1,
+  "zip": "32806-1324"
+}, {
+  "latitude": "39.441600",
+  "longitude": "-98.119200",
+  "weight": 1,
+  "zip": "67420-1324"
+}, {
+  "latitude": "46.823400",
+  "longitude": "-100.774800",
+  "weight": 1,
+  "zip": "58501"
+}, {
+  "latitude": "40.620500",
+  "longitude": "-73.923900",
+  "weight": 1,
+  "zip": "11234-6412"
+}, {
+  "latitude": "44.816200",
+  "longitude": "-85.575100",
+  "weight": 2,
+  "zip": "49696-8120"
+}, {
+  "latitude": "39.781300",
+  "longitude": "-76.747700",
+  "weight": 1,
+  "zip": "17327-8885"
+}, {
+  "latitude": "30.644800",
+  "longitude": "-95.579800",
+  "weight": 1,
+  "zip": "77340"
+}, {
+  "latitude": "49.147867",
+  "longitude": "-102.977989",
+  "weight": 3,
+  "zip": "S4A 2C2"
+}, {
+  "latitude": "40.880600",
+  "longitude": "-85.157000",
+  "weight": 1,
+  "zip": "46777-9301"
+}, {
+  "latitude": "26.241600",
+  "longitude": "-81.807100",
+  "weight": 1,
+  "zip": "34108-2224"
+}, {
+  "latitude": "39.734000",
+  "longitude": "-105.025900",
+  "weight": 1,
+  "zip": "80204-3594"
+}, {
+  "latitude": "53.219389",
+  "longitude": "-114.992577",
+  "weight": 1,
+  "zip": "T7A 1L4"
+}, {
+  "latitude": "33.793900",
+  "longitude": "-118.119200",
+  "weight": 1,
+  "zip": "90815-0207"
+}, {
+  "latitude": "40.492800",
+  "longitude": "-94.570100",
+  "weight": 1,
+  "zip": "64486-8224"
+}, {
+  "latitude": "43.112400",
+  "longitude": "-102.598400",
+  "weight": 1,
+  "zip": "57770-0405"
+}, {
+  "latitude": "36.522000",
+  "longitude": "-87.349000",
+  "weight": 1,
+  "zip": "37040-6272"
+}, {
+  "latitude": "37.994000",
+  "longitude": "-121.703600",
+  "weight": 2,
+  "zip": "94561-5229"
+}, {
+  "latitude": "41.743100",
+  "longitude": "-87.806600",
+  "weight": 2,
+  "zip": "60455-1966"
+}, {
+  "latitude": "38.356900",
+  "longitude": "-82.525500",
+  "weight": 1,
+  "zip": "25530-9741"
+}, {
+  "latitude": "39.119100",
+  "longitude": "-84.351000",
+  "weight": 1,
+  "zip": "45244-1367"
+}, {
+  "latitude": "40.893500",
+  "longitude": "-77.473300",
+  "weight": 3,
+  "zip": "16854-0076"
+}, {
+  "latitude": "29.235300",
+  "longitude": "-81.065800",
+  "weight": 6,
+  "zip": "32117-4304"
+}, {
+  "latitude": "45.845000",
+  "longitude": "-119.284900",
+  "weight": 1,
+  "zip": "97838-4010"
+}, {
+  "latitude": "42.189800",
+  "longitude": "-91.775800",
+  "weight": 1,
+  "zip": "52213-9362"
+}, {
+  "latitude": "39.615600",
+  "longitude": "-75.040900",
+  "weight": 1,
+  "zip": "08322-2474"
+}, {
+  "latitude": "41.996900",
+  "longitude": "-88.298600",
+  "weight": 1,
+  "zip": "60177-1437"
+}, {
+  "latitude": "41.781700",
+  "longitude": "-124.133200",
+  "weight": 1,
+  "zip": "95531-9656"
+}, {
+  "latitude": "44.198881",
+  "longitude": "-79.267808",
+  "weight": 2,
+  "zip": "L0E 1T0"
+}, {
+  "latitude": "33.498300",
+  "longitude": "-117.095800",
+  "weight": 2,
+  "zip": "92592-6619"
+}, {
+  "latitude": "54.265904",
+  "longitude": "-110.720436",
+  "weight": 1,
+  "zip": "T9N 1P4"
+}, {
+  "latitude": "40.534600",
+  "longitude": "-79.880500",
+  "weight": 1,
+  "zip": "15238-1361"
+}, {
+  "latitude": "41.747200",
+  "longitude": "-72.610300",
+  "weight": 1,
+  "zip": "06118-1734"
+}, {
+  "latitude": "49.656393",
+  "longitude": "-112.873444",
+  "weight": 1,
+  "zip": "T1K 7J2"
+}, {
+  "latitude": "34.926200",
+  "longitude": "-95.759200",
+  "weight": 1,
+  "zip": "74501-4366"
+}, {
+  "latitude": "40.442100",
+  "longitude": "-74.536900",
+  "weight": 1,
+  "zip": "08823"
+}, {
+  "latitude": "38.897600",
+  "longitude": "-77.509200",
+  "weight": 1,
+  "zip": "20152-6021"
+}, {
+  "latitude": "38.428600",
+  "longitude": "-82.391100",
+  "weight": 1,
+  "zip": "25702-1225"
+}, {
+  "latitude": "34.117500",
+  "longitude": "-109.919700",
+  "weight": 1,
+  "zip": "85935"
+}, {
+  "latitude": "43.851100",
+  "longitude": "-104.226200",
+  "weight": 1,
+  "zip": "82701-9529"
+}, {
+  "latitude": "39.031200",
+  "longitude": "-94.630800",
+  "weight": 1,
+  "zip": "66205-1621"
+}, {
+  "latitude": "37.865600",
+  "longitude": "-122.285100",
+  "weight": 2,
+  "zip": "94702-2624"
+}, {
+  "latitude": "41.143700",
+  "longitude": "-104.796200",
+  "weight": 1,
+  "zip": "82001-6851"
+}, {
+  "latitude": "34.085300",
+  "longitude": "-80.916700",
+  "weight": 1,
+  "zip": "29223-2265"
+}, {
+  "latitude": "38.384700",
+  "longitude": "-121.988700",
+  "weight": 1,
+  "zip": "95688-3131"
+}, {
+  "latitude": "41.564400",
+  "longitude": "-74.430400",
+  "weight": 2,
+  "zip": "12721"
+}, {
+  "latitude": "37.945100",
+  "longitude": "-77.471400",
+  "weight": 2,
+  "zip": "22546-3557"
+}, {
+  "latitude": "41.729900",
+  "longitude": "-86.240700",
+  "weight": 1,
+  "zip": "46637-2080"
+}, {
+  "latitude": "34.581400",
+  "longitude": "-93.099400",
+  "weight": 1,
+  "zip": "71903-0525"
+}, {
+  "latitude": "33.195100",
+  "longitude": "-96.664200",
+  "weight": 1,
+  "zip": "75070-7031"
+}, {
+  "latitude": "37.756200",
+  "longitude": "-121.952200",
+  "weight": 1,
+  "zip": "94583-3705"
+}, {
+  "latitude": "41.443000",
+  "longitude": "-74.250500",
+  "weight": 1,
+  "zip": "10916"
+}, {
+  "latitude": "39.684100",
+  "longitude": "-84.163300",
+  "weight": 1,
+  "zip": "45429-3528"
+}, {
+  "latitude": "26.330400",
+  "longitude": "-81.587100",
+  "weight": 1,
+  "zip": "34120-2831"
+}, {
+  "latitude": "32.745100",
+  "longitude": "-100.917500",
+  "weight": 1,
+  "zip": "79549-5418"
+}, {
+  "latitude": "40.808300",
+  "longitude": "-73.130500",
+  "weight": 1,
+  "zip": "11779-5008"
+}, {
+  "latitude": "32.167200",
+  "longitude": "-81.199900",
+  "weight": 2,
+  "zip": "31407-5617"
+}, {
+  "latitude": "33.563100",
+  "longitude": "-117.273800",
+  "weight": 3,
+  "zip": "92562-5913"
+}, {
+  "latitude": "30.073900",
+  "longitude": "-95.620100",
+  "weight": 1,
+  "zip": "77375-4171"
+}, {
+  "latitude": "45.277765",
+  "longitude": "-75.868498",
+  "weight": 1,
+  "zip": "K2M 0E3"
+}, {
+  "latitude": "38.235200",
+  "longitude": "-104.660000",
+  "weight": 2,
+  "zip": "81005-1855"
+}, {
+  "latitude": "37.996900",
+  "longitude": "-122.287500",
+  "weight": 1,
+  "zip": "94564-1116"
+}, {
+  "latitude": "41.772000",
+  "longitude": "-76.521300",
+  "weight": 1,
+  "zip": "18817"
+}, {
+  "latitude": "26.649200",
+  "longitude": "-81.616700",
+  "weight": 1,
+  "zip": "33972-1007"
+}, {
+  "latitude": "50.137211",
+  "longitude": "-96.899490",
+  "weight": 2,
+  "zip": "R1A 4L4"
+}, {
+  "latitude": "32.634700",
+  "longitude": "-96.911300",
+  "weight": 1,
+  "zip": "75137-4001"
+}, {
+  "latitude": "45.571300",
+  "longitude": "-94.203600",
+  "weight": 1,
+  "zip": "56303-3508"
+}, {
+  "latitude": "44.207000",
+  "longitude": "-69.785800",
+  "weight": 1,
+  "zip": "04345-6309"
+}, {
+  "latitude": "33.436800",
+  "longitude": "-112.383400",
+  "weight": 1,
+  "zip": "85338-7909"
+}, {
+  "latitude": "35.446900",
+  "longitude": "-79.138000",
+  "weight": 1,
+  "zip": "27332-6092"
+}, {
+  "latitude": "36.166100",
+  "longitude": "-116.003800",
+  "weight": 1,
+  "zip": "89048-7180"
+}, {
+  "latitude": "44.029600",
+  "longitude": "-84.496800",
+  "weight": 1,
+  "zip": "48624-1065"
+}, {
+  "latitude": "40.801400",
+  "longitude": "-81.154000",
+  "weight": 2,
+  "zip": "44669-9774"
+}, {
+  "latitude": "44.741100",
+  "longitude": "-68.873000",
+  "weight": 1,
+  "zip": "04444-5103"
+}, {
+  "latitude": "41.960200",
+  "longitude": "-87.981000",
+  "weight": 1,
+  "zip": "60191-2077"
+}, {
+  "latitude": "42.145800",
+  "longitude": "-88.023000",
+  "weight": 1,
+  "zip": "60074-2911"
+}, {
+  "latitude": "29.616900",
+  "longitude": "-98.625200",
+  "weight": 5,
+  "zip": "78256-1625"
+}, {
+  "latitude": "30.233300",
+  "longitude": "-95.550200",
+  "weight": 1,
+  "zip": "77354-6559"
+}, {
+  "latitude": "41.929600",
+  "longitude": "-71.300900",
+  "weight": 1,
+  "zip": "02703-3190"
+}, {
+  "latitude": "33.924300",
+  "longitude": "-118.411900",
+  "weight": 1,
+  "zip": "90245-2349"
+}, {
+  "latitude": "52.868947",
+  "longitude": "-112.951449",
+  "weight": 1,
+  "zip": "T0B 3L0"
+}, {
+  "latitude": "44.482000",
+  "longitude": "-88.020500",
+  "weight": 4,
+  "zip": "54301-1322"
+}, {
+  "latitude": "51.077838",
+  "longitude": "-114.061526",
+  "weight": 1,
+  "zip": "T2M 2K3"
+}, {
+  "latitude": "52.369568",
+  "longitude": "-114.913565",
+  "weight": 1,
+  "zip": "T4T 1C6"
+}, {
+  "latitude": "33.810500",
+  "longitude": "-84.136100",
+  "weight": 1,
+  "zip": "30087-3466"
+}, {
+  "latitude": "33.310600",
+  "longitude": "-110.395300",
+  "weight": 2,
+  "zip": "85550-0280"
+}, {
+  "latitude": "40.845800",
+  "longitude": "-81.774100",
+  "weight": 1,
+  "zip": "44667-2307"
+}, {
+  "latitude": "37.832100",
+  "longitude": "-121.916700",
+  "weight": 1,
+  "zip": "94506-4689"
+}, {
+  "latitude": "51.462940",
+  "longitude": "-112.722177",
+  "weight": 1,
+  "zip": "T0J 0Y0"
+}, {
+  "latitude": "39.029900",
+  "longitude": "-96.839600",
+  "weight": 1,
+  "zip": "66441-2659"
+}, {
+  "latitude": "43.276400",
+  "longitude": "-88.715400",
+  "weight": 1,
+  "zip": "53098-4558"
+}, {
+  "latitude": "41.851700",
+  "longitude": "-90.207800",
+  "weight": 2,
+  "zip": "52732-5052"
+}, {
+  "latitude": "46.118800",
+  "longitude": "-67.863000",
+  "weight": 1,
+  "zip": "04730-4308"
+}, {
+  "latitude": "38.807600",
+  "longitude": "-104.740300",
+  "weight": 1,
+  "zip": "80916-2051"
+}, {
+  "latitude": "44.426800",
+  "longitude": "-88.993200",
+  "weight": 1,
+  "zip": "54962-9627"
+}, {
+  "latitude": "47.294800",
+  "longitude": "-122.398300",
+  "weight": 1,
+  "zip": "98422-3751"
+}, {
+  "latitude": "39.403100",
+  "longitude": "-74.831600",
+  "weight": 1,
+  "zip": "08317-9709"
+}, {
+  "latitude": "41.872100",
+  "longitude": "-88.016000",
+  "weight": 3,
+  "zip": "60148-2107"
+}, {
+  "latitude": "38.433600",
+  "longitude": "-105.011300",
+  "weight": 1,
+  "zip": "81240-9116"
+}, {
+  "latitude": "36.728400",
+  "longitude": "-91.871700",
+  "weight": 1,
+  "zip": "65775"
+}, {
+  "latitude": "34.710800",
+  "longitude": "-86.742500",
+  "weight": 1,
+  "zip": "35758-9404"
+}, {
+  "latitude": "35.141600",
+  "longitude": "-79.002500",
+  "weight": 5,
+  "zip": "28307-3414"
+}, {
+  "latitude": "44.034500",
+  "longitude": "-90.060000",
+  "weight": 1,
+  "zip": "54646-8159"
+}, {
+  "latitude": "42.176000",
+  "longitude": "-71.692700",
+  "weight": 2,
+  "zip": "01560-1034"
+}, {
+  "latitude": "36.606200",
+  "longitude": "-121.908900",
+  "weight": 1,
+  "zip": "93944"
+}, {
+  "latitude": "40.087400",
+  "longitude": "-74.115200",
+  "weight": 1,
+  "zip": "08724-7046"
+}, {
+  "latitude": "26.716500",
+  "longitude": "-80.067900",
+  "weight": 2,
+  "zip": "33401-4185"
+}, {
+  "latitude": "34.189700",
+  "longitude": "-92.044800",
+  "weight": 2,
+  "zip": "71603-8766"
+}, {
+  "latitude": "39.236700",
+  "longitude": "-86.222000",
+  "weight": 7,
+  "zip": "47448-9200"
+}, {
+  "latitude": "46.707400",
+  "longitude": "-111.958000",
+  "weight": 1,
+  "zip": "59602-7961"
+}, {
+  "latitude": "40.532500",
+  "longitude": "-74.337500",
+  "weight": 2,
+  "zip": "08837-4236"
+}, {
+  "latitude": "44.402293",
+  "longitude": "-79.687997",
+  "weight": 1,
+  "zip": "L4M 2S7"
+}, {
+  "latitude": "39.214100",
+  "longitude": "-81.832900",
+  "weight": 2,
+  "zip": "45723-9557"
+}, {
+  "latitude": "53.706807",
+  "longitude": "-110.780425",
+  "weight": 2,
+  "zip": "T0B 1C0"
+}, {
+  "latitude": "49.823765",
+  "longitude": "-99.973133",
+  "weight": 2,
+  "zip": "R7B 2C9"
+}, {
+  "latitude": "40.711700",
+  "longitude": "-73.300700",
+  "weight": 1,
+  "zip": "11795-4701"
+}, {
+  "latitude": "30.184300",
+  "longitude": "-92.049700",
+  "weight": 1,
+  "zip": "70503"
+}, {
+  "latitude": "40.109300",
+  "longitude": "-83.114600",
+  "weight": 1,
+  "zip": "43017-3468"
+}, {
+  "latitude": "39.008200",
+  "longitude": "-84.597700",
+  "weight": 2,
+  "zip": "41018-2977"
+}, {
+  "latitude": "30.223100",
+  "longitude": "-81.755600",
+  "weight": 3,
+  "zip": "32244-6815"
+}, {
+  "latitude": "38.885200",
+  "longitude": "-77.323300",
+  "weight": 1,
+  "zip": "22124-1903"
+}, {
+  "latitude": "40.854200",
+  "longitude": "-73.213800",
+  "weight": 1,
+  "zip": "11787-2413"
+}, {
+  "latitude": "35.558300",
+  "longitude": "-97.637500",
+  "weight": 2,
+  "zip": "73132-5712"
+}, {
+  "latitude": "41.952500",
+  "longitude": "-88.253600",
+  "weight": 1,
+  "zip": "60184-2305"
+}, {
+  "latitude": "40.418100",
+  "longitude": "-80.052600",
+  "weight": 1,
+  "zip": "15220-4025"
+}, {
+  "latitude": "43.706900",
+  "longitude": "-116.362000",
+  "weight": 1,
+  "zip": "83616-6539"
+}, {
+  "latitude": "38.975500",
+  "longitude": "-80.240700",
+  "weight": 1,
+  "zip": "26201-6077"
+}, {
+  "latitude": "32.188800",
+  "longitude": "-90.259500",
+  "weight": 2,
+  "zip": "39272-9422"
+}, {
+  "latitude": "55.778469",
+  "longitude": "-118.837229",
+  "weight": 1,
+  "zip": "T0H 3G0"
+}, {
+  "latitude": "43.188800",
+  "longitude": "-70.886800",
+  "weight": 1,
+  "zip": "03820-3744"
+}, {
+  "latitude": "39.907200",
+  "longitude": "-77.636000",
+  "weight": 1,
+  "zip": "17202-4466"
+}, {
+  "latitude": "42.534000",
+  "longitude": "-83.528500",
+  "weight": 1,
+  "zip": "48393-2726"
+}, {
+  "latitude": "33.110100",
+  "longitude": "-117.070000",
+  "weight": 1,
+  "zip": "92025-6607"
+}, {
+  "latitude": "28.712000",
+  "longitude": "-81.513600",
+  "weight": 1,
+  "zip": "32712-2005"
+}, {
+  "latitude": "42.074600",
+  "longitude": "-71.476800",
+  "weight": 1,
+  "zip": "02019-1469"
+}, {
+  "latitude": "41.340900",
+  "longitude": "-75.024100",
+  "weight": 1,
+  "zip": "18371-9480"
+}, {
+  "latitude": "30.566100",
+  "longitude": "-90.109800",
+  "weight": 2,
+  "zip": "70435-2225"
+}, {
+  "latitude": "40.080600",
+  "longitude": "-74.059500",
+  "weight": 1,
+  "zip": "08742-2038"
+}, {
+  "latitude": "40.575300",
+  "longitude": "-77.008300",
+  "weight": 1,
+  "zip": "17045-9226"
+}, {
+  "latitude": "29.976600",
+  "longitude": "-95.635800",
+  "weight": 1,
+  "zip": "77429-2529"
+}, {
+  "latitude": "42.642900",
+  "longitude": "-83.354600",
+  "weight": 1,
+  "zip": "48328"
+}, {
+  "latitude": "54.090035",
+  "longitude": "-125.056552",
+  "weight": 1,
+  "zip": "V0J 1L0"
+}, {
+  "latitude": "50.276332",
+  "longitude": "-107.801002",
+  "weight": 1,
+  "zip": "S9H 3H3"
+}, {
+  "latitude": "30.460100",
+  "longitude": "-89.088600",
+  "weight": 1,
+  "zip": "39503-4426"
+}, {
+  "latitude": "31.489200",
+  "longitude": "-110.215300",
+  "weight": 1,
+  "zip": "85650-7514"
+}, {
+  "latitude": "34.261000",
+  "longitude": "-116.813100",
+  "weight": 1,
+  "zip": "92314-0435"
+}, {
+  "latitude": "38.894200",
+  "longitude": "-121.290800",
+  "weight": 2,
+  "zip": "95648-3009"
+}, {
+  "latitude": "42.467100",
+  "longitude": "-96.352800",
+  "weight": 1,
+  "zip": "51106-1716"
+}, {
+  "latitude": "36.202200",
+  "longitude": "-119.338000",
+  "weight": 3,
+  "zip": "93274-8579"
+}, {
+  "latitude": "35.310600",
+  "longitude": "-79.347200",
+  "weight": 1,
+  "zip": "28326-6229"
+}, {
+  "latitude": "35.779200",
+  "longitude": "-90.766000",
+  "weight": 1,
+  "zip": "72404-7647"
+}, {
+  "latitude": "43.227000",
+  "longitude": "-123.515800",
+  "weight": 1,
+  "zip": "97471-5005"
+}, {
+  "latitude": "36.916800",
+  "longitude": "-76.287500",
+  "weight": 1,
+  "zip": "23505-9162"
+}, {
+  "latitude": "49.197511",
+  "longitude": "-113.307083",
+  "weight": 3,
+  "zip": "T0K 0K0"
+}, {
+  "latitude": "41.022200",
+  "longitude": "-73.679800",
+  "weight": 1,
+  "zip": "10573-2922"
+}, {
+  "latitude": "30.514500",
+  "longitude": "-97.668000",
+  "weight": 2,
+  "zip": "78664-4010"
+}, {
+  "latitude": "40.400100",
+  "longitude": "-86.860200",
+  "weight": 4,
+  "zip": "47905-1472"
+}, {
+  "latitude": "47.611600",
+  "longitude": "-122.305600",
+  "weight": 1,
+  "zip": "98122-2233"
+}, {
+  "latitude": "39.778700",
+  "longitude": "-75.887600",
+  "weight": 1,
+  "zip": "19352-9042"
+}, {
+  "latitude": "35.275200",
+  "longitude": "-89.729500",
+  "weight": 1,
+  "zip": "38002-4496"
+}, {
+  "latitude": "43.700488",
+  "longitude": "-79.368306",
+  "weight": 1,
+  "zip": "M4P 2L4"
+}, {
+  "latitude": "37.893100",
+  "longitude": "-78.338600",
+  "weight": 1,
+  "zip": "22963-4248"
+}, {
+  "latitude": "33.831000",
+  "longitude": "-85.775200",
+  "weight": 1,
+  "zip": "36265-7431"
+}, {
+  "latitude": "32.285200",
+  "longitude": "-81.287500",
+  "weight": 1,
+  "zip": "31326"
+}, {
+  "latitude": "49.016080",
+  "longitude": "-88.267591",
+  "weight": 1,
+  "zip": "P0T 2J0"
+}, {
+  "latitude": "51.167724",
+  "longitude": "-114.076783",
+  "weight": 1,
+  "zip": "T3K 0N4"
+}, {
+  "latitude": "41.102500",
+  "longitude": "-81.538600",
+  "weight": 4,
+  "zip": "44303-1768"
+}, {
+  "latitude": "31.419400",
+  "longitude": "-100.480000",
+  "weight": 1,
+  "zip": "76904-7935"
+}, {
+  "latitude": "41.146500",
+  "longitude": "-85.123200",
+  "weight": 1,
+  "zip": "46825-4330"
+}, {
+  "latitude": "43.049800",
+  "longitude": "-78.851000",
+  "weight": 1,
+  "zip": "14120-6922"
+}, {
+  "latitude": "50.949474",
+  "longitude": "-114.132633",
+  "weight": 1,
+  "zip": "T2W 3C4"
+}, {
+  "latitude": "42.679700",
+  "longitude": "-84.577200",
+  "weight": 2,
+  "zip": "48911-2344"
+}, {
+  "latitude": "37.881000",
+  "longitude": "-93.660800",
+  "weight": 1,
+  "zip": "64738-8295"
+}, {
+  "latitude": "39.380900",
+  "longitude": "-119.685900",
+  "weight": 1,
+  "zip": "89521-7445"
+}, {
+  "latitude": "40.512400",
+  "longitude": "-88.988300",
+  "weight": 1,
+  "zip": "61761-6423"
+}, {
+  "latitude": "46.239500",
+  "longitude": "-114.167900",
+  "weight": 1,
+  "zip": "59840-3634"
+}, {
+  "latitude": "33.570100",
+  "longitude": "-117.708600",
+  "weight": 2,
+  "zip": "92656-4259"
+}, {
+  "latitude": "40.557000",
+  "longitude": "-80.157800",
+  "weight": 1,
+  "zip": "15143-8703"
+}, {
+  "latitude": "35.722500",
+  "longitude": "-78.840800",
+  "weight": 1,
+  "zip": "27502-6754"
+}, {
+  "latitude": "42.063900",
+  "longitude": "-87.985600",
+  "weight": 2,
+  "zip": "60005-2630"
+}, {
+  "latitude": "41.556900",
+  "longitude": "-72.665200",
+  "weight": 1,
+  "zip": "06457-5118"
+}, {
+  "latitude": "39.749500",
+  "longitude": "-77.100300",
+  "weight": 1,
+  "zip": "17340-9338"
+}, {
+  "latitude": "30.077700",
+  "longitude": "-90.489500",
+  "weight": 1,
+  "zip": "70068-5204"
+}, {
+  "latitude": "39.465500",
+  "longitude": "-74.965300",
+  "weight": 1,
+  "zip": "08361-7204"
+}, {
+  "latitude": "40.429500",
+  "longitude": "-80.014400",
+  "weight": 1,
+  "zip": "15211-1710"
+}, {
+  "latitude": "40.061700",
+  "longitude": "-86.055500",
+  "weight": 1,
+  "zip": "46062-9290"
+}, {
+  "latitude": "30.938100",
+  "longitude": "-84.593400",
+  "weight": 1,
+  "zip": "39817-6954"
+}, {
+  "latitude": "34.140700",
+  "longitude": "-117.956700",
+  "weight": 1,
+  "zip": "91010-1611"
+}, {
+  "latitude": "27.863300",
+  "longitude": "-82.349900",
+  "weight": 1,
+  "zip": "33578-8385"
+}, {
+  "latitude": "43.160200",
+  "longitude": "-88.112800",
+  "weight": 1,
+  "zip": "53051-6060"
+}, {
+  "latitude": "42.849900",
+  "longitude": "-73.785100",
+  "weight": 1,
+  "zip": "12065-6644"
+}, {
+  "latitude": "39.657500",
+  "longitude": "-104.784600",
+  "weight": 2,
+  "zip": "80013-3657"
+}, {
+  "latitude": "37.683000",
+  "longitude": "-121.763000",
+  "weight": 1,
+  "zip": "94550"
+}, {
+  "latitude": "39.768200",
+  "longitude": "-87.197800",
+  "weight": 1,
+  "zip": "47872-7917"
+}, {
+  "latitude": "52.370591",
+  "longitude": "-114.912711",
+  "weight": 2,
+  "zip": "T4T 1C5"
+}, {
+  "latitude": "40.895600",
+  "longitude": "-81.433000",
+  "weight": 1,
+  "zip": "44720-2563"
+}, {
+  "latitude": "33.661700",
+  "longitude": "-112.037000",
+  "weight": 1,
+  "zip": "85024-6238"
+}, {
+  "latitude": "44.503500",
+  "longitude": "-73.090600",
+  "weight": 1,
+  "zip": "05452-4629"
+}, {
+  "latitude": "35.669500",
+  "longitude": "-97.743100",
+  "weight": 1,
+  "zip": "73078-8975"
+}, {
+  "latitude": "46.949800",
+  "longitude": "-123.021200",
+  "weight": 1,
+  "zip": "98512-8130"
+}, {
+  "latitude": "44.941400",
+  "longitude": "-93.010700",
+  "weight": 1,
+  "zip": "55119-4721"
+}, {
+  "latitude": "29.996600",
+  "longitude": "-97.833500",
+  "weight": 1,
+  "zip": "78640-6344"
+}, {
+  "latitude": "55.169639",
+  "longitude": "-118.791449",
+  "weight": 1,
+  "zip": "T8V 7K2"
+}, {
+  "latitude": "36.149900",
+  "longitude": "-95.792300",
+  "weight": 1,
+  "zip": "74108-5542"
+}, {
+  "latitude": "40.008600",
+  "longitude": "-74.789600",
+  "weight": 1,
+  "zip": "08060-2409"
+}, {
+  "latitude": "43.579700",
+  "longitude": "-83.173300",
+  "weight": 1,
+  "zip": "48726-9792"
+}, {
+  "latitude": "30.547400",
+  "longitude": "-88.708600",
+  "weight": 1,
+  "zip": "39565-9031"
+}, {
+  "latitude": "36.216100",
+  "longitude": "-94.811400",
+  "weight": 1,
+  "zip": "74347-9349"
+}, {
+  "latitude": "31.804500",
+  "longitude": "-105.966100",
+  "weight": 2,
+  "zip": "79938-4489"
+}, {
+  "latitude": "47.509800",
+  "longitude": "-111.340500",
+  "weight": 1,
+  "zip": "59404"
+}, {
+  "latitude": "36.258300",
+  "longitude": "-115.106800",
+  "weight": 1,
+  "zip": "89081-2679"
+}, {
+  "latitude": "44.324259",
+  "longitude": "-78.541092",
+  "weight": 1,
+  "zip": "K0L 2W0"
+}, {
+  "latitude": "39.768100",
+  "longitude": "-89.855000",
+  "weight": 1,
+  "zip": "62670-4438"
+}, {
+  "latitude": "45.295600",
+  "longitude": "-93.802300",
+  "weight": 1,
+  "zip": "55362-9386"
+}, {
+  "latitude": "39.947800",
+  "longitude": "-74.903600",
+  "weight": 1,
+  "zip": "08054-5985"
+}, {
+  "latitude": "53.498915",
+  "longitude": "-112.051161",
+  "weight": 1,
+  "zip": "T9C 1K2"
+}, {
+  "latitude": "42.232500",
+  "longitude": "-83.633600",
+  "weight": 1,
+  "zip": "48197-1913"
+}, {
+  "latitude": "43.042500",
+  "longitude": "-83.070800",
+  "weight": 1,
+  "zip": "48444-9503"
+}, {
+  "latitude": "46.823400",
+  "longitude": "-100.774800",
+  "weight": 1,
+  "zip": "58501-4707"
+}, {
+  "latitude": "40.303000",
+  "longitude": "-76.886200",
+  "weight": 1,
+  "zip": "17110-1792"
+}, {
+  "latitude": "47.143000",
+  "longitude": "-122.164400",
+  "weight": 1,
+  "zip": "98391"
+}, {
+  "latitude": "40.751300",
+  "longitude": "-73.883000",
+  "weight": 1,
+  "zip": "11372-1538"
+}, {
+  "latitude": "38.816100",
+  "longitude": "-94.532800",
+  "weight": 1,
+  "zip": "64012-1768"
+}, {
+  "latitude": "51.082493",
+  "longitude": "-115.334683",
+  "weight": 1,
+  "zip": "T1W 1B5"
+}, {
+  "latitude": "50.499742",
+  "longitude": "-104.649530",
+  "weight": 1,
+  "zip": "S4X 4V1"
+}, {
+  "latitude": "53.905864",
+  "longitude": "-122.773782",
+  "weight": 3,
+  "zip": "V2M 1W5"
+}, {
+  "latitude": "40.282500",
+  "longitude": "-74.342400",
+  "weight": 1,
+  "zip": "07726-1743"
+}, {
+  "latitude": "26.112200",
+  "longitude": "-80.226400",
+  "weight": 1,
+  "zip": "33317-3550"
+}, {
+  "latitude": "43.598293",
+  "longitude": "-79.654719",
+  "weight": 1,
+  "zip": "L5R 1S5"
+}, {
+  "latitude": "44.345600",
+  "longitude": "-88.434300",
+  "weight": 1,
+  "zip": "54913-8160"
+}, {
+  "latitude": "48.353400",
+  "longitude": "-114.178400",
+  "weight": 1,
+  "zip": "59912-9488"
+}, {
+  "latitude": "37.319700",
+  "longitude": "-82.611400",
+  "weight": 2,
+  "zip": "41572-8602"
+}, {
+  "latitude": "44.232500",
+  "longitude": "-83.806800",
+  "weight": 11,
+  "zip": "48770-9760"
+}, {
+  "latitude": "33.979700",
+  "longitude": "-117.730800",
+  "weight": 2,
+  "zip": "91709-3022"
+}, {
+  "latitude": "36.331200",
+  "longitude": "-92.375300",
+  "weight": 1,
+  "zip": "72653-8566"
+}, {
+  "latitude": "49.222085",
+  "longitude": "-122.580587",
+  "weight": 1,
+  "zip": "V2X 9E4"
+}, {
+  "latitude": "35.411000",
+  "longitude": "-97.438800",
+  "weight": 6,
+  "zip": "73135"
+}, {
+  "latitude": "45.387300",
+  "longitude": "-92.842100",
+  "weight": 3,
+  "zip": "55045-8341"
+}, {
+  "latitude": "43.329000",
+  "longitude": "-73.681800",
+  "weight": 1,
+  "zip": "12804-8745"
+}, {
+  "latitude": "40.335100",
+  "longitude": "-75.875000",
+  "weight": 1,
+  "zip": "19606-9504"
+}, {
+  "latitude": "33.863300",
+  "longitude": "-98.534000",
+  "weight": 2,
+  "zip": "76308-3515"
+}, {
+  "latitude": "40.900000",
+  "longitude": "-80.861900",
+  "weight": 1,
+  "zip": "44460-9622"
+}, {
+  "latitude": "37.728400",
+  "longitude": "-77.554400",
+  "weight": 1,
+  "zip": "23059-6923"
+}, {
+  "latitude": "41.373400",
+  "longitude": "-81.915800",
+  "weight": 1,
+  "zip": "44138-1840"
+}, {
+  "latitude": "32.898200",
+  "longitude": "-80.068600",
+  "weight": 1,
+  "zip": "29404-5302"
+}, {
+  "latitude": "39.634900",
+  "longitude": "-75.699300",
+  "weight": 1,
+  "zip": "19702-2827"
+}, {
+  "latitude": "34.069900",
+  "longitude": "-118.349200",
+  "weight": 1,
+  "zip": "90036-4235"
+}, {
+  "latitude": "25.852100",
+  "longitude": "-80.182100",
+  "weight": 1,
+  "zip": "33138-2212"
+}, {
+  "latitude": "33.093400",
+  "longitude": "-96.645400",
+  "weight": 1,
+  "zip": "75002-8506"
+}, {
+  "latitude": "35.078100",
+  "longitude": "-85.063500",
+  "weight": 1,
+  "zip": "37363-7015"
+}, {
+  "latitude": "40.608700",
+  "longitude": "-74.281900",
+  "weight": 1,
+  "zip": "07065-1835"
+}, {
+  "latitude": "38.995000",
+  "longitude": "-92.311200",
+  "weight": 1,
+  "zip": "65202-5531"
+}, {
+  "latitude": "43.701300",
+  "longitude": "-116.496700",
+  "weight": 3,
+  "zip": "83669-5629"
+}, {
+  "latitude": "43.087800",
+  "longitude": "-79.037000",
+  "weight": 1,
+  "zip": "14303-2228"
+}, {
+  "latitude": "42.124500",
+  "longitude": "-72.446400",
+  "weight": 1,
+  "zip": "01095-2346"
+}, {
+  "latitude": "39.896700",
+  "longitude": "-75.347400",
+  "weight": 2,
+  "zip": "19081-2718"
+}, {
+  "latitude": "40.727500",
+  "longitude": "-84.089000",
+  "weight": 1,
+  "zip": "45804-3629"
+}, {
+  "latitude": "35.044300",
+  "longitude": "-106.672900",
+  "weight": 1,
+  "zip": "87193-7112"
+}, {
+  "latitude": "43.010700",
+  "longitude": "-89.294800",
+  "weight": 2,
+  "zip": "53558-9528"
+}, {
+  "latitude": "32.899900",
+  "longitude": "-96.789700",
+  "weight": 1,
+  "zip": "75230-2261"
+}, {
+  "latitude": "62.445279",
+  "longitude": "-114.397202",
+  "weight": 3,
+  "zip": "X1A 2L3"
+}, {
+  "latitude": "50.456176",
+  "longitude": "-104.638253",
+  "weight": 1,
+  "zip": "S4T 4G5"
+}, {
+  "latitude": "42.169800",
+  "longitude": "-83.784900",
+  "weight": 1,
+  "zip": "48176-1535"
+}, {
+  "latitude": "40.518000",
+  "longitude": "-74.845300",
+  "weight": 1,
+  "zip": "08822-1145"
+}, {
+  "latitude": "40.204300",
+  "longitude": "-74.177900",
+  "weight": 1,
+  "zip": "07727-3836"
+}, {
+  "latitude": "38.577000",
+  "longitude": "-90.525500",
+  "weight": 2,
+  "zip": "63021-6215"
+}, {
+  "latitude": "37.287400",
+  "longitude": "-107.861700",
+  "weight": 1,
+  "zip": "81301-5879"
+}, {
+  "latitude": "50.175230",
+  "longitude": "-101.193917",
+  "weight": 1,
+  "zip": "R0M 1H0"
+}, {
+  "latitude": "54.765785",
+  "longitude": "-101.863810",
+  "weight": 1,
+  "zip": "R8A 1B3"
+}, {
+  "latitude": "39.317000",
+  "longitude": "-84.243800",
+  "weight": 2,
+  "zip": "45039-7001"
+}, {
+  "latitude": "35.549400",
+  "longitude": "-80.422600",
+  "weight": 1,
+  "zip": "28138-8520"
+}, {
+  "latitude": "39.409600",
+  "longitude": "-77.275900",
+  "weight": 5,
+  "zip": "21774-6561"
+}, {
+  "latitude": "38.860400",
+  "longitude": "-77.264900",
+  "weight": 1,
+  "zip": "22031-4804"
+}, {
+  "latitude": "41.563700",
+  "longitude": "-87.724700",
+  "weight": 1,
+  "zip": "60478-4990"
+}, {
+  "latitude": "49.765501",
+  "longitude": "-94.480905",
+  "weight": 1,
+  "zip": "P9N 3X3"
+}, {
+  "latitude": "41.721200",
+  "longitude": "-93.568200",
+  "weight": 1,
+  "zip": "50021-6872"
+}, {
+  "latitude": "33.159800",
+  "longitude": "-111.561800",
+  "weight": 1,
+  "zip": "85143-5334"
+}, {
+  "latitude": "42.889200",
+  "longitude": "-87.902700",
+  "weight": 1,
+  "zip": "53154-7445"
+}, {
+  "latitude": "41.357200",
+  "longitude": "-72.057900",
+  "weight": 1,
+  "zip": "06340-2449"
+}, {
+  "latitude": "34.187200",
+  "longitude": "-118.386500",
+  "weight": 1,
+  "zip": "91606-5128"
+}, {
+  "latitude": "41.805000",
+  "longitude": "-73.801300",
+  "weight": 1,
+  "zip": "12578-2101"
+}, {
+  "latitude": "31.663100",
+  "longitude": "-106.140100",
+  "weight": 1,
+  "zip": "79928-6454"
+}, {
+  "latitude": "45.520100",
+  "longitude": "-122.860400",
+  "weight": 2,
+  "zip": "97006-4480"
+}, {
+  "latitude": "28.662200",
+  "longitude": "-82.523600",
+  "weight": 1,
+  "zip": "34614-2746"
+}, {
+  "latitude": "37.179000",
+  "longitude": "-113.706600",
+  "weight": 1,
+  "zip": "84738-6477"
+}, {
+  "latitude": "32.824800",
+  "longitude": "-97.451900",
+  "weight": 1,
+  "zip": "76135"
+}, {
+  "latitude": "29.950400",
+  "longitude": "-90.123600",
+  "weight": 1,
+  "zip": "70118"
+}, {
+  "latitude": "38.926800",
+  "longitude": "-78.179600",
+  "weight": 2,
+  "zip": "22630-9345"
+}, {
+  "latitude": "44.699257",
+  "longitude": "-63.666184",
+  "weight": 1,
+  "zip": "B3M 4W9"
+}, {
+  "latitude": "42.505100",
+  "longitude": "-83.407200",
+  "weight": 3,
+  "zip": "48331-2661"
+}, {
+  "latitude": "50.280375",
+  "longitude": "-107.791146",
+  "weight": 1,
+  "zip": "S9H 3X4"
+}, {
+  "latitude": "32.962800",
+  "longitude": "-96.364800",
+  "weight": 1,
+  "zip": "75189-9134"
+}, {
+  "latitude": "42.711500",
+  "longitude": "-71.167000",
+  "weight": 3,
+  "zip": "01841-2135"
+}, {
+  "latitude": "33.641500",
+  "longitude": "-117.589400",
+  "weight": 1,
+  "zip": "92679-4818"
+}, {
+  "latitude": "52.781952",
+  "longitude": "-108.300510",
+  "weight": 2,
+  "zip": "S9A 0R5"
+}, {
+  "latitude": "38.599300",
+  "longitude": "-77.340300",
+  "weight": 1,
+  "zip": "22025-1140"
+}, {
+  "latitude": "47.234800",
+  "longitude": "-93.511500",
+  "weight": 1,
+  "zip": "55744-4749"
+}, {
+  "latitude": "30.019200",
+  "longitude": "-93.832600",
+  "weight": 2,
+  "zip": "77611-3023"
+}, {
+  "latitude": "43.592600",
+  "longitude": "-96.586000",
+  "weight": 2,
+  "zip": "57005-1635"
+}, {
+  "latitude": "34.113200",
+  "longitude": "-117.377100",
+  "weight": 1,
+  "zip": "92376-7132"
+}, {
+  "latitude": "29.682600",
+  "longitude": "-95.122200",
+  "weight": 3,
+  "zip": "77536-4996"
+}, {
+  "latitude": "39.762800",
+  "longitude": "-86.534300",
+  "weight": 2,
+  "zip": "46122-8807"
+}, {
+  "latitude": "35.867300",
+  "longitude": "-78.538100",
+  "weight": 1,
+  "zip": "27616-8384"
+}, {
+  "latitude": "40.175600",
+  "longitude": "-76.182100",
+  "weight": 1,
+  "zip": "17522-9202"
+}, {
+  "latitude": "38.535200",
+  "longitude": "-90.000600",
+  "weight": 1,
+  "zip": "62226-6051"
+}, {
+  "latitude": "53.762920",
+  "longitude": "-112.779504",
+  "weight": 1,
+  "zip": "T0B 2R0"
+}, {
+  "latitude": "42.193800",
+  "longitude": "-85.563900",
+  "weight": 1,
+  "zip": "49002-6303"
+}, {
+  "latitude": "40.495400",
+  "longitude": "-111.944400",
+  "weight": 2,
+  "zip": "84065-2415"
+}, {
+  "latitude": "40.866200",
+  "longitude": "-73.900300",
+  "weight": 1,
+  "zip": "10468-1312"
+}, {
+  "latitude": "33.541200",
+  "longitude": "-82.139800",
+  "weight": 1,
+  "zip": "30809-8209"
+}, {
+  "latitude": "37.165400",
+  "longitude": "-93.252200",
+  "weight": 1,
+  "zip": "65804-7418"
+}, {
+  "latitude": "40.095600",
+  "longitude": "-75.373700",
+  "weight": 1,
+  "zip": "19406-4346"
+}, {
+  "latitude": "38.902400",
+  "longitude": "-76.990100",
+  "weight": 2,
+  "zip": "20002-3804"
+}, {
+  "latitude": "27.467600",
+  "longitude": "-81.458100",
+  "weight": 1,
+  "zip": "33875-1361"
+}, {
+  "latitude": "38.006600",
+  "longitude": "-122.263700",
+  "weight": 1,
+  "zip": "94547-2023"
+}, {
+  "latitude": "42.460300",
+  "longitude": "-84.420700",
+  "weight": 1,
+  "zip": "49251-9731"
+}, {
+  "latitude": "50.013156",
+  "longitude": "-114.930535",
+  "weight": 1,
+  "zip": "V0B 1H0"
+}, {
+  "latitude": "41.662400",
+  "longitude": "-87.852100",
+  "weight": 2,
+  "zip": "60464-2534"
+}, {
+  "latitude": "37.683000",
+  "longitude": "-121.763000",
+  "weight": 1,
+  "zip": "94550-5848"
+}, {
+  "latitude": "41.604900",
+  "longitude": "-83.563800",
+  "weight": 1,
+  "zip": "43460-1564"
+}, {
+  "latitude": "33.252200",
+  "longitude": "-111.702200",
+  "weight": 1,
+  "zip": "85298-4820"
+}, {
+  "latitude": "39.877500",
+  "longitude": "-77.064300",
+  "weight": 1,
+  "zip": "17350-8428"
+}, {
+  "latitude": "42.897400",
+  "longitude": "-76.280600",
+  "weight": 1,
+  "zip": "13110-9707"
+}, {
+  "latitude": "52.306346",
+  "longitude": "-114.099248",
+  "weight": 1,
+  "zip": "T4S 1N8"
+}, {
+  "latitude": "41.391700",
+  "longitude": "-73.453200",
+  "weight": 3,
+  "zip": "06810-2606"
+}, {
+  "latitude": "35.327500",
+  "longitude": "-118.983900",
+  "weight": 1,
+  "zip": "93307-5579"
+}, {
+  "latitude": "40.696400",
+  "longitude": "-74.025300",
+  "weight": 2,
+  "zip": "10004-1217"
+}, {
+  "latitude": "40.844500",
+  "longitude": "-74.482400",
+  "weight": 1,
+  "zip": "07950-3236"
+}, {
+  "latitude": "38.366100",
+  "longitude": "-76.434600",
+  "weight": 1,
+  "zip": "20657-2027"
+}, {
+  "latitude": "39.749100",
+  "longitude": "-104.994600",
+  "weight": 1,
+  "zip": "80202-1602"
+}, {
+  "latitude": "41.350700",
+  "longitude": "-72.106200",
+  "weight": 3,
+  "zip": "06320-5617"
+}, {
+  "latitude": "34.808900",
+  "longitude": "-88.198300",
+  "weight": 1,
+  "zip": "38852-7522"
+}, {
+  "latitude": "52.749704",
+  "longitude": "-108.313451",
+  "weight": 1,
+  "zip": "S0M 2E0"
+}, {
+  "latitude": "48.345800",
+  "longitude": "-102.418500",
+  "weight": 1,
+  "zip": "58784-9586"
+}, {
+  "latitude": "44.024000",
+  "longitude": "-92.746400",
+  "weight": 1,
+  "zip": "55944-9426"
+}, {
+  "latitude": "41.428900",
+  "longitude": "-78.550500",
+  "weight": 1,
+  "zip": "15857-1216"
+}, {
+  "latitude": "47.931800",
+  "longitude": "-97.021300",
+  "weight": 2,
+  "zip": "56721-2325"
+}, {
+  "latitude": "30.073900",
+  "longitude": "-95.620100",
+  "weight": 1,
+  "zip": "77375"
+}, {
+  "latitude": "38.001000",
+  "longitude": "-84.528200",
+  "weight": 1,
+  "zip": "40503-6303"
+}, {
+  "latitude": "36.181900",
+  "longitude": "-95.168900",
+  "weight": 1,
+  "zip": "74352-0192"
+}, {
+  "latitude": "40.256300",
+  "longitude": "-75.834400",
+  "weight": 1,
+  "zip": "19508-8598"
+}, {
+  "latitude": "41.595000",
+  "longitude": "-73.887600",
+  "weight": 2,
+  "zip": "12590-2606"
+}, {
+  "latitude": "35.164700",
+  "longitude": "-108.191700",
+  "weight": 1,
+  "zip": "87005"
+}, {
+  "latitude": "32.251300",
+  "longitude": "-80.872100",
+  "weight": 1,
+  "zip": "29910-7931"
+}, {
+  "latitude": "34.696200",
+  "longitude": "-82.289300",
+  "weight": 1,
+  "zip": "29680-6575"
+}, {
+  "latitude": "29.897300",
+  "longitude": "-90.203300",
+  "weight": 1,
+  "zip": "70094"
+}, {
+  "latitude": "34.784700",
+  "longitude": "-98.200200",
+  "weight": 1,
+  "zip": "73541-9433"
+}, {
+  "latitude": "40.413700",
+  "longitude": "-80.568300",
+  "weight": 1,
+  "zip": "26062-4625"
+}, {
+  "latitude": "47.865400",
+  "longitude": "-95.064300",
+  "weight": 1,
+  "zip": "56671-0903"
+}, {
+  "latitude": "53.228282",
+  "longitude": "-114.047019",
+  "weight": 1,
+  "zip": "T0C 2P0"
+}, {
+  "latitude": "31.517100",
+  "longitude": "-97.119800",
+  "weight": 1,
+  "zip": "76706-5126"
+}, {
+  "latitude": "40.615600",
+  "longitude": "-74.772400",
+  "weight": 1,
+  "zip": "08889-3384"
+}, {
+  "latitude": "33.658100",
+  "longitude": "-95.537900",
+  "weight": 1,
+  "zip": "75460-6432"
+}, {
+  "latitude": "35.480900",
+  "longitude": "-108.176700",
+  "weight": 2,
+  "zip": "87311-0422"
+}, {
+  "latitude": "53.397435",
+  "longitude": "-117.587530",
+  "weight": 1,
+  "zip": "T7V 1R1"
+}, {
+  "latitude": "26.664400",
+  "longitude": "-80.174100",
+  "weight": 3,
+  "zip": "33411-8143"
+}, {
+  "latitude": "38.553700",
+  "longitude": "-75.563100",
+  "weight": 1,
+  "zip": "19956-2637"
+}, {
+  "latitude": "47.542700",
+  "longitude": "-122.587100",
+  "weight": 1,
+  "zip": "98366-3638"
+}, {
+  "latitude": "42.486500",
+  "longitude": "-73.920600",
+  "weight": 2,
+  "zip": "12046-2105"
+}, {
+  "latitude": "38.596000",
+  "longitude": "-90.007100",
+  "weight": 1,
+  "zip": "62208-2647"
+}, {
+  "latitude": "46.456000",
+  "longitude": "-97.636900",
+  "weight": 1,
+  "zip": "58054-9750"
+}, {
+  "latitude": "42.180500",
+  "longitude": "-76.834500",
+  "weight": 1,
+  "zip": "14845-8122"
+}, {
+  "latitude": "38.996900",
+  "longitude": "-105.062300",
+  "weight": 8,
+  "zip": "80863-9404"
+}, {
+  "latitude": "39.210900",
+  "longitude": "-76.559700",
+  "weight": 3,
+  "zip": "21226-1924"
+}, {
+  "latitude": "35.152700",
+  "longitude": "-86.566400",
+  "weight": 1,
+  "zip": "37334-8024"
+}, {
+  "latitude": "41.651600",
+  "longitude": "-74.700700",
+  "weight": 1,
+  "zip": "12701-2411"
+}, {
+  "latitude": "41.161900",
+  "longitude": "-85.473700",
+  "weight": 2,
+  "zip": "46725-9182"
+}, {
+  "latitude": "36.527500",
+  "longitude": "-83.252900",
+  "weight": 1,
+  "zip": "37869-6832"
+}, {
+  "latitude": "38.952800",
+  "longitude": "-94.470500",
+  "weight": 1,
+  "zip": "64138"
+}, {
+  "latitude": "41.708000",
+  "longitude": "-83.706800",
+  "weight": 1,
+  "zip": "43560"
+}, {
+  "latitude": "53.815114",
+  "longitude": "-101.244748",
+  "weight": 1,
+  "zip": "R9A 1M1"
+}, {
+  "latitude": "52.367374",
+  "longitude": "-114.924699",
+  "weight": 1,
+  "zip": "T4T 2A3"
+}, {
+  "latitude": "43.035100",
+  "longitude": "-108.202400",
+  "weight": 4,
+  "zip": "82501-2243"
+}, {
+  "latitude": "36.514400",
+  "longitude": "-82.547600",
+  "weight": 1,
+  "zip": "37660-6760"
+}, {
+  "latitude": "43.256901",
+  "longitude": "-81.137548",
+  "weight": 1,
+  "zip": "N4X 1A5"
+}, {
+  "latitude": "54.154674",
+  "longitude": "-113.856266",
+  "weight": 2,
+  "zip": "T7P 1V3"
+}, {
+  "latitude": "39.367300",
+  "longitude": "-75.029300",
+  "weight": 1,
+  "zip": "08332-4720"
+}, {
+  "latitude": "43.765000",
+  "longitude": "-88.605700",
+  "weight": 2,
+  "zip": "54937-8634"
+}, {
+  "latitude": "41.471200",
+  "longitude": "-87.939100",
+  "weight": 1,
+  "zip": "60431-9009"
+}, {
+  "latitude": "39.429300",
+  "longitude": "-84.173500",
+  "weight": 1,
+  "zip": "45036-1468"
+}, {
+  "latitude": "42.000200",
+  "longitude": "-70.844800",
+  "weight": 1,
+  "zip": "02338-1130"
+}, {
+  "latitude": "40.979900",
+  "longitude": "-76.622900",
+  "weight": 1,
+  "zip": "17821-2121"
+}, {
+  "latitude": "34.830500",
+  "longitude": "-87.656000",
+  "weight": 1,
+  "zip": "35630-0735"
+}, {
+  "latitude": "33.654700",
+  "longitude": "-97.158300",
+  "weight": 1,
+  "zip": "76240-5921"
+}, {
+  "latitude": "44.631000",
+  "longitude": "-95.418200",
+  "weight": 1,
+  "zip": "56237-1584"
+}, {
+  "latitude": "28.981800",
+  "longitude": "-80.910300",
+  "weight": 1,
+  "zip": "32132-3048"
+}, {
+  "latitude": "34.203700",
+  "longitude": "-84.103100",
+  "weight": 2,
+  "zip": "30041-6007"
+}, {
+  "latitude": "40.453800",
+  "longitude": "-74.482300",
+  "weight": 4,
+  "zip": "08902"
+}, {
+  "latitude": "45.224546",
+  "longitude": "-72.438945",
+  "weight": 1,
+  "zip": "J0E 2T0"
+}, {
+  "latitude": "34.896800",
+  "longitude": "-76.890000",
+  "weight": 1,
+  "zip": "28532-2039"
+}, {
+  "latitude": "33.526200",
+  "longitude": "-112.214900",
+  "weight": 1,
+  "zip": "85303-5728"
+}, {
+  "latitude": "34.772200",
+  "longitude": "-80.396600",
+  "weight": 1,
+  "zip": "29728"
+}, {
+  "latitude": "30.104400",
+  "longitude": "-95.506600",
+  "weight": 1,
+  "zip": "77389-4277"
+}, {
+  "latitude": "32.002700",
+  "longitude": "-110.705300",
+  "weight": 1,
+  "zip": "85641-2180"
+}, {
+  "latitude": "40.301100",
+  "longitude": "-76.588600",
+  "weight": 1,
+  "zip": "17078-8756"
+}, {
+  "latitude": "33.524200",
+  "longitude": "-84.359000",
+  "weight": 1,
+  "zip": "30236-6879"
+}, {
+  "latitude": "40.731500",
+  "longitude": "-73.432700",
+  "weight": 1,
+  "zip": "11735-5110"
+}, {
+  "latitude": "51.116165",
+  "longitude": "-114.065561",
+  "weight": 1,
+  "zip": "T2K 3Z7"
+}, {
+  "latitude": "34.170500",
+  "longitude": "-117.518200",
+  "weight": 1,
+  "zip": "91739-1627"
+}, {
+  "latitude": "46.758500",
+  "longitude": "-114.109700",
+  "weight": 1,
+  "zip": "59847-0733"
+}, {
+  "latitude": "41.917800",
+  "longitude": "-88.137000",
+  "weight": 1,
+  "zip": "60188-4838"
+}, {
+  "latitude": "37.763900",
+  "longitude": "-97.426900",
+  "weight": 1,
+  "zip": "67205-2189"
+}, {
+  "latitude": "41.881400",
+  "longitude": "-87.643000",
+  "weight": 2,
+  "zip": "60661-2170"
+}, {
+  "latitude": "52.241736",
+  "longitude": "-113.777733",
+  "weight": 1,
+  "zip": "T4R 3B1"
+}, {
+  "latitude": "44.254458",
+  "longitude": "-76.586112",
+  "weight": 1,
+  "zip": "K7P 1P4"
+}, {
+  "latitude": "48.377300",
+  "longitude": "-115.539100",
+  "weight": 1,
+  "zip": "59923-9016"
+}, {
+  "latitude": "32.083900",
+  "longitude": "-110.900400",
+  "weight": 2,
+  "zip": "85756-6148"
+}, {
+  "latitude": "42.524400",
+  "longitude": "-113.793100",
+  "weight": 1,
+  "zip": "83318-5684"
+}, {
+  "latitude": "41.336100",
+  "longitude": "-75.730400",
+  "weight": 1,
+  "zip": "18641-2014"
+}, {
+  "latitude": "32.967300",
+  "longitude": "-96.980500",
+  "weight": 1,
+  "zip": "75019-5803"
+}, {
+  "latitude": "30.293000",
+  "longitude": "-104.084800",
+  "weight": 4,
+  "zip": "79843-0933"
+}, {
+  "latitude": "40.148100",
+  "longitude": "-74.213700",
+  "weight": 3,
+  "zip": "07731-2071"
+}, {
+  "latitude": "51.274627",
+  "longitude": "-80.638494",
+  "weight": 4,
+  "zip": "P0L 1Y0"
+}, {
+  "latitude": "40.282500",
+  "longitude": "-74.342400",
+  "weight": 1,
+  "zip": "07726-9003"
+}, {
+  "latitude": "32.820100",
+  "longitude": "-117.098600",
+  "weight": 1,
+  "zip": "92124-1734"
+}, {
+  "latitude": "29.517300",
+  "longitude": "-98.321700",
+  "weight": 1,
+  "zip": "78109-1142"
+}, {
+  "latitude": "41.560300",
+  "longitude": "-73.793900",
+  "weight": 5,
+  "zip": "12533-7436"
+}, {
+  "latitude": "53.338106",
+  "longitude": "-111.180082",
+  "weight": 1,
+  "zip": "T0B 2W0"
+}, {
+  "latitude": "30.006900",
+  "longitude": "-95.489700",
+  "weight": 1,
+  "zip": "77068-1316"
+}, {
+  "latitude": "42.412800",
+  "longitude": "-71.204400",
+  "weight": 1,
+  "zip": "02478-3910"
+}, {
+  "latitude": "35.160200",
+  "longitude": "-89.781600",
+  "weight": 1,
+  "zip": "38016-6662"
+}, {
+  "latitude": "29.459700",
+  "longitude": "-98.655500",
+  "weight": 2,
+  "zip": "78251-3730"
+}, {
+  "latitude": "40.207500",
+  "longitude": "-75.532900",
+  "weight": 1,
+  "zip": "19468-1862"
+}, {
+  "latitude": "33.335400",
+  "longitude": "-111.815300",
+  "weight": 2,
+  "zip": "85233-7116"
+}, {
+  "latitude": "41.188700",
+  "longitude": "-84.744800",
+  "weight": 1,
+  "zip": "45813-0570"
+}, {
+  "latitude": "40.745000",
+  "longitude": "-88.516500",
+  "weight": 1,
+  "zip": "61739-1462"
+}, {
+  "latitude": "47.643647",
+  "longitude": "-65.688629",
+  "weight": 1,
+  "zip": "E2A 3R3"
+}, {
+  "latitude": "33.739000",
+  "longitude": "-116.924300",
+  "weight": 1,
+  "zip": "92544-6364"
+}, {
+  "latitude": "38.908700",
+  "longitude": "-90.156800",
+  "weight": 4,
+  "zip": "62002-7628"
+}, {
+  "latitude": "44.304700",
+  "longitude": "-105.495900",
+  "weight": 1,
+  "zip": "82717-3613"
+}, {
+  "latitude": "39.340100",
+  "longitude": "-76.415300",
+  "weight": 1,
+  "zip": "21220-4920"
+}, {
+  "latitude": "45.472015",
+  "longitude": "-73.831645",
+  "weight": 2,
+  "zip": "H9G 1W2"
+}, {
+  "latitude": "36.268200",
+  "longitude": "-119.817300",
+  "weight": 1,
+  "zip": "93245-2857"
+}, {
+  "latitude": "39.405900",
+  "longitude": "-84.522100",
+  "weight": 1,
+  "zip": "45011-8431"
+}, {
+  "latitude": "36.465700",
+  "longitude": "-81.814000",
+  "weight": 1,
+  "zip": "37683-4201"
+}, {
+  "latitude": "42.254500",
+  "longitude": "-84.387500",
+  "weight": 1,
+  "zip": "49201"
+}, {
+  "latitude": "53.265570",
+  "longitude": "-113.545140",
+  "weight": 1,
+  "zip": "T9E 5V9"
+}, {
+  "latitude": "39.831700",
+  "longitude": "-89.646500",
+  "weight": 1,
+  "zip": "62702"
+}, {
+  "latitude": "33.126500",
+  "longitude": "-110.117000",
+  "weight": 1,
+  "zip": "85530-0379"
+}, {
+  "latitude": "32.753200",
+  "longitude": "-98.909900",
+  "weight": 1,
+  "zip": "76424-6328"
+}, {
+  "latitude": "46.822400",
+  "longitude": "-114.026500",
+  "weight": 1,
+  "zip": "59803-1242"
+}, {
+  "latitude": "31.128200",
+  "longitude": "-97.746900",
+  "weight": 3,
+  "zip": "76544"
+}, {
+  "latitude": "37.885800",
+  "longitude": "-95.391100",
+  "weight": 1,
+  "zip": "66749-1961"
+}, {
+  "latitude": "35.888700",
+  "longitude": "-78.639300",
+  "weight": 1,
+  "zip": "27615"
+}, {
+  "latitude": "44.646015",
+  "longitude": "-75.677642",
+  "weight": 1,
+  "zip": "K6V 5T2"
+}, {
+  "latitude": "38.098500",
+  "longitude": "-122.212400",
+  "weight": 1,
+  "zip": "94591-8514"
+}, {
+  "latitude": "38.064000",
+  "longitude": "-81.094300",
+  "weight": 1,
+  "zip": "25840-5937"
+}, {
+  "latitude": "40.307400",
+  "longitude": "-79.542400",
+  "weight": 1,
+  "zip": "15601-4971"
+}, {
+  "latitude": "34.171700",
+  "longitude": "-118.323100",
+  "weight": 1,
+  "zip": "91506-3003"
+}, {
+  "latitude": "33.967700",
+  "longitude": "-84.243800",
+  "weight": 1,
+  "zip": "30092-1376"
+}, {
+  "latitude": "36.446100",
+  "longitude": "-77.673100",
+  "weight": 1,
+  "zip": "27870-2511"
+}, {
+  "latitude": "40.551500",
+  "longitude": "-74.459000",
+  "weight": 1,
+  "zip": "08854-4833"
+}, {
+  "latitude": "40.886300",
+  "longitude": "-78.219000",
+  "weight": 1,
+  "zip": "16866-1321"
+}, {
+  "latitude": "41.874400",
+  "longitude": "-87.810600",
+  "weight": 3,
+  "zip": "60130"
+}, {
+  "latitude": "39.737000",
+  "longitude": "-90.301400",
+  "weight": 1,
+  "zip": "62650-1115"
+}, {
+  "latitude": "37.984100",
+  "longitude": "-122.011900",
+  "weight": 1,
+  "zip": "94519-1710"
+}, {
+  "latitude": "35.981500",
+  "longitude": "-78.539200",
+  "weight": 2,
+  "zip": "27587-4334"
+}, {
+  "latitude": "39.543700",
+  "longitude": "-104.969100",
+  "weight": 1,
+  "zip": "80126-8003"
+}, {
+  "latitude": "34.117300",
+  "longitude": "-117.437800",
+  "weight": 1,
+  "zip": "92336"
+}, {
+  "latitude": "43.446600",
+  "longitude": "-71.299500",
+  "weight": 1,
+  "zip": "03837-0217"
+}, {
+  "latitude": "41.973500",
+  "longitude": "-87.865800",
+  "weight": 3,
+  "zip": "60656-4210"
+}, {
+  "latitude": "38.643800",
+  "longitude": "-77.345100",
+  "weight": 4,
+  "zip": "22193-3279"
+}, {
+  "latitude": "41.304700",
+  "longitude": "-73.129400",
+  "weight": 1,
+  "zip": "06484-5633"
+}, {
+  "latitude": "33.284800",
+  "longitude": "-111.656100",
+  "weight": 1,
+  "zip": "85142-3297"
+}, {
+  "latitude": "37.096900",
+  "longitude": "-94.505100",
+  "weight": 1,
+  "zip": "64801-1588"
+}, {
+  "latitude": "46.890700",
+  "longitude": "-96.925800",
+  "weight": 1,
+  "zip": "58078-5000"
+}, {
+  "latitude": "31.351100",
+  "longitude": "-109.544700",
+  "weight": 2,
+  "zip": "85607-1881"
+}, {
+  "latitude": "43.928200",
+  "longitude": "-105.549200",
+  "weight": 1,
+  "zip": "82718-7485"
+}, {
+  "latitude": "41.471200",
+  "longitude": "-87.939100",
+  "weight": 1,
+  "zip": "60431-2793"
+}, {
+  "latitude": "36.696100",
+  "longitude": "-101.477800",
+  "weight": 1,
+  "zip": "73942-6111"
+}, {
+  "latitude": "35.237500",
+  "longitude": "-109.523000",
+  "weight": 4,
+  "zip": "86505-0051"
+}, {
+  "latitude": "34.170500",
+  "longitude": "-117.518200",
+  "weight": 1,
+  "zip": "91739-7018"
+}, {
+  "latitude": "37.633200",
+  "longitude": "-122.097100",
+  "weight": 1,
+  "zip": "94545-4508"
+}, {
+  "latitude": "43.659819",
+  "longitude": "-79.404979",
+  "weight": 1,
+  "zip": "M5S 2L8"
+}, {
+  "latitude": "32.336600",
+  "longitude": "-111.177100",
+  "weight": 2,
+  "zip": "85743-8723"
+}, {
+  "latitude": "29.589400",
+  "longitude": "-98.520100",
+  "weight": 1,
+  "zip": "78248-1709"
+}, {
+  "latitude": "38.815700",
+  "longitude": "-77.621600",
+  "weight": 1,
+  "zip": "20155-4453"
+}, {
+  "latitude": "26.662700",
+  "longitude": "-80.253000",
+  "weight": 1,
+  "zip": "33414-4402"
+}, {
+  "latitude": "32.642300",
+  "longitude": "-99.923900",
+  "weight": 1,
+  "zip": "79525-2534"
+}, {
+  "latitude": "49.482996",
+  "longitude": "-119.569135",
+  "weight": 1,
+  "zip": "V2A 4R9"
+}, {
+  "latitude": "53.306893",
+  "longitude": "-60.326251",
+  "weight": 1,
+  "zip": "A0P 1E0"
+}, {
+  "latitude": "42.537600",
+  "longitude": "-73.707100",
+  "weight": 1,
+  "zip": "12033-1108"
+}, {
+  "latitude": "31.270000",
+  "longitude": "-94.646900",
+  "weight": 1,
+  "zip": "75901-6074"
+}, {
+  "latitude": "38.751300",
+  "longitude": "-90.729600",
+  "weight": 3,
+  "zip": "63368-6670"
+}, {
+  "latitude": "39.182300",
+  "longitude": "-75.850000",
+  "weight": 3,
+  "zip": "21668-1406"
+}, {
+  "latitude": "28.552300",
+  "longitude": "-81.179500",
+  "weight": 2,
+  "zip": "32828-7522"
+}, {
+  "latitude": "61.630300",
+  "longitude": "-148.987200",
+  "weight": 3,
+  "zip": "99645-9014"
+}, {
+  "latitude": "41.662400",
+  "longitude": "-87.852100",
+  "weight": 2,
+  "zip": "60464-2521"
+}, {
+  "latitude": "39.924500",
+  "longitude": "-105.060900",
+  "weight": 1,
+  "zip": "80020-6840"
+}, {
+  "latitude": "36.774500",
+  "longitude": "-108.069200",
+  "weight": 1,
+  "zip": "87499-5847"
+}, {
+  "latitude": "43.446000",
+  "longitude": "-96.686400",
+  "weight": 1,
+  "zip": "57032-2214"
+}, {
+  "latitude": "46.074370",
+  "longitude": "-73.128207",
+  "weight": 1,
+  "zip": "J0K 2P0"
+}, {
+  "latitude": "30.487600",
+  "longitude": "-90.095900",
+  "weight": 1,
+  "zip": "70433"
+}, {
+  "latitude": "33.269600",
+  "longitude": "-117.342300",
+  "weight": 2,
+  "zip": "92058-0652"
+}, {
+  "latitude": "32.444100",
+  "longitude": "-95.331000",
+  "weight": 1,
+  "zip": "75706-6012"
+}, {
+  "latitude": "43.926418",
+  "longitude": "-80.149244",
+  "weight": 1,
+  "zip": "L9W 2Z3"
+}, {
+  "latitude": "43.828231",
+  "longitude": "-79.122147",
+  "weight": 2,
+  "zip": "L1V 3Y3"
+}, {
+  "latitude": "42.423700",
+  "longitude": "-85.399800",
+  "weight": 7,
+  "zip": "49060-9785"
+}, {
+  "latitude": "34.793300",
+  "longitude": "-91.745900",
+  "weight": 1,
+  "zip": "72024"
+}, {
+  "latitude": "40.310800",
+  "longitude": "-86.375300",
+  "weight": 2,
+  "zip": "46057"
+}, {
+  "latitude": "36.988200",
+  "longitude": "-85.922100",
+  "weight": 2,
+  "zip": "42141-8846"
+}, {
+  "latitude": "42.079400",
+  "longitude": "-71.040000",
+  "weight": 1,
+  "zip": "02301-6741"
+}, {
+  "latitude": "30.566100",
+  "longitude": "-90.109800",
+  "weight": 1,
+  "zip": "70435-6543"
+}, {
+  "latitude": "43.886297",
+  "longitude": "-79.290768",
+  "weight": 2,
+  "zip": "L6C 2C7"
+}, {
+  "latitude": "33.003300",
+  "longitude": "-96.882000",
+  "weight": 1,
+  "zip": "75007-2770"
+}, {
+  "latitude": "35.186800",
+  "longitude": "-106.665200",
+  "weight": 3,
+  "zip": "87114-5652"
+}, {
+  "latitude": "41.371700",
+  "longitude": "-73.750800",
+  "weight": 1,
+  "zip": "10541-3672"
+}, {
+  "latitude": "40.711700",
+  "longitude": "-73.300700",
+  "weight": 1,
+  "zip": "11795-2441"
+}, {
+  "latitude": "47.755900",
+  "longitude": "-122.300300",
+  "weight": 1,
+  "zip": "98155-3772"
+}, {
+  "latitude": "54.269475",
+  "longitude": "-110.743118",
+  "weight": 1,
+  "zip": "T9N 2H3"
+}, {
+  "latitude": "48.330600",
+  "longitude": "-101.315600",
+  "weight": 2,
+  "zip": "58703-0835"
+}, {
+  "latitude": "45.371853",
+  "longitude": "-72.740754",
+  "weight": 1,
+  "zip": "J2J 1V8"
+}, {
+  "latitude": "44.643470",
+  "longitude": "-63.625421",
+  "weight": 2,
+  "zip": "B3N 1X5"
+}, {
+  "latitude": "39.120600",
+  "longitude": "-76.495000",
+  "weight": 1,
+  "zip": "21122-5478"
+}, {
+  "latitude": "38.240800",
+  "longitude": "-122.042000",
+  "weight": 1,
+  "zip": "94585-1744"
+}, {
+  "latitude": "33.432100",
+  "longitude": "-112.343800",
+  "weight": 2,
+  "zip": "85323-4400"
+}, {
+  "latitude": "34.941200",
+  "longitude": "-84.764500",
+  "weight": 1,
+  "zip": "30711-0454"
+}, {
+  "latitude": "47.125800",
+  "longitude": "-102.680600",
+  "weight": 1,
+  "zip": "58642-9529"
+}, {
+  "latitude": "51.077422",
+  "longitude": "-113.949337",
+  "weight": 1,
+  "zip": "T1Y 2E4"
+}, {
+  "latitude": "33.771800",
+  "longitude": "-84.375700",
+  "weight": 1,
+  "zip": "30308-2987"
+}, {
+  "latitude": "46.252200",
+  "longitude": "-119.288000",
+  "weight": 1,
+  "zip": "99352-8678"
+}, {
+  "latitude": "42.413800",
+  "longitude": "-71.005200",
+  "weight": 3,
+  "zip": "02151-1833"
+}, {
+  "latitude": "38.308900",
+  "longitude": "-85.822100",
+  "weight": 2,
+  "zip": "47150-6630"
+}, {
+  "latitude": "35.055200",
+  "longitude": "-80.819500",
+  "weight": 2,
+  "zip": "28277-2481"
+}, {
+  "latitude": "41.673000",
+  "longitude": "-93.702800",
+  "weight": 1,
+  "zip": "50131"
+}, {
+  "latitude": "43.000600",
+  "longitude": "-88.807800",
+  "weight": 4,
+  "zip": "53549-1486"
+}, {
+  "latitude": "41.569500",
+  "longitude": "-93.799400",
+  "weight": 1,
+  "zip": "50266-1668"
+}, {
+  "latitude": "35.106000",
+  "longitude": "-114.594700",
+  "weight": 1,
+  "zip": "86442-6544"
+}, {
+  "latitude": "43.460500",
+  "longitude": "-76.244600",
+  "weight": 1,
+  "zip": "13114-0782"
+}, {
+  "latitude": "31.072300",
+  "longitude": "-97.472000",
+  "weight": 1,
+  "zip": "76513-4885"
+}, {
+  "latitude": "47.663400",
+  "longitude": "-117.219300",
+  "weight": 1,
+  "zip": "99216-0416"
+}, {
+  "latitude": "41.323200",
+  "longitude": "-81.745700",
+  "weight": 1,
+  "zip": "44133-4746"
+}, {
+  "latitude": "41.290800",
+  "longitude": "-88.282300",
+  "weight": 4,
+  "zip": "60416-2435"
+}, {
+  "latitude": "36.048900",
+  "longitude": "-106.079300",
+  "weight": 1,
+  "zip": "87566-1179"
+}, {
+  "latitude": "36.038300",
+  "longitude": "-115.146200",
+  "weight": 1,
+  "zip": "89123-3364"
+}, {
+  "latitude": "56.721906",
+  "longitude": "-111.366049",
+  "weight": 1,
+  "zip": "T9H 0B8"
+}, {
+  "latitude": "33.461500",
+  "longitude": "-117.637500",
+  "weight": 1,
+  "zip": "92673-7028"
+}, {
+  "latitude": "30.231500",
+  "longitude": "-97.722300",
+  "weight": 1,
+  "zip": "78741-7326"
+}, {
+  "latitude": "28.038100",
+  "longitude": "-81.939200",
+  "weight": 1,
+  "zip": "33801-5519"
+}, {
+  "latitude": "37.752500",
+  "longitude": "-85.995400",
+  "weight": 1,
+  "zip": "40162-9532"
+}, {
+  "latitude": "41.603400",
+  "longitude": "-75.116500",
+  "weight": 1,
+  "zip": "18405-4065"
+}, {
+  "latitude": "41.910400",
+  "longitude": "-70.642000",
+  "weight": 1,
+  "zip": "02360-1468"
+}, {
+  "latitude": "53.030165",
+  "longitude": "-112.843020",
+  "weight": 1,
+  "zip": "T4V 4G7"
+}, {
+  "latitude": "38.787800",
+  "longitude": "-92.253700",
+  "weight": 1,
+  "zip": "65010-9296"
+}, {
+  "latitude": "34.749000",
+  "longitude": "-80.761600",
+  "weight": 1,
+  "zip": "29720"
+}, {
+  "latitude": "40.855100",
+  "longitude": "-76.777600",
+  "weight": 2,
+  "zip": "17801-1909"
+}, {
+  "latitude": "52.959027",
+  "longitude": "-113.379680",
+  "weight": 1,
+  "zip": "T9A 1M6"
+}, {
+  "latitude": "29.597200",
+  "longitude": "-99.558500",
+  "weight": 2,
+  "zip": "78884-0432"
+}, {
+  "latitude": "44.061200",
+  "longitude": "-123.155500",
+  "weight": 1,
+  "zip": "97402-7400"
+}, {
+  "latitude": "34.618000",
+  "longitude": "-86.056200",
+  "weight": 2,
+  "zip": "35769-4162"
+}, {
+  "latitude": "42.693200",
+  "longitude": "-85.475900",
+  "weight": 1,
+  "zip": "49333-8874"
+}, {
+  "latitude": "45.313600",
+  "longitude": "-93.581400",
+  "weight": 1,
+  "zip": "55330-8337"
+}, {
+  "latitude": "38.623200",
+  "longitude": "-81.621700",
+  "weight": 1,
+  "zip": "25248-9722"
+}, {
+  "latitude": "53.533838",
+  "longitude": "-113.965820",
+  "weight": 1,
+  "zip": "T7Z 2P9"
+}, {
+  "latitude": "43.078400",
+  "longitude": "-89.201700",
+  "weight": 2,
+  "zip": "53527-9769"
+}, {
+  "latitude": "33.718900",
+  "longitude": "-86.822500",
+  "weight": 4,
+  "zip": "35071-2357"
+}, {
+  "latitude": "38.841500",
+  "longitude": "-77.090500",
+  "weight": 1,
+  "zip": "22206-3427"
+}, {
+  "latitude": "41.508700",
+  "longitude": "-87.590400",
+  "weight": 1,
+  "zip": "60411-1652"
+}, {
+  "latitude": "40.292600",
+  "longitude": "-79.410300",
+  "weight": 1,
+  "zip": "15650-5907"
+}, {
+  "latitude": "37.555600",
+  "longitude": "-76.823700",
+  "weight": 1,
+  "zip": "23181"
+}, {
+  "latitude": "43.428500",
+  "longitude": "-70.758500",
+  "weight": 4,
+  "zip": "04073-5203"
+}, {
+  "latitude": "38.738100",
+  "longitude": "-75.174700",
+  "weight": 2,
+  "zip": "19958-1542"
+}, {
+  "latitude": "44.229000",
+  "longitude": "-73.984100",
+  "weight": 1,
+  "zip": "12946-4144"
+}, {
+  "latitude": "32.640000",
+  "longitude": "-97.544800",
+  "weight": 1,
+  "zip": "76126-1815"
+}, {
+  "latitude": "38.222200",
+  "longitude": "-85.688500",
+  "weight": 1,
+  "zip": "40205-1224"
+}, {
+  "latitude": "35.311900",
+  "longitude": "-81.030600",
+  "weight": 5,
+  "zip": "28120-1746"
+}, {
+  "latitude": "27.867900",
+  "longitude": "-80.541600",
+  "weight": 1,
+  "zip": "32976-7504"
+}, {
+  "latitude": "56.232813",
+  "longitude": "-120.801095",
+  "weight": 2,
+  "zip": "V1J 2Y6"
+}, {
+  "latitude": "51.768525",
+  "longitude": "-104.179602",
+  "weight": 1,
+  "zip": "S0A 4T0"
+}, {
+  "latitude": "45.544100",
+  "longitude": "-122.642300",
+  "weight": 1,
+  "zip": "97212-5418"
+}, {
+  "latitude": "40.598100",
+  "longitude": "-80.558400",
+  "weight": 1,
+  "zip": "26034-1871"
+}, {
+  "latitude": "42.537600",
+  "longitude": "-73.707100",
+  "weight": 1,
+  "zip": "12033-4601"
+}, {
+  "latitude": "40.159800",
+  "longitude": "-104.046800",
+  "weight": 1,
+  "zip": "80654-8113"
+}, {
+  "latitude": "46.839400",
+  "longitude": "-100.784300",
+  "weight": 1,
+  "zip": "58503-5661"
+}, {
+  "latitude": "42.556000",
+  "longitude": "-87.870500",
+  "weight": 1,
+  "zip": "53142-1522"
+}, {
+  "latitude": "49.152887",
+  "longitude": "-112.083345",
+  "weight": 1,
+  "zip": "T0K 1M0"
+}, {
+  "latitude": "41.784200",
+  "longitude": "-87.868900",
+  "weight": 2,
+  "zip": "60525-2684"
+}, {
+  "latitude": "40.398300",
+  "longitude": "-120.646400",
+  "weight": 1,
+  "zip": "96130-3974"
+}, {
+  "latitude": "30.525700",
+  "longitude": "-97.567200",
+  "weight": 1,
+  "zip": "78634-4343"
+}, {
+  "latitude": "41.284000",
+  "longitude": "-88.123100",
+  "weight": 2,
+  "zip": "60481-1498"
+}, {
+  "latitude": "32.820100",
+  "longitude": "-117.098600",
+  "weight": 2,
+  "zip": "92124"
+}, {
+  "latitude": "38.385000",
+  "longitude": "-105.123200",
+  "weight": 1,
+  "zip": "81226-1243"
+}, {
+  "latitude": "40.182100",
+  "longitude": "-75.147900",
+  "weight": 2,
+  "zip": "19044-2536"
+}, {
+  "latitude": "51.023189",
+  "longitude": "-114.103986",
+  "weight": 1,
+  "zip": "T2T 2B9"
+}, {
+  "latitude": "39.718700",
+  "longitude": "-82.603100",
+  "weight": 1,
+  "zip": "43130-8861"
+}, {
+  "latitude": "39.601300",
+  "longitude": "-90.807300",
+  "weight": 1,
+  "zip": "62363-1106"
+}, {
+  "latitude": "41.618900",
+  "longitude": "-80.308600",
+  "weight": 1,
+  "zip": "16316-2353"
+}, {
+  "latitude": "56.239636",
+  "longitude": "-115.493622",
+  "weight": 2,
+  "zip": "T0G 0C0"
+}, {
+  "latitude": "41.526300",
+  "longitude": "-87.252500",
+  "weight": 1,
+  "zip": "46342-3528"
+}, {
+  "latitude": "41.954700",
+  "longitude": "-78.654000",
+  "weight": 1,
+  "zip": "16701-1307"
+}, {
+  "latitude": "33.884200",
+  "longitude": "-84.376100",
+  "weight": 1,
+  "zip": "30342"
+}, {
+  "latitude": "38.209500",
+  "longitude": "-78.309800",
+  "weight": 1,
+  "zip": "22923-2703"
+}, {
+  "latitude": "37.814000",
+  "longitude": "-121.966000",
+  "weight": 3,
+  "zip": "94526-6690"
+}, {
+  "latitude": "56.248037",
+  "longitude": "-120.781853",
+  "weight": 1,
+  "zip": "V1J 4M6"
+}, {
+  "latitude": "38.592700",
+  "longitude": "-121.532500",
+  "weight": 1,
+  "zip": "95605-2239"
+}, {
+  "latitude": "49.903775",
+  "longitude": "-97.172158",
+  "weight": 1,
+  "zip": "R3E 2L7"
+}, {
+  "latitude": "31.834100",
+  "longitude": "-102.416200",
+  "weight": 2,
+  "zip": "79763-3944"
+}, {
+  "latitude": "39.961900",
+  "longitude": "-105.014800",
+  "weight": 1,
+  "zip": "80023-4046"
+}, {
+  "latitude": "49.649026",
+  "longitude": "-108.409038",
+  "weight": 1,
+  "zip": "S0N 2M0"
+}, {
+  "latitude": "44.265852",
+  "longitude": "-76.556022",
+  "weight": 1,
+  "zip": "K7P 0E3"
+}, {
+  "latitude": "39.620600",
+  "longitude": "-105.090100",
+  "weight": 3,
+  "zip": "80123-7712"
+}, {
+  "latitude": "43.458567",
+  "longitude": "-80.578898",
+  "weight": 1,
+  "zip": "N2T 2V3"
+}, {
+  "latitude": "42.234000",
+  "longitude": "-85.323800",
+  "weight": 1,
+  "zip": "49034-9610"
+}, {
+  "latitude": "38.868200",
+  "longitude": "-76.815600",
+  "weight": 1,
+  "zip": "20774-8007"
+}, {
+  "latitude": "55.155805",
+  "longitude": "-118.788952",
+  "weight": 1,
+  "zip": "T8V 6J9"
+}, {
+  "latitude": "41.302700",
+  "longitude": "-90.493900",
+  "weight": 1,
+  "zip": "61281-9318"
+}, {
+  "latitude": "38.993800",
+  "longitude": "-94.634000",
+  "weight": 1,
+  "zip": "66208-2539"
+}, {
+  "latitude": "32.439500",
+  "longitude": "-97.213000",
+  "weight": 1,
+  "zip": "76009-6465"
+}, {
+  "latitude": "40.966400",
+  "longitude": "-117.746700",
+  "weight": 1,
+  "zip": "89445-2667"
+}, {
+  "latitude": "52.678154",
+  "longitude": "-113.547520",
+  "weight": 1,
+  "zip": "T4J 1R1"
+}, {
+  "latitude": "42.772600",
+  "longitude": "-87.796000",
+  "weight": 1,
+  "zip": "53402-2362"
+}, {
+  "latitude": "43.968800",
+  "longitude": "-86.440300",
+  "weight": 1,
+  "zip": "49431-2153"
+}, {
+  "latitude": "46.516309",
+  "longitude": "-84.273416",
+  "weight": 1,
+  "zip": "P6A 6E8"
+}, {
+  "latitude": "36.827200",
+  "longitude": "-80.977900",
+  "weight": 4,
+  "zip": "24350-0187"
+}, {
+  "latitude": "53.837515",
+  "longitude": "-113.412341",
+  "weight": 1,
+  "zip": "T0A 0K0"
+}, {
+  "latitude": "46.784609",
+  "longitude": "-71.181784",
+  "weight": 4,
+  "zip": "G6W 7V8"
+}, {
+  "latitude": "42.113300",
+  "longitude": "-80.097600",
+  "weight": 1,
+  "zip": "16502-2966"
+}, {
+  "latitude": "33.004100",
+  "longitude": "-96.539400",
+  "weight": 2,
+  "zip": "75098-4544"
+}, {
+  "latitude": "50.561767",
+  "longitude": "-111.916145",
+  "weight": 1,
+  "zip": "T1R 1H8"
+}, {
+  "latitude": "39.990800",
+  "longitude": "-78.526100",
+  "weight": 1,
+  "zip": "15522-9741"
+}, {
+  "latitude": "33.118600",
+  "longitude": "-96.677300",
+  "weight": 1,
+  "zip": "75013-5823"
+}, {
+  "latitude": "35.025500",
+  "longitude": "-99.094400",
+  "weight": 2,
+  "zip": "73651"
+}, {
+  "latitude": "42.159600",
+  "longitude": "-72.608200",
+  "weight": 1,
+  "zip": "01013-2306"
+}, {
+  "latitude": "43.227822",
+  "longitude": "-79.763083",
+  "weight": 1,
+  "zip": "L8G 1B2"
+}, {
+  "latitude": "45.398633",
+  "longitude": "-75.842882",
+  "weight": 1,
+  "zip": "J9H 4C6"
+}, {
+  "latitude": "41.161100",
+  "longitude": "-80.693300",
+  "weight": 1,
+  "zip": "44420-3250"
+}, {
+  "latitude": "33.451000",
+  "longitude": "-84.154400",
+  "weight": 1,
+  "zip": "30253-5820"
+}, {
+  "latitude": "50.107941",
+  "longitude": "-120.804172",
+  "weight": 1,
+  "zip": "V1K 1L3"
+}, {
+  "latitude": "38.635600",
+  "longitude": "-77.268300",
+  "weight": 1,
+  "zip": "22191-6555"
+}, {
+  "latitude": "39.007000",
+  "longitude": "-87.748400",
+  "weight": 1,
+  "zip": "62454-4821"
+}, {
+  "latitude": "36.307100",
+  "longitude": "-109.217600",
+  "weight": 2,
+  "zip": "86556-0102"
+}, {
+  "latitude": "34.137800",
+  "longitude": "-118.242400",
+  "weight": 4,
+  "zip": "91205-1831"
+}, {
+  "latitude": "42.105500",
+  "longitude": "-83.279500",
+  "weight": 1,
+  "zip": "48134-9777"
+}, {
+  "latitude": "33.793800",
+  "longitude": "-118.317200",
+  "weight": 1,
+  "zip": "90717-2111"
+}, {
+  "latitude": "39.955100",
+  "longitude": "-82.803500",
+  "weight": 1,
+  "zip": "43068"
+}, {
+  "latitude": "48.099353",
+  "longitude": "-77.808840",
+  "weight": 1,
+  "zip": "J9P 5T8"
+}, {
+  "latitude": "38.425700",
+  "longitude": "-81.994300",
+  "weight": 1,
+  "zip": "25526"
+}, {
+  "latitude": "45.952461",
+  "longitude": "-66.613449",
+  "weight": 1,
+  "zip": "E3A 3V7"
+}, {
+  "latitude": "49.689981",
+  "longitude": "-112.879630",
+  "weight": 1,
+  "zip": "T1K 6B3"
+}, {
+  "latitude": "29.496900",
+  "longitude": "-98.403200",
+  "weight": 2,
+  "zip": "78218-3047"
+}, {
+  "latitude": "26.889700",
+  "longitude": "-99.250600",
+  "weight": 1,
+  "zip": "78076-0003"
+}, {
+  "latitude": "38.837700",
+  "longitude": "-76.798000",
+  "weight": 1,
+  "zip": "20772-8191"
+}, {
+  "latitude": "40.400100",
+  "longitude": "-80.016100",
+  "weight": 1,
+  "zip": "15226-2035"
+}, {
+  "latitude": "40.642300",
+  "longitude": "-86.096200",
+  "weight": 1,
+  "zip": "46914-9013"
+}, {
+  "latitude": "40.053500",
+  "longitude": "-83.018800",
+  "weight": 2,
+  "zip": "43214-3757"
+}, {
+  "latitude": "35.509400",
+  "longitude": "-83.314400",
+  "weight": 1,
+  "zip": "28719-1981"
+}, {
+  "latitude": "40.507600",
+  "longitude": "-75.388800",
+  "weight": 1,
+  "zip": "18036-9203"
+}, {
+  "latitude": "50.575432",
+  "longitude": "-111.884270",
+  "weight": 1,
+  "zip": "T1R 0L7"
+}, {
+  "latitude": "43.573613",
+  "longitude": "-79.565267",
+  "weight": 1,
+  "zip": "L5E 1W9"
+}, {
+  "latitude": "35.414100",
+  "longitude": "-80.616200",
+  "weight": 1,
+  "zip": "28027-3396"
+}, {
+  "latitude": "37.619600",
+  "longitude": "-122.481600",
+  "weight": 1,
+  "zip": "94044-3804"
+}, {
+  "latitude": "37.271300",
+  "longitude": "-122.022700",
+  "weight": 2,
+  "zip": "95070-3234"
+}, {
+  "latitude": "40.732600",
+  "longitude": "-92.872800",
+  "weight": 1,
+  "zip": "52544-1610"
+}, {
+  "latitude": "45.400371",
+  "longitude": "-75.616088",
+  "weight": 1,
+  "zip": "K1B 4J9"
+}, {
+  "latitude": "40.742800",
+  "longitude": "-73.758800",
+  "weight": 1,
+  "zip": "11364"
+}, {
+  "latitude": "35.166300",
+  "longitude": "-101.886800",
+  "weight": 1,
+  "zip": "79109-6213"
+}, {
+  "latitude": "42.880000",
+  "longitude": "-73.991300",
+  "weight": 1,
+  "zip": "12302-5202"
+}, {
+  "latitude": "38.431400",
+  "longitude": "-85.032600",
+  "weight": 2,
+  "zip": "40057"
+}, {
+  "latitude": "41.927200",
+  "longitude": "-73.888800",
+  "weight": 3,
+  "zip": "12572-0044"
+}, {
+  "latitude": "34.926200",
+  "longitude": "-95.759200",
+  "weight": 2,
+  "zip": "74501-7710"
+}, {
+  "latitude": "52.326077",
+  "longitude": "-112.709463",
+  "weight": 2,
+  "zip": "T0C 2L2"
+}, {
+  "latitude": "33.658800",
+  "longitude": "-112.321400",
+  "weight": 1,
+  "zip": "85373"
+}, {
+  "latitude": "30.394200",
+  "longitude": "-87.589000",
+  "weight": 1,
+  "zip": "36530-4665"
+}, {
+  "latitude": "35.297400",
+  "longitude": "-119.050900",
+  "weight": 1,
+  "zip": "93313-4372"
+}, {
+  "latitude": "35.168000",
+  "longitude": "-103.717900",
+  "weight": 1,
+  "zip": "88401-0053"
+}, {
+  "latitude": "38.733400",
+  "longitude": "-88.080900",
+  "weight": 1,
+  "zip": "62450-1926"
+}, {
+  "latitude": "51.205922",
+  "longitude": "-114.486509",
+  "weight": 1,
+  "zip": "T4C 1A4"
+}, {
+  "latitude": "42.559700",
+  "longitude": "-83.113800",
+  "weight": 1,
+  "zip": "48083-1554"
+}, {
+  "latitude": "38.068500",
+  "longitude": "-122.161400",
+  "weight": 1,
+  "zip": "94510-1413"
+}, {
+  "latitude": "35.328500",
+  "longitude": "-106.530900",
+  "weight": 2,
+  "zip": "87004-6923"
+}, {
+  "latitude": "40.751900",
+  "longitude": "-115.595600",
+  "weight": 1,
+  "zip": "89815"
+}, {
+  "latitude": "50.590101",
+  "longitude": "-113.884037",
+  "weight": 1,
+  "zip": "T1V 1E3"
+}, {
+  "latitude": "38.003100",
+  "longitude": "-121.917200",
+  "weight": 1,
+  "zip": "94565-2214"
+}, {
+  "latitude": "39.040000",
+  "longitude": "-77.044400",
+  "weight": 2,
+  "zip": "20902-2147"
+}, {
+  "latitude": "39.340100",
+  "longitude": "-76.415300",
+  "weight": 1,
+  "zip": "21220-2346"
+}, {
+  "latitude": "38.235200",
+  "longitude": "-104.660000",
+  "weight": 1,
+  "zip": "81005-3801"
+}, {
+  "latitude": "37.982300",
+  "longitude": "-122.036200",
+  "weight": 1,
+  "zip": "94520-1407"
+}, {
+  "latitude": "32.968200",
+  "longitude": "-96.794200",
+  "weight": 1,
+  "zip": "75248-2233"
+}, {
+  "latitude": "33.125000",
+  "longitude": "-90.055700",
+  "weight": 1,
+  "zip": "39095-7011"
+}, {
+  "latitude": "54.405573",
+  "longitude": "-116.808371",
+  "weight": 3,
+  "zip": "T0H 1P0"
+}, {
+  "latitude": "32.430500",
+  "longitude": "-111.145900",
+  "weight": 1,
+  "zip": "85658-4621"
+}, {
+  "latitude": "29.413700",
+  "longitude": "-96.092900",
+  "weight": 1,
+  "zip": "77448-0046"
+}, {
+  "latitude": "49.287758",
+  "longitude": "-123.126721",
+  "weight": 1,
+  "zip": "V6E 4R9"
+}, {
+  "latitude": "33.920800",
+  "longitude": "-117.609600",
+  "weight": 1,
+  "zip": "92880-3197"
+}, {
+  "latitude": "37.573500",
+  "longitude": "-122.322500",
+  "weight": 2,
+  "zip": "94401-1734"
+}, {
+  "latitude": "29.968600",
+  "longitude": "-90.064600",
+  "weight": 1,
+  "zip": "70116"
+}, {
+  "latitude": "39.673700",
+  "longitude": "-89.711200",
+  "weight": 1,
+  "zip": "62629-1688"
+}, {
+  "latitude": "40.695700",
+  "longitude": "-75.082500",
+  "weight": 1,
+  "zip": "08886-2041"
+}, {
+  "latitude": "42.295900",
+  "longitude": "-78.660600",
+  "weight": 1,
+  "zip": "14731-9749"
+}, {
+  "latitude": "45.538331",
+  "longitude": "-73.777126",
+  "weight": 1,
+  "zip": "H7W 0J5"
+}, {
+  "latitude": "42.052800",
+  "longitude": "-71.750900",
+  "weight": 1,
+  "zip": "01516-2334"
+}, {
+  "latitude": "40.854500",
+  "longitude": "-74.278900",
+  "weight": 1,
+  "zip": "07006-7421"
+}, {
+  "latitude": "39.948700",
+  "longitude": "-75.159300",
+  "weight": 2,
+  "zip": "19107-5846"
+}, {
+  "latitude": "30.120400",
+  "longitude": "-81.412800",
+  "weight": 1,
+  "zip": "32081-7031"
+}, {
+  "latitude": "41.213700",
+  "longitude": "-76.763300",
+  "weight": 1,
+  "zip": "17756-7828"
+}, {
+  "latitude": "42.733400",
+  "longitude": "-78.838900",
+  "weight": 1,
+  "zip": "14075-3424"
+}, {
+  "latitude": "36.935600",
+  "longitude": "-76.303400",
+  "weight": 1,
+  "zip": "23511"
+}, {
+  "latitude": "41.280000",
+  "longitude": "-72.810600",
+  "weight": 1,
+  "zip": "06405-4174"
+}, {
+  "latitude": "33.269600",
+  "longitude": "-117.342300",
+  "weight": 2,
+  "zip": "92058-7719"
+}, {
+  "latitude": "29.575000",
+  "longitude": "-98.228000",
+  "weight": 2,
+  "zip": "78108-4364"
+}, {
+  "latitude": "38.093200",
+  "longitude": "-84.500700",
+  "weight": 1,
+  "zip": "40511-1181"
+}, {
+  "latitude": "43.174000",
+  "longitude": "-77.563700",
+  "weight": 1,
+  "zip": "14609-5734"
+}, {
+  "latitude": "40.690400",
+  "longitude": "-76.259700",
+  "weight": 1,
+  "zip": "17954"
+}, {
+  "latitude": "40.730500",
+  "longitude": "-74.401700",
+  "weight": 1,
+  "zip": "07928-1636"
+}, {
+  "latitude": "39.695600",
+  "longitude": "-105.034100",
+  "weight": 1,
+  "zip": "80219-5143"
+}, {
+  "latitude": "51.160102",
+  "longitude": "-113.304249",
+  "weight": 1,
+  "zip": "T1P 1J6"
+}, {
+  "latitude": "33.353800",
+  "longitude": "-86.825400",
+  "weight": 1,
+  "zip": "35244-1483"
+}, {
+  "latitude": "46.538839",
+  "longitude": "-84.384919",
+  "weight": 1,
+  "zip": "P6C 5G8"
+}, {
+  "latitude": "55.069012",
+  "longitude": "-117.276834",
+  "weight": 1,
+  "zip": "T0H 3N0"
+}, {
+  "latitude": "42.070200",
+  "longitude": "-72.622700",
+  "weight": 1,
+  "zip": "01001-1704"
+}, {
+  "latitude": "33.824100",
+  "longitude": "-117.519800",
+  "weight": 5,
+  "zip": "92881-7440"
+}, {
+  "latitude": "39.930000",
+  "longitude": "-84.021700",
+  "weight": 1,
+  "zip": "45344-1641"
+}, {
+  "latitude": "36.678400",
+  "longitude": "-93.846700",
+  "weight": 1,
+  "zip": "65625"
+}, {
+  "latitude": "26.662700",
+  "longitude": "-80.253000",
+  "weight": 1,
+  "zip": "33414-8822"
+}, {
+  "latitude": "40.756800",
+  "longitude": "-96.652300",
+  "weight": 1,
+  "zip": "68516-5746"
+}, {
+  "latitude": "39.003900",
+  "longitude": "-77.308300",
+  "weight": 1,
+  "zip": "22066"
+}, {
+  "latitude": "41.698000",
+  "longitude": "-86.869900",
+  "weight": 1,
+  "zip": "46360-2066"
+}, {
+  "latitude": "38.211700",
+  "longitude": "-84.556200",
+  "weight": 1,
+  "zip": "40324-9698"
+}, {
+  "latitude": "42.204400",
+  "longitude": "-83.199900",
+  "weight": 1,
+  "zip": "48195-3541"
+}, {
+  "latitude": "40.449300",
+  "longitude": "-74.439000",
+  "weight": 1,
+  "zip": "08850-1508"
+}, {
+  "latitude": "42.969156",
+  "longitude": "-81.328458",
+  "weight": 1,
+  "zip": "N6H 3T5"
+}, {
+  "latitude": "35.401100",
+  "longitude": "-80.869500",
+  "weight": 1,
+  "zip": "28078-2316"
+}, {
+  "latitude": "39.120600",
+  "longitude": "-76.495000",
+  "weight": 1,
+  "zip": "21122-3030"
+}, {
+  "latitude": "42.956600",
+  "longitude": "-85.481000",
+  "weight": 1,
+  "zip": "49301-9120"
+}, {
+  "latitude": "35.317200",
+  "longitude": "-120.833300",
+  "weight": 1,
+  "zip": "93402-2410"
+}, {
+  "latitude": "29.364100",
+  "longitude": "-98.492400",
+  "weight": 1,
+  "zip": "78214"
+}, {
+  "latitude": "43.393900",
+  "longitude": "-84.330800",
+  "weight": 3,
+  "zip": "48637-2537"
+}, {
+  "latitude": "34.951900",
+  "longitude": "-90.050700",
+  "weight": 1,
+  "zip": "38637-1263"
+}, {
+  "latitude": "39.882500",
+  "longitude": "-79.971000",
+  "weight": 1,
+  "zip": "15320-1118"
+}, {
+  "latitude": "37.379900",
+  "longitude": "-81.117500",
+  "weight": 1,
+  "zip": "24740-1937"
+}, {
+  "latitude": "38.676000",
+  "longitude": "-77.316300",
+  "weight": 1,
+  "zip": "22192-5321"
+}, {
+  "latitude": "40.668300",
+  "longitude": "-94.732400",
+  "weight": 1,
+  "zip": "50833-1524"
+}, {
+  "latitude": "39.695600",
+  "longitude": "-105.034100",
+  "weight": 1,
+  "zip": "80219-5504"
+}, {
+  "latitude": "38.607100",
+  "longitude": "-86.078700",
+  "weight": 1,
+  "zip": "47167-2002"
+}, {
+  "latitude": "43.928200",
+  "longitude": "-105.549200",
+  "weight": 1,
+  "zip": "82718-6342"
+}, {
+  "latitude": "41.766400",
+  "longitude": "-88.344600",
+  "weight": 1,
+  "zip": "60506-1879"
+}, {
+  "latitude": "42.962200",
+  "longitude": "-115.316000",
+  "weight": 1,
+  "zip": "83623-0457"
+}, {
+  "latitude": "39.460000",
+  "longitude": "-76.813500",
+  "weight": 1,
+  "zip": "21136-5315"
+}, {
+  "latitude": "40.038600",
+  "longitude": "-82.099800",
+  "weight": 1,
+  "zip": "43830-9543"
+}, {
+  "latitude": "53.502689",
+  "longitude": "-113.605691",
+  "weight": 1,
+  "zip": "T5T 2X5"
+}, {
+  "latitude": "51.272726",
+  "longitude": "-114.028234",
+  "weight": 1,
+  "zip": "T4B 3E3"
+}, {
+  "latitude": "41.971900",
+  "longitude": "-87.662400",
+  "weight": 1,
+  "zip": "60640-5459"
+}, {
+  "latitude": "41.550300",
+  "longitude": "-72.996300",
+  "weight": 2,
+  "zip": "06705-1739"
+}, {
+  "latitude": "43.895946",
+  "longitude": "-78.877952",
+  "weight": 2,
+  "zip": "L1J 2M6"
+}, {
+  "latitude": "49.151031",
+  "longitude": "-122.319600",
+  "weight": 1,
+  "zip": "V2V 2S6"
+}, {
+  "latitude": "36.072500",
+  "longitude": "-86.724000",
+  "weight": 1,
+  "zip": "37211-6204"
+}, {
+  "latitude": "30.073900",
+  "longitude": "-95.620100",
+  "weight": 1,
+  "zip": "77375-2139"
+}, {
+  "latitude": "46.011200",
+  "longitude": "-122.816600",
+  "weight": 1,
+  "zip": "98625-0400"
+}, {
+  "latitude": "32.274000",
+  "longitude": "-104.091400",
+  "weight": 1,
+  "zip": "88256-0448"
+}, {
+  "latitude": "45.548300",
+  "longitude": "-122.827600",
+  "weight": 1,
+  "zip": "97229-6669"
+}, {
+  "latitude": "35.506800",
+  "longitude": "-78.347900",
+  "weight": 1,
+  "zip": "27577-8925"
+}, {
+  "latitude": "40.793400",
+  "longitude": "-73.688800",
+  "weight": 5,
+  "zip": "11030-1963"
+}, {
+  "latitude": "43.798028",
+  "longitude": "-80.223755",
+  "weight": 2,
+  "zip": "L0N 1N0"
+}, {
+  "latitude": "40.695200",
+  "longitude": "-74.267700",
+  "weight": 1,
+  "zip": "07083-5264"
+}, {
+  "latitude": "39.235400",
+  "longitude": "-111.651400",
+  "weight": 1,
+  "zip": "84642-1052"
+}, {
+  "latitude": "40.037400",
+  "longitude": "-84.203200",
+  "weight": 1,
+  "zip": "45373-2393"
+}, {
+  "latitude": "41.605200",
+  "longitude": "-72.872700",
+  "weight": 1,
+  "zip": "06489"
+}, {
+  "latitude": "40.854200",
+  "longitude": "-73.213800",
+  "weight": 1,
+  "zip": "11787-4908"
+}, {
+  "latitude": "47.146400",
+  "longitude": "-122.457200",
+  "weight": 2,
+  "zip": "98444-5340"
+}, {
+  "latitude": "37.624700",
+  "longitude": "-122.429000",
+  "weight": 2,
+  "zip": "94066-2073"
+}, {
+  "latitude": "45.748417",
+  "longitude": "-65.570466",
+  "weight": 1,
+  "zip": "E4G 1N1"
+}, {
+  "latitude": "41.533400",
+  "longitude": "-72.799700",
+  "weight": 2,
+  "zip": "06450-3304"
+}, {
+  "latitude": "31.125600",
+  "longitude": "-93.173600",
+  "weight": 2,
+  "zip": "71446-7759"
+}, {
+  "latitude": "51.208651",
+  "longitude": "-114.506239",
+  "weight": 2,
+  "zip": "T4C 0L4"
+}, {
+  "latitude": "40.302700",
+  "longitude": "-99.899700",
+  "weight": 1,
+  "zip": "68922-2750"
+}, {
+  "latitude": "35.166300",
+  "longitude": "-101.886800",
+  "weight": 1,
+  "zip": "79109-5215"
+}, {
+  "latitude": "42.483700",
+  "longitude": "-89.029800",
+  "weight": 1,
+  "zip": "61080-1913"
+}, {
+  "latitude": "39.599200",
+  "longitude": "-78.844400",
+  "weight": 3,
+  "zip": "21502-5189"
+}, {
+  "latitude": "37.833200",
+  "longitude": "-81.902400",
+  "weight": 1,
+  "zip": "25624-0073"
+}, {
+  "latitude": "49.258156",
+  "longitude": "-122.783720",
+  "weight": 2,
+  "zip": "V3C 1X6"
+}, {
+  "latitude": "33.195100",
+  "longitude": "-96.664200",
+  "weight": 1,
+  "zip": "75070-3954"
+}, {
+  "latitude": "40.731500",
+  "longitude": "-73.432700",
+  "weight": 1,
+  "zip": "11735-1614"
+}, {
+  "latitude": "35.845400",
+  "longitude": "-86.486700",
+  "weight": 1,
+  "zip": "37128-8221"
+}, {
+  "latitude": "30.351000",
+  "longitude": "-81.506100",
+  "weight": 1,
+  "zip": "32225-3243"
+}, {
+  "latitude": "33.721700",
+  "longitude": "-84.333900",
+  "weight": 3,
+  "zip": "30316-1418"
+}, {
+  "latitude": "41.638200",
+  "longitude": "-79.685500",
+  "weight": 2,
+  "zip": "16354-1055"
+}, {
+  "latitude": "42.688500",
+  "longitude": "-83.054800",
+  "weight": 1,
+  "zip": "48316"
+}, {
+  "latitude": "42.473500",
+  "longitude": "-83.522400",
+  "weight": 1,
+  "zip": "48374-2528"
+}, {
+  "latitude": "43.186900",
+  "longitude": "-89.222700",
+  "weight": 3,
+  "zip": "53590-3023"
+}, {
+  "latitude": "45.502920",
+  "longitude": "-75.679549",
+  "weight": 1,
+  "zip": "J8R 2K2"
+}, {
+  "latitude": "32.637100",
+  "longitude": "-117.067600",
+  "weight": 1,
+  "zip": "91910-6848"
+}, {
+  "latitude": "39.096600",
+  "longitude": "-94.749500",
+  "weight": 1,
+  "zip": "66117-0177"
+}, {
+  "latitude": "56.245361",
+  "longitude": "-120.830559",
+  "weight": 1,
+  "zip": "V1J 5S3"
+}, {
+  "latitude": "39.757400",
+  "longitude": "-84.056900",
+  "weight": 1,
+  "zip": "45431-8898"
+}, {
+  "latitude": "32.276800",
+  "longitude": "-95.303100",
+  "weight": 1,
+  "zip": "75703-3843"
+}, {
+  "latitude": "46.759047",
+  "longitude": "-71.309696",
+  "weight": 1,
+  "zip": "G1W 2T3"
+}, {
+  "latitude": "40.886100",
+  "longitude": "-73.243800",
+  "weight": 1,
+  "zip": "11754-0939"
+}, {
+  "latitude": "42.882100",
+  "longitude": "-97.398600",
+  "weight": 1,
+  "zip": "57078"
+}, {
+  "latitude": "39.213300",
+  "longitude": "-94.574300",
+  "weight": 1,
+  "zip": "64118-4441"
+}, {
+  "latitude": "33.563100",
+  "longitude": "-117.273800",
+  "weight": 3,
+  "zip": "92562-4512"
+}, {
+  "latitude": "37.488800",
+  "longitude": "-120.853500",
+  "weight": 2,
+  "zip": "95380-2598"
+}, {
+  "latitude": "29.770000",
+  "longitude": "-94.860800",
+  "weight": 1,
+  "zip": "77523-3511"
+}, {
+  "latitude": "43.461600",
+  "longitude": "-88.840700",
+  "weight": 1,
+  "zip": "53916-9121"
+}, {
+  "latitude": "36.730400",
+  "longitude": "-76.593100",
+  "weight": 1,
+  "zip": "23434"
+}, {
+  "latitude": "30.688400",
+  "longitude": "-81.934500",
+  "weight": 2,
+  "zip": "32046-7667"
+}, {
+  "latitude": "33.839700",
+  "longitude": "-118.354200",
+  "weight": 1,
+  "zip": "90503"
+}, {
+  "latitude": "34.926900",
+  "longitude": "-116.709300",
+  "weight": 1,
+  "zip": "92398-1235"
+}, {
+  "latitude": "33.604800",
+  "longitude": "-112.223700",
+  "weight": 2,
+  "zip": "85381"
+}, {
+  "latitude": "34.375600",
+  "longitude": "-80.084200",
+  "weight": 1,
+  "zip": "29550-0371"
+}, {
+  "latitude": "21.453100",
+  "longitude": "-158.017400",
+  "weight": 1,
+  "zip": "96789-4865"
+}, {
+  "latitude": "36.072500",
+  "longitude": "-86.724000",
+  "weight": 1,
+  "zip": "37211-2330"
+}, {
+  "latitude": "41.731600",
+  "longitude": "-73.458300",
+  "weight": 1,
+  "zip": "06757-1305"
+}, {
+  "latitude": "48.225700",
+  "longitude": "-103.649000",
+  "weight": 1,
+  "zip": "58801-2838"
+}, {
+  "latitude": "43.131700",
+  "longitude": "-77.606200",
+  "weight": 1,
+  "zip": "14620-1321"
+}, {
+  "latitude": "34.690900",
+  "longitude": "-77.361400",
+  "weight": 1,
+  "zip": "28547-1024"
+}, {
+  "latitude": "33.990300",
+  "longitude": "-80.999700",
+  "weight": 1,
+  "zip": "29205-3564"
+}, {
+  "latitude": "39.485400",
+  "longitude": "-86.060800",
+  "weight": 1,
+  "zip": "46131-7530"
+}, {
+  "latitude": "34.571500",
+  "longitude": "-118.023100",
+  "weight": 2,
+  "zip": "93552-3794"
+}, {
+  "latitude": "43.554836",
+  "longitude": "-79.585966",
+  "weight": 1,
+  "zip": "L5G 1L9"
+}, {
+  "latitude": "41.903000",
+  "longitude": "-87.881100",
+  "weight": 3,
+  "zip": "60165-1151"
+}, {
+  "latitude": "32.002700",
+  "longitude": "-110.705300",
+  "weight": 6,
+  "zip": "85641-6451"
+}, {
+  "latitude": "33.943200",
+  "longitude": "-117.992700",
+  "weight": 2,
+  "zip": "90603-2050"
+}, {
+  "latitude": "36.224500",
+  "longitude": "-79.890100",
+  "weight": 1,
+  "zip": "27358"
+}, {
+  "latitude": "26.966700",
+  "longitude": "-82.359900",
+  "weight": 1,
+  "zip": "34223-2660"
+}, {
+  "latitude": "34.187000",
+  "longitude": "-84.820400",
+  "weight": 1,
+  "zip": "30120-6739"
+}, {
+  "latitude": "55.752195",
+  "longitude": "-120.258062",
+  "weight": 1,
+  "zip": "V1G 2V1"
+}, {
+  "latitude": "39.738800",
+  "longitude": "-104.408300",
+  "weight": 1,
+  "zip": "80238-3404"
+}, {
+  "latitude": "30.307300",
+  "longitude": "-90.940500",
+  "weight": 2,
+  "zip": "70769-4858"
+}, {
+  "latitude": "35.559700",
+  "longitude": "-82.921600",
+  "weight": 1,
+  "zip": "28721-8810"
+}, {
+  "latitude": "46.852903",
+  "longitude": "-71.329671",
+  "weight": 1,
+  "zip": "G1Y 1L4"
+}, {
+  "latitude": "26.018500",
+  "longitude": "-80.344900",
+  "weight": 1,
+  "zip": "33028-1818"
+}, {
+  "latitude": "30.037700",
+  "longitude": "-95.532600",
+  "weight": 1,
+  "zip": "77379-7801"
+}, {
+  "latitude": "30.442100",
+  "longitude": "-97.629900",
+  "weight": 2,
+  "zip": "78660-3580"
+}, {
+  "latitude": "34.152600",
+  "longitude": "-118.432200",
+  "weight": 1,
+  "zip": "91423-4539"
+}, {
+  "latitude": "44.898500",
+  "longitude": "-92.923000",
+  "weight": 1,
+  "zip": "55129-6708"
+}, {
+  "latitude": "29.024700",
+  "longitude": "-80.958400",
+  "weight": 1,
+  "zip": "32168"
+}, {
+  "latitude": "45.817600",
+  "longitude": "-95.694500",
+  "weight": 1,
+  "zip": "56343"
+}, {
+  "latitude": "47.615600",
+  "longitude": "-117.362200",
+  "weight": 1,
+  "zip": "99223-6903"
+}, {
+  "latitude": "38.676000",
+  "longitude": "-77.316300",
+  "weight": 1,
+  "zip": "22192-6444"
+}, {
+  "latitude": "43.615000",
+  "longitude": "-116.397500",
+  "weight": 3,
+  "zip": "83642-9428"
+}, {
+  "latitude": "37.948500",
+  "longitude": "-91.760300",
+  "weight": 3,
+  "zip": "65401"
+}, {
+  "latitude": "30.268300",
+  "longitude": "-92.553200",
+  "weight": 1,
+  "zip": "70537-3404"
+}, {
+  "latitude": "50.356928",
+  "longitude": "-125.927474",
+  "weight": 1,
+  "zip": "V0P 1R0"
+}, {
+  "latitude": "40.929700",
+  "longitude": "-72.742300",
+  "weight": 1,
+  "zip": "11933-1036"
+}, {
+  "latitude": "43.085900",
+  "longitude": "-87.974200",
+  "weight": 1,
+  "zip": "53216-3151"
+}, {
+  "latitude": "40.817000",
+  "longitude": "-75.601100",
+  "weight": 2,
+  "zip": "18071-1512"
+}, {
+  "latitude": "37.287400",
+  "longitude": "-107.861700",
+  "weight": 4,
+  "zip": "81301-8965"
+}, {
+  "latitude": "34.719500",
+  "longitude": "-90.896900",
+  "weight": 5,
+  "zip": "72311-0092"
+}, {
+  "latitude": "42.928200",
+  "longitude": "-83.626400",
+  "weight": 1,
+  "zip": "48439-7340"
+}, {
+  "latitude": "33.491300",
+  "longitude": "-112.246800",
+  "weight": 1,
+  "zip": "85037-8318"
+}, {
+  "latitude": "37.207700",
+  "longitude": "-89.518100",
+  "weight": 1,
+  "zip": "63780"
+}, {
+  "latitude": "39.037300",
+  "longitude": "-77.480500",
+  "weight": 1,
+  "zip": "20147-6947"
+}, {
+  "latitude": "39.265500",
+  "longitude": "-76.493500",
+  "weight": 1,
+  "zip": "21222-5403"
+}, {
+  "latitude": "40.352400",
+  "longitude": "-80.678100",
+  "weight": 2,
+  "zip": "43953-4069"
+}, {
+  "latitude": "36.920200",
+  "longitude": "-76.216000",
+  "weight": 1,
+  "zip": "23518-2708"
+}, {
+  "latitude": "41.245800",
+  "longitude": "-81.436700",
+  "weight": 4,
+  "zip": "44236-1558"
+}, {
+  "latitude": "40.428400",
+  "longitude": "-74.406400",
+  "weight": 1,
+  "zip": "08816-2834"
+}, {
+  "latitude": "41.030200",
+  "longitude": "-74.519800",
+  "weight": 2,
+  "zip": "07438-9714"
+}, {
+  "latitude": "45.412300",
+  "longitude": "-83.835500",
+  "weight": 1,
+  "zip": "49779-1324"
+}, {
+  "latitude": "45.131400",
+  "longitude": "-89.141900",
+  "weight": 1,
+  "zip": "54409-2610"
+}, {
+  "latitude": "36.409000",
+  "longitude": "-81.439600",
+  "weight": 1,
+  "zip": "28640-9767"
+}, {
+  "latitude": "33.526000",
+  "longitude": "-81.795600",
+  "weight": 1,
+  "zip": "29851-2740"
+}, {
+  "latitude": "43.380692",
+  "longitude": "-80.695772",
+  "weight": 1,
+  "zip": "N3A 2H9"
+}, {
+  "latitude": "53.766141",
+  "longitude": "-115.987827",
+  "weight": 1,
+  "zip": "T0E 1W0"
+}, {
+  "latitude": "37.963800",
+  "longitude": "-79.871700",
+  "weight": 1,
+  "zip": "24445-2855"
+}, {
+  "latitude": "41.602900",
+  "longitude": "-72.770000",
+  "weight": 1,
+  "zip": "06037-2070"
+}, {
+  "latitude": "41.358200",
+  "longitude": "-73.974600",
+  "weight": 1,
+  "zip": "10928-1736"
+}, {
+  "latitude": "40.852000",
+  "longitude": "-74.941800",
+  "weight": 1,
+  "zip": "07838-2063"
+}, {
+  "latitude": "43.517900",
+  "longitude": "-96.792400",
+  "weight": 2,
+  "zip": "57106-4798"
+}, {
+  "latitude": "36.585300",
+  "longitude": "-87.418600",
+  "weight": 2,
+  "zip": "37042-8694"
+}, {
+  "latitude": "39.264000",
+  "longitude": "-78.198900",
+  "weight": 1,
+  "zip": "22603-4207"
+}, {
+  "latitude": "42.115100",
+  "longitude": "-72.641100",
+  "weight": 1,
+  "zip": "01089-3356"
+}, {
+  "latitude": "34.495900",
+  "longitude": "-110.080700",
+  "weight": 1,
+  "zip": "85937-6019"
+}, {
+  "latitude": "41.439000",
+  "longitude": "-105.801000",
+  "weight": 1,
+  "zip": "82070-4728"
+}, {
+  "latitude": "26.656000",
+  "longitude": "-80.126000",
+  "weight": 3,
+  "zip": "33415-4705"
+}, {
+  "latitude": "41.781400",
+  "longitude": "-87.770500",
+  "weight": 7,
+  "zip": "60638-3217"
+}, {
+  "latitude": "38.833800",
+  "longitude": "-90.293600",
+  "weight": 2,
+  "zip": "63034-3404"
+}, {
+  "latitude": "45.628900",
+  "longitude": "-72.957197",
+  "weight": 1,
+  "zip": "J2S 5R4"
+}, {
+  "latitude": "39.970100",
+  "longitude": "-76.521700",
+  "weight": 3,
+  "zip": "17317-0451"
+}, {
+  "latitude": "40.882000",
+  "longitude": "-73.954400",
+  "weight": 1,
+  "zip": "07632-3014"
+}, {
+  "latitude": "30.373700",
+  "longitude": "-87.312600",
+  "weight": 2,
+  "zip": "32507-8681"
+}, {
+  "latitude": "40.237700",
+  "longitude": "-74.782100",
+  "weight": 7,
+  "zip": "08618-3203"
+}, {
+  "latitude": "40.279500",
+  "longitude": "-74.691200",
+  "weight": 2,
+  "zip": "08648-1456"
+}, {
+  "latitude": "42.200800",
+  "longitude": "-79.833200",
+  "weight": 1,
+  "zip": "16428-6502"
+}, {
+  "latitude": "40.199800",
+  "longitude": "-74.434400",
+  "weight": 1,
+  "zip": "08510-8148"
+}, {
+  "latitude": "46.314942",
+  "longitude": "-79.452374",
+  "weight": 2,
+  "zip": "P1B 1P7"
+}, {
+  "latitude": "41.733500",
+  "longitude": "-80.756200",
+  "weight": 1,
+  "zip": "44047-1366"
+}, {
+  "latitude": "40.496100",
+  "longitude": "-105.000200",
+  "weight": 2,
+  "zip": "80528-3082"
+}, {
+  "latitude": "45.663697",
+  "longitude": "-73.547548",
+  "weight": 4,
+  "zip": "H1C 2K6"
+}, {
+  "latitude": "41.689500",
+  "longitude": "-81.342100",
+  "weight": 1,
+  "zip": "44060"
+}, {
+  "latitude": "30.192700",
+  "longitude": "-81.605000",
+  "weight": 2,
+  "zip": "32257-3925"
+}, {
+  "latitude": "41.795100",
+  "longitude": "-107.234900",
+  "weight": 4,
+  "zip": "82301-4236"
+}, {
+  "latitude": "29.734800",
+  "longitude": "-95.522000",
+  "weight": 4,
+  "zip": "77063-1421"
+}, {
+  "latitude": "35.079000",
+  "longitude": "-106.616900",
+  "weight": 1,
+  "zip": "87106-1416"
+}, {
+  "latitude": "33.633900",
+  "longitude": "-86.598100",
+  "weight": 1,
+  "zip": "35173-1717"
+}, {
+  "latitude": "50.232424",
+  "longitude": "-118.615561",
+  "weight": 1,
+  "zip": "V0E 2G3"
+}, {
+  "latitude": "41.686000",
+  "longitude": "-72.729600",
+  "weight": 1,
+  "zip": "06111-3433"
+}, {
+  "latitude": "32.551000",
+  "longitude": "-85.897800",
+  "weight": 6,
+  "zip": "36078-2038"
+}, {
+  "latitude": "33.043600",
+  "longitude": "-109.311500",
+  "weight": 1,
+  "zip": "85540-0322"
+}, {
+  "latitude": "33.630000",
+  "longitude": "-112.331400",
+  "weight": 2,
+  "zip": "85374-4461"
+}, {
+  "latitude": "38.248100",
+  "longitude": "-77.468100",
+  "weight": 2,
+  "zip": "22408-2344"
+}, {
+  "latitude": "48.492412",
+  "longitude": "-81.351879",
+  "weight": 1,
+  "zip": "P4N 7R9"
+}, {
+  "latitude": "40.824600",
+  "longitude": "-73.950700",
+  "weight": 2,
+  "zip": "10031-7630"
+}, {
+  "latitude": "49.674126",
+  "longitude": "-112.797686",
+  "weight": 1,
+  "zip": "T1K 3P6"
+}, {
+  "latitude": "37.337000",
+  "longitude": "-78.980400",
+  "weight": 1,
+  "zip": "24538-3058"
+}, {
+  "latitude": "35.684000",
+  "longitude": "-85.778200",
+  "weight": 2,
+  "zip": "37110-4490"
+}, {
+  "latitude": "40.038900",
+  "longitude": "-74.110900",
+  "weight": 1,
+  "zip": "08723-6034"
+}, {
+  "latitude": "46.993441",
+  "longitude": "-71.199157",
+  "weight": 1,
+  "zip": "G0A 3K0"
+}, {
+  "latitude": "41.094200",
+  "longitude": "-73.520300",
+  "weight": 1,
+  "zip": "06907-2615"
+}, {
+  "latitude": "40.245800",
+  "longitude": "-74.276800",
+  "weight": 1,
+  "zip": "07728-1806"
+}, {
+  "latitude": "41.091500",
+  "longitude": "-74.375000",
+  "weight": 1,
+  "zip": "07480-2910"
+}, {
+  "latitude": "41.329100",
+  "longitude": "-110.292600",
+  "weight": 2,
+  "zip": "82937"
+}, {
+  "latitude": "41.122200",
+  "longitude": "-73.435800",
+  "weight": 2,
+  "zip": "06850-3971"
+}, {
+  "latitude": "41.148700",
+  "longitude": "-73.941300",
+  "weight": 1,
+  "zip": "10920-2418"
+}, {
+  "latitude": "50.491180",
+  "longitude": "-120.812305",
+  "weight": 1,
+  "zip": "V0K 1W0"
+}, {
+  "latitude": "37.898100",
+  "longitude": "-114.396800",
+  "weight": 1,
+  "zip": "89043-2573"
+}, {
+  "latitude": "32.701500",
+  "longitude": "-114.642400",
+  "weight": 1,
+  "zip": "85364-8801"
+}, {
+  "latitude": "45.381386",
+  "longitude": "-73.505682",
+  "weight": 1,
+  "zip": "J5R 5R6"
+}, {
+  "latitude": "54.721186",
+  "longitude": "-115.402852",
+  "weight": 1,
+  "zip": "T0G 2C0"
+}, {
+  "latitude": "45.654600",
+  "longitude": "-110.560900",
+  "weight": 2,
+  "zip": "59047-3526"
+}, {
+  "latitude": "36.585300",
+  "longitude": "-87.418600",
+  "weight": 1,
+  "zip": "37042-8167"
+}, {
+  "latitude": "32.796900",
+  "longitude": "-117.240500",
+  "weight": 2,
+  "zip": "92109-3070"
+}, {
+  "latitude": "42.351800",
+  "longitude": "-85.562100",
+  "weight": 1,
+  "zip": "49004-7630"
+}, {
+  "latitude": "38.577000",
+  "longitude": "-90.525500",
+  "weight": 1,
+  "zip": "63021-5607"
+}, {
+  "latitude": "41.428900",
+  "longitude": "-78.550500",
+  "weight": 2,
+  "zip": "15857"
+}, {
+  "latitude": "49.767821",
+  "longitude": "-119.752617",
+  "weight": 1,
+  "zip": "V0H 1X4"
+}, {
+  "latitude": "39.864300",
+  "longitude": "-75.433200",
+  "weight": 1,
+  "zip": "19014-2261"
+}, {
+  "latitude": "45.078800",
+  "longitude": "-93.187200",
+  "weight": 5,
+  "zip": "55112-3637"
+}, {
+  "latitude": "26.255600",
+  "longitude": "-98.230300",
+  "weight": 1,
+  "zip": "78504-1762"
+}, {
+  "latitude": "39.927400",
+  "longitude": "-82.004100",
+  "weight": 1,
+  "zip": "43701-1646"
+}, {
+  "latitude": "52.678516",
+  "longitude": "-113.575287",
+  "weight": 1,
+  "zip": "T4J 1R3"
+}, {
+  "latitude": "36.010400",
+  "longitude": "-115.207300",
+  "weight": 1,
+  "zip": "89141-3886"
+}, {
+  "latitude": "49.249847",
+  "longitude": "-123.110686",
+  "weight": 2,
+  "zip": "V5V 2A8"
+}, {
+  "latitude": "51.054019",
+  "longitude": "-114.091631",
+  "weight": 9,
+  "zip": "T2E 1N3"
+}, {
+  "latitude": "47.840100",
+  "longitude": "-122.197200",
+  "weight": 3,
+  "zip": "98012-1787"
+}, {
+  "latitude": "42.110900",
+  "longitude": "-80.153400",
+  "weight": 1,
+  "zip": "16505-3315"
+}, {
+  "latitude": "50.929066",
+  "longitude": "-113.978401",
+  "weight": 1,
+  "zip": "T2Z 3N4"
+}, {
+  "latitude": "35.449900",
+  "longitude": "-108.770500",
+  "weight": 1,
+  "zip": "87305"
+}, {
+  "latitude": "55.775476",
+  "longitude": "-120.255149",
+  "weight": 3,
+  "zip": "V1G 0A5"
+}, {
+  "latitude": "34.495900",
+  "longitude": "-86.259000",
+  "weight": 1,
+  "zip": "35747-9678"
+}, {
+  "latitude": "41.033000",
+  "longitude": "-73.765200",
+  "weight": 1,
+  "zip": "10601-2228"
+}, {
+  "latitude": "39.349100",
+  "longitude": "-101.716400",
+  "weight": 1,
+  "zip": "67735-0485"
+}, {
+  "latitude": "30.321700",
+  "longitude": "-95.528500",
+  "weight": 1,
+  "zip": "77304-6821"
+}, {
+  "latitude": "40.641200",
+  "longitude": "-74.013300",
+  "weight": 1,
+  "zip": "11220-5437"
+}, {
+  "latitude": "32.893200",
+  "longitude": "-105.948500",
+  "weight": 1,
+  "zip": "88310-7266"
+}, {
+  "latitude": "40.935100",
+  "longitude": "-73.757200",
+  "weight": 3,
+  "zip": "10538-7372"
+}, {
+  "latitude": "41.453500",
+  "longitude": "-81.921800",
+  "weight": 1,
+  "zip": "44145-6208"
+}, {
+  "latitude": "36.797800",
+  "longitude": "-76.175900",
+  "weight": 1,
+  "zip": "23464-7631"
+}, {
+  "latitude": "32.533800",
+  "longitude": "-94.361900",
+  "weight": 1,
+  "zip": "75670-5810"
+}, {
+  "latitude": "36.888100",
+  "longitude": "-76.144600",
+  "weight": 1,
+  "zip": "23455-2249"
+}, {
+  "latitude": "49.245212",
+  "longitude": "-122.767506",
+  "weight": 1,
+  "zip": "V3C 4G8"
+}, {
+  "latitude": "39.014700",
+  "longitude": "-94.741400",
+  "weight": 1,
+  "zip": "66216-1375"
+}, {
+  "latitude": "49.233255",
+  "longitude": "-122.561263",
+  "weight": 1,
+  "zip": "V4R 1R6"
+}, {
+  "latitude": "42.763500",
+  "longitude": "-84.558000",
+  "weight": 1,
+  "zip": "48906-5389"
+}, {
+  "latitude": "43.858412",
+  "longitude": "-79.041909",
+  "weight": 2,
+  "zip": "L1T 3H3"
+}, {
+  "latitude": "38.967500",
+  "longitude": "-76.855100",
+  "weight": 1,
+  "zip": "20706-2174"
+}, {
+  "latitude": "42.281800",
+  "longitude": "-122.905400",
+  "weight": 1,
+  "zip": "97501-2071"
+}, {
+  "latitude": "39.657500",
+  "longitude": "-104.784600",
+  "weight": 1,
+  "zip": "80013-2622"
+}, {
+  "latitude": "29.906700",
+  "longitude": "-95.333400",
+  "weight": 1,
+  "zip": "77039"
+}, {
+  "latitude": "38.975500",
+  "longitude": "-80.240700",
+  "weight": 5,
+  "zip": "26201-2252"
+}, {
+  "latitude": "42.906300",
+  "longitude": "-74.229000",
+  "weight": 1,
+  "zip": "12010-3014"
+}, {
+  "latitude": "30.072900",
+  "longitude": "-95.810400",
+  "weight": 1,
+  "zip": "77447"
+}, {
+  "latitude": "39.959700",
+  "longitude": "-74.565500",
+  "weight": 1,
+  "zip": "08015"
+}, {
+  "latitude": "40.143100",
+  "longitude": "-74.703200",
+  "weight": 1,
+  "zip": "08505-4711"
+}, {
+  "latitude": "40.439700",
+  "longitude": "-74.955400",
+  "weight": 1,
+  "zip": "08559-1020"
+}, {
+  "latitude": "51.646869",
+  "longitude": "-111.931235",
+  "weight": 2,
+  "zip": "T0J 1P0"
+}, {
+  "latitude": "40.809400",
+  "longitude": "-81.948300",
+  "weight": 1,
+  "zip": "44691-4870"
+}, {
+  "latitude": "33.510300",
+  "longitude": "-112.055600",
+  "weight": 1,
+  "zip": "85014-2332"
+}, {
+  "latitude": "30.514500",
+  "longitude": "-97.668000",
+  "weight": 3,
+  "zip": "78664-5733"
+}, {
+  "latitude": "35.904000",
+  "longitude": "-109.308700",
+  "weight": 1,
+  "zip": "86511-0878"
+}, {
+  "latitude": "40.751900",
+  "longitude": "-115.595600",
+  "weight": 1,
+  "zip": "89815-6129"
+}, {
+  "latitude": "51.059260",
+  "longitude": "-99.517799",
+  "weight": 1,
+  "zip": "R0L 1S0"
+}, {
+  "latitude": "39.922200",
+  "longitude": "-88.568800",
+  "weight": 1,
+  "zip": "61813-3720"
+}, {
+  "latitude": "37.017400",
+  "longitude": "-86.451800",
+  "weight": 1,
+  "zip": "42101-4468"
+}, {
+  "latitude": "32.499500",
+  "longitude": "-86.364100",
+  "weight": 2,
+  "zip": "36054"
+}, {
+  "latitude": "42.278700",
+  "longitude": "-71.158900",
+  "weight": 1,
+  "zip": "02132-4223"
+}, {
+  "latitude": "53.529190",
+  "longitude": "-114.188470",
+  "weight": 1,
+  "zip": "T0E 0H0"
+}, {
+  "latitude": "40.808700",
+  "longitude": "-91.117000",
+  "weight": 4,
+  "zip": "52601-4940"
+}, {
+  "latitude": "42.254100",
+  "longitude": "-71.774600",
+  "weight": 1,
+  "zip": "01604-1364"
+}, {
+  "latitude": "52.145606",
+  "longitude": "-106.718674",
+  "weight": 1,
+  "zip": "S7L 6T3"
+}, {
+  "latitude": "38.384700",
+  "longitude": "-121.988700",
+  "weight": 2,
+  "zip": "95688-9631"
+}, {
+  "latitude": "36.820500",
+  "longitude": "-108.011000",
+  "weight": 1,
+  "zip": "87410-9740"
+}, {
+  "latitude": "31.396900",
+  "longitude": "-102.354400",
+  "weight": 5,
+  "zip": "79731-1404"
+}, {
+  "latitude": "44.165765",
+  "longitude": "-77.391972",
+  "weight": 1,
+  "zip": "K8P 1A6"
+}, {
+  "latitude": "41.474800",
+  "longitude": "-84.562900",
+  "weight": 1,
+  "zip": "43506-1806"
+}, {
+  "latitude": "41.896400",
+  "longitude": "-71.520700",
+  "weight": 2,
+  "zip": "02917-3103"
+}, {
+  "latitude": "43.944600",
+  "longitude": "-88.091100",
+  "weight": 2,
+  "zip": "53061-1633"
+}, {
+  "latitude": "41.684400",
+  "longitude": "-72.001000",
+  "weight": 1,
+  "zip": "06331-1807"
+}, {
+  "latitude": "40.785100",
+  "longitude": "-73.809600",
+  "weight": 2,
+  "zip": "11357-3519"
+}, {
+  "latitude": "57.051400",
+  "longitude": "-135.316600",
+  "weight": 3,
+  "zip": "99835-9301"
+}, {
+  "latitude": "33.594700",
+  "longitude": "-83.461800",
+  "weight": 1,
+  "zip": "30650-2110"
+}, {
+  "latitude": "40.178500",
+  "longitude": "-75.107200",
+  "weight": 1,
+  "zip": "19040-1414"
+}, {
+  "latitude": "40.731500",
+  "longitude": "-73.432700",
+  "weight": 1,
+  "zip": "11735-0852"
+}, {
+  "latitude": "43.824357",
+  "longitude": "-79.228319",
+  "weight": 1,
+  "zip": "M1X 1Z8"
+}, {
+  "latitude": "30.448700",
+  "longitude": "-86.625400",
+  "weight": 3,
+  "zip": "32547-6861"
+}, {
+  "latitude": "37.433600",
+  "longitude": "-93.021000",
+  "weight": 2,
+  "zip": "65644-8401"
+}, {
+  "latitude": "33.530400",
+  "longitude": "-102.026100",
+  "weight": 3,
+  "zip": "79382-4322"
+}, {
+  "latitude": "38.670300",
+  "longitude": "-88.491900",
+  "weight": 6,
+  "zip": "62839"
+}, {
+  "latitude": "43.140600",
+  "longitude": "-93.385000",
+  "weight": 2,
+  "zip": "50428-2401"
+}, {
+  "latitude": "34.219700",
+  "longitude": "-118.611100",
+  "weight": 10,
+  "zip": "91304-6105"
+}, {
+  "latitude": "47.717000",
+  "longitude": "-122.301500",
+  "weight": 1,
+  "zip": "98125-6759"
+}, {
+  "latitude": "50.923122",
+  "longitude": "-114.130466",
+  "weight": 1,
+  "zip": "T2Y 4N3"
+}, {
+  "latitude": "44.440100",
+  "longitude": "-87.559400",
+  "weight": 1,
+  "zip": "54216"
+}, {
+  "latitude": "41.076400",
+  "longitude": "-117.760200",
+  "weight": 2,
+  "zip": "89446"
+}, {
+  "latitude": "41.470600",
+  "longitude": "-87.078300",
+  "weight": 1,
+  "zip": "46385-8252"
+}, {
+  "latitude": "36.762600",
+  "longitude": "-78.941500",
+  "weight": 3,
+  "zip": "24558-2186"
+}, {
+  "latitude": "34.003100",
+  "longitude": "-84.012600",
+  "weight": 5,
+  "zip": "30043-4354"
+}, {
+  "latitude": "41.435000",
+  "longitude": "-75.610300",
+  "weight": 1,
+  "zip": "18512-1910"
+}, {
+  "latitude": "41.707400",
+  "longitude": "-87.975600",
+  "weight": 1,
+  "zip": "60439-2750"
+}, {
+  "latitude": "41.371700",
+  "longitude": "-73.750800",
+  "weight": 4,
+  "zip": "10541-2938"
+}, {
+  "latitude": "47.509800",
+  "longitude": "-111.340500",
+  "weight": 1,
+  "zip": "59404-4202"
+}, {
+  "latitude": "42.995900",
+  "longitude": "-87.994400",
+  "weight": 1,
+  "zip": "53219-1139"
+}, {
+  "latitude": "42.726200",
+  "longitude": "-83.026800",
+  "weight": 1,
+  "zip": "48094-1116"
+}, {
+  "latitude": "45.640907",
+  "longitude": "-73.569991",
+  "weight": 1,
+  "zip": "H1E 1Y4"
+}, {
+  "latitude": "31.663100",
+  "longitude": "-106.140100",
+  "weight": 4,
+  "zip": "79928"
+}, {
+  "latitude": "53.533082",
+  "longitude": "-113.606421",
+  "weight": 1,
+  "zip": "T5P 3S5"
+}, {
+  "latitude": "42.171000",
+  "longitude": "-77.119400",
+  "weight": 1,
+  "zip": "14870-9556"
+}, {
+  "latitude": "41.872100",
+  "longitude": "-88.016000",
+  "weight": 1,
+  "zip": "60148-1855"
+}, {
+  "latitude": "36.130400",
+  "longitude": "-109.603700",
+  "weight": 2,
+  "zip": "86503-2136"
+}, {
+  "latitude": "38.443200",
+  "longitude": "-122.754700",
+  "weight": 6,
+  "zip": "95401-8732"
+}, {
+  "latitude": "42.475500",
+  "longitude": "-92.281200",
+  "weight": 1,
+  "zip": "50707-1604"
+}, {
+  "latitude": "55.138462",
+  "longitude": "-118.828299",
+  "weight": 2,
+  "zip": "T8W 0B5"
+}, {
+  "latitude": "28.212900",
+  "longitude": "-82.680700",
+  "weight": 1,
+  "zip": "34655-2714"
+}, {
+  "latitude": "44.295400",
+  "longitude": "-90.831300",
+  "weight": 1,
+  "zip": "54615-6200"
+}, {
+  "latitude": "38.379600",
+  "longitude": "-77.534900",
+  "weight": 1,
+  "zip": "22406-5303"
+}, {
+  "latitude": "33.614400",
+  "longitude": "-117.643300",
+  "weight": 1,
+  "zip": "92692-2323"
+}, {
+  "latitude": "44.712900",
+  "longitude": "-92.863700",
+  "weight": 3,
+  "zip": "55033-1727"
+}, {
+  "latitude": "53.482985",
+  "longitude": "-113.916091",
+  "weight": 1,
+  "zip": "T7X 3S3"
+}, {
+  "latitude": "38.133500",
+  "longitude": "-82.554100",
+  "weight": 1,
+  "zip": "25514-8578"
+}, {
+  "latitude": "45.997900",
+  "longitude": "-112.598800",
+  "weight": 1,
+  "zip": "59701-2211"
+}, {
+  "latitude": "33.058000",
+  "longitude": "-80.010100",
+  "weight": 12,
+  "zip": "29445-7759"
+}, {
+  "latitude": "40.168100",
+  "longitude": "-101.020100",
+  "weight": 1,
+  "zip": "69044-1863"
+}, {
+  "latitude": "54.126656",
+  "longitude": "-115.682091",
+  "weight": 1,
+  "zip": "T7S 1G2"
+}, {
+  "latitude": "38.458600",
+  "longitude": "-77.430600",
+  "weight": 5,
+  "zip": "22554-5213"
+}, {
+  "latitude": "38.418400",
+  "longitude": "-96.187100",
+  "weight": 1,
+  "zip": "66801-5319"
+}, {
+  "latitude": "34.156600",
+  "longitude": "-97.179200",
+  "weight": 1,
+  "zip": "73401-1078"
+}, {
+  "latitude": "49.894031",
+  "longitude": "-119.381601",
+  "weight": 3,
+  "zip": "V1X 2G5"
+}, {
+  "latitude": "53.555099",
+  "longitude": "-113.272011",
+  "weight": 1,
+  "zip": "T8H 0C8"
+}, {
+  "latitude": "51.561587",
+  "longitude": "-101.893494",
+  "weight": 2,
+  "zip": "S0A 1S0"
+}, {
+  "latitude": "41.087900",
+  "longitude": "-111.970400",
+  "weight": 1,
+  "zip": "84041-4918"
+}, {
+  "latitude": "36.031800",
+  "longitude": "-79.488900",
+  "weight": 1,
+  "zip": "27215-7013"
+}, {
+  "latitude": "39.684200",
+  "longitude": "-83.936900",
+  "weight": 1,
+  "zip": "45385-7612"
+}, {
+  "latitude": "43.001216",
+  "longitude": "-81.237674",
+  "weight": 1,
+  "zip": "N5Y 2L8"
+}, {
+  "latitude": "37.984900",
+  "longitude": "-84.481600",
+  "weight": 1,
+  "zip": "40517-2510"
+}, {
+  "latitude": "38.377400",
+  "longitude": "-81.830500",
+  "weight": 8,
+  "zip": "25177"
+}, {
+  "latitude": "38.983200",
+  "longitude": "-77.000700",
+  "weight": 2,
+  "zip": "20912-4702"
+}, {
+  "latitude": "46.901830",
+  "longitude": "-71.146445",
+  "weight": 2,
+  "zip": "G0A 1H0"
+}, {
+  "latitude": "29.518200",
+  "longitude": "-98.362700",
+  "weight": 1,
+  "zip": "78239"
+}, {
+  "latitude": "34.604000",
+  "longitude": "-92.625900",
+  "weight": 2,
+  "zip": "72019"
+}, {
+  "latitude": "37.976900",
+  "longitude": "-100.862100",
+  "weight": 1,
+  "zip": "67846-9334"
+}, {
+  "latitude": "38.546200",
+  "longitude": "-121.667600",
+  "weight": 3,
+  "zip": "95618-4365"
+}, {
+  "latitude": "33.521700",
+  "longitude": "-117.128600",
+  "weight": 3,
+  "zip": "92591-4533"
+}, {
+  "latitude": "39.835300",
+  "longitude": "-84.112300",
+  "weight": 1,
+  "zip": "45424-1828"
+}, {
+  "latitude": "40.883500",
+  "longitude": "-74.214400",
+  "weight": 1,
+  "zip": "07424-2904"
+}, {
+  "latitude": "42.336300",
+  "longitude": "-122.839800",
+  "weight": 1,
+  "zip": "97504-5905"
+}, {
+  "latitude": "37.766700",
+  "longitude": "-97.280500",
+  "weight": 1,
+  "zip": "67220-1617"
+}, {
+  "latitude": "40.130400",
+  "longitude": "-106.911600",
+  "weight": 1,
+  "zip": "80483"
+}, {
+  "latitude": "43.729888",
+  "longitude": "-79.327772",
+  "weight": 2,
+  "zip": "M3C 3M8"
+}, {
+  "latitude": "40.854700",
+  "longitude": "-86.212600",
+  "weight": 1,
+  "zip": "46988-9300"
+}, {
+  "latitude": "39.763500",
+  "longitude": "-77.567400",
+  "weight": 1,
+  "zip": "17268-1201"
+}, {
+  "latitude": "38.584000",
+  "longitude": "-76.894200",
+  "weight": 1,
+  "zip": "20602-1612"
+}, {
+  "latitude": "45.134300",
+  "longitude": "-87.621500",
+  "weight": 1,
+  "zip": "49858-1235"
+}, {
+  "latitude": "35.722500",
+  "longitude": "-78.840800",
+  "weight": 1,
+  "zip": "27523-6149"
+}, {
+  "latitude": "41.954700",
+  "longitude": "-78.654000",
+  "weight": 1,
+  "zip": "16701-4103"
+}, {
+  "latitude": "50.483133",
+  "longitude": "-104.673408",
+  "weight": 2,
+  "zip": "S4T 7N3"
+}, {
+  "latitude": "36.203400",
+  "longitude": "-115.036400",
+  "weight": 1,
+  "zip": "89156-1148"
+}, {
+  "latitude": "45.781300",
+  "longitude": "-108.572700",
+  "weight": 6,
+  "zip": "59102-2920"
+}, {
+  "latitude": "47.637900",
+  "longitude": "-122.364300",
+  "weight": 1,
+  "zip": "98119-2542"
+}, {
+  "latitude": "33.661700",
+  "longitude": "-112.037000",
+  "weight": 1,
+  "zip": "85024-7585"
+}, {
+  "latitude": "47.629400",
+  "longitude": "-117.404100",
+  "weight": 1,
+  "zip": "99203-3856"
+}, {
+  "latitude": "41.420200",
+  "longitude": "-73.129600",
+  "weight": 1,
+  "zip": "06478-1507"
+}, {
+  "latitude": "38.444300",
+  "longitude": "-90.088800",
+  "weight": 1,
+  "zip": "62260-3231"
+}, {
+  "latitude": "41.602800",
+  "longitude": "-87.959900",
+  "weight": 1,
+  "zip": "60491-9340"
+}, {
+  "latitude": "43.835255",
+  "longitude": "-79.091592",
+  "weight": 5,
+  "zip": "L1V 3P8"
+}, {
+  "latitude": "32.893200",
+  "longitude": "-105.948500",
+  "weight": 3,
+  "zip": "88310-6020"
+}, {
+  "latitude": "51.188930",
+  "longitude": "-114.441591",
+  "weight": 2,
+  "zip": "T4C 1N8"
+}, {
+  "latitude": "37.861600",
+  "longitude": "-97.262100",
+  "weight": 1,
+  "zip": "67147"
+}, {
+  "latitude": "41.721000",
+  "longitude": "-71.885000",
+  "weight": 1,
+  "zip": "06354-1905"
+}, {
+  "latitude": "39.116000",
+  "longitude": "-94.764000",
+  "weight": 2,
+  "zip": "66112-1607"
+}, {
+  "latitude": "39.679300",
+  "longitude": "-104.884300",
+  "weight": 2,
+  "zip": "80231-5951"
+}, {
+  "latitude": "33.559100",
+  "longitude": "-112.133200",
+  "weight": 1,
+  "zip": "85051-4750"
+}, {
+  "latitude": "28.436400",
+  "longitude": "-99.748600",
+  "weight": 1,
+  "zip": "78827"
+}, {
+  "latitude": "42.954900",
+  "longitude": "-87.944700",
+  "weight": 1,
+  "zip": "53221-5305"
+}, {
+  "latitude": "34.446600",
+  "longitude": "-118.537400",
+  "weight": 1,
+  "zip": "91354-1897"
+}, {
+  "latitude": "35.142100",
+  "longitude": "-106.704100",
+  "weight": 1,
+  "zip": "87120-4181"
+}, {
+  "latitude": "32.424400",
+  "longitude": "-80.565300",
+  "weight": 4,
+  "zip": "29901"
+}, {
+  "latitude": "34.331700",
+  "longitude": "-89.914200",
+  "weight": 1,
+  "zip": "38606-6232"
+}, {
+  "latitude": "42.849900",
+  "longitude": "-73.785100",
+  "weight": 1,
+  "zip": "12065-4149"
+}, {
+  "latitude": "41.492800",
+  "longitude": "-78.678300",
+  "weight": 1,
+  "zip": "15845-1016"
+}, {
+  "latitude": "41.858500",
+  "longitude": "-83.471500",
+  "weight": 11,
+  "zip": "48145-9642"
+}, {
+  "latitude": "40.110900",
+  "longitude": "-74.937800",
+  "weight": 4,
+  "zip": "19020-4535"
+}, {
+  "latitude": "32.952200",
+  "longitude": "-96.665400",
+  "weight": 1,
+  "zip": "75044-3837"
+}, {
+  "latitude": "50.475918",
+  "longitude": "-104.678552",
+  "weight": 1,
+  "zip": "S4X 1G2"
+}, {
+  "latitude": "29.721700",
+  "longitude": "-95.897700",
+  "weight": 1,
+  "zip": "77441"
+}, {
+  "latitude": "40.705100",
+  "longitude": "-73.243000",
+  "weight": 1,
+  "zip": "11706-2328"
+}, {
+  "latitude": "28.377400",
+  "longitude": "-81.188800",
+  "weight": 1,
+  "zip": "32832-5996"
+}, {
+  "latitude": "30.321700",
+  "longitude": "-95.528500",
+  "weight": 2,
+  "zip": "77304-3404"
+}, {
+  "latitude": "41.519600",
+  "longitude": "-109.471400",
+  "weight": 3,
+  "zip": "82935-6141"
+}, {
+  "latitude": "51.129957",
+  "longitude": "-114.087904",
+  "weight": 1,
+  "zip": "T3K 1P8"
+}, {
+  "latitude": "32.019900",
+  "longitude": "-102.147600",
+  "weight": 1,
+  "zip": "79707-5260"
+}, {
+  "latitude": "43.850349",
+  "longitude": "-79.506533",
+  "weight": 2,
+  "zip": "L6A 1H6"
+}, {
+  "latitude": "64.854400",
+  "longitude": "-147.846900",
+  "weight": 2,
+  "zip": "99709-4715"
+}, {
+  "latitude": "35.675700",
+  "longitude": "-97.059700",
+  "weight": 1,
+  "zip": "74881-0037"
+}, {
+  "latitude": "44.381449",
+  "longitude": "-76.777441",
+  "weight": 2,
+  "zip": "K0K 3N0"
+}, {
+  "latitude": "56.069946",
+  "longitude": "-118.382380",
+  "weight": 1,
+  "zip": "T0H 1L0"
+}, {
+  "latitude": "35.255600",
+  "longitude": "-84.766600",
+  "weight": 1,
+  "zip": "37310-6126"
+}, {
+  "latitude": "41.234400",
+  "longitude": "-73.691500",
+  "weight": 2,
+  "zip": "10507-1303"
+}, {
+  "latitude": "32.856200",
+  "longitude": "-116.920100",
+  "weight": 2,
+  "zip": "92040-2465"
+}, {
+  "latitude": "27.768300",
+  "longitude": "-97.401300",
+  "weight": 3,
+  "zip": "78404-2414"
+}, {
+  "latitude": "42.365400",
+  "longitude": "-71.231600",
+  "weight": 2,
+  "zip": "02453-1552"
+}, {
+  "latitude": "31.604300",
+  "longitude": "-81.887100",
+  "weight": 1,
+  "zip": "31545-7612"
+}, {
+  "latitude": "40.949100",
+  "longitude": "-73.786300",
+  "weight": 1,
+  "zip": "10804-1002"
+}, {
+  "latitude": "44.098146",
+  "longitude": "-78.807117",
+  "weight": 1,
+  "zip": "L0B 1B0"
+}, {
+  "latitude": "47.217260",
+  "longitude": "-65.103632",
+  "weight": 3,
+  "zip": "E9G 2B3"
+}, {
+  "latitude": "38.823700",
+  "longitude": "-97.642100",
+  "weight": 1,
+  "zip": "67401-7619"
+}, {
+  "latitude": "40.430600",
+  "longitude": "-84.992800",
+  "weight": 1,
+  "zip": "47371-0030"
+}, {
+  "latitude": "40.032200",
+  "longitude": "-83.138300",
+  "weight": 2,
+  "zip": "43026-9597"
+}, {
+  "latitude": "38.730900",
+  "longitude": "-87.678400",
+  "weight": 1,
+  "zip": "62439-4421"
+}, {
+  "latitude": "40.756500",
+  "longitude": "-96.694600",
+  "weight": 1,
+  "zip": "68512-3693"
+}, {
+  "latitude": "33.171700",
+  "longitude": "-86.271300",
+  "weight": 1,
+  "zip": "35150-5278"
+}, {
+  "latitude": "34.277800",
+  "longitude": "-83.140600",
+  "weight": 1,
+  "zip": "30662-3396"
+}, {
+  "latitude": "43.660100",
+  "longitude": "-116.252400",
+  "weight": 1,
+  "zip": "83703-5626"
+}, {
+  "latitude": "47.572000",
+  "longitude": "-94.801300",
+  "weight": 1,
+  "zip": "56601-5226"
+}, {
+  "latitude": "37.986400",
+  "longitude": "-122.135000",
+  "weight": 1,
+  "zip": "94553-6200"
+}, {
+  "latitude": "41.322900",
+  "longitude": "-73.080000",
+  "weight": 1,
+  "zip": "06418-2256"
+}, {
+  "latitude": "43.326700",
+  "longitude": "-71.028400",
+  "weight": 2,
+  "zip": "03821-1762"
+}, {
+  "latitude": "34.501600",
+  "longitude": "-117.294400",
+  "weight": 1,
+  "zip": "92395-9664"
+}, {
+  "latitude": "32.838400",
+  "longitude": "-104.407400",
+  "weight": 1,
+  "zip": "88210"
+}, {
+  "latitude": "38.981400",
+  "longitude": "-77.472300",
+  "weight": 1,
+  "zip": "20166-3056"
+}, {
+  "latitude": "32.789300",
+  "longitude": "-115.566500",
+  "weight": 1,
+  "zip": "92243-3133"
+}, {
+  "latitude": "42.035100",
+  "longitude": "-94.006300",
+  "weight": 1,
+  "zip": "50212-2088"
+}, {
+  "latitude": "39.688800",
+  "longitude": "-105.156000",
+  "weight": 1,
+  "zip": "80228-2330"
+}, {
+  "latitude": "45.044200",
+  "longitude": "-93.913900",
+  "weight": 1,
+  "zip": "55363-8598"
+}, {
+  "latitude": "26.293700",
+  "longitude": "-98.300800",
+  "weight": 1,
+  "zip": "78573-8446"
+}, {
+  "latitude": "39.193800",
+  "longitude": "-96.585800",
+  "weight": 1,
+  "zip": "66502-8444"
+}, {
+  "latitude": "30.220100",
+  "longitude": "-92.657400",
+  "weight": 1,
+  "zip": "70546-3119"
+}, {
+  "latitude": "41.466200",
+  "longitude": "-85.592700",
+  "weight": 1,
+  "zip": "46767-9509"
+}, {
+  "latitude": "36.890400",
+  "longitude": "-83.871600",
+  "weight": 1,
+  "zip": "40949-5953"
+}, {
+  "latitude": "55.767669",
+  "longitude": "-120.222804",
+  "weight": 1,
+  "zip": "V1G 3M6"
+}, {
+  "latitude": "40.768500",
+  "longitude": "-73.958800",
+  "weight": 1,
+  "zip": "10021-5393"
+}, {
+  "latitude": "42.515000",
+  "longitude": "-90.681900",
+  "weight": 1,
+  "zip": "52001-8654"
+}, {
+  "latitude": "34.953500",
+  "longitude": "-120.495700",
+  "weight": 1,
+  "zip": "93458-1243"
+}, {
+  "latitude": "41.869600",
+  "longitude": "-72.371800",
+  "weight": 1,
+  "zip": "06084-3825"
+}, {
+  "latitude": "38.953000",
+  "longitude": "-77.229500",
+  "weight": 1,
+  "zip": "22102-2218"
+}, {
+  "latitude": "40.251300",
+  "longitude": "-94.327000",
+  "weight": 1,
+  "zip": "64402-0177"
+}, {
+  "latitude": "36.072500",
+  "longitude": "-86.724000",
+  "weight": 2,
+  "zip": "37211-1139"
+}, {
+  "latitude": "31.128200",
+  "longitude": "-97.746900",
+  "weight": 1,
+  "zip": "76544-1558"
+}, {
+  "latitude": "42.749700",
+  "longitude": "-76.844900",
+  "weight": 1,
+  "zip": "14541-9579"
+}, {
+  "latitude": "26.574700",
+  "longitude": "-80.079400",
+  "weight": 3,
+  "zip": "33462-1605"
+}, {
+  "latitude": "41.382600",
+  "longitude": "-81.796400",
+  "weight": 1,
+  "zip": "44130-3721"
+}, {
+  "latitude": "50.070163",
+  "longitude": "-110.786612",
+  "weight": 3,
+  "zip": "T0J 2P2"
+}, {
+  "latitude": "52.373517",
+  "longitude": "-114.916208",
+  "weight": 1,
+  "zip": "T4T 1B4"
+}, {
+  "latitude": "48.040496",
+  "longitude": "-65.255899",
+  "weight": 1,
+  "zip": "G0C 2K0"
+}, {
+  "latitude": "45.519700",
+  "longitude": "-91.826600",
+  "weight": 1,
+  "zip": "54868"
+}, {
+  "latitude": "48.435138",
+  "longitude": "-123.490533",
+  "weight": 1,
+  "zip": "V9B 0G9"
+}, {
+  "latitude": "46.578600",
+  "longitude": "-87.454500",
+  "weight": 1,
+  "zip": "49855-3210"
+}, {
+  "latitude": "32.862100",
+  "longitude": "-97.250800",
+  "weight": 1,
+  "zip": "76148-2033"
+}, {
+  "latitude": "33.946200",
+  "longitude": "-118.201300",
+  "weight": 1,
+  "zip": "90280-5621"
+}, {
+  "latitude": "30.010200",
+  "longitude": "-94.878700",
+  "weight": 2,
+  "zip": "77535-5288"
+}, {
+  "latitude": "40.839200",
+  "longitude": "-96.653200",
+  "weight": 1,
+  "zip": "68504-1828"
+}, {
+  "latitude": "40.785900",
+  "longitude": "-74.256800",
+  "weight": 1,
+  "zip": "07052-2624"
+}, {
+  "latitude": "34.643000",
+  "longitude": "-86.816800",
+  "weight": 1,
+  "zip": "35756-5206"
+}, {
+  "latitude": "30.294800",
+  "longitude": "-91.829600",
+  "weight": 1,
+  "zip": "70517-7408"
+}, {
+  "latitude": "45.080000",
+  "longitude": "-93.022300",
+  "weight": 1,
+  "zip": "55110-3785"
+}, {
+  "latitude": "40.171700",
+  "longitude": "-80.256000",
+  "weight": 1,
+  "zip": "15301-8606"
+}, {
+  "latitude": "54.265131",
+  "longitude": "-110.735377",
+  "weight": 1,
+  "zip": "T9N 1M4"
+}, {
+  "latitude": "35.275200",
+  "longitude": "-89.729500",
+  "weight": 5,
+  "zip": "38002-4287"
+}, {
+  "latitude": "35.446900",
+  "longitude": "-79.138000",
+  "weight": 1,
+  "zip": "27332-7398"
+}, {
+  "latitude": "41.910400",
+  "longitude": "-70.642000",
+  "weight": 1,
+  "zip": "02360-5255"
+}, {
+  "latitude": "31.889000",
+  "longitude": "-102.354800",
+  "weight": 1,
+  "zip": "79762-9413"
+}, {
+  "latitude": "28.546600",
+  "longitude": "-82.521300",
+  "weight": 6,
+  "zip": "34613-6449"
+}, {
+  "latitude": "42.113300",
+  "longitude": "-80.097600",
+  "weight": 8,
+  "zip": "16502-2513"
+}, {
+  "latitude": "45.617483",
+  "longitude": "-73.829294",
+  "weight": 1,
+  "zip": "J7G 3E5"
+}, {
+  "latitude": "47.713000",
+  "longitude": "-104.163400",
+  "weight": 1,
+  "zip": "59270-3731"
+}, {
+  "latitude": "37.963700",
+  "longitude": "-87.393800",
+  "weight": 2,
+  "zip": "47630-2024"
+}, {
+  "latitude": "41.879800",
+  "longitude": "-87.628500",
+  "weight": 1,
+  "zip": "60603-4954"
+}, {
+  "latitude": "49.893583",
+  "longitude": "-97.147945",
+  "weight": 2,
+  "zip": "R3B 3J6"
+}, {
+  "latitude": "40.888200",
+  "longitude": "-74.050300",
+  "weight": 1,
+  "zip": "07601-3609"
+}, {
+  "latitude": "39.951100",
+  "longitude": "-74.994600",
+  "weight": 3,
+  "zip": "08052-1511"
+}, {
+  "latitude": "39.610300",
+  "longitude": "-80.252900",
+  "weight": 1,
+  "zip": "26570-8731"
+}, {
+  "latitude": "43.376263",
+  "longitude": "-79.821128",
+  "weight": 2,
+  "zip": "L7M 2P5"
+}, {
+  "latitude": "41.484700",
+  "longitude": "-81.801800",
+  "weight": 2,
+  "zip": "44107-2710"
+}, {
+  "latitude": "35.288600",
+  "longitude": "-80.820900",
+  "weight": 1,
+  "zip": "28269-0413"
+}, {
+  "latitude": "41.995100",
+  "longitude": "-87.808200",
+  "weight": 2,
+  "zip": "60631-3137"
+}, {
+  "latitude": "39.927400",
+  "longitude": "-82.004100",
+  "weight": 1,
+  "zip": "43701-7764"
+}, {
+  "latitude": "39.647200",
+  "longitude": "-105.079500",
+  "weight": 1,
+  "zip": "80235-1187"
+}, {
+  "latitude": "46.701600",
+  "longitude": "-92.091200",
+  "weight": 1,
+  "zip": "54880-3363"
+}, {
+  "latitude": "35.634800",
+  "longitude": "-78.451000",
+  "weight": 1,
+  "zip": "27520-1846"
+}, {
+  "latitude": "39.598800",
+  "longitude": "-82.930000",
+  "weight": 2,
+  "zip": "43113-1124"
+}, {
+  "latitude": "43.037800",
+  "longitude": "-86.191200",
+  "weight": 1,
+  "zip": "49417-9511"
+}, {
+  "latitude": "42.441300",
+  "longitude": "-88.223700",
+  "weight": 1,
+  "zip": "60081-8912"
+}, {
+  "latitude": "43.367900",
+  "longitude": "-72.342200",
+  "weight": 1,
+  "zip": "03743-3108"
+}, {
+  "latitude": "43.976757",
+  "longitude": "-79.407969",
+  "weight": 1,
+  "zip": "L4G 7C8"
+}, {
+  "latitude": "36.028400",
+  "longitude": "-95.930600",
+  "weight": 1,
+  "zip": "74137"
+}, {
+  "latitude": "48.055700",
+  "longitude": "-123.917800",
+  "weight": 2,
+  "zip": "98363-8749"
+}, {
+  "latitude": "36.319400",
+  "longitude": "-81.747600",
+  "weight": 1,
+  "zip": "28698-9467"
+}, {
+  "latitude": "40.876400",
+  "longitude": "-88.632800",
+  "weight": 1,
+  "zip": "61764-1512"
+}, {
+  "latitude": "29.561700",
+  "longitude": "-95.272100",
+  "weight": 3,
+  "zip": "77581-6196"
+}, {
+  "latitude": "30.225700",
+  "longitude": "-95.492400",
+  "weight": 1,
+  "zip": "77384"
+}, {
+  "latitude": "50.914043",
+  "longitude": "-113.971562",
+  "weight": 1,
+  "zip": "T2Z 2X4"
+}, {
+  "latitude": "35.050200",
+  "longitude": "-80.990800",
+  "weight": 1,
+  "zip": "29708-8947"
+}, {
+  "latitude": "40.719900",
+  "longitude": "-79.201400",
+  "weight": 1,
+  "zip": "15732-8224"
+}, {
+  "latitude": "35.449900",
+  "longitude": "-82.496600",
+  "weight": 4,
+  "zip": "28732-8387"
+}, {
+  "latitude": "40.080600",
+  "longitude": "-74.059500",
+  "weight": 2,
+  "zip": "08742"
+}, {
+  "latitude": "43.161900",
+  "longitude": "-85.687700",
+  "weight": 1,
+  "zip": "49345-8433"
+}, {
+  "latitude": "35.932800",
+  "longitude": "-86.878800",
+  "weight": 1,
+  "zip": "37064-9636"
+}, {
+  "latitude": "34.003100",
+  "longitude": "-84.012600",
+  "weight": 1,
+  "zip": "30043-6143"
+}, {
+  "latitude": "37.317800",
+  "longitude": "-76.763400",
+  "weight": 1,
+  "zip": "23188-7304"
+}, {
+  "latitude": "33.563100",
+  "longitude": "-117.273800",
+  "weight": 1,
+  "zip": "92562-2818"
+}, {
+  "latitude": "44.874400",
+  "longitude": "-93.375300",
+  "weight": 1,
+  "zip": "55439-1433"
+}, {
+  "latitude": "33.498300",
+  "longitude": "-117.095800",
+  "weight": 1,
+  "zip": "92592-1454"
+}, {
+  "latitude": "33.142800",
+  "longitude": "-97.072700",
+  "weight": 1,
+  "zip": "76210-0482"
+}, {
+  "latitude": "39.344600",
+  "longitude": "-76.679400",
+  "weight": 1,
+  "zip": "21215-2488"
+}, {
+  "latitude": "40.637900",
+  "longitude": "-74.368200",
+  "weight": 1,
+  "zip": "07076-2951"
+}, {
+  "latitude": "48.319987",
+  "longitude": "-70.885146",
+  "weight": 1,
+  "zip": "G7B 4S4"
+}, {
+  "latitude": "30.384700",
+  "longitude": "-87.043900",
+  "weight": 1,
+  "zip": "32561-5101"
+}, {
+  "latitude": "47.142400",
+  "longitude": "-122.265200",
+  "weight": 1,
+  "zip": "98374-8836"
+}, {
+  "latitude": "37.501400",
+  "longitude": "-118.404800",
+  "weight": 1,
+  "zip": "93514-9472"
+}, {
+  "latitude": "36.710300",
+  "longitude": "-121.643800",
+  "weight": 1,
+  "zip": "93906-5589"
+}, {
+  "latitude": "40.785100",
+  "longitude": "-73.809600",
+  "weight": 2,
+  "zip": "11357-1002"
+}, {
+  "latitude": "60.703313",
+  "longitude": "-135.025642",
+  "weight": 2,
+  "zip": "Y1A 3W1"
+}, {
+  "latitude": "31.193200",
+  "longitude": "-82.376600",
+  "weight": 1,
+  "zip": "31503-7767"
+}, {
+  "latitude": "45.449200",
+  "longitude": "-123.818900",
+  "weight": 2,
+  "zip": "97141-3407"
+}, {
+  "latitude": "44.018500",
+  "longitude": "-123.099800",
+  "weight": 1,
+  "zip": "97405-6257"
+}, {
+  "latitude": "34.571500",
+  "longitude": "-118.023100",
+  "weight": 2,
+  "zip": "93552-1100"
+}, {
+  "latitude": "40.744300",
+  "longitude": "-73.978100",
+  "weight": 1,
+  "zip": "10016-1744"
+}, {
+  "latitude": "42.842800",
+  "longitude": "-84.579700",
+  "weight": 1,
+  "zip": "48820-7112"
+}, {
+  "latitude": "42.294000",
+  "longitude": "-83.314600",
+  "weight": 1,
+  "zip": "48141-2059"
+}, {
+  "latitude": "44.328300",
+  "longitude": "-75.465100",
+  "weight": 1,
+  "zip": "13642-1110"
+}, {
+  "latitude": "30.427700",
+  "longitude": "-86.927100",
+  "weight": 1,
+  "zip": "32566-5520"
+}, {
+  "latitude": "43.041140",
+  "longitude": "-79.298039",
+  "weight": 1,
+  "zip": "L0S 1E5"
+}, {
+  "latitude": "44.519900",
+  "longitude": "-85.693500",
+  "weight": 1,
+  "zip": "49620"
+}, {
+  "latitude": "30.280100",
+  "longitude": "-81.416500",
+  "weight": 1,
+  "zip": "32250-2632"
+}, {
+  "latitude": "42.793800",
+  "longitude": "-77.799600",
+  "weight": 3,
+  "zip": "14454-9779"
+}, {
+  "latitude": "39.235400",
+  "longitude": "-111.651400",
+  "weight": 1,
+  "zip": "84642-1417"
+}, {
+  "latitude": "40.947700",
+  "longitude": "-74.067200",
+  "weight": 1,
+  "zip": "07652-3746"
+}, {
+  "latitude": "39.265500",
+  "longitude": "-76.493500",
+  "weight": 1,
+  "zip": "21222-2328"
+}, {
+  "latitude": "38.453400",
+  "longitude": "-122.687800",
+  "weight": 5,
+  "zip": "95404-7640"
+}, {
+  "latitude": "40.215000",
+  "longitude": "-74.440400",
+  "weight": 1,
+  "zip": "08535-1101"
+}, {
+  "latitude": "33.643700",
+  "longitude": "-117.686800",
+  "weight": 2,
+  "zip": "92630-2624"
+}, {
+  "latitude": "40.748100",
+  "longitude": "-73.711400",
+  "weight": 2,
+  "zip": "11004-1109"
+}, {
+  "latitude": "41.329300",
+  "longitude": "-72.966400",
+  "weight": 1,
+  "zip": "06515-2739"
+}, {
+  "latitude": "40.944700",
+  "longitude": "-73.992100",
+  "weight": 1,
+  "zip": "07628-3607"
+}, {
+  "latitude": "47.696400",
+  "longitude": "-117.439900",
+  "weight": 1,
+  "zip": "99205-4152"
+}, {
+  "latitude": "32.547500",
+  "longitude": "-85.468200",
+  "weight": 4,
+  "zip": "36830-7829"
+}, {
+  "latitude": "29.632100",
+  "longitude": "-98.754200",
+  "weight": 1,
+  "zip": "78023"
+}, {
+  "latitude": "34.422800",
+  "longitude": "-114.125000",
+  "weight": 1,
+  "zip": "86406-9136"
+}, {
+  "latitude": "43.066800",
+  "longitude": "-88.146900",
+  "weight": 4,
+  "zip": "53045-6150"
+}, {
+  "latitude": "39.967000",
+  "longitude": "-76.275200",
+  "weight": 1,
+  "zip": "17584-9652"
+}, {
+  "latitude": "44.145525",
+  "longitude": "-79.879818",
+  "weight": 1,
+  "zip": "L9R 1A6"
+}, {
+  "latitude": "43.057300",
+  "longitude": "-92.952000",
+  "weight": 1,
+  "zip": "50468-8077"
+}, {
+  "latitude": "40.149600",
+  "longitude": "-75.379600",
+  "weight": 1,
+  "zip": "19403-4128"
+}, {
+  "latitude": "48.441096",
+  "longitude": "-123.346639",
+  "weight": 3,
+  "zip": "V8T 5B3"
+}, {
+  "latitude": "39.474400",
+  "longitude": "-76.299700",
+  "weight": 1,
+  "zip": "21009-1552"
+}, {
+  "latitude": "33.310600",
+  "longitude": "-110.395300",
+  "weight": 1,
+  "zip": "85550-0416"
+}, {
+  "latitude": "43.400980",
+  "longitude": "-80.510559",
+  "weight": 2,
+  "zip": "N2E 4C7"
+}, {
+  "latitude": "35.075900",
+  "longitude": "-98.876000",
+  "weight": 2,
+  "zip": "73041-9610"
+}, {
+  "latitude": "33.422700",
+  "longitude": "-111.926100",
+  "weight": 2,
+  "zip": "85281-8102"
+}, {
+  "latitude": "39.794300",
+  "longitude": "-76.981200",
+  "weight": 1,
+  "zip": "17331-8644"
+}, {
+  "latitude": "34.232100",
+  "longitude": "-84.158000",
+  "weight": 1,
+  "zip": "30040-9399"
+}, {
+  "latitude": "43.262200",
+  "longitude": "-82.633700",
+  "weight": 1,
+  "zip": "48422-8444"
+}, {
+  "latitude": "43.020100",
+  "longitude": "-71.569700",
+  "weight": 1,
+  "zip": "03045-1921"
+}, {
+  "latitude": "40.870200",
+  "longitude": "-73.849500",
+  "weight": 2,
+  "zip": "10469-3410"
+}, {
+  "latitude": "32.797200",
+  "longitude": "-117.170800",
+  "weight": 2,
+  "zip": "92111-2832"
+}, {
+  "latitude": "41.722000",
+  "longitude": "-87.702400",
+  "weight": 2,
+  "zip": "60805-2953"
+}, {
+  "latitude": "33.623800",
+  "longitude": "-112.004400",
+  "weight": 5,
+  "zip": "85032-5735"
+}, {
+  "latitude": "40.334900",
+  "longitude": "-79.332600",
+  "weight": 1,
+  "zip": "15627-1050"
+}, {
+  "latitude": "33.796700",
+  "longitude": "-116.932400",
+  "weight": 1,
+  "zip": "92583-5786"
+}, {
+  "latitude": "31.694800",
+  "longitude": "-106.300000",
+  "weight": 1,
+  "zip": "79926-6989"
+}, {
+  "latitude": "34.179900",
+  "longitude": "-103.336300",
+  "weight": 3,
+  "zip": "88130"
+}, {
+  "latitude": "36.202200",
+  "longitude": "-119.338000",
+  "weight": 1,
+  "zip": "93274-2362"
+}, {
+  "latitude": "43.042600",
+  "longitude": "-91.119300",
+  "weight": 1,
+  "zip": "53821-2237"
+}, {
+  "latitude": "40.666400",
+  "longitude": "-74.119200",
+  "weight": 1,
+  "zip": "07002-3003"
+}, {
+  "latitude": "51.443623",
+  "longitude": "-98.800127",
+  "weight": 3,
+  "zip": "R0C 2Y0"
+}, {
+  "latitude": "35.181000",
+  "longitude": "-83.388500",
+  "weight": 1,
+  "zip": "28734-2214"
+}, {
+  "latitude": "40.844400",
+  "longitude": "-89.639700",
+  "weight": 1,
+  "zip": "61525-7506"
+}, {
+  "latitude": "42.977400",
+  "longitude": "-77.985100",
+  "weight": 1,
+  "zip": "14482-1206"
+}, {
+  "latitude": "34.081200",
+  "longitude": "-117.736200",
+  "weight": 1,
+  "zip": "91767-1007"
+}, {
+  "latitude": "35.688400",
+  "longitude": "-81.361200",
+  "weight": 1,
+  "zip": "28602-4827"
+}, {
+  "latitude": "35.657700",
+  "longitude": "-78.383700",
+  "weight": 1,
+  "zip": "27527-3935"
+}, {
+  "latitude": "33.398500",
+  "longitude": "-90.883900",
+  "weight": 1,
+  "zip": "38756-3111"
+}, {
+  "latitude": "27.677000",
+  "longitude": "-97.365000",
+  "weight": 2,
+  "zip": "78414-4064"
+}, {
+  "latitude": "35.667600",
+  "longitude": "-109.078400",
+  "weight": 1,
+  "zip": "86515-4310"
+}, {
+  "latitude": "27.868800",
+  "longitude": "-82.734400",
+  "weight": 1,
+  "zip": "33777-1011"
+}, {
+  "latitude": "43.934009",
+  "longitude": "-78.692848",
+  "weight": 1,
+  "zip": "L1C 0B7"
+}, {
+  "latitude": "53.899465",
+  "longitude": "-110.904051",
+  "weight": 1,
+  "zip": "T0A 1A0"
+}, {
+  "latitude": "40.335100",
+  "longitude": "-79.983200",
+  "weight": 1,
+  "zip": "15236"
+}, {
+  "latitude": "29.518900",
+  "longitude": "-98.600600",
+  "weight": 1,
+  "zip": "78240-2383"
+}, {
+  "latitude": "52.319909",
+  "longitude": "-106.580643",
+  "weight": 2,
+  "zip": "S0K 4S0"
+}, {
+  "latitude": "41.027700",
+  "longitude": "-74.640700",
+  "weight": 1,
+  "zip": "07871-2854"
+}, {
+  "latitude": "41.385300",
+  "longitude": "-81.704400",
+  "weight": 1,
+  "zip": "44134-3459"
+}, {
+  "latitude": "33.525100",
+  "longitude": "-81.939400",
+  "weight": 1,
+  "zip": "29841-2314"
+}, {
+  "latitude": "41.851500",
+  "longitude": "-87.669400",
+  "weight": 1,
+  "zip": "60608-6546"
+}, {
+  "latitude": "42.845800",
+  "longitude": "-106.316600",
+  "weight": 1,
+  "zip": "82601-6363"
+}, {
+  "latitude": "36.681100",
+  "longitude": "-121.617600",
+  "weight": 1,
+  "zip": "93905-1613"
+}, {
+  "latitude": "43.206900",
+  "longitude": "-83.226700",
+  "weight": 2,
+  "zip": "48461-8817"
+}, {
+  "latitude": "38.903900",
+  "longitude": "-119.995000",
+  "weight": 1,
+  "zip": "96151-7976"
+}, {
+  "latitude": "42.836800",
+  "longitude": "-71.754100",
+  "weight": 1,
+  "zip": "03086-5400"
+}, {
+  "latitude": "30.358700",
+  "longitude": "-95.685700",
+  "weight": 1,
+  "zip": "77316"
+}, {
+  "latitude": "37.013900",
+  "longitude": "-121.577300",
+  "weight": 1,
+  "zip": "95020-9133"
+}, {
+  "latitude": "26.191700",
+  "longitude": "-81.803900",
+  "weight": 2,
+  "zip": "34103-2317"
+}, {
+  "latitude": "42.579600",
+  "longitude": "-71.803100",
+  "weight": 2,
+  "zip": "01420-3334"
+}, {
+  "latitude": "33.754000",
+  "longitude": "-117.791900",
+  "weight": 1,
+  "zip": "92705-1649"
+}, {
+  "latitude": "37.751300",
+  "longitude": "-87.155400",
+  "weight": 2,
+  "zip": "42301-5821"
+}, {
+  "latitude": "26.638800",
+  "longitude": "-81.699200",
+  "weight": 1,
+  "zip": "33971-5626"
+}, {
+  "latitude": "36.886800",
+  "longitude": "-83.828200",
+  "weight": 1,
+  "zip": "40915-6120"
+}, {
+  "latitude": "39.521000",
+  "longitude": "-87.127800",
+  "weight": 1,
+  "zip": "47834-7624"
+}, {
+  "latitude": "33.305400",
+  "longitude": "-111.740800",
+  "weight": 1,
+  "zip": "85295-6147"
+}, {
+  "latitude": "41.555700",
+  "longitude": "-91.530800",
+  "weight": 2,
+  "zip": "52235-0487"
+}, {
+  "latitude": "49.211736",
+  "longitude": "-123.030856",
+  "weight": 1,
+  "zip": "V5S 4K9"
+}, {
+  "latitude": "42.062400",
+  "longitude": "-104.191700",
+  "weight": 1,
+  "zip": "82240-3306"
+}, {
+  "latitude": "43.968400",
+  "longitude": "-70.184600",
+  "weight": 1,
+  "zip": "04222-5353"
+}, {
+  "latitude": "41.329100",
+  "longitude": "-110.292600",
+  "weight": 1,
+  "zip": "82937-9077"
+}, {
+  "latitude": "29.479300",
+  "longitude": "-98.347600",
+  "weight": 1,
+  "zip": "78244-1216"
+}, {
+  "latitude": "53.424778",
+  "longitude": "-113.497925",
+  "weight": 1,
+  "zip": "T6W 0Y2"
+}, {
+  "latitude": "60.781885",
+  "longitude": "-135.169799",
+  "weight": 1,
+  "zip": "Y1A 5K1"
+}, {
+  "latitude": "40.235200",
+  "longitude": "-76.929100",
+  "weight": 5,
+  "zip": "17011-1190"
+}, {
+  "latitude": "53.536456",
+  "longitude": "-113.590490",
+  "weight": 1,
+  "zip": "T5P 2P3"
+}, {
+  "latitude": "49.125143",
+  "longitude": "-66.537271",
+  "weight": 1,
+  "zip": "G4V 1H4"
+}, {
+  "latitude": "32.540100",
+  "longitude": "-114.755000",
+  "weight": 1,
+  "zip": "85349-0851"
+}, {
+  "latitude": "40.694000",
+  "longitude": "-73.990300",
+  "weight": 2,
+  "zip": "11201-4580"
+}, {
+  "latitude": "39.679300",
+  "longitude": "-104.884300",
+  "weight": 3,
+  "zip": "80231-7143"
+}, {
+  "latitude": "38.348200",
+  "longitude": "-121.953800",
+  "weight": 1,
+  "zip": "95687-3301"
+}, {
+  "latitude": "44.805300",
+  "longitude": "-68.994200",
+  "weight": 1,
+  "zip": "04419-3518"
+}, {
+  "latitude": "37.959100",
+  "longitude": "-87.529300",
+  "weight": 1,
+  "zip": "47714-5855"
+}, {
+  "latitude": "35.098100",
+  "longitude": "-89.982500",
+  "weight": 10,
+  "zip": "38114-2299"
+}, {
+  "latitude": "30.508400",
+  "longitude": "-97.706200",
+  "weight": 1,
+  "zip": "78681-8083"
+}, {
+  "latitude": "52.368297",
+  "longitude": "-114.445298",
+  "weight": 1,
+  "zip": "T0M 1H0"
+}, {
+  "latitude": "37.671700",
+  "longitude": "-120.948200",
+  "weight": 2,
+  "zip": "95355-2929"
+}, {
+  "latitude": "40.262500",
+  "longitude": "-83.752800",
+  "weight": 1,
+  "zip": "43357-9604"
+}, {
+  "latitude": "39.927400",
+  "longitude": "-104.954800",
+  "weight": 1,
+  "zip": "80241-3211"
+}, {
+  "latitude": "38.920200",
+  "longitude": "-77.037500",
+  "weight": 5,
+  "zip": "20009-2765"
+}, {
+  "latitude": "35.858000",
+  "longitude": "-84.119400",
+  "weight": 1,
+  "zip": "37922-5156"
+}, {
+  "latitude": "32.412200",
+  "longitude": "-90.120700",
+  "weight": 1,
+  "zip": "39157-8659"
+}, {
+  "latitude": "35.414100",
+  "longitude": "-80.616200",
+  "weight": 1,
+  "zip": "28027-7000"
+}, {
+  "latitude": "42.021200",
+  "longitude": "-71.217800",
+  "weight": 2,
+  "zip": "02048-2826"
+}, {
+  "latitude": "40.569000",
+  "longitude": "-84.177400",
+  "weight": 1,
+  "zip": "45895-7313"
+}, {
+  "latitude": "42.270300",
+  "longitude": "-71.841700",
+  "weight": 1,
+  "zip": "01602-1710"
+}, {
+  "latitude": "45.698197",
+  "longitude": "-73.591096",
+  "weight": 1,
+  "zip": "J6W 6L7"
+}, {
+  "latitude": "31.536500",
+  "longitude": "-110.266600",
+  "weight": 1,
+  "zip": "85635-2375"
+}, {
+  "latitude": "45.881300",
+  "longitude": "-87.115200",
+  "weight": 1,
+  "zip": "49837-2493"
+}, {
+  "latitude": "39.914700",
+  "longitude": "-74.190500",
+  "weight": 1,
+  "zip": "08721"
+}, {
+  "latitude": "38.564300",
+  "longitude": "-76.087400",
+  "weight": 1,
+  "zip": "21613-3416"
+}, {
+  "latitude": "35.346800",
+  "longitude": "-86.220000",
+  "weight": 1,
+  "zip": "37388-9580"
+}, {
+  "latitude": "51.801576",
+  "longitude": "-114.639234",
+  "weight": 1,
+  "zip": "T0M 1X0"
+}, {
+  "latitude": "33.743000",
+  "longitude": "-90.730900",
+  "weight": 1,
+  "zip": "38732-9722"
+}, {
+  "latitude": "42.493500",
+  "longitude": "-122.808800",
+  "weight": 1,
+  "zip": "97524"
+}, {
+  "latitude": "40.398000",
+  "longitude": "-74.323600",
+  "weight": 1,
+  "zip": "08857-1324"
+}, {
+  "latitude": "39.601200",
+  "longitude": "-104.739400",
+  "weight": 1,
+  "zip": "80016-5831"
+}, {
+  "latitude": "41.200500",
+  "longitude": "-73.168800",
+  "weight": 1,
+  "zip": "06610-1103"
+}, {
+  "latitude": "32.392300",
+  "longitude": "-84.931500",
+  "weight": 1,
+  "zip": "31905"
+}, {
+  "latitude": "53.561183",
+  "longitude": "-113.503723",
+  "weight": 2,
+  "zip": "T5K 1W3"
+}, {
+  "latitude": "32.660500",
+  "longitude": "-97.031100",
+  "weight": 1,
+  "zip": "75052-7221"
+}, {
+  "latitude": "38.450100",
+  "longitude": "-76.511000",
+  "weight": 1,
+  "zip": "20685-2106"
+}, {
+  "latitude": "40.758200",
+  "longitude": "-74.991400",
+  "weight": 1,
+  "zip": "07882-1525"
+}, {
+  "latitude": "36.355100",
+  "longitude": "-119.301000",
+  "weight": 1,
+  "zip": "93291-5739"
+}, {
+  "latitude": "39.611100",
+  "longitude": "-104.953200",
+  "weight": 1,
+  "zip": "80121-1148"
+}, {
+  "latitude": "53.595288",
+  "longitude": "-113.523570",
+  "weight": 4,
+  "zip": "T5Z 3V1"
+}, {
+  "latitude": "55.502251",
+  "longitude": "-126.201737",
+  "weight": 1,
+  "zip": "V0J 3B0"
+}, {
+  "latitude": "54.418796",
+  "longitude": "-110.212248",
+  "weight": 5,
+  "zip": "T9M 1R4"
+}, {
+  "latitude": "43.907121",
+  "longitude": "-80.141885",
+  "weight": 1,
+  "zip": "L9W 5G7"
+}, {
+  "latitude": "35.106000",
+  "longitude": "-114.594700",
+  "weight": 1,
+  "zip": "86442-8625"
+}, {
+  "latitude": "40.458700",
+  "longitude": "-74.305000",
+  "weight": 1,
+  "zip": "08859-1531"
+}, {
+  "latitude": "40.265600",
+  "longitude": "-79.856800",
+  "weight": 3,
+  "zip": "15037-2532"
+}, {
+  "latitude": "35.986600",
+  "longitude": "-106.065400",
+  "weight": 1,
+  "zip": "87533-4508"
+}, {
+  "latitude": "42.642400",
+  "longitude": "-74.571000",
+  "weight": 1,
+  "zip": "12149-1826"
+}, {
+  "latitude": "36.038400",
+  "longitude": "-115.085700",
+  "weight": 4,
+  "zip": "89074"
+}, {
+  "latitude": "42.302853",
+  "longitude": "-82.907613",
+  "weight": 4,
+  "zip": "N8R 2B4"
+}, {
+  "latitude": "42.444200",
+  "longitude": "-87.838900",
+  "weight": 4,
+  "zip": "60099-1648"
+}, {
+  "latitude": "41.837800",
+  "longitude": "-87.760200",
+  "weight": 1,
+  "zip": "60804-1710"
+}, {
+  "latitude": "42.724200",
+  "longitude": "-87.855100",
+  "weight": 2,
+  "zip": "53406-4634"
+}, {
+  "latitude": "35.333000",
+  "longitude": "-94.308200",
+  "weight": 1,
+  "zip": "72923-1715"
+}, {
+  "latitude": "36.854600",
+  "longitude": "-76.214300",
+  "weight": 4,
+  "zip": "23502-2228"
+}, {
+  "latitude": "52.300481",
+  "longitude": "-114.087462",
+  "weight": 1,
+  "zip": "T4S 1K7"
+}, {
+  "latitude": "32.903500",
+  "longitude": "-97.541200",
+  "weight": 1,
+  "zip": "76020-4410"
+}, {
+  "latitude": "27.891400",
+  "longitude": "-82.506700",
+  "weight": 2,
+  "zip": "33611-1012"
+}, {
+  "latitude": "40.635400",
+  "longitude": "-74.255600",
+  "weight": 1,
+  "zip": "07036-7537"
+}, {
+  "latitude": "48.631245",
+  "longitude": "-93.835248",
+  "weight": 5,
+  "zip": "P0W 1E0"
+}, {
+  "latitude": "49.238305",
+  "longitude": "-123.154497",
+  "weight": 2,
+  "zip": "V5P 1G2"
+}, {
+  "latitude": "38.061700",
+  "longitude": "-87.554800",
+  "weight": 4,
+  "zip": "47711-6240"
+}, {
+  "latitude": "42.354500",
+  "longitude": "-89.039700",
+  "weight": 1,
+  "zip": "61115-7630"
+}, {
+  "latitude": "39.479900",
+  "longitude": "-84.459800",
+  "weight": 1,
+  "zip": "45067-9200"
+}, {
+  "latitude": "34.304600",
+  "longitude": "-118.684400",
+  "weight": 1,
+  "zip": "93063-2913"
+}, {
+  "latitude": "43.614100",
+  "longitude": "-72.970800",
+  "weight": 1,
+  "zip": "05701-4343"
+}, {
+  "latitude": "45.660500",
+  "longitude": "-118.783100",
+  "weight": 3,
+  "zip": "97801-9063"
+}, {
+  "latitude": "39.902600",
+  "longitude": "-76.608100",
+  "weight": 1,
+  "zip": "17356-9079"
+}, {
+  "latitude": "33.699400",
+  "longitude": "-78.913700",
+  "weight": 2,
+  "zip": "29577-4076"
+}, {
+  "latitude": "34.945300",
+  "longitude": "-82.220900",
+  "weight": 5,
+  "zip": "29651-4503"
+}, {
+  "latitude": "30.077700",
+  "longitude": "-90.489500",
+  "weight": 1,
+  "zip": "70068-3516"
+}, {
+  "latitude": "34.780700",
+  "longitude": "-82.303500",
+  "weight": 1,
+  "zip": "29662-3406"
+}, {
+  "latitude": "53.531782",
+  "longitude": "-113.430912",
+  "weight": 3,
+  "zip": "T6E 3C9"
+}, {
+  "latitude": "33.966800",
+  "longitude": "-84.324900",
+  "weight": 2,
+  "zip": "30338-3119"
+}, {
+  "latitude": "32.412200",
+  "longitude": "-90.120700",
+  "weight": 1,
+  "zip": "39157"
+}, {
+  "latitude": "33.137700",
+  "longitude": "-96.752400",
+  "weight": 2,
+  "zip": "75035-8642"
+}, {
+  "latitude": "30.123700",
+  "longitude": "-95.268600",
+  "weight": 1,
+  "zip": "77365-4781"
+}, {
+  "latitude": "35.904000",
+  "longitude": "-109.308700",
+  "weight": 1,
+  "zip": "86511-0574"
+}, {
+  "latitude": "41.805500",
+  "longitude": "-89.705400",
+  "weight": 1,
+  "zip": "61081-8952"
+}, {
+  "latitude": "33.366500",
+  "longitude": "-111.931200",
+  "weight": 2,
+  "zip": "85283"
+}, {
+  "latitude": "40.817400",
+  "longitude": "-72.985200",
+  "weight": 3,
+  "zip": "11763-1579"
+}, {
+  "latitude": "41.771600",
+  "longitude": "-71.465900",
+  "weight": 1,
+  "zip": "02920-6204"
+}, {
+  "latitude": "51.932094",
+  "longitude": "-114.033335",
+  "weight": 1,
+  "zip": "T0M 0K0"
+}, {
+  "latitude": "37.318000",
+  "longitude": "-122.044900",
+  "weight": 1,
+  "zip": "95014"
+}, {
+  "latitude": "55.187653",
+  "longitude": "-118.800601",
+  "weight": 1,
+  "zip": "T8V 0N4"
+}, {
+  "latitude": "42.082100",
+  "longitude": "-78.426000",
+  "weight": 1,
+  "zip": "14760-1104"
+}, {
+  "latitude": "42.292200",
+  "longitude": "-85.633000",
+  "weight": 1,
+  "zip": "49006"
+}, {
+  "latitude": "42.883678",
+  "longitude": "-79.042698",
+  "weight": 1,
+  "zip": "L0S 1N0"
+}, {
+  "latitude": "31.266800",
+  "longitude": "-85.397100",
+  "weight": 1,
+  "zip": "36303-3912"
+}, {
+  "latitude": "40.650500",
+  "longitude": "-73.934900",
+  "weight": 1,
+  "zip": "11203-5507"
+}, {
+  "latitude": "40.402900",
+  "longitude": "-80.091500",
+  "weight": 1,
+  "zip": "15106-4228"
+}, {
+  "latitude": "47.718800",
+  "longitude": "-122.196600",
+  "weight": 1,
+  "zip": "98034"
+}, {
+  "latitude": "40.780700",
+  "longitude": "-73.781200",
+  "weight": 1,
+  "zip": "11360-1138"
+}, {
+  "latitude": "30.525700",
+  "longitude": "-97.567200",
+  "weight": 1,
+  "zip": "78634-3290"
+}, {
+  "latitude": "30.056600",
+  "longitude": "-95.170700",
+  "weight": 1,
+  "zip": "77345-2293"
+}, {
+  "latitude": "41.701700",
+  "longitude": "-93.452700",
+  "weight": 2,
+  "zip": "50035-1045"
+}, {
+  "latitude": "39.100700",
+  "longitude": "-104.854200",
+  "weight": 1,
+  "zip": "80132-7120"
+}, {
+  "latitude": "33.156000",
+  "longitude": "-91.997500",
+  "weight": 1,
+  "zip": "71635-9490"
+}, {
+  "latitude": "40.388600",
+  "longitude": "-75.932800",
+  "weight": 1,
+  "zip": "19605-1185"
+}, {
+  "latitude": "34.818500",
+  "longitude": "-112.958400",
+  "weight": 2,
+  "zip": "86305-3707"
+}, {
+  "latitude": "41.172400",
+  "longitude": "-112.038200",
+  "weight": 5,
+  "zip": "84067-2531"
+}, {
+  "latitude": "34.167200",
+  "longitude": "-118.398900",
+  "weight": 1,
+  "zip": "91607-5519"
+}, {
+  "latitude": "53.530430",
+  "longitude": "-113.323477",
+  "weight": 1,
+  "zip": "T8A 4G3"
+}, {
+  "latitude": "37.392400",
+  "longitude": "-121.962300",
+  "weight": 4,
+  "zip": "95054-2007"
+}, {
+  "latitude": "42.930000",
+  "longitude": "-76.562600",
+  "weight": 1,
+  "zip": "13021-3829"
+}, {
+  "latitude": "33.579800",
+  "longitude": "-85.081200",
+  "weight": 1,
+  "zip": "30117-9589"
+}, {
+  "latitude": "43.810000",
+  "longitude": "-111.789000",
+  "weight": 1,
+  "zip": "83440-1401"
+}, {
+  "latitude": "39.863700",
+  "longitude": "-74.822300",
+  "weight": 1,
+  "zip": "08055-3434"
+}, {
+  "latitude": "54.526587",
+  "longitude": "-128.607935",
+  "weight": 1,
+  "zip": "V8G 4M8"
+}, {
+  "latitude": "38.751300",
+  "longitude": "-90.729600",
+  "weight": 2,
+  "zip": "63368-6605"
+}, {
+  "latitude": "35.005200",
+  "longitude": "-114.568700",
+  "weight": 1,
+  "zip": "86426-6811"
+}, {
+  "latitude": "32.975600",
+  "longitude": "-117.040200",
+  "weight": 3,
+  "zip": "92064-1524"
+}, {
+  "latitude": "49.240080",
+  "longitude": "-122.557141",
+  "weight": 1,
+  "zip": "V4R 0A9"
+}, {
+  "latitude": "40.762300",
+  "longitude": "-73.523000",
+  "weight": 2,
+  "zip": "11801-4701"
+}, {
+  "latitude": "37.752600",
+  "longitude": "-121.770000",
+  "weight": 1,
+  "zip": "94551-6148"
+}, {
+  "latitude": "51.527118",
+  "longitude": "-111.203069",
+  "weight": 1,
+  "zip": "T0J 3P0"
+}, {
+  "latitude": "52.148039",
+  "longitude": "-106.737614",
+  "weight": 1,
+  "zip": "S7L 6L2"
+}, {
+  "latitude": "42.348600",
+  "longitude": "-71.358800",
+  "weight": 1,
+  "zip": "01778-2917"
+}, {
+  "latitude": "36.133700",
+  "longitude": "-86.800600",
+  "weight": 1,
+  "zip": "37212-4058"
+}, {
+  "latitude": "41.606000",
+  "longitude": "-109.230000",
+  "weight": 1,
+  "zip": "82901-4445"
+}, {
+  "latitude": "38.366100",
+  "longitude": "-76.434600",
+  "weight": 1,
+  "zip": "20657-4894"
+}, {
+  "latitude": "43.610488",
+  "longitude": "-79.618752",
+  "weight": 6,
+  "zip": "L4W 3K1"
+}, {
+  "latitude": "39.787000",
+  "longitude": "-75.178500",
+  "weight": 2,
+  "zip": "08051-1737"
+}, {
+  "latitude": "47.137400",
+  "longitude": "-119.289100",
+  "weight": 1,
+  "zip": "98837-9609"
+}, {
+  "latitude": "40.636200",
+  "longitude": "-73.637500",
+  "weight": 1,
+  "zip": "11572-4745"
+}, {
+  "latitude": "37.051200",
+  "longitude": "-93.297200",
+  "weight": 1,
+  "zip": "65714-8638"
+}, {
+  "latitude": "30.221400",
+  "longitude": "-81.557100",
+  "weight": 1,
+  "zip": "32256-7023"
+}, {
+  "latitude": "43.363000",
+  "longitude": "-92.126000",
+  "weight": 1,
+  "zip": "52136-1073"
+}, {
+  "latitude": "39.120800",
+  "longitude": "-76.843400",
+  "weight": 1,
+  "zip": "20723-1465"
+}, {
+  "latitude": "34.906300",
+  "longitude": "-83.727400",
+  "weight": 1,
+  "zip": "30546-2554"
+}, {
+  "latitude": "34.277100",
+  "longitude": "-118.499200",
+  "weight": 1,
+  "zip": "91344-5054"
+}, {
+  "latitude": "37.088400",
+  "longitude": "-83.390700",
+  "weight": 1,
+  "zip": "40868-0357"
+}, {
+  "latitude": "40.270900",
+  "longitude": "-75.739700",
+  "weight": 4,
+  "zip": "19518"
+}, {
+  "latitude": "30.169300",
+  "longitude": "-93.221800",
+  "weight": 1,
+  "zip": "70605-5336"
+}, {
+  "latitude": "33.783800",
+  "longitude": "-84.595200",
+  "weight": 1,
+  "zip": "30168"
+}, {
+  "latitude": "34.649100",
+  "longitude": "-87.426200",
+  "weight": 1,
+  "zip": "35672-5651"
+}, {
+  "latitude": "30.187700",
+  "longitude": "-95.428800",
+  "weight": 1,
+  "zip": "77385-8556"
+}, {
+  "latitude": "46.475773",
+  "longitude": "-84.055537",
+  "weight": 1,
+  "zip": "P0S 1C0"
+}, {
+  "latitude": "40.815500",
+  "longitude": "-79.510700",
+  "weight": 1,
+  "zip": "16201"
+}, {
+  "latitude": "50.901043",
+  "longitude": "-114.102857",
+  "weight": 2,
+  "zip": "T2Y 3R6"
+}, {
+  "latitude": "43.007300",
+  "longitude": "-71.448200",
+  "weight": 1,
+  "zip": "03104-6121"
+}, {
+  "latitude": "46.477691",
+  "longitude": "-80.908413",
+  "weight": 1,
+  "zip": "P3B 3V6"
+}, {
+  "latitude": "44.003600",
+  "longitude": "-103.358900",
+  "weight": 1,
+  "zip": "57702-5010"
+}, {
+  "latitude": "40.635400",
+  "longitude": "-74.255600",
+  "weight": 2,
+  "zip": "07036-3412"
+}, {
+  "latitude": "32.213800",
+  "longitude": "-110.824000",
+  "weight": 1,
+  "zip": "85710-6077"
+}, {
+  "latitude": "71.234600",
+  "longitude": "-156.817400",
+  "weight": 1,
+  "zip": "99723-1515"
+}, {
+  "latitude": "48.862500",
+  "longitude": "-122.595300",
+  "weight": 1,
+  "zip": "98248-9648"
+}, {
+  "latitude": "39.943000",
+  "longitude": "-104.786600",
+  "weight": 1,
+  "zip": "80601-5361"
+}, {
+  "latitude": "40.945700",
+  "longitude": "-74.182600",
+  "weight": 1,
+  "zip": "07508-2612"
+}, {
+  "latitude": "35.397600",
+  "longitude": "-108.160400",
+  "weight": 2,
+  "zip": "87323-1435"
+}, {
+  "latitude": "40.825900",
+  "longitude": "-81.339900",
+  "weight": 1,
+  "zip": "44705-3042"
+}, {
+  "latitude": "29.083800",
+  "longitude": "-81.033600",
+  "weight": 1,
+  "zip": "32128-7089"
+}, {
+  "latitude": "40.492700",
+  "longitude": "-79.834500",
+  "weight": 1,
+  "zip": "15147-2849"
+}, {
+  "latitude": "40.610200",
+  "longitude": "-74.087800",
+  "weight": 1,
+  "zip": "10304-2900"
+}, {
+  "latitude": "39.632000",
+  "longitude": "-77.737200",
+  "weight": 1,
+  "zip": "21740"
+}, {
+  "latitude": "35.689500",
+  "longitude": "-81.538700",
+  "weight": 4,
+  "zip": "28612-8358"
+}, {
+  "latitude": "41.256400",
+  "longitude": "-73.211100",
+  "weight": 1,
+  "zip": "06611-2934"
+}, {
+  "latitude": "41.951400",
+  "longitude": "-83.652200",
+  "weight": 1,
+  "zip": "48131-9647"
+}, {
+  "latitude": "26.169400",
+  "longitude": "-97.988700",
+  "weight": 1,
+  "zip": "78596-6814"
+}, {
+  "latitude": "29.517300",
+  "longitude": "-98.321700",
+  "weight": 1,
+  "zip": "78109-3573"
+}, {
+  "latitude": "38.545300",
+  "longitude": "-77.756100",
+  "weight": 1,
+  "zip": "22712-9410"
+}, {
+  "latitude": "41.970300",
+  "longitude": "-87.704200",
+  "weight": 1,
+  "zip": "60625-2127"
+}, {
+  "latitude": "42.779000",
+  "longitude": "-71.474800",
+  "weight": 1,
+  "zip": "03064-1430"
+}, {
+  "latitude": "41.701500",
+  "longitude": "-76.275400",
+  "weight": 1,
+  "zip": "18853-8008"
+}, {
+  "latitude": "40.410900",
+  "longitude": "-74.238000",
+  "weight": 1,
+  "zip": "07747-6426"
+}, {
+  "latitude": "38.814900",
+  "longitude": "-77.121000",
+  "weight": 1,
+  "zip": "22304-3904"
+}, {
+  "latitude": "43.018300",
+  "longitude": "-78.959100",
+  "weight": 1,
+  "zip": "14072-3313"
+}, {
+  "latitude": "40.630600",
+  "longitude": "-103.221200",
+  "weight": 1,
+  "zip": "80751"
+}, {
+  "latitude": "31.340800",
+  "longitude": "-85.842100",
+  "weight": 1,
+  "zip": "36330-8794"
+}, {
+  "latitude": "45.698203",
+  "longitude": "-73.792300",
+  "weight": 1,
+  "zip": "J6Y 2C9"
+}, {
+  "latitude": "33.858300",
+  "longitude": "-94.395200",
+  "weight": 2,
+  "zip": "71866-0144"
+}, {
+  "latitude": "46.101493",
+  "longitude": "-77.497723",
+  "weight": 1,
+  "zip": "K0J 1P0"
+}, {
+  "latitude": "42.230800",
+  "longitude": "-88.332400",
+  "weight": 1,
+  "zip": "60014-6232"
+}, {
+  "latitude": "37.167900",
+  "longitude": "-118.291600",
+  "weight": 1,
+  "zip": "93513-0114"
+}, {
+  "latitude": "40.373500",
+  "longitude": "-99.153900",
+  "weight": 1,
+  "zip": "68982-0127"
+}, {
+  "latitude": "40.470400",
+  "longitude": "-78.837500",
+  "weight": 2,
+  "zip": "15943-3718"
+}, {
+  "latitude": "38.045200",
+  "longitude": "-85.558600",
+  "weight": 1,
+  "zip": "40047-7437"
+}, {
+  "latitude": "31.902100",
+  "longitude": "-106.414900",
+  "weight": 1,
+  "zip": "79924-3926"
+}, {
+  "latitude": "37.628100",
+  "longitude": "-77.339500",
+  "weight": 2,
+  "zip": "23111-1219"
+}, {
+  "latitude": "27.842700",
+  "longitude": "-82.644800",
+  "weight": 1,
+  "zip": "33702-2762"
+}, {
+  "latitude": "41.059400",
+  "longitude": "-115.529600",
+  "weight": 1,
+  "zip": "89803-1405"
+}, {
+  "latitude": "41.869600",
+  "longitude": "-72.371800",
+  "weight": 3,
+  "zip": "06084-3829"
+}, {
+  "latitude": "39.907400",
+  "longitude": "-75.000800",
+  "weight": 5,
+  "zip": "08034-2003"
+}, {
+  "latitude": "37.740800",
+  "longitude": "-85.594800",
+  "weight": 1,
+  "zip": "40107-8535"
+}, {
+  "latitude": "46.151400",
+  "longitude": "-122.963400",
+  "weight": 1,
+  "zip": "98632"
+}, {
+  "latitude": "41.788700",
+  "longitude": "-73.906300",
+  "weight": 1,
+  "zip": "12538-2216"
+}, {
+  "latitude": "47.993362",
+  "longitude": "-84.776425",
+  "weight": 1,
+  "zip": "P0S 1K0"
+}, {
+  "latitude": "51.032784",
+  "longitude": "-114.067394",
+  "weight": 3,
+  "zip": "T2P 4H9"
+}, {
+  "latitude": "32.955500",
+  "longitude": "-117.225200",
+  "weight": 2,
+  "zip": "92130-2253"
+}, {
+  "latitude": "41.132600",
+  "longitude": "-100.774600",
+  "weight": 2,
+  "zip": "69101-4793"
+}, {
+  "latitude": "44.006153",
+  "longitude": "-79.467867",
+  "weight": 2,
+  "zip": "L4G 5W3"
+}, {
+  "latitude": "32.628800",
+  "longitude": "-85.001700",
+  "weight": 2,
+  "zip": "31808-7302"
+}, {
+  "latitude": "39.922700",
+  "longitude": "-75.181200",
+  "weight": 2,
+  "zip": "19145-3715"
+}, {
+  "latitude": "36.771900",
+  "longitude": "-81.665100",
+  "weight": 1,
+  "zip": "24319-0791"
+}, {
+  "latitude": "43.000300",
+  "longitude": "-78.192900",
+  "weight": 1,
+  "zip": "14020-3623"
+}, {
+  "latitude": "37.983300",
+  "longitude": "-84.576700",
+  "weight": 1,
+  "zip": "40514-1122"
+}, {
+  "latitude": "38.208300",
+  "longitude": "-84.245000",
+  "weight": 1,
+  "zip": "40361-1906"
+}, {
+  "latitude": "41.805500",
+  "longitude": "-89.705400",
+  "weight": 3,
+  "zip": "61081-3043"
+}, {
+  "latitude": "25.737800",
+  "longitude": "-80.224800",
+  "weight": 3,
+  "zip": "33133"
+}, {
+  "latitude": "41.581700",
+  "longitude": "-83.662800",
+  "weight": 2,
+  "zip": "43537-9143"
+}, {
+  "latitude": "40.148100",
+  "longitude": "-74.213700",
+  "weight": 1,
+  "zip": "07731-2710"
+}, {
+  "latitude": "34.918600",
+  "longitude": "-87.613600",
+  "weight": 1,
+  "zip": "35634-6261"
+}, {
+  "latitude": "33.596100",
+  "longitude": "-112.119900",
+  "weight": 1,
+  "zip": "85029"
+}, {
+  "latitude": "35.943900",
+  "longitude": "-85.439200",
+  "weight": 1,
+  "zip": "38583-3079"
+}, {
+  "latitude": "40.544900",
+  "longitude": "-74.351700",
+  "weight": 1,
+  "zip": "08840-1443"
+}, {
+  "latitude": "49.789153",
+  "longitude": "-112.140147",
+  "weight": 1,
+  "zip": "T1G 2E1"
+}, {
+  "latitude": "34.044700",
+  "longitude": "-118.448700",
+  "weight": 1,
+  "zip": "90025-4925"
+}, {
+  "latitude": "44.138200",
+  "longitude": "-91.044500",
+  "weight": 1,
+  "zip": "54642-8254"
+}, {
+  "latitude": "36.012900",
+  "longitude": "-115.211800",
+  "weight": 1,
+  "zip": "89139-7157"
+}, {
+  "latitude": "33.677300",
+  "longitude": "-118.005100",
+  "weight": 2,
+  "zip": "92648-6846"
+}, {
+  "latitude": "34.690900",
+  "longitude": "-118.149100",
+  "weight": 1,
+  "zip": "93534-5028"
+}, {
+  "latitude": "46.118800",
+  "longitude": "-67.863000",
+  "weight": 1,
+  "zip": "04730-6747"
+}, {
+  "latitude": "46.823999",
+  "longitude": "-71.334689",
+  "weight": 1,
+  "zip": "G1P 1A5"
+}, {
+  "latitude": "48.310901",
+  "longitude": "-71.115900",
+  "weight": 1,
+  "zip": "G7N 1G3"
+}, {
+  "latitude": "42.652500",
+  "longitude": "-71.689600",
+  "weight": 1,
+  "zip": "01469-0272"
+}, {
+  "latitude": "27.874200",
+  "longitude": "-82.520300",
+  "weight": 3,
+  "zip": "33616-2115"
+}, {
+  "latitude": "47.209082",
+  "longitude": "-67.955673",
+  "weight": 1,
+  "zip": "E7E 1V2"
+}, {
+  "latitude": "38.539600",
+  "longitude": "-89.958300",
+  "weight": 1,
+  "zip": "62221-7052"
+}, {
+  "latitude": "36.100200",
+  "longitude": "-110.221100",
+  "weight": 1,
+  "zip": "86510-1320"
+}, {
+  "latitude": "42.820000",
+  "longitude": "-95.803400",
+  "weight": 1,
+  "zip": "51035-7755"
+}, {
+  "latitude": "39.688800",
+  "longitude": "-105.156000",
+  "weight": 1,
+  "zip": "80228-2592"
+}, {
+  "latitude": "46.591388",
+  "longitude": "-84.309099",
+  "weight": 1,
+  "zip": "P6A 5K7"
+}, {
+  "latitude": "33.914300",
+  "longitude": "-118.349300",
+  "weight": 1,
+  "zip": "90250-8245"
+}, {
+  "latitude": "38.557600",
+  "longitude": "-90.492400",
+  "weight": 1,
+  "zip": "63088-1555"
+}, {
+  "latitude": "52.305111",
+  "longitude": "-114.085016",
+  "weight": 1,
+  "zip": "T4S 1M3"
+}, {
+  "latitude": "40.143400",
+  "longitude": "-74.861400",
+  "weight": 1,
+  "zip": "19057-1736"
+}, {
+  "latitude": "43.695900",
+  "longitude": "-98.086400",
+  "weight": 1,
+  "zip": "57301-2334"
+}, {
+  "latitude": "41.630200",
+  "longitude": "-81.407600",
+  "weight": 4,
+  "zip": "44094-5123"
+}, {
+  "latitude": "50.908206",
+  "longitude": "-97.213137",
+  "weight": 1,
+  "zip": "R0C 0A0"
+}, {
+  "latitude": "43.551800",
+  "longitude": "-111.891900",
+  "weight": 1,
+  "zip": "83401-3576"
+}, {
+  "latitude": "42.354500",
+  "longitude": "-89.039700",
+  "weight": 1,
+  "zip": "61115-2130"
+}, {
+  "latitude": "49.226714",
+  "longitude": "-122.919373",
+  "weight": 2,
+  "zip": "V3N 3W4"
+}, {
+  "latitude": "33.342500",
+  "longitude": "-111.635300",
+  "weight": 1,
+  "zip": "85212-1556"
+}, {
+  "latitude": "42.849900",
+  "longitude": "-73.785100",
+  "weight": 1,
+  "zip": "12065-7602"
+}, {
+  "latitude": "42.092800",
+  "longitude": "-79.244000",
+  "weight": 1,
+  "zip": "14701-4836"
+}, {
+  "latitude": "45.045785",
+  "longitude": "-79.315567",
+  "weight": 1,
+  "zip": "P1L 2C1"
+}, {
+  "latitude": "42.012200",
+  "longitude": "-87.841700",
+  "weight": 1,
+  "zip": "60068-4407"
+}, {
+  "latitude": "35.232300",
+  "longitude": "-89.850900",
+  "weight": 1,
+  "zip": "38135-1730"
+}, {
+  "latitude": "42.216500",
+  "longitude": "-88.076900",
+  "weight": 1,
+  "zip": "60047-7100"
+}, {
+  "latitude": "33.967900",
+  "longitude": "-84.438500",
+  "weight": 1,
+  "zip": "30068-3527"
+}, {
+  "latitude": "31.578200",
+  "longitude": "-81.880200",
+  "weight": 1,
+  "zip": "31598-0888"
+}, {
+  "latitude": "33.436800",
+  "longitude": "-111.712900",
+  "weight": 1,
+  "zip": "85205-5215"
+}, {
+  "latitude": "35.288600",
+  "longitude": "-80.820900",
+  "weight": 1,
+  "zip": "28269-8342"
+}, {
+  "latitude": "32.802300",
+  "longitude": "-96.959700",
+  "weight": 1,
+  "zip": "75060-5926"
+}, {
+  "latitude": "40.889700",
+  "longitude": "-74.484400",
+  "weight": 1,
+  "zip": "07834-1528"
+}, {
+  "latitude": "30.422400",
+  "longitude": "-97.796700",
+  "weight": 1,
+  "zip": "78750-2566"
+}, {
+  "latitude": "32.411900",
+  "longitude": "-104.239500",
+  "weight": 1,
+  "zip": "88220-6044"
+}, {
+  "latitude": "41.900500",
+  "longitude": "-84.044600",
+  "weight": 2,
+  "zip": "49221-3303"
+}, {
+  "latitude": "55.149779",
+  "longitude": "-118.806427",
+  "weight": 1,
+  "zip": "T8W 1X9"
+}, {
+  "latitude": "39.883900",
+  "longitude": "-75.466900",
+  "weight": 1,
+  "zip": "19017-0223"
+}, {
+  "latitude": "29.518900",
+  "longitude": "-98.600600",
+  "weight": 1,
+  "zip": "78240-3912"
+}, {
+  "latitude": "34.496500",
+  "longitude": "-84.934500",
+  "weight": 1,
+  "zip": "30701"
+}, {
+  "latitude": "30.622200",
+  "longitude": "-81.590600",
+  "weight": 1,
+  "zip": "32097"
+}, {
+  "latitude": "41.314300",
+  "longitude": "-73.850800",
+  "weight": 1,
+  "zip": "10547-2010"
+}, {
+  "latitude": "40.453800",
+  "longitude": "-74.482300",
+  "weight": 1,
+  "zip": "08902-5587"
+}, {
+  "latitude": "51.474424",
+  "longitude": "-57.708659",
+  "weight": 1,
+  "zip": "G0G 2P0"
+}, {
+  "latitude": "36.541500",
+  "longitude": "-81.446800",
+  "weight": 1,
+  "zip": "28631"
+}, {
+  "latitude": "45.667737",
+  "longitude": "-73.208940",
+  "weight": 1,
+  "zip": "J0L 2E0"
+}, {
+  "latitude": "31.446700",
+  "longitude": "-103.579100",
+  "weight": 1,
+  "zip": "79772-6744"
+}, {
+  "latitude": "36.869500",
+  "longitude": "-76.294500",
+  "weight": 1,
+  "zip": "23517-2368"
+}, {
+  "latitude": "34.858000",
+  "longitude": "-85.322100",
+  "weight": 1,
+  "zip": "30707-1701"
+}, {
+  "latitude": "33.929900",
+  "longitude": "-87.432400",
+  "weight": 1,
+  "zip": "35578-6322"
+}, {
+  "latitude": "40.666900",
+  "longitude": "-76.473200",
+  "weight": 1,
+  "zip": "17938-8904"
+}, {
+  "latitude": "29.083800",
+  "longitude": "-81.033600",
+  "weight": 1,
+  "zip": "32128-7182"
+}, {
+  "latitude": "40.703600",
+  "longitude": "-73.896100",
+  "weight": 1,
+  "zip": "11385-1846"
+}, {
+  "latitude": "54.267280",
+  "longitude": "-110.744211",
+  "weight": 2,
+  "zip": "T9N 2G9"
+}, {
+  "latitude": "39.689500",
+  "longitude": "-105.090800",
+  "weight": 2,
+  "zip": "80232-5322"
+}, {
+  "latitude": "55.149504",
+  "longitude": "-118.774359",
+  "weight": 1,
+  "zip": "T8V 6H1"
+}, {
+  "latitude": "41.435300",
+  "longitude": "-71.461600",
+  "weight": 1,
+  "zip": "02882-2704"
+}, {
+  "latitude": "53.490594",
+  "longitude": "-113.677974",
+  "weight": 1,
+  "zip": "T6M 0B9"
+}, {
+  "latitude": "47.749700",
+  "longitude": "-122.215900",
+  "weight": 1,
+  "zip": "98011-2525"
+}, {
+  "latitude": "47.769700",
+  "longitude": "-95.641000",
+  "weight": 1,
+  "zip": "56646-4116"
+}, {
+  "latitude": "29.859800",
+  "longitude": "-90.110500",
+  "weight": 1,
+  "zip": "70072-5623"
+}, {
+  "latitude": "37.767600",
+  "longitude": "-92.210500",
+  "weight": 1,
+  "zip": "65583-3391"
+}, {
+  "latitude": "36.324900",
+  "longitude": "-83.314200",
+  "weight": 1,
+  "zip": "37708-4306"
+}, {
+  "latitude": "42.488900",
+  "longitude": "-70.964700",
+  "weight": 2,
+  "zip": "01904-2713"
+}, {
+  "latitude": "32.886000",
+  "longitude": "-96.409500",
+  "weight": 2,
+  "zip": "75032-6687"
+}, {
+  "latitude": "41.719900",
+  "longitude": "-88.254800",
+  "weight": 1,
+  "zip": "60503-7603"
+}, {
+  "latitude": "47.858500",
+  "longitude": "-121.947400",
+  "weight": 1,
+  "zip": "98272-8895"
+}, {
+  "latitude": "41.018600",
+  "longitude": "-111.501100",
+  "weight": 1,
+  "zip": "84033"
+}, {
+  "latitude": "43.117200",
+  "longitude": "-88.344600",
+  "weight": 1,
+  "zip": "53029"
+}, {
+  "latitude": "36.621800",
+  "longitude": "-79.412400",
+  "weight": 1,
+  "zip": "24540-1415"
+}, {
+  "latitude": "33.352700",
+  "longitude": "-111.780900",
+  "weight": 1,
+  "zip": "85234-5955"
+}, {
+  "latitude": "41.980400",
+  "longitude": "-91.709800",
+  "weight": 1,
+  "zip": "52405-2718"
+}, {
+  "latitude": "43.658583",
+  "longitude": "-79.910387",
+  "weight": 1,
+  "zip": "L7G 5L8"
+}, {
+  "latitude": "44.375500",
+  "longitude": "-73.843100",
+  "weight": 1,
+  "zip": "12997-2524"
+}, {
+  "latitude": "43.357000",
+  "longitude": "-71.557000",
+  "weight": 1,
+  "zip": "03224-2016"
+}, {
+  "latitude": "40.766900",
+  "longitude": "-87.299900",
+  "weight": 2,
+  "zip": "47948-8005"
+}, {
+  "latitude": "44.552200",
+  "longitude": "-88.078800",
+  "weight": 1,
+  "zip": "54303-6573"
+}, {
+  "latitude": "34.398500",
+  "longitude": "-83.694500",
+  "weight": 1,
+  "zip": "30554-2875"
+}, {
+  "latitude": "43.843600",
+  "longitude": "-87.976700",
+  "weight": 1,
+  "zip": "53020-1933"
+}, {
+  "latitude": "37.752600",
+  "longitude": "-121.770000",
+  "weight": 1,
+  "zip": "94551-1564"
+}, {
+  "latitude": "49.150760",
+  "longitude": "-122.301603",
+  "weight": 1,
+  "zip": "V2V 3Z5"
+}, {
+  "latitude": "28.079000",
+  "longitude": "-82.526800",
+  "weight": 2,
+  "zip": "33624-4504"
+}, {
+  "latitude": "35.134700",
+  "longitude": "-106.522200",
+  "weight": 1,
+  "zip": "87111-5955"
+}, {
+  "latitude": "37.260200",
+  "longitude": "-121.770900",
+  "weight": 1,
+  "zip": "95138-2216"
+}, {
+  "latitude": "34.601700",
+  "longitude": "-118.231000",
+  "weight": 2,
+  "zip": "93551-4818"
+}, {
+  "latitude": "43.784510",
+  "longitude": "-79.145744",
+  "weight": 2,
+  "zip": "M1C 2T4"
+}, {
+  "latitude": "30.448700",
+  "longitude": "-86.625400",
+  "weight": 1,
+  "zip": "32547-2778"
+}, {
+  "latitude": "40.998800",
+  "longitude": "-74.426100",
+  "weight": 6,
+  "zip": "07405-2167"
+}, {
+  "latitude": "33.754100",
+  "longitude": "-117.474000",
+  "weight": 2,
+  "zip": "92883-6272"
+}, {
+  "latitude": "28.019400",
+  "longitude": "-81.621200",
+  "weight": 1,
+  "zip": "33838-0610"
+}, {
+  "latitude": "36.034100",
+  "longitude": "-80.396200",
+  "weight": 3,
+  "zip": "27012-9381"
+}, {
+  "latitude": "41.910400",
+  "longitude": "-70.642000",
+  "weight": 2,
+  "zip": "02360-6104"
+}, {
+  "latitude": "32.486000",
+  "longitude": "-93.676700",
+  "weight": 1,
+  "zip": "71112-5010"
+}, {
+  "latitude": "37.976900",
+  "longitude": "-100.862100",
+  "weight": 2,
+  "zip": "67846-3689"
+}, {
+  "latitude": "39.287400",
+  "longitude": "-80.341900",
+  "weight": 1,
+  "zip": "26301-7222"
+}, {
+  "latitude": "33.741900",
+  "longitude": "-117.746700",
+  "weight": 5,
+  "zip": "92602-2334"
+}, {
+  "latitude": "35.258200",
+  "longitude": "-118.130200",
+  "weight": 1,
+  "zip": "93523-2422"
+}, {
+  "latitude": "27.321500",
+  "longitude": "-80.403000",
+  "weight": 1,
+  "zip": "34986-2065"
+}, {
+  "latitude": "27.726200",
+  "longitude": "-97.407800",
+  "weight": 2,
+  "zip": "78415-5207"
+}, {
+  "latitude": "41.162400",
+  "longitude": "-80.576200",
+  "weight": 1,
+  "zip": "44425-2737"
+}, {
+  "latitude": "36.130400",
+  "longitude": "-109.603700",
+  "weight": 3,
+  "zip": "86503"
+}, {
+  "latitude": "40.319100",
+  "longitude": "-79.720500",
+  "weight": 1,
+  "zip": "15642"
+}, {
+  "latitude": "44.427200",
+  "longitude": "-72.005100",
+  "weight": 1,
+  "zip": "05819-8912"
+}, {
+  "latitude": "33.541500",
+  "longitude": "-89.127500",
+  "weight": 1,
+  "zip": "39752-9542"
+}, {
+  "latitude": "42.508900",
+  "longitude": "-71.200400",
+  "weight": 1,
+  "zip": "01803-2721"
+}, {
+  "latitude": "21.500600",
+  "longitude": "-158.043500",
+  "weight": 1,
+  "zip": "96786-7014"
+}, {
+  "latitude": "53.518619",
+  "longitude": "-113.632060",
+  "weight": 1,
+  "zip": "T5T 2B2"
+}, {
+  "latitude": "34.209200",
+  "longitude": "-118.574900",
+  "weight": 2,
+  "zip": "91306-3751"
+}, {
+  "latitude": "25.558400",
+  "longitude": "-80.458200",
+  "weight": 2,
+  "zip": "33170-4315"
+}, {
+  "latitude": "30.061500",
+  "longitude": "-95.682100",
+  "weight": 1,
+  "zip": "77377-8588"
+}, {
+  "latitude": "31.893800",
+  "longitude": "-81.590200",
+  "weight": 1,
+  "zip": "31315-4556"
+}, {
+  "latitude": "28.307800",
+  "longitude": "-81.368100",
+  "weight": 2,
+  "zip": "34744-9446"
+}, {
+  "latitude": "43.795800",
+  "longitude": "-70.414300",
+  "weight": 1,
+  "zip": "04062"
+}, {
+  "latitude": "43.989300",
+  "longitude": "-96.265200",
+  "weight": 1,
+  "zip": "56164-2204"
+}, {
+  "latitude": "42.465800",
+  "longitude": "-82.945900",
+  "weight": 1,
+  "zip": "48021-2733"
+}, {
+  "latitude": "40.668500",
+  "longitude": "-73.553600",
+  "weight": 2,
+  "zip": "11566-2328"
+}, {
+  "latitude": "36.064100",
+  "longitude": "-86.769700",
+  "weight": 1,
+  "zip": "37220-1104"
+}, {
+  "latitude": "38.996900",
+  "longitude": "-105.062300",
+  "weight": 1,
+  "zip": "80863-9400"
+}, {
+  "latitude": "56.753854",
+  "longitude": "-111.450312",
+  "weight": 1,
+  "zip": "T9K 2W3"
+}, {
+  "latitude": "29.594300",
+  "longitude": "-90.754800",
+  "weight": 1,
+  "zip": "70360-4645"
+}, {
+  "latitude": "37.794600",
+  "longitude": "-97.097100",
+  "weight": 1,
+  "zip": "67017-8732"
+}, {
+  "latitude": "53.641775",
+  "longitude": "-113.498722",
+  "weight": 1,
+  "zip": "T5X 5Y6"
+}, {
+  "latitude": "41.285400",
+  "longitude": "-82.043100",
+  "weight": 1,
+  "zip": "44044-1207"
+}, {
+  "latitude": "48.478647",
+  "longitude": "-78.131371",
+  "weight": 1,
+  "zip": "J0Y 1M0"
+}, {
+  "latitude": "41.506700",
+  "longitude": "-87.963100",
+  "weight": 1,
+  "zip": "60451-2287"
+}, {
+  "latitude": "39.402900",
+  "longitude": "-114.977000",
+  "weight": 2,
+  "zip": "89314"
+}, {
+  "latitude": "38.759600",
+  "longitude": "-77.148500",
+  "weight": 1,
+  "zip": "22315-3816"
+}, {
+  "latitude": "40.784400",
+  "longitude": "-89.430900",
+  "weight": 2,
+  "zip": "61548-8624"
+}, {
+  "latitude": "52.965299",
+  "longitude": "-113.376530",
+  "weight": 1,
+  "zip": "T9A 0E5"
+}, {
+  "latitude": "33.786000",
+  "longitude": "-84.351400",
+  "weight": 3,
+  "zip": "30306-4463"
+}, {
+  "latitude": "36.076000",
+  "longitude": "-87.399500",
+  "weight": 1,
+  "zip": "37055-4527"
+}, {
+  "latitude": "52.129719",
+  "longitude": "-106.651803",
+  "weight": 2,
+  "zip": "S7K 2W7"
+}, {
+  "latitude": "62.453578",
+  "longitude": "-114.422492",
+  "weight": 1,
+  "zip": "X1A 3V4"
+}, {
+  "latitude": "45.997900",
+  "longitude": "-112.598800",
+  "weight": 1,
+  "zip": "59701-6148"
+}, {
+  "latitude": "33.429200",
+  "longitude": "-96.548600",
+  "weight": 1,
+  "zip": "75495-2141"
+}, {
+  "latitude": "29.508600",
+  "longitude": "-97.449500",
+  "weight": 2,
+  "zip": "78629-4605"
+}, {
+  "latitude": "45.604988",
+  "longitude": "-73.352258",
+  "weight": 2,
+  "zip": "J3E 1V4"
+}, {
+  "latitude": "51.094249",
+  "longitude": "-114.242435",
+  "weight": 1,
+  "zip": "T3B 5P8"
+}, {
+  "latitude": "46.815200",
+  "longitude": "-102.527400",
+  "weight": 1,
+  "zip": "58630-0323"
+}, {
+  "latitude": "42.612400",
+  "longitude": "-83.034500",
+  "weight": 1,
+  "zip": "48314-1623"
+}, {
+  "latitude": "44.722555",
+  "longitude": "-63.872492",
+  "weight": 3,
+  "zip": "B3Z 0K5"
+}, {
+  "latitude": "40.384900",
+  "longitude": "-105.091600",
+  "weight": 1,
+  "zip": "80537-6804"
+}, {
+  "latitude": "41.784500",
+  "longitude": "-88.261600",
+  "weight": 1,
+  "zip": "60502-6764"
+}, {
+  "latitude": "26.538400",
+  "longitude": "-80.185600",
+  "weight": 1,
+  "zip": "33472-5129"
+}, {
+  "latitude": "29.740400",
+  "longitude": "-95.830400",
+  "weight": 1,
+  "zip": "77494"
+}, {
+  "latitude": "41.502200",
+  "longitude": "-83.733100",
+  "weight": 1,
+  "zip": "43566-1008"
+}, {
+  "latitude": "41.382600",
+  "longitude": "-81.796400",
+  "weight": 4,
+  "zip": "44130-6605"
+}, {
+  "latitude": "36.300500",
+  "longitude": "-88.309300",
+  "weight": 1,
+  "zip": "38242"
+}, {
+  "latitude": "40.734800",
+  "longitude": "-73.222100",
+  "weight": 3,
+  "zip": "11751-3169"
+}, {
+  "latitude": "40.403300",
+  "longitude": "-80.184200",
+  "weight": 3,
+  "zip": "15071"
+}, {
+  "latitude": "55.793620",
+  "longitude": "-98.877855",
+  "weight": 2,
+  "zip": "R0B 2B0"
+}, {
+  "latitude": "29.458500",
+  "longitude": "-95.034500",
+  "weight": 1,
+  "zip": "77539-4026"
+}, {
+  "latitude": "42.243900",
+  "longitude": "-83.583000",
+  "weight": 1,
+  "zip": "48198-9451"
+}, {
+  "latitude": "33.920800",
+  "longitude": "-117.609600",
+  "weight": 1,
+  "zip": "92880-3799"
+}, {
+  "latitude": "44.463300",
+  "longitude": "-69.319000",
+  "weight": 1,
+  "zip": "04941-3501"
+}, {
+  "latitude": "46.856400",
+  "longitude": "-96.812300",
+  "weight": 1,
+  "zip": "58103-7820"
+}, {
+  "latitude": "43.370135",
+  "longitude": "-79.835854",
+  "weight": 1,
+  "zip": "L7P 4L7"
+}, {
+  "latitude": "40.814300",
+  "longitude": "-73.363400",
+  "weight": 1,
+  "zip": "11746-8144"
+}, {
+  "latitude": "46.389100",
+  "longitude": "-84.698100",
+  "weight": 1,
+  "zip": "49715-9060"
+}, {
+  "latitude": "44.938400",
+  "longitude": "-93.221400",
+  "weight": 2,
+  "zip": "55406-1938"
+}, {
+  "latitude": "30.210600",
+  "longitude": "-95.525700",
+  "weight": 2,
+  "zip": "77382"
+}, {
+  "latitude": "40.285000",
+  "longitude": "-78.865400",
+  "weight": 1,
+  "zip": "15904-2443"
+}, {
+  "latitude": "36.166100",
+  "longitude": "-116.003800",
+  "weight": 3,
+  "zip": "89048-3442"
+}, {
+  "latitude": "48.017100",
+  "longitude": "-122.067200",
+  "weight": 1,
+  "zip": "98258-8203"
+}, {
+  "latitude": "32.592700",
+  "longitude": "-86.215300",
+  "weight": 1,
+  "zip": "36092-0004"
+}, {
+  "latitude": "38.814900",
+  "longitude": "-77.121000",
+  "weight": 1,
+  "zip": "22304-1920"
+}, {
+  "latitude": "52.355513",
+  "longitude": "-110.259712",
+  "weight": 10,
+  "zip": "T0B 3S0"
+}, {
+  "latitude": "41.619400",
+  "longitude": "-87.842200",
+  "weight": 1,
+  "zip": "60462-2948"
+}, {
+  "latitude": "41.966100",
+  "longitude": "-72.289900",
+  "weight": 1,
+  "zip": "06076-3701"
+}, {
+  "latitude": "39.942000",
+  "longitude": "-84.166300",
+  "weight": 1,
+  "zip": "45371-2799"
+}, {
+  "latitude": "38.685000",
+  "longitude": "-121.068000",
+  "weight": 1,
+  "zip": "95762-5948"
+}, {
+  "latitude": "42.659300",
+  "longitude": "-83.122500",
+  "weight": 1,
+  "zip": "48307-6002"
+}, {
+  "latitude": "32.285200",
+  "longitude": "-81.287500",
+  "weight": 1,
+  "zip": "31326-3101"
+}, {
+  "latitude": "39.978800",
+  "longitude": "-75.126200",
+  "weight": 1,
+  "zip": "19125-1904"
+}, {
+  "latitude": "40.156700",
+  "longitude": "-75.126900",
+  "weight": 1,
+  "zip": "19090-3603"
+}, {
+  "latitude": "43.974200",
+  "longitude": "-71.150300",
+  "weight": 2,
+  "zip": "03818-1446"
+}, {
+  "latitude": "29.578500",
+  "longitude": "-95.606600",
+  "weight": 1,
+  "zip": "77479-6290"
+}, {
+  "latitude": "42.310600",
+  "longitude": "-71.274700",
+  "weight": 1,
+  "zip": "02481-3219"
+}, {
+  "latitude": "35.188400",
+  "longitude": "-79.473200",
+  "weight": 2,
+  "zip": "28374-7055"
+}, {
+  "latitude": "39.148400",
+  "longitude": "-76.792200",
+  "weight": 1,
+  "zip": "20794-9631"
+}, {
+  "latitude": "40.850300",
+  "longitude": "-73.974500",
+  "weight": 1,
+  "zip": "07024-1632"
+}, {
+  "latitude": "30.154500",
+  "longitude": "-91.177300",
+  "weight": 1,
+  "zip": "70788-4244"
+}, {
+  "latitude": "34.648400",
+  "longitude": "-99.320500",
+  "weight": 1,
+  "zip": "73521-7611"
+}, {
+  "latitude": "40.130900",
+  "longitude": "-85.653600",
+  "weight": 1,
+  "zip": "46012-9754"
+}, {
+  "latitude": "53.439609",
+  "longitude": "-113.209874",
+  "weight": 1,
+  "zip": "T8C 1H5"
+}, {
+  "latitude": "32.590700",
+  "longitude": "-97.040500",
+  "weight": 1,
+  "zip": "75054-5561"
+}, {
+  "latitude": "37.067600",
+  "longitude": "-97.035700",
+  "weight": 1,
+  "zip": "67005"
+}, {
+  "latitude": "38.971300",
+  "longitude": "-94.577400",
+  "weight": 1,
+  "zip": "64131-2050"
+}, {
+  "latitude": "38.649100",
+  "longitude": "-90.535800",
+  "weight": 2,
+  "zip": "63017-7603"
+}, {
+  "latitude": "40.016100",
+  "longitude": "-75.718300",
+  "weight": 1,
+  "zip": "19335-3321"
+}, {
+  "latitude": "35.348100",
+  "longitude": "-83.203100",
+  "weight": 2,
+  "zip": "28779-5176"
+}, {
+  "latitude": "35.504300",
+  "longitude": "-97.639900",
+  "weight": 1,
+  "zip": "73008-4708"
+}, {
+  "latitude": "40.684500",
+  "longitude": "-81.183800",
+  "weight": 1,
+  "zip": "44644-9561"
+}, {
+  "latitude": "44.662800",
+  "longitude": "-93.153900",
+  "weight": 1,
+  "zip": "55024-1469"
+}, {
+  "latitude": "46.368069",
+  "longitude": "-79.469269",
+  "weight": 2,
+  "zip": "P1B 8G3"
+}, {
+  "latitude": "52.677652",
+  "longitude": "-113.577254",
+  "weight": 1,
+  "zip": "T4J 1R6"
+}, {
+  "latitude": "40.669300",
+  "longitude": "-75.334900",
+  "weight": 1,
+  "zip": "18020-7809"
+}, {
+  "latitude": "28.013000",
+  "longitude": "-82.133900",
+  "weight": 3,
+  "zip": "33563-6532"
+}, {
+  "latitude": "51.032109",
+  "longitude": "-113.820655",
+  "weight": 1,
+  "zip": "T1X 1B4"
+}, {
+  "latitude": "46.166400",
+  "longitude": "-103.707900",
+  "weight": 1,
+  "zip": "58651"
+}, {
+  "latitude": "36.828200",
+  "longitude": "-76.023700",
+  "weight": 1,
+  "zip": "23454-6360"
+}, {
+  "latitude": "44.220800",
+  "longitude": "-70.026300",
+  "weight": 1,
+  "zip": "04259-6508"
+}, {
+  "latitude": "48.178300",
+  "longitude": "-111.939700",
+  "weight": 1,
+  "zip": "59425-2414"
+}, {
+  "latitude": "60.796409",
+  "longitude": "-115.806265",
+  "weight": 3,
+  "zip": "X0E 0R2"
+}, {
+  "latitude": "37.685000",
+  "longitude": "-92.655000",
+  "weight": 1,
+  "zip": "65536-7164"
+}, {
+  "latitude": "37.600400",
+  "longitude": "-122.402000",
+  "weight": 1,
+  "zip": "94030-1313"
+}, {
+  "latitude": "36.134100",
+  "longitude": "-96.142600",
+  "weight": 1,
+  "zip": "74063-3349"
+}, {
+  "latitude": "34.280500",
+  "longitude": "-118.557600",
+  "weight": 1,
+  "zip": "91326-2953"
+}, {
+  "latitude": "35.866000",
+  "longitude": "-83.479300",
+  "weight": 1,
+  "zip": "37876-0632"
+}, {
+  "latitude": "29.628300",
+  "longitude": "-98.444500",
+  "weight": 1,
+  "zip": "78259-2032"
+}, {
+  "latitude": "43.851050",
+  "longitude": "-81.245227",
+  "weight": 1,
+  "zip": "N0G 1G0"
+}, {
+  "latitude": "53.246959",
+  "longitude": "-113.527652",
+  "weight": 1,
+  "zip": "T9E 6E4"
+}, {
+  "latitude": "35.795600",
+  "longitude": "-78.794100",
+  "weight": 3,
+  "zip": "27513-1631"
+}, {
+  "latitude": "33.310500",
+  "longitude": "-111.823900",
+  "weight": 1,
+  "zip": "85225-1600"
+}, {
+  "latitude": "39.650500",
+  "longitude": "-79.944000",
+  "weight": 1,
+  "zip": "26505-3904"
+}, {
+  "latitude": "34.933600",
+  "longitude": "-79.766600",
+  "weight": 1,
+  "zip": "28379"
+}, {
+  "latitude": "42.866700",
+  "longitude": "-71.512800",
+  "weight": 1,
+  "zip": "03054-3292"
+}, {
+  "latitude": "45.518280",
+  "longitude": "-73.490575",
+  "weight": 1,
+  "zip": "J4K 4J2"
+}, {
+  "latitude": "29.739600",
+  "longitude": "-95.446000",
+  "weight": 3,
+  "zip": "77027-4347"
+}, {
+  "latitude": "37.166800",
+  "longitude": "-93.308500",
+  "weight": 1,
+  "zip": "65807-2106"
+}, {
+  "latitude": "36.869500",
+  "longitude": "-76.386900",
+  "weight": 3,
+  "zip": "23703-4925"
+}, {
+  "latitude": "32.951200",
+  "longitude": "-103.348800",
+  "weight": 1,
+  "zip": "88260-5018"
+}, {
+  "latitude": "35.506500",
+  "longitude": "-108.741400",
+  "weight": 1,
+  "zip": "87301"
+}, {
+  "latitude": "41.619400",
+  "longitude": "-87.842200",
+  "weight": 1,
+  "zip": "60462-1500"
+}, {
+  "latitude": "63.870600",
+  "longitude": "-144.002600",
+  "weight": 2,
+  "zip": "99780-0656"
+}, {
+  "latitude": "42.682600",
+  "longitude": "-71.109000",
+  "weight": 1,
+  "zip": "01845-3377"
+}, {
+  "latitude": "40.527700",
+  "longitude": "-97.609600",
+  "weight": 1,
+  "zip": "68361-2113"
+}, {
+  "latitude": "38.183900",
+  "longitude": "-85.710600",
+  "weight": 1,
+  "zip": "40213-3149"
+}, {
+  "latitude": "39.622400",
+  "longitude": "-86.149000",
+  "weight": 3,
+  "zip": "46142-1519"
+}, {
+  "latitude": "42.108700",
+  "longitude": "-79.953500",
+  "weight": 2,
+  "zip": "16510-2375"
+}, {
+  "latitude": "34.069900",
+  "longitude": "-118.349200",
+  "weight": 1,
+  "zip": "90036-4218"
+}, {
+  "latitude": "33.394300",
+  "longitude": "-84.473800",
+  "weight": 1,
+  "zip": "30215-2651"
+}, {
+  "latitude": "34.809600",
+  "longitude": "-90.009500",
+  "weight": 1,
+  "zip": "38632-8073"
+}, {
+  "latitude": "40.042200",
+  "longitude": "-75.024400",
+  "weight": 1,
+  "zip": "19136-4004"
+}, {
+  "latitude": "41.831300",
+  "longitude": "-91.885400",
+  "weight": 1,
+  "zip": "52203-8134"
+}, {
+  "latitude": "41.731100",
+  "longitude": "-87.731500",
+  "weight": 1,
+  "zip": "60456-1027"
+}, {
+  "latitude": "27.196800",
+  "longitude": "-80.253800",
+  "weight": 1,
+  "zip": "34994-5400"
+}, {
+  "latitude": "33.019800",
+  "longitude": "-96.992500",
+  "weight": 1,
+  "zip": "75067-6539"
+}, {
+  "latitude": "33.601300",
+  "longitude": "-111.886700",
+  "weight": 1,
+  "zip": "85260-2061"
+}, {
+  "latitude": "40.400100",
+  "longitude": "-80.046200",
+  "weight": 1,
+  "zip": "15216-1856"
+}, {
+  "latitude": "27.745600",
+  "longitude": "-82.751600",
+  "weight": 1,
+  "zip": "33706-5204"
+}, {
+  "latitude": "36.693300",
+  "longitude": "-108.421800",
+  "weight": 1,
+  "zip": "87416"
+}, {
+  "latitude": "38.681600",
+  "longitude": "-121.805200",
+  "weight": 9,
+  "zip": "95695-2812"
+}, {
+  "latitude": "42.756400",
+  "longitude": "-71.466700",
+  "weight": 2,
+  "zip": "03060"
+}, {
+  "latitude": "43.657900",
+  "longitude": "-116.912200",
+  "weight": 2,
+  "zip": "83676-5804"
+}, {
+  "latitude": "32.553000",
+  "longitude": "-92.042200",
+  "weight": 1,
+  "zip": "71203-2959"
+}, {
+  "latitude": "34.994700",
+  "longitude": "-81.224500",
+  "weight": 2,
+  "zip": "29745"
+}, {
+  "latitude": "26.379900",
+  "longitude": "-80.097500",
+  "weight": 1,
+  "zip": "33431-4129"
+}, {
+  "latitude": "44.276700",
+  "longitude": "-121.189600",
+  "weight": 2,
+  "zip": "97756-7998"
+}, {
+  "latitude": "44.992700",
+  "longitude": "-123.016700",
+  "weight": 11,
+  "zip": "97303-1808"
+}, {
+  "latitude": "33.216400",
+  "longitude": "-105.774300",
+  "weight": 2,
+  "zip": "88340-9766"
+}, {
+  "latitude": "56.756962",
+  "longitude": "-111.455721",
+  "weight": 1,
+  "zip": "T9K 0G4"
+}, {
+  "latitude": "56.647083",
+  "longitude": "-115.943746",
+  "weight": 1,
+  "zip": "T0G 1X0"
+}, {
+  "latitude": "38.967500",
+  "longitude": "-76.855100",
+  "weight": 3,
+  "zip": "20706-1567"
+}, {
+  "latitude": "49.895051",
+  "longitude": "-96.981285",
+  "weight": 1,
+  "zip": "R2C 0H4"
+}, {
+  "latitude": "35.262500",
+  "longitude": "-116.696600",
+  "weight": 1,
+  "zip": "92310-1676"
+}, {
+  "latitude": "28.377400",
+  "longitude": "-81.188800",
+  "weight": 1,
+  "zip": "32832-5553"
+}, {
+  "latitude": "29.460200",
+  "longitude": "-82.855300",
+  "weight": 1,
+  "zip": "32644-1494"
+}, {
+  "latitude": "35.202300",
+  "longitude": "-77.296300",
+  "weight": 1,
+  "zip": "28523"
+}, {
+  "latitude": "46.723100",
+  "longitude": "-100.678000",
+  "weight": 1,
+  "zip": "58504-9303"
+}, {
+  "latitude": "30.419300",
+  "longitude": "-81.972400",
+  "weight": 1,
+  "zip": "32009-1821"
+}, {
+  "latitude": "40.788800",
+  "longitude": "-74.011500",
+  "weight": 1,
+  "zip": "07093-8360"
+}, {
+  "latitude": "41.697300",
+  "longitude": "-72.307200",
+  "weight": 1,
+  "zip": "06237"
+}, {
+  "latitude": "41.349800",
+  "longitude": "-83.118100",
+  "weight": 1,
+  "zip": "43420-2918"
+}, {
+  "latitude": "40.263500",
+  "longitude": "-75.617200",
+  "weight": 1,
+  "zip": "19464-6415"
+}, {
+  "latitude": "40.008400",
+  "longitude": "-79.840400",
+  "weight": 1,
+  "zip": "15442-1020"
+}, {
+  "latitude": "27.814600",
+  "longitude": "-97.527000",
+  "weight": 1,
+  "zip": "78409-2633"
+}, {
+  "latitude": "37.645500",
+  "longitude": "-77.626600",
+  "weight": 1,
+  "zip": "23233"
+}, {
+  "latitude": "32.724000",
+  "longitude": "-116.997600",
+  "weight": 1,
+  "zip": "91977-3725"
+}, {
+  "latitude": "42.925500",
+  "longitude": "-78.748100",
+  "weight": 1,
+  "zip": "14225-1207"
+}, {
+  "latitude": "40.715700",
+  "longitude": "-80.260300",
+  "weight": 4,
+  "zip": "15074-1009"
+}, {
+  "latitude": "38.626400",
+  "longitude": "-88.948100",
+  "weight": 2,
+  "zip": "62881-6629"
+}, {
+  "latitude": "37.915400",
+  "longitude": "-121.910000",
+  "weight": 4,
+  "zip": "94517-0828"
+}, {
+  "latitude": "42.835600",
+  "longitude": "-71.093400",
+  "weight": 1,
+  "zip": "03865-2332"
+}, {
+  "latitude": "49.353660",
+  "longitude": "-98.282250",
+  "weight": 1,
+  "zip": "R0G 1H0"
+}, {
+  "latitude": "32.486000",
+  "longitude": "-93.676700",
+  "weight": 2,
+  "zip": "71112-8807"
+}, {
+  "latitude": "31.678100",
+  "longitude": "-98.113100",
+  "weight": 3,
+  "zip": "76531-1225"
+}, {
+  "latitude": "34.817400",
+  "longitude": "-83.433300",
+  "weight": 1,
+  "zip": "30576-1908"
+}, {
+  "latitude": "38.423100",
+  "longitude": "-89.989600",
+  "weight": 1,
+  "zip": "62285-3066"
+}, {
+  "latitude": "39.522700",
+  "longitude": "-77.974700",
+  "weight": 2,
+  "zip": "25403"
+}, {
+  "latitude": "41.361700",
+  "longitude": "-82.253800",
+  "weight": 2,
+  "zip": "44001-3447"
+}, {
+  "latitude": "39.079100",
+  "longitude": "-108.491600",
+  "weight": 1,
+  "zip": "81504-5499"
+}, {
+  "latitude": "48.554128",
+  "longitude": "-58.582067",
+  "weight": 1,
+  "zip": "A2N 1T1"
+}, {
+  "latitude": "34.989000",
+  "longitude": "-79.222800",
+  "weight": 1,
+  "zip": "28376-9671"
+}, {
+  "latitude": "40.926500",
+  "longitude": "-74.039200",
+  "weight": 1,
+  "zip": "07661-1308"
+}, {
+  "latitude": "29.681300",
+  "longitude": "-82.353900",
+  "weight": 1,
+  "zip": "32635-7471"
+}, {
+  "latitude": "33.335400",
+  "longitude": "-111.740600",
+  "weight": 3,
+  "zip": "85296-1122"
+}, {
+  "latitude": "39.684100",
+  "longitude": "-84.163300",
+  "weight": 1,
+  "zip": "45429"
+}, {
+  "latitude": "39.539400",
+  "longitude": "-76.356400",
+  "weight": 1,
+  "zip": "21014-1871"
+}, {
+  "latitude": "33.592400",
+  "longitude": "-101.936700",
+  "weight": 1,
+  "zip": "79416-4614"
+}, {
+  "latitude": "42.551200",
+  "longitude": "-82.916700",
+  "weight": 2,
+  "zip": "48035-1375"
+}, {
+  "latitude": "42.520100",
+  "longitude": "-88.138700",
+  "weight": 1,
+  "zip": "53179-9235"
+}, {
+  "latitude": "37.714900",
+  "longitude": "-97.499000",
+  "weight": 1,
+  "zip": "67235-7020"
+}, {
+  "latitude": "33.965900",
+  "longitude": "-80.935500",
+  "weight": 1,
+  "zip": "29209-2179"
+}, {
+  "latitude": "48.471029",
+  "longitude": "-81.338065",
+  "weight": 1,
+  "zip": "P4N 3B9"
+}, {
+  "latitude": "34.047900",
+  "longitude": "-81.110100",
+  "weight": 4,
+  "zip": "29210-3706"
+}, {
+  "latitude": "35.598600",
+  "longitude": "-82.290200",
+  "weight": 1,
+  "zip": "28711-2840"
+}, {
+  "latitude": "36.276300",
+  "longitude": "-85.951700",
+  "weight": 1,
+  "zip": "37030"
+}, {
+  "latitude": "36.204400",
+  "longitude": "-115.223300",
+  "weight": 1,
+  "zip": "89108-4668"
+}, {
+  "latitude": "41.619400",
+  "longitude": "-87.842200",
+  "weight": 1,
+  "zip": "60462-3583"
+}, {
+  "latitude": "35.990800",
+  "longitude": "-95.814300",
+  "weight": 1,
+  "zip": "74011-4262"
+}, {
+  "latitude": "52.285771",
+  "longitude": "-106.652937",
+  "weight": 1,
+  "zip": "S0K 0A2"
+}, {
+  "latitude": "41.170500",
+  "longitude": "-73.771500",
+  "weight": 1,
+  "zip": "10514-3703"
+}, {
+  "latitude": "44.406352",
+  "longitude": "-79.649555",
+  "weight": 1,
+  "zip": "L4M 5X6"
+}, {
+  "latitude": "40.762300",
+  "longitude": "-73.523000",
+  "weight": 1,
+  "zip": "11801-5449"
+}, {
+  "latitude": "45.237700",
+  "longitude": "-93.272400",
+  "weight": 1,
+  "zip": "55304-4336"
+}, {
+  "latitude": "35.722500",
+  "longitude": "-78.840800",
+  "weight": 1,
+  "zip": "27502-4442"
+}, {
+  "latitude": "47.143000",
+  "longitude": "-122.164400",
+  "weight": 1,
+  "zip": "98391-6138"
+}, {
+  "latitude": "32.848600",
+  "longitude": "-116.986200",
+  "weight": 2,
+  "zip": "92071-2121"
+}, {
+  "latitude": "35.902500",
+  "longitude": "-115.178900",
+  "weight": 2,
+  "zip": "89044-4451"
+}, {
+  "latitude": "40.595900",
+  "longitude": "-111.964400",
+  "weight": 1,
+  "zip": "84088-4301"
+}, {
+  "latitude": "43.732300",
+  "longitude": "-75.366900",
+  "weight": 1,
+  "zip": "13343-4112"
+}, {
+  "latitude": "32.975600",
+  "longitude": "-117.040200",
+  "weight": 2,
+  "zip": "92064-2646"
+}, {
+  "latitude": "41.060200",
+  "longitude": "-73.544500",
+  "weight": 3,
+  "zip": "06902-6118"
+}, {
+  "latitude": "33.592400",
+  "longitude": "-101.936700",
+  "weight": 1,
+  "zip": "79416-3822"
+}, {
+  "latitude": "31.873400",
+  "longitude": "-92.221400",
+  "weight": 1,
+  "zip": "71465-4085"
+}, {
+  "latitude": "36.112400",
+  "longitude": "-78.647600",
+  "weight": 1,
+  "zip": "27522"
+}, {
+  "latitude": "48.401872",
+  "longitude": "-71.257915",
+  "weight": 1,
+  "zip": "G7X 8A7"
+}, {
+  "latitude": "64.854400",
+  "longitude": "-147.846900",
+  "weight": 3,
+  "zip": "99709-5106"
+}, {
+  "latitude": "35.166300",
+  "longitude": "-101.886800",
+  "weight": 1,
+  "zip": "79109-5328"
+}, {
+  "latitude": "40.471700",
+  "longitude": "-80.087600",
+  "weight": 1,
+  "zip": "15136-3409"
+}, {
+  "latitude": "39.126300",
+  "longitude": "-86.576900",
+  "weight": 3,
+  "zip": "47403-1903"
+}, {
+  "latitude": "40.768700",
+  "longitude": "-80.359200",
+  "weight": 1,
+  "zip": "15010-1341"
+}, {
+  "latitude": "32.251300",
+  "longitude": "-80.872100",
+  "weight": 1,
+  "zip": "29910-6417"
+}, {
+  "latitude": "33.815500",
+  "longitude": "-112.120200",
+  "weight": 1,
+  "zip": "85086-4958"
+}, {
+  "latitude": "40.727800",
+  "longitude": "-73.860200",
+  "weight": 1,
+  "zip": "11374-1911"
+}, {
+  "latitude": "45.768891",
+  "longitude": "-66.492124",
+  "weight": 1,
+  "zip": "E2V 4H4"
+}, {
+  "latitude": "39.193800",
+  "longitude": "-96.585800",
+  "weight": 1,
+  "zip": "66502-1435"
+}, {
+  "latitude": "24.655700",
+  "longitude": "-81.382400",
+  "weight": 6,
+  "zip": "33040-3610"
+}, {
+  "latitude": "31.464700",
+  "longitude": "-100.390000",
+  "weight": 2,
+  "zip": "76905-7589"
+}, {
+  "latitude": "40.699600",
+  "longitude": "-74.653600",
+  "weight": 1,
+  "zip": "07931-2201"
+}, {
+  "latitude": "30.412900",
+  "longitude": "-87.309200",
+  "weight": 1,
+  "zip": "32506-9753"
+}, {
+  "latitude": "50.116631",
+  "longitude": "-96.918574",
+  "weight": 1,
+  "zip": "R1A 4A7"
+}, {
+  "latitude": "42.332000",
+  "longitude": "-83.469500",
+  "weight": 1,
+  "zip": "48187"
+}, {
+  "latitude": "42.664500",
+  "longitude": "-77.056900",
+  "weight": 1,
+  "zip": "14527-9210"
+}, {
+  "latitude": "40.705100",
+  "longitude": "-73.243000",
+  "weight": 1,
+  "zip": "11706-3137"
+}, {
+  "latitude": "49.277548",
+  "longitude": "-123.121963",
+  "weight": 1,
+  "zip": "V6B 0C2"
+}, {
+  "latitude": "43.687600",
+  "longitude": "-70.287600",
+  "weight": 1,
+  "zip": "04103-3780"
+}, {
+  "latitude": "39.225900",
+  "longitude": "-76.615300",
+  "weight": 1,
+  "zip": "21225-2907"
+}, {
+  "latitude": "30.338800",
+  "longitude": "-97.532300",
+  "weight": 1,
+  "zip": "78653-3770"
+}, {
+  "latitude": "52.236250",
+  "longitude": "-113.764882",
+  "weight": 1,
+  "zip": "T4R 0G4"
+}, {
+  "latitude": "34.669400",
+  "longitude": "-88.544300",
+  "weight": 1,
+  "zip": "38829"
+}, {
+  "latitude": "46.121477",
+  "longitude": "-60.181346",
+  "weight": 1,
+  "zip": "B1P 4S6"
+}, {
+  "latitude": "41.330900",
+  "longitude": "-92.472000",
+  "weight": 1,
+  "zip": "52586-9755"
+}, {
+  "latitude": "30.242800",
+  "longitude": "-97.765800",
+  "weight": 1,
+  "zip": "78704"
+}, {
+  "latitude": "42.228800",
+  "longitude": "-87.971900",
+  "weight": 1,
+  "zip": "60061-1875"
+}, {
+  "latitude": "27.845000",
+  "longitude": "-82.312500",
+  "weight": 1,
+  "zip": "33569-5601"
+}, {
+  "latitude": "54.268425",
+  "longitude": "-110.743491",
+  "weight": 1,
+  "zip": "T9N 2H4"
+}, {
+  "latitude": "48.364189",
+  "longitude": "-89.290246",
+  "weight": 6,
+  "zip": "P7E 3S1"
+}, {
+  "latitude": "46.559091",
+  "longitude": "-71.439742",
+  "weight": 2,
+  "zip": "G0S 1Z0"
+}, {
+  "latitude": "40.668000",
+  "longitude": "-111.505400",
+  "weight": 1,
+  "zip": "84068-0951"
+}, {
+  "latitude": "52.368334",
+  "longitude": "-114.925207",
+  "weight": 1,
+  "zip": "T4T 0B2"
+}, {
+  "latitude": "45.603200",
+  "longitude": "-122.513300",
+  "weight": 3,
+  "zip": "98683-9605"
+}, {
+  "latitude": "32.546000",
+  "longitude": "-83.604700",
+  "weight": 1,
+  "zip": "31005-3683"
+}, {
+  "latitude": "38.444500",
+  "longitude": "-75.558300",
+  "weight": 1,
+  "zip": "21875-2378"
+}, {
+  "latitude": "40.215100",
+  "longitude": "-76.868900",
+  "weight": 1,
+  "zip": "17070-5043"
+}, {
+  "latitude": "37.579900",
+  "longitude": "-84.274900",
+  "weight": 1,
+  "zip": "40403-8706"
+}, {
+  "latitude": "41.872100",
+  "longitude": "-87.657800",
+  "weight": 1,
+  "zip": "60607-2916"
+}, {
+  "latitude": "37.704800",
+  "longitude": "-97.363800",
+  "weight": 1,
+  "zip": "67203-5007"
+}, {
+  "latitude": "44.001528",
+  "longitude": "-79.686592",
+  "weight": 1,
+  "zip": "L0G 1T0"
+}, {
+  "latitude": "32.829500",
+  "longitude": "-109.626600",
+  "weight": 1,
+  "zip": "85546"
+}, {
+  "latitude": "42.779000",
+  "longitude": "-71.474800",
+  "weight": 1,
+  "zip": "03064-1760"
+}, {
+  "latitude": "45.997900",
+  "longitude": "-112.598800",
+  "weight": 1,
+  "zip": "59701-9237"
+}, {
+  "latitude": "32.456600",
+  "longitude": "-92.185400",
+  "weight": 1,
+  "zip": "71292-8367"
+}, {
+  "latitude": "39.694800",
+  "longitude": "-104.788100",
+  "weight": 4,
+  "zip": "80017-3157"
+}, {
+  "latitude": "36.777900",
+  "longitude": "-81.767600",
+  "weight": 1,
+  "zip": "24340-3638"
+}, {
+  "latitude": "40.798300",
+  "longitude": "-75.973500",
+  "weight": 1,
+  "zip": "18252-1904"
+}, {
+  "latitude": "29.518900",
+  "longitude": "-98.600600",
+  "weight": 3,
+  "zip": "78240-5103"
+}, {
+  "latitude": "39.803600",
+  "longitude": "-75.005800",
+  "weight": 1,
+  "zip": "08021-4934"
+}, {
+  "latitude": "41.631200",
+  "longitude": "-89.946700",
+  "weight": 3,
+  "zip": "61277-1428"
+}, {
+  "latitude": "54.768268",
+  "longitude": "-111.972559",
+  "weight": 1,
+  "zip": "T0A 2C0"
+}, {
+  "latitude": "37.719500",
+  "longitude": "-122.441100",
+  "weight": 1,
+  "zip": "94112-3836"
+}, {
+  "latitude": "41.964300",
+  "longitude": "-87.816200",
+  "weight": 1,
+  "zip": "60706-4445"
+}, {
+  "latitude": "56.702315",
+  "longitude": "-111.376159",
+  "weight": 1,
+  "zip": "T9J 1L5"
+}, {
+  "latitude": "54.342733",
+  "longitude": "-109.777860",
+  "weight": 1,
+  "zip": "S0M 2K0"
+}, {
+  "latitude": "42.238600",
+  "longitude": "-77.206600",
+  "weight": 2,
+  "zip": "14821-9537"
+}, {
+  "latitude": "48.176100",
+  "longitude": "-122.521000",
+  "weight": 1,
+  "zip": "98282-8228"
+}, {
+  "latitude": "38.618400",
+  "longitude": "-122.862000",
+  "weight": 1,
+  "zip": "95448"
+}, {
+  "latitude": "34.026800",
+  "longitude": "-84.242200",
+  "weight": 1,
+  "zip": "30022-8337"
+}, {
+  "latitude": "51.122797",
+  "longitude": "-113.968476",
+  "weight": 4,
+  "zip": "T3J 3Z7"
+}, {
+  "latitude": "40.049500",
+  "longitude": "-83.066900",
+  "weight": 1,
+  "zip": "43220-3221"
+}, {
+  "latitude": "38.711900",
+  "longitude": "-76.536700",
+  "weight": 2,
+  "zip": "20714-9638"
+}, {
+  "latitude": "33.700900",
+  "longitude": "-117.756400",
+  "weight": 1,
+  "zip": "92620-1740"
+}, {
+  "latitude": "40.460000",
+  "longitude": "-74.347800",
+  "weight": 1,
+  "zip": "08872-1806"
+}, {
+  "latitude": "36.011900",
+  "longitude": "-115.043300",
+  "weight": 1,
+  "zip": "89012-2456"
+}, {
+  "latitude": "41.697600",
+  "longitude": "-88.087300",
+  "weight": 1,
+  "zip": "60440-6204"
+}, {
+  "latitude": "33.316000",
+  "longitude": "-112.066900",
+  "weight": 1,
+  "zip": "85048-8412"
+}, {
+  "latitude": "42.460400",
+  "longitude": "-83.457700",
+  "weight": 1,
+  "zip": "48375-5026"
+}, {
+  "latitude": "35.580000",
+  "longitude": "-78.790800",
+  "weight": 1,
+  "zip": "27526-9557"
+}, {
+  "latitude": "29.740400",
+  "longitude": "-95.830400",
+  "weight": 1,
+  "zip": "77494-8603"
+}, {
+  "latitude": "33.735200",
+  "longitude": "-112.129400",
+  "weight": 1,
+  "zip": "85083-1604"
+}, {
+  "latitude": "40.636200",
+  "longitude": "-73.637500",
+  "weight": 2,
+  "zip": "11572-1835"
+}, {
+  "latitude": "47.687600",
+  "longitude": "-114.140400",
+  "weight": 5,
+  "zip": "59860-3101"
+}, {
+  "latitude": "33.569000",
+  "longitude": "-117.178300",
+  "weight": 2,
+  "zip": "92563-7871"
+}, {
+  "latitude": "33.310600",
+  "longitude": "-110.395300",
+  "weight": 1,
+  "zip": "85550-0058"
+}, {
+  "latitude": "29.418900",
+  "longitude": "-98.689500",
+  "weight": 1,
+  "zip": "78245-3242"
+}, {
+  "latitude": "49.619235",
+  "longitude": "-100.261181",
+  "weight": 1,
+  "zip": "R0K 2C0"
+}, {
+  "latitude": "49.756619",
+  "longitude": "-77.630266",
+  "weight": 1,
+  "zip": "J0Y 2A0"
+}, {
+  "latitude": "40.795900",
+  "longitude": "-81.553300",
+  "weight": 1,
+  "zip": "44647-1828"
+}, {
+  "latitude": "53.661502",
+  "longitude": "-113.610296",
+  "weight": 3,
+  "zip": "T8N 6K5"
+}, {
+  "latitude": "49.705997",
+  "longitude": "-75.959560",
+  "weight": 1,
+  "zip": "J0Y 3C0"
+}, {
+  "latitude": "36.257400",
+  "longitude": "-81.765200",
+  "weight": 4,
+  "zip": "28692-9736"
+}, {
+  "latitude": "31.536500",
+  "longitude": "-110.266600",
+  "weight": 5,
+  "zip": "85635-2468"
+}, {
+  "latitude": "52.308759",
+  "longitude": "-114.099360",
+  "weight": 1,
+  "zip": "T4S 1S6"
+}, {
+  "latitude": "41.545400",
+  "longitude": "-88.129900",
+  "weight": 3,
+  "zip": "60435"
+}, {
+  "latitude": "35.195500",
+  "longitude": "-94.253000",
+  "weight": 1,
+  "zip": "72936-5944"
+}, {
+  "latitude": "52.312780",
+  "longitude": "-113.835065",
+  "weight": 1,
+  "zip": "T4P 4C5"
+}, {
+  "latitude": "44.949700",
+  "longitude": "-93.337300",
+  "weight": 1,
+  "zip": "55416-4275"
+}, {
+  "latitude": "38.332600",
+  "longitude": "-85.461000",
+  "weight": 1,
+  "zip": "40014-8409"
+}, {
+  "latitude": "39.205500",
+  "longitude": "-85.931700",
+  "weight": 1,
+  "zip": "47201"
+}, {
+  "latitude": "33.058000",
+  "longitude": "-80.010100",
+  "weight": 1,
+  "zip": "29445-6633"
+}, {
+  "latitude": "40.394400",
+  "longitude": "-74.115700",
+  "weight": 1,
+  "zip": "07748-1049"
+}, {
+  "latitude": "37.620600",
+  "longitude": "-87.059100",
+  "weight": 1,
+  "zip": "42376-9531"
+}, {
+  "latitude": "41.420100",
+  "longitude": "-81.913100",
+  "weight": 1,
+  "zip": "44070-4756"
+}, {
+  "latitude": "35.506500",
+  "longitude": "-108.741400",
+  "weight": 1,
+  "zip": "87301-5184"
+}, {
+  "latitude": "55.147104",
+  "longitude": "-118.829618",
+  "weight": 1,
+  "zip": "T8W 2Z2"
+}, {
+  "latitude": "31.412100",
+  "longitude": "-95.990400",
+  "weight": 1,
+  "zip": "75831-0783"
+}, {
+  "latitude": "37.135300",
+  "longitude": "-121.650100",
+  "weight": 3,
+  "zip": "95037-5837"
+}, {
+  "latitude": "34.039700",
+  "longitude": "-117.180400",
+  "weight": 1,
+  "zip": "92373-5046"
+}, {
+  "latitude": "39.264400",
+  "longitude": "-81.535400",
+  "weight": 1,
+  "zip": "26101-8646"
+}, {
+  "latitude": "32.829500",
+  "longitude": "-109.626600",
+  "weight": 3,
+  "zip": "85546-3642"
+}, {
+  "latitude": "34.445100",
+  "longitude": "-119.256500",
+  "weight": 1,
+  "zip": "93023-9302"
+}, {
+  "latitude": "41.885800",
+  "longitude": "-87.618100",
+  "weight": 1,
+  "zip": "60601-2913"
+}, {
+  "latitude": "39.832400",
+  "longitude": "-84.893600",
+  "weight": 1,
+  "zip": "47374-1857"
+}, {
+  "latitude": "38.760900",
+  "longitude": "-121.286700",
+  "weight": 1,
+  "zip": "95678-6047"
+}, {
+  "latitude": "39.949200",
+  "longitude": "-76.801800",
+  "weight": 1,
+  "zip": "17408-9425"
+}, {
+  "latitude": "55.167413",
+  "longitude": "-118.783584",
+  "weight": 2,
+  "zip": "T8V 3R6"
+}, {
+  "latitude": "32.278700",
+  "longitude": "-101.457800",
+  "weight": 4,
+  "zip": "79720"
+}, {
+  "latitude": "39.891100",
+  "longitude": "-75.117000",
+  "weight": 2,
+  "zip": "08030-1118"
+}, {
+  "latitude": "37.636600",
+  "longitude": "-81.950100",
+  "weight": 1,
+  "zip": "25621-0310"
+}, {
+  "latitude": "40.392800",
+  "longitude": "-111.794100",
+  "weight": 1,
+  "zip": "84003-2708"
+}, {
+  "latitude": "42.916800",
+  "longitude": "-73.721400",
+  "weight": 1,
+  "zip": "12118-2525"
+}, {
+  "latitude": "41.759100",
+  "longitude": "-70.852300",
+  "weight": 1,
+  "zip": "02770-4112"
+}, {
+  "latitude": "40.372400",
+  "longitude": "-78.632800",
+  "weight": 1,
+  "zip": "15946-8507"
+}, {
+  "latitude": "40.021000",
+  "longitude": "-82.807900",
+  "weight": 2,
+  "zip": "43004-8279"
+}, {
+  "latitude": "45.998500",
+  "longitude": "-84.697800",
+  "weight": 1,
+  "zip": "49781-0153"
+}, {
+  "latitude": "42.025879",
+  "longitude": "-82.769989",
+  "weight": 1,
+  "zip": "N9Y 0A7"
+}, {
+  "latitude": "32.299300",
+  "longitude": "-97.027000",
+  "weight": 1,
+  "zip": "76064-0096"
+}, {
+  "latitude": "39.678900",
+  "longitude": "-86.130200",
+  "weight": 1,
+  "zip": "46227-8136"
+}, {
+  "latitude": "39.808800",
+  "longitude": "-86.316300",
+  "weight": 1,
+  "zip": "46234-4045"
+}, {
+  "latitude": "38.571800",
+  "longitude": "-89.895700",
+  "weight": 1,
+  "zip": "62269-3525"
+}, {
+  "latitude": "33.431000",
+  "longitude": "-93.876500",
+  "weight": 1,
+  "zip": "71854-8925"
+}, {
+  "latitude": "43.263600",
+  "longitude": "-73.076600",
+  "weight": 1,
+  "zip": "05251-0706"
+}, {
+  "latitude": "40.846200",
+  "longitude": "-73.148200",
+  "weight": 1,
+  "zip": "11767-2927"
+}, {
+  "latitude": "39.800500",
+  "longitude": "-120.542200",
+  "weight": 2,
+  "zip": "96122-0106"
+}, {
+  "latitude": "41.147200",
+  "longitude": "-73.996200",
+  "weight": 1,
+  "zip": "10956-2623"
+}, {
+  "latitude": "37.950600",
+  "longitude": "-87.856900",
+  "weight": 1,
+  "zip": "47620-9589"
+}, {
+  "latitude": "47.425300",
+  "longitude": "-120.327300",
+  "weight": 1,
+  "zip": "98801-8012"
+}, {
+  "latitude": "53.443015",
+  "longitude": "-113.425896",
+  "weight": 1,
+  "zip": "T6L 3B4"
+}, {
+  "latitude": "45.438898",
+  "longitude": "-75.785311",
+  "weight": 1,
+  "zip": "J9A 3J1"
+}, {
+  "latitude": "34.144900",
+  "longitude": "-117.579300",
+  "weight": 2,
+  "zip": "91737-3717"
+}, {
+  "latitude": "58.809246",
+  "longitude": "-122.693489",
+  "weight": 3,
+  "zip": "V0C 1R0"
+}, {
+  "latitude": "40.483700",
+  "longitude": "-104.899400",
+  "weight": 1,
+  "zip": "80550-6173"
+}, {
+  "latitude": "35.179600",
+  "longitude": "-80.855900",
+  "weight": 1,
+  "zip": "28209"
+}, {
+  "latitude": "32.979200",
+  "longitude": "-115.529600",
+  "weight": 1,
+  "zip": "92227-3479"
+}, {
+  "latitude": "40.688400",
+  "longitude": "-73.374500",
+  "weight": 1,
+  "zip": "11757-2808"
+}, {
+  "latitude": "33.616500",
+  "longitude": "-111.955400",
+  "weight": 1,
+  "zip": "85254-5913"
+}, {
+  "latitude": "63.543600",
+  "longitude": "-149.986700",
+  "weight": 1,
+  "zip": "99744-3166"
+}, {
+  "latitude": "36.688300",
+  "longitude": "-110.265200",
+  "weight": 1,
+  "zip": "86033-0722"
+}, {
+  "latitude": "40.707900",
+  "longitude": "-75.150700",
+  "weight": 1,
+  "zip": "08865-9361"
+}, {
+  "latitude": "41.777700",
+  "longitude": "-72.524400",
+  "weight": 1,
+  "zip": "06040-3839"
+}, {
+  "latitude": "39.405900",
+  "longitude": "-84.522100",
+  "weight": 1,
+  "zip": "45011-6501"
+}, {
+  "latitude": "33.132300",
+  "longitude": "-109.246200",
+  "weight": 1,
+  "zip": "85533-0466"
+}, {
+  "latitude": "44.536000",
+  "longitude": "-73.202200",
+  "weight": 1,
+  "zip": "05446-9713"
+}, {
+  "latitude": "48.229100",
+  "longitude": "-101.298500",
+  "weight": 1,
+  "zip": "58701-5714"
+}, {
+  "latitude": "41.196300",
+  "longitude": "-76.004400",
+  "weight": 3,
+  "zip": "18634-1203"
+}, {
+  "latitude": "44.786000",
+  "longitude": "-93.220200",
+  "weight": 1,
+  "zip": "55122-3141"
+}, {
+  "latitude": "41.589400",
+  "longitude": "-71.462500",
+  "weight": 1,
+  "zip": "02852-4222"
+}, {
+  "latitude": "50.213746",
+  "longitude": "-66.215514",
+  "weight": 1,
+  "zip": "G4R 4K2"
+}, {
+  "latitude": "52.362460",
+  "longitude": "-114.370536",
+  "weight": 1,
+  "zip": "T0M 0X0"
+}, {
+  "latitude": "38.589300",
+  "longitude": "-90.348100",
+  "weight": 1,
+  "zip": "63119-2076"
+}, {
+  "latitude": "36.123200",
+  "longitude": "-115.090200",
+  "weight": 1,
+  "zip": "89121-7512"
+}, {
+  "latitude": "30.053200",
+  "longitude": "-95.377300",
+  "weight": 1,
+  "zip": "77373-7661"
+}, {
+  "latitude": "42.129200",
+  "longitude": "-89.265900",
+  "weight": 1,
+  "zip": "61010-9620"
+}, {
+  "latitude": "40.837000",
+  "longitude": "-72.917400",
+  "weight": 2,
+  "zip": "11980-0472"
+}, {
+  "latitude": "46.993900",
+  "longitude": "-122.743000",
+  "weight": 1,
+  "zip": "98513-4306"
+}, {
+  "latitude": "42.813000",
+  "longitude": "-70.884700",
+  "weight": 1,
+  "zip": "01950-3846"
+}, {
+  "latitude": "35.512700",
+  "longitude": "-82.841300",
+  "weight": 3,
+  "zip": "28716-5464"
+}, {
+  "latitude": "35.334000",
+  "longitude": "-97.476800",
+  "weight": 2,
+  "zip": "73160-6010"
+}, {
+  "latitude": "44.434400",
+  "longitude": "-68.757400",
+  "weight": 4,
+  "zip": "04476-3604"
+}, {
+  "latitude": "40.670500",
+  "longitude": "-73.894000",
+  "weight": 1,
+  "zip": "11207-1221"
+}, {
+  "latitude": "29.776700",
+  "longitude": "-98.462600",
+  "weight": 1,
+  "zip": "78163-4103"
+}, {
+  "latitude": "42.525400",
+  "longitude": "-96.400500",
+  "weight": 1,
+  "zip": "51104-3651"
+}, {
+  "latitude": "39.431100",
+  "longitude": "-77.815800",
+  "weight": 2,
+  "zip": "25443-4748"
+}, {
+  "latitude": "37.771900",
+  "longitude": "-97.317500",
+  "weight": 1,
+  "zip": "67219-1715"
+}, {
+  "latitude": "35.361300",
+  "longitude": "-82.426400",
+  "weight": 1,
+  "zip": "28792-0272"
+}, {
+  "latitude": "40.826100",
+  "longitude": "-73.819600",
+  "weight": 1,
+  "zip": "10465-1727"
+}, {
+  "latitude": "41.710100",
+  "longitude": "-85.972900",
+  "weight": 1,
+  "zip": "46514-3955"
+}, {
+  "latitude": "39.165200",
+  "longitude": "-84.662500",
+  "weight": 2,
+  "zip": "45248-8462"
+}, {
+  "latitude": "41.207500",
+  "longitude": "-96.114700",
+  "weight": 2,
+  "zip": "68137-5362"
+}, {
+  "latitude": "39.593400",
+  "longitude": "-88.603800",
+  "weight": 1,
+  "zip": "61951-6379"
+}, {
+  "latitude": "50.708593",
+  "longitude": "-120.409595",
+  "weight": 2,
+  "zip": "V2B 4Y8"
+}, {
+  "latitude": "40.171700",
+  "longitude": "-80.256000",
+  "weight": 1,
+  "zip": "15301-9288"
+}, {
+  "latitude": "28.394900",
+  "longitude": "-81.417900",
+  "weight": 1,
+  "zip": "32837-4703"
+}, {
+  "latitude": "46.489658",
+  "longitude": "-80.946850",
+  "weight": 1,
+  "zip": "P3B 1K9"
+}, {
+  "latitude": "38.366100",
+  "longitude": "-76.434600",
+  "weight": 2,
+  "zip": "20657-5520"
+}, {
+  "latitude": "44.787400",
+  "longitude": "-68.753900",
+  "weight": 1,
+  "zip": "04412-1911"
+}, {
+  "latitude": "33.865600",
+  "longitude": "-84.072500",
+  "weight": 1,
+  "zip": "30047-3241"
+}, {
+  "latitude": "35.141700",
+  "longitude": "-97.340900",
+  "weight": 1,
+  "zip": "73068-9383"
+}, {
+  "latitude": "33.904500",
+  "longitude": "-84.862100",
+  "weight": 1,
+  "zip": "30157-7781"
+}, {
+  "latitude": "34.480200",
+  "longitude": "-117.408200",
+  "weight": 4,
+  "zip": "92392-1264"
+}, {
+  "latitude": "29.594300",
+  "longitude": "-90.754800",
+  "weight": 1,
+  "zip": "70360-8351"
+}, {
+  "latitude": "35.904000",
+  "longitude": "-109.308700",
+  "weight": 3,
+  "zip": "86511-0892"
+}, {
+  "latitude": "28.514000",
+  "longitude": "-81.357000",
+  "weight": 1,
+  "zip": "32806-4959"
+}, {
+  "latitude": "30.853600",
+  "longitude": "-83.888300",
+  "weight": 2,
+  "zip": "31757-8102"
+}, {
+  "latitude": "49.672367",
+  "longitude": "-103.852538",
+  "weight": 1,
+  "zip": "S4H 0S7"
+}, {
+  "latitude": "29.517300",
+  "longitude": "-95.096300",
+  "weight": 1,
+  "zip": "77573-3128"
+}, {
+  "latitude": "30.641200",
+  "longitude": "-85.375600",
+  "weight": 1,
+  "zip": "32420-6823"
+}, {
+  "latitude": "49.216513",
+  "longitude": "-84.777984",
+  "weight": 1,
+  "zip": "P0M 1Z0"
+}, {
+  "latitude": "47.646200",
+  "longitude": "-122.038600",
+  "weight": 1,
+  "zip": "98053-8251"
+}, {
+  "latitude": "30.159800",
+  "longitude": "-95.740200",
+  "weight": 1,
+  "zip": "77355-8563"
+}, {
+  "latitude": "41.816700",
+  "longitude": "-89.969000",
+  "weight": 1,
+  "zip": "61270-2628"
+}, {
+  "latitude": "29.561300",
+  "longitude": "-97.962800",
+  "weight": 1,
+  "zip": "78155-5918"
+}, {
+  "latitude": "42.138200",
+  "longitude": "-83.217900",
+  "weight": 1,
+  "zip": "48183-2583"
+}, {
+  "latitude": "30.280100",
+  "longitude": "-81.416500",
+  "weight": 1,
+  "zip": "32250-8175"
+}, {
+  "latitude": "49.142492",
+  "longitude": "-102.807534",
+  "weight": 1,
+  "zip": "S0C 0M0"
+}, {
+  "latitude": "40.713500",
+  "longitude": "-73.354600",
+  "weight": 1,
+  "zip": "11704-3302"
+}, {
+  "latitude": "41.583100",
+  "longitude": "-75.505600",
+  "weight": 1,
+  "zip": "18407-1103"
+}, {
+  "latitude": "29.418900",
+  "longitude": "-98.689500",
+  "weight": 1,
+  "zip": "78245-2670"
+}, {
+  "latitude": "39.794000",
+  "longitude": "-86.270700",
+  "weight": 1,
+  "zip": "46224-6916"
+}, {
+  "latitude": "42.982200",
+  "longitude": "-88.094600",
+  "weight": 1,
+  "zip": "53151-1852"
+}, {
+  "latitude": "38.618800",
+  "longitude": "-89.528400",
+  "weight": 1,
+  "zip": "62230-3010"
+}, {
+  "latitude": "41.348400",
+  "longitude": "-72.911700",
+  "weight": 1,
+  "zip": "06517-3606"
+}, {
+  "latitude": "27.743200",
+  "longitude": "-98.083600",
+  "weight": 1,
+  "zip": "78332-5328"
+}, {
+  "latitude": "35.596200",
+  "longitude": "-81.033900",
+  "weight": 1,
+  "zip": "28673-9322"
+}, {
+  "latitude": "49.954443",
+  "longitude": "-97.085421",
+  "weight": 2,
+  "zip": "R2V 2C1"
+}, {
+  "latitude": "34.162600",
+  "longitude": "-119.197300",
+  "weight": 1,
+  "zip": "93041-4549"
+}, {
+  "latitude": "49.241456",
+  "longitude": "-122.512844",
+  "weight": 2,
+  "zip": "V4R 1C9"
+}, {
+  "latitude": "42.041100",
+  "longitude": "-91.594100",
+  "weight": 1,
+  "zip": "52302-5173"
+}, {
+  "latitude": "49.725335",
+  "longitude": "-112.622947",
+  "weight": 1,
+  "zip": "T1M 1E7"
+}, {
+  "latitude": "37.329300",
+  "longitude": "-121.833900",
+  "weight": 1,
+  "zip": "95122-1309"
+}, {
+  "latitude": "41.920900",
+  "longitude": "-87.704300",
+  "weight": 2,
+  "zip": "60647-4002"
+}, {
+  "latitude": "42.752800",
+  "longitude": "-71.084300",
+  "weight": 1,
+  "zip": "01835-7707"
+}, {
+  "latitude": "30.968700",
+  "longitude": "-87.321600",
+  "weight": 1,
+  "zip": "32535"
+}, {
+  "latitude": "40.603900",
+  "longitude": "-74.147200",
+  "weight": 1,
+  "zip": "10314-5112"
+}, {
+  "latitude": "37.808300",
+  "longitude": "-80.440700",
+  "weight": 1,
+  "zip": "24901-1312"
+}, {
+  "latitude": "44.141500",
+  "longitude": "-103.205200",
+  "weight": 1,
+  "zip": "57701-1008"
+}, {
+  "latitude": "38.338400",
+  "longitude": "-90.414200",
+  "weight": 1,
+  "zip": "63012-2725"
+}, {
+  "latitude": "30.280100",
+  "longitude": "-81.416500",
+  "weight": 1,
+  "zip": "32250-4923"
+}, {
+  "latitude": "32.901500",
+  "longitude": "-84.332400",
+  "weight": 1,
+  "zip": "30286-3428"
+}, {
+  "latitude": "61.105400",
+  "longitude": "-149.780000",
+  "weight": 1,
+  "zip": "99516-2411"
+}, {
+  "latitude": "41.576100",
+  "longitude": "-72.509300",
+  "weight": 1,
+  "zip": "06424-1622"
+}, {
+  "latitude": "42.318900",
+  "longitude": "-85.515200",
+  "weight": 1,
+  "zip": "49048-2217"
+}, {
+  "latitude": "51.167971",
+  "longitude": "-114.452815",
+  "weight": 1,
+  "zip": "T4C 0P9"
+}, {
+  "latitude": "35.354700",
+  "longitude": "-108.103800",
+  "weight": 1,
+  "zip": "87045-0184"
+}, {
+  "latitude": "25.766400",
+  "longitude": "-80.231700",
+  "weight": 2,
+  "zip": "33135-2544"
+}, {
+  "latitude": "35.649800",
+  "longitude": "-82.710600",
+  "weight": 1,
+  "zip": "28748-5113"
+}, {
+  "latitude": "52.325402",
+  "longitude": "-112.704804",
+  "weight": 1,
+  "zip": "T0C 0N0"
+}, {
+  "latitude": "46.410325",
+  "longitude": "-71.088464",
+  "weight": 1,
+  "zip": "G0S 2J0"
+}, {
+  "latitude": "40.928600",
+  "longitude": "-98.387300",
+  "weight": 1,
+  "zip": "68803"
+}, {
+  "latitude": "41.408700",
+  "longitude": "-73.248500",
+  "weight": 3,
+  "zip": "06482-1303"
+}, {
+  "latitude": "34.809600",
+  "longitude": "-90.009500",
+  "weight": 1,
+  "zip": "38632-0795"
+}, {
+  "latitude": "43.798900",
+  "longitude": "-91.217500",
+  "weight": 1,
+  "zip": "54601-5315"
+}, {
+  "latitude": "32.739200",
+  "longitude": "-97.385200",
+  "weight": 1,
+  "zip": "76107-5109"
+}, {
+  "latitude": "42.263600",
+  "longitude": "-88.004800",
+  "weight": 1,
+  "zip": "60060-1461"
+}, {
+  "latitude": "38.300900",
+  "longitude": "-80.835300",
+  "weight": 1,
+  "zip": "26651"
+}, {
+  "latitude": "40.538400",
+  "longitude": "-105.054700",
+  "weight": 1,
+  "zip": "80525-1131"
+}, {
+  "latitude": "39.537000",
+  "longitude": "-83.455000",
+  "weight": 4,
+  "zip": "43160-2356"
+}, {
+  "latitude": "40.502300",
+  "longitude": "-78.005000",
+  "weight": 1,
+  "zip": "16652"
+}, {
+  "latitude": "58.435931",
+  "longitude": "-130.005246",
+  "weight": 2,
+  "zip": "V0C 1L0"
+}, {
+  "latitude": "42.364200",
+  "longitude": "-71.025700",
+  "weight": 4,
+  "zip": "02128-2649"
+}, {
+  "latitude": "40.808300",
+  "longitude": "-73.130500",
+  "weight": 1,
+  "zip": "11779-7102"
+}, {
+  "latitude": "34.453700",
+  "longitude": "-84.155000",
+  "weight": 1,
+  "zip": "30534-5731"
+}, {
+  "latitude": "45.908996",
+  "longitude": "-77.277338",
+  "weight": 1,
+  "zip": "K8H 1J8"
+}, {
+  "latitude": "42.982200",
+  "longitude": "-88.094600",
+  "weight": 1,
+  "zip": "53151-6594"
+}, {
+  "latitude": "36.326500",
+  "longitude": "-115.339800",
+  "weight": 1,
+  "zip": "89166-1052"
+}, {
+  "latitude": "40.905600",
+  "longitude": "-115.534400",
+  "weight": 1,
+  "zip": "89801-2850"
+}, {
+  "latitude": "29.561200",
+  "longitude": "-98.611700",
+  "weight": 2,
+  "zip": "78249-1494"
+}, {
+  "latitude": "50.450753",
+  "longitude": "-104.565011",
+  "weight": 1,
+  "zip": "S4N 1S4"
+}, {
+  "latitude": "48.364600",
+  "longitude": "-102.957600",
+  "weight": 1,
+  "zip": "58852-9239"
+}, {
+  "latitude": "31.761700",
+  "longitude": "-93.091600",
+  "weight": 1,
+  "zip": "71457-7520"
+}, {
+  "latitude": "41.232400",
+  "longitude": "-95.875100",
+  "weight": 2,
+  "zip": "51501-5829"
+}, {
+  "latitude": "54.420581",
+  "longitude": "-110.261292",
+  "weight": 3,
+  "zip": "T9M 2C2"
+}, {
+  "latitude": "40.307200",
+  "longitude": "-78.943000",
+  "weight": 2,
+  "zip": "15905-3109"
+}, {
+  "latitude": "38.425700",
+  "longitude": "-81.994300",
+  "weight": 4,
+  "zip": "25526-7505"
+}, {
+  "latitude": "40.242300",
+  "longitude": "-76.057700",
+  "weight": 2,
+  "zip": "19501-0175"
+}, {
+  "latitude": "40.711700",
+  "longitude": "-73.300700",
+  "weight": 1,
+  "zip": "11795"
+}, {
+  "latitude": "52.293093",
+  "longitude": "-114.110653",
+  "weight": 1,
+  "zip": "T4S 2R1"
+}, {
+  "latitude": "48.182900",
+  "longitude": "-122.112100",
+  "weight": 1,
+  "zip": "98223-8740"
+}, {
+  "latitude": "38.443200",
+  "longitude": "-122.754700",
+  "weight": 1,
+  "zip": "95401-5739"
+}, {
+  "latitude": "33.764300",
+  "longitude": "-116.422500",
+  "weight": 1,
+  "zip": "92270-0014"
+}, {
+  "latitude": "37.221400",
+  "longitude": "-93.544700",
+  "weight": 1,
+  "zip": "65612-8112"
+}, {
+  "latitude": "33.811000",
+  "longitude": "-117.849300",
+  "weight": 1,
+  "zip": "92867-1704"
+}, {
+  "latitude": "34.289700",
+  "longitude": "-84.179600",
+  "weight": 1,
+  "zip": "30028-6927"
+}, {
+  "latitude": "41.428900",
+  "longitude": "-78.550500",
+  "weight": 1,
+  "zip": "15857-3610"
+}, {
+  "latitude": "30.165300",
+  "longitude": "-85.576300",
+  "weight": 1,
+  "zip": "32404-4076"
+}, {
+  "latitude": "33.479000",
+  "longitude": "-112.394700",
+  "weight": 1,
+  "zip": "85395-9000"
+}, {
+  "latitude": "40.952100",
+  "longitude": "-90.369800",
+  "weight": 1,
+  "zip": "61401-2427"
+}, {
+  "latitude": "42.501600",
+  "longitude": "-83.102700",
+  "weight": 1,
+  "zip": "48071-4536"
+}, {
+  "latitude": "35.540000",
+  "longitude": "-89.817700",
+  "weight": 1,
+  "zip": "38015-6376"
+}, {
+  "latitude": "52.254103",
+  "longitude": "-113.770331",
+  "weight": 1,
+  "zip": "T4R 1W6"
+}, {
+  "latitude": "40.084700",
+  "longitude": "-82.798800",
+  "weight": 1,
+  "zip": "43054-8585"
+}, {
+  "latitude": "33.352700",
+  "longitude": "-111.780900",
+  "weight": 7,
+  "zip": "85234-7514"
+}, {
+  "latitude": "39.599200",
+  "longitude": "-78.844400",
+  "weight": 2,
+  "zip": "21502-4719"
+}, {
+  "latitude": "41.766200",
+  "longitude": "-88.141000",
+  "weight": 1,
+  "zip": "60540"
+}, {
+  "latitude": "41.593000",
+  "longitude": "-88.050700",
+  "weight": 1,
+  "zip": "60441-3161"
+}, {
+  "latitude": "37.827400",
+  "longitude": "-87.563200",
+  "weight": 1,
+  "zip": "42420-2848"
+}, {
+  "latitude": "42.283600",
+  "longitude": "-71.129500",
+  "weight": 1,
+  "zip": "02131-4524"
+}, {
+  "latitude": "36.494200",
+  "longitude": "-87.878700",
+  "weight": 1,
+  "zip": "37058-6261"
+}, {
+  "latitude": "49.632273",
+  "longitude": "-102.269057",
+  "weight": 3,
+  "zip": "S0C 0R0"
+}, {
+  "latitude": "39.927400",
+  "longitude": "-82.004100",
+  "weight": 4,
+  "zip": "43701"
+}, {
+  "latitude": "38.793200",
+  "longitude": "-82.930600",
+  "weight": 1,
+  "zip": "45662-5332"
+}, {
+  "latitude": "40.508500",
+  "longitude": "-74.244500",
+  "weight": 6,
+  "zip": "10307-1140"
+}, {
+  "latitude": "32.404700",
+  "longitude": "-111.273600",
+  "weight": 1,
+  "zip": "85653-8120"
+}, {
+  "latitude": "34.003000",
+  "longitude": "-118.429800",
+  "weight": 1,
+  "zip": "90066-3753"
+}, {
+  "latitude": "50.879786",
+  "longitude": "-113.955128",
+  "weight": 1,
+  "zip": "T3M 0P6"
+}, {
+  "latitude": "53.506152",
+  "longitude": "-105.564461",
+  "weight": 1,
+  "zip": "S0J 1Z0"
+}, {
+  "latitude": "41.409700",
+  "longitude": "-72.911000",
+  "weight": 1,
+  "zip": "06518-1016"
+}, {
+  "latitude": "49.870803",
+  "longitude": "-111.378918",
+  "weight": 1,
+  "zip": "T0K 0G0"
+}, {
+  "latitude": "40.630600",
+  "longitude": "-74.137900",
+  "weight": 1,
+  "zip": "10302-1502"
+}, {
+  "latitude": "41.744700",
+  "longitude": "-87.769900",
+  "weight": 1,
+  "zip": "60459-1116"
+}, {
+  "latitude": "39.971200",
+  "longitude": "-86.124500",
+  "weight": 1,
+  "zip": "46032-5425"
+}, {
+  "latitude": "36.292100",
+  "longitude": "-95.312900",
+  "weight": 1,
+  "zip": "74361-6814"
+}, {
+  "latitude": "33.431700",
+  "longitude": "-111.846900",
+  "weight": 1,
+  "zip": "85201-2202"
+}, {
+  "latitude": "37.157400",
+  "longitude": "-76.584500",
+  "weight": 1,
+  "zip": "23604"
+}, {
+  "latitude": "38.216200",
+  "longitude": "-85.224300",
+  "weight": 1,
+  "zip": "40065-9265"
+}, {
+  "latitude": "44.559200",
+  "longitude": "-87.823500",
+  "weight": 1,
+  "zip": "54229-9464"
+}, {
+  "latitude": "33.949600",
+  "longitude": "-83.994200",
+  "weight": 1,
+  "zip": "30046-5995"
+}, {
+  "latitude": "33.371000",
+  "longitude": "-96.944600",
+  "weight": 1,
+  "zip": "76258-4430"
+}, {
+  "latitude": "39.626900",
+  "longitude": "-119.708100",
+  "weight": 3,
+  "zip": "89436-2508"
+}, {
+  "latitude": "40.998800",
+  "longitude": "-74.426100",
+  "weight": 2,
+  "zip": "07405-2317"
+}, {
+  "latitude": "47.798900",
+  "longitude": "-116.742300",
+  "weight": 1,
+  "zip": "83835-9286"
+}, {
+  "latitude": "37.146600",
+  "longitude": "-80.271500",
+  "weight": 4,
+  "zip": "24162-2021"
+}, {
+  "latitude": "30.421200",
+  "longitude": "-86.892600",
+  "weight": 2,
+  "zip": "32566-2703"
+}, {
+  "latitude": "45.411658",
+  "longitude": "-73.676075",
+  "weight": 1,
+  "zip": "J0L 1B0"
+}, {
+  "latitude": "40.545700",
+  "longitude": "-74.179200",
+  "weight": 2,
+  "zip": "10312-3128"
+}, {
+  "latitude": "39.486900",
+  "longitude": "-88.176100",
+  "weight": 1,
+  "zip": "61920-1864"
+}, {
+  "latitude": "36.189700",
+  "longitude": "-86.502300",
+  "weight": 1,
+  "zip": "37122-2130"
+}, {
+  "latitude": "36.599500",
+  "longitude": "-87.558500",
+  "weight": 1,
+  "zip": "42223-1109"
+}, {
+  "latitude": "56.236010",
+  "longitude": "-120.805123",
+  "weight": 1,
+  "zip": "V1J 3A5"
+}, {
+  "latitude": "48.443321",
+  "longitude": "-68.520357",
+  "weight": 1,
+  "zip": "G5L 4Y8"
+}, {
+  "latitude": "40.398000",
+  "longitude": "-74.323600",
+  "weight": 1,
+  "zip": "08857-2341"
+}, {
+  "latitude": "39.322300",
+  "longitude": "-74.600800",
+  "weight": 2,
+  "zip": "08244-1171"
+}, {
+  "latitude": "28.582600",
+  "longitude": "-81.190700",
+  "weight": 2,
+  "zip": "32826-3524"
+}, {
+  "latitude": "32.039100",
+  "longitude": "-81.124200",
+  "weight": 1,
+  "zip": "31405-6752"
+}, {
+  "latitude": "36.171600",
+  "longitude": "-94.042800",
+  "weight": 3,
+  "zip": "72764-9082"
+}, {
+  "latitude": "40.514500",
+  "longitude": "-75.602900",
+  "weight": 1,
+  "zip": "18011-2724"
+}, {
+  "latitude": "39.764700",
+  "longitude": "-75.506900",
+  "weight": 2,
+  "zip": "19809-2474"
+}, {
+  "latitude": "39.029900",
+  "longitude": "-96.839600",
+  "weight": 1,
+  "zip": "66441-1418"
+}, {
+  "latitude": "34.578500",
+  "longitude": "-113.175500",
+  "weight": 1,
+  "zip": "86321-0646"
+}, {
+  "latitude": "28.499800",
+  "longitude": "-81.328800",
+  "weight": 1,
+  "zip": "32812"
+}, {
+  "latitude": "42.527100",
+  "longitude": "-73.611800",
+  "weight": 1,
+  "zip": "12123-1723"
+}, {
+  "latitude": "33.329100",
+  "longitude": "-111.994300",
+  "weight": 1,
+  "zip": "85044-9001"
+}, {
+  "latitude": "56.765097",
+  "longitude": "-111.456440",
+  "weight": 1,
+  "zip": "T9K 0E4"
+}, {
+  "latitude": "34.880700",
+  "longitude": "-92.230300",
+  "weight": 1,
+  "zip": "72120-1525"
+}, {
+  "latitude": "39.498000",
+  "longitude": "-119.823900",
+  "weight": 3,
+  "zip": "89509-5663"
+}, {
+  "latitude": "35.537600",
+  "longitude": "-82.700100",
+  "weight": 1,
+  "zip": "28715-9579"
+}, {
+  "latitude": "51.028800",
+  "longitude": "-114.018049",
+  "weight": 1,
+  "zip": "T2V 1A5"
+}, {
+  "latitude": "54.646721",
+  "longitude": "-101.540044",
+  "weight": 1,
+  "zip": "R0B 0H0"
+}, {
+  "latitude": "40.886100",
+  "longitude": "-73.243800",
+  "weight": 1,
+  "zip": "11754-4104"
+}, {
+  "latitude": "40.871600",
+  "longitude": "-104.234600",
+  "weight": 1,
+  "zip": "80729"
+}, {
+  "latitude": "27.635700",
+  "longitude": "-99.592300",
+  "weight": 1,
+  "zip": "78045-7052"
+}, {
+  "latitude": "39.595300",
+  "longitude": "-79.922900",
+  "weight": 1,
+  "zip": "26508-2997"
+}, {
+  "latitude": "41.232500",
+  "longitude": "-80.234000",
+  "weight": 1,
+  "zip": "16137-3116"
+}, {
+  "latitude": "40.615600",
+  "longitude": "-74.772400",
+  "weight": 1,
+  "zip": "08889-3526"
+}, {
+  "latitude": "35.480900",
+  "longitude": "-108.176700",
+  "weight": 1,
+  "zip": "87311-0308"
+}, {
+  "latitude": "40.896500",
+  "longitude": "-75.367000",
+  "weight": 1,
+  "zip": "18353-8584"
+}, {
+  "latitude": "35.402000",
+  "longitude": "-94.633200",
+  "weight": 1,
+  "zip": "74948"
+}, {
+  "latitude": "33.418800",
+  "longitude": "-86.786700",
+  "weight": 1,
+  "zip": "35216-4034"
+}, {
+  "latitude": "32.483000",
+  "longitude": "-93.734900",
+  "weight": 4,
+  "zip": "71104-1820"
+}, {
+  "latitude": "32.855500",
+  "longitude": "-100.470500",
+  "weight": 1,
+  "zip": "79546-3905"
+}, {
+  "latitude": "40.603700",
+  "longitude": "-112.041100",
+  "weight": 1,
+  "zip": "84081-8169"
+}, {
+  "latitude": "38.980700",
+  "longitude": "-77.341900",
+  "weight": 1,
+  "zip": "20194-1957"
+}, {
+  "latitude": "36.310800",
+  "longitude": "-89.073100",
+  "weight": 1,
+  "zip": "38253-3839"
+}, {
+  "latitude": "28.552500",
+  "longitude": "-81.757400",
+  "weight": 1,
+  "zip": "34711-9612"
+}, {
+  "latitude": "43.066700",
+  "longitude": "-124.121300",
+  "weight": 1,
+  "zip": "97458-8611"
+}, {
+  "latitude": "44.305600",
+  "longitude": "-96.791400",
+  "weight": 1,
+  "zip": "57006-4118"
+}, {
+  "latitude": "42.137800",
+  "longitude": "-124.249200",
+  "weight": 1,
+  "zip": "97415-0010"
+}, {
+  "latitude": "40.512400",
+  "longitude": "-88.988300",
+  "weight": 1,
+  "zip": "61761-3232"
+}, {
+  "latitude": "37.476400",
+  "longitude": "-97.232000",
+  "weight": 2,
+  "zip": "67110-9201"
+}, {
+  "latitude": "53.620918",
+  "longitude": "-113.547618",
+  "weight": 2,
+  "zip": "T5Y 0A3"
+}, {
+  "latitude": "53.003916",
+  "longitude": "-112.860184",
+  "weight": 1,
+  "zip": "T4V 5B7"
+}, {
+  "latitude": "39.335700",
+  "longitude": "-84.314900",
+  "weight": 6,
+  "zip": "45040-8449"
+}, {
+  "latitude": "38.932700",
+  "longitude": "-77.032200",
+  "weight": 3,
+  "zip": "20010-1208"
+}, {
+  "latitude": "45.344045",
+  "longitude": "-72.520248",
+  "weight": 1,
+  "zip": "J0E 2N0"
+}, {
+  "latitude": "40.901800",
+  "longitude": "-72.888100",
+  "weight": 3,
+  "zip": "11961-1276"
+}, {
+  "latitude": "30.058300",
+  "longitude": "-85.576200",
+  "weight": 1,
+  "zip": "32403-5439"
+}, {
+  "latitude": "40.494700",
+  "longitude": "-111.405100",
+  "weight": 1,
+  "zip": "84032"
+}, {
+  "latitude": "61.166100",
+  "longitude": "-149.960000",
+  "weight": 1,
+  "zip": "99502-5200"
+}, {
+  "latitude": "43.633000",
+  "longitude": "-116.295100",
+  "weight": 3,
+  "zip": "83704-2354"
+}, {
+  "latitude": "40.301400",
+  "longitude": "-109.863700",
+  "weight": 3,
+  "zip": "84026-0793"
+}, {
+  "latitude": "52.107486",
+  "longitude": "-122.166509",
+  "weight": 1,
+  "zip": "V2G 4Y3"
+}, {
+  "latitude": "37.763900",
+  "longitude": "-97.426900",
+  "weight": 1,
+  "zip": "67205"
+}, {
+  "latitude": "46.220588",
+  "longitude": "-64.504945",
+  "weight": 7,
+  "zip": "E4P 9C8"
+}, {
+  "latitude": "52.985969",
+  "longitude": "-113.198425",
+  "weight": 1,
+  "zip": "T9A 2E8"
+}, {
+  "latitude": "38.183900",
+  "longitude": "-85.710600",
+  "weight": 1,
+  "zip": "40213-1331"
+}, {
+  "latitude": "42.395800",
+  "longitude": "-83.377200",
+  "weight": 1,
+  "zip": "48154-4011"
+}, {
+  "latitude": "42.110900",
+  "longitude": "-80.153400",
+  "weight": 1,
+  "zip": "16505-4228"
+}, {
+  "latitude": "37.287600",
+  "longitude": "-77.295000",
+  "weight": 1,
+  "zip": "23860-1728"
+}, {
+  "latitude": "38.093200",
+  "longitude": "-84.500700",
+  "weight": 1,
+  "zip": "40511-2167"
+}, {
+  "latitude": "43.105200",
+  "longitude": "-89.507300",
+  "weight": 1,
+  "zip": "53562-2945"
+}, {
+  "latitude": "48.315100",
+  "longitude": "-122.637400",
+  "weight": 1,
+  "zip": "98277"
+}, {
+  "latitude": "46.590097",
+  "longitude": "-81.334177",
+  "weight": 2,
+  "zip": "P0M 1R0"
+}, {
+  "latitude": "40.335200",
+  "longitude": "-76.791400",
+  "weight": 1,
+  "zip": "17112-4406"
+}, {
+  "latitude": "40.241700",
+  "longitude": "-77.198300",
+  "weight": 1,
+  "zip": "17013-2573"
+}, {
+  "latitude": "44.546300",
+  "longitude": "-88.102100",
+  "weight": 3,
+  "zip": "54313-5310"
+}, {
+  "latitude": "35.502000",
+  "longitude": "-80.635900",
+  "weight": 2,
+  "zip": "28081-7733"
+}, {
+  "latitude": "41.342700",
+  "longitude": "-73.074200",
+  "weight": 2,
+  "zip": "06401-2129"
+}, {
+  "latitude": "33.514500",
+  "longitude": "-117.708400",
+  "weight": 1,
+  "zip": "92677-1524"
+}, {
+  "latitude": "34.146800",
+  "longitude": "-118.139100",
+  "weight": 1,
+  "zip": "91101"
+}, {
+  "latitude": "37.861600",
+  "longitude": "-97.262100",
+  "weight": 1,
+  "zip": "67147-8558"
+}, {
+  "latitude": "32.931000",
+  "longitude": "-97.284300",
+  "weight": 2,
+  "zip": "76244-5384"
+}, {
+  "latitude": "39.014200",
+  "longitude": "-77.528500",
+  "weight": 1,
+  "zip": "20148-1732"
+}, {
+  "latitude": "40.913600",
+  "longitude": "-73.046400",
+  "weight": 1,
+  "zip": "11776-3173"
+}, {
+  "latitude": "44.424437",
+  "longitude": "-78.986481",
+  "weight": 1,
+  "zip": "K0M 2T0"
+}, {
+  "latitude": "40.606800",
+  "longitude": "-75.478100",
+  "weight": 1,
+  "zip": "18102-4745"
+}, {
+  "latitude": "32.688900",
+  "longitude": "-97.190500",
+  "weight": 1,
+  "zip": "76016"
+}, {
+  "latitude": "40.006200",
+  "longitude": "-76.855500",
+  "weight": 1,
+  "zip": "17315-2975"
+}, {
+  "latitude": "40.428500",
+  "longitude": "-98.106300",
+  "weight": 1,
+  "zip": "68938-2705"
+}, {
+  "latitude": "36.341700",
+  "longitude": "-86.721200",
+  "weight": 1,
+  "zip": "37072-8487"
+}, {
+  "latitude": "38.655400",
+  "longitude": "-121.261100",
+  "weight": 1,
+  "zip": "95628-7527"
+}, {
+  "latitude": "33.843900",
+  "longitude": "-118.008000",
+  "weight": 1,
+  "zip": "90620-3987"
+}, {
+  "latitude": "42.971900",
+  "longitude": "-78.876900",
+  "weight": 1,
+  "zip": "14217-1628"
+}, {
+  "latitude": "51.641754",
+  "longitude": "-103.531127",
+  "weight": 1,
+  "zip": "S0A 1A0"
+}, {
+  "latitude": "38.211700",
+  "longitude": "-84.556200",
+  "weight": 1,
+  "zip": "40324-8796"
+}, {
+  "latitude": "49.081032",
+  "longitude": "-121.815352",
+  "weight": 1,
+  "zip": "V4Z 1B7"
+}, {
+  "latitude": "49.233986",
+  "longitude": "-122.772900",
+  "weight": 1,
+  "zip": "V3C 5V9"
+}, {
+  "latitude": "38.458600",
+  "longitude": "-77.430600",
+  "weight": 1,
+  "zip": "22554-2426"
+}, {
+  "latitude": "31.857900",
+  "longitude": "-102.352300",
+  "weight": 1,
+  "zip": "79761-1542"
+}, {
+  "latitude": "33.209000",
+  "longitude": "-107.221200",
+  "weight": 4,
+  "zip": "87935"
+}, {
+  "latitude": "34.866400",
+  "longitude": "-118.340900",
+  "weight": 1,
+  "zip": "93560-7605"
+}, {
+  "latitude": "39.834900",
+  "longitude": "-82.804400",
+  "weight": 1,
+  "zip": "43110-7046"
+}, {
+  "latitude": "43.974300",
+  "longitude": "-75.912200",
+  "weight": 1,
+  "zip": "13601-5324"
+}, {
+  "latitude": "40.852900",
+  "longitude": "-74.834300",
+  "weight": 1,
+  "zip": "07840-2802"
+}, {
+  "latitude": "33.623900",
+  "longitude": "-112.177600",
+  "weight": 1,
+  "zip": "85306-2517"
+}, {
+  "latitude": "41.340900",
+  "longitude": "-75.024100",
+  "weight": 3,
+  "zip": "18371-9498"
+}, {
+  "latitude": "37.777300",
+  "longitude": "-90.409400",
+  "weight": 2,
+  "zip": "63640-7228"
+}, {
+  "latitude": "41.506700",
+  "longitude": "-87.963100",
+  "weight": 1,
+  "zip": "60451-2375"
+}, {
+  "latitude": "40.861200",
+  "longitude": "-83.463000",
+  "weight": 1,
+  "zip": "43359"
+}, {
+  "latitude": "43.121600",
+  "longitude": "-77.731100",
+  "weight": 1,
+  "zip": "14624-2430"
+}, {
+  "latitude": "33.929100",
+  "longitude": "-117.884500",
+  "weight": 1,
+  "zip": "92821-3631"
+}, {
+  "latitude": "42.688800",
+  "longitude": "-113.648100",
+  "weight": 3,
+  "zip": "83350-8317"
+}, {
+  "latitude": "39.887000",
+  "longitude": "-75.297200",
+  "weight": 1,
+  "zip": "19074-1528"
+}, {
+  "latitude": "35.210600",
+  "longitude": "-80.440700",
+  "weight": 1,
+  "zip": "28163-6607"
+}, {
+  "latitude": "41.939900",
+  "longitude": "-87.652800",
+  "weight": 1,
+  "zip": "60657-5974"
+}, {
+  "latitude": "33.843900",
+  "longitude": "-118.008000",
+  "weight": 2,
+  "zip": "90620-4416"
+}, {
+  "latitude": "52.762583",
+  "longitude": "-110.458746",
+  "weight": 1,
+  "zip": "T0B 1K0"
+}, {
+  "latitude": "52.311976",
+  "longitude": "-114.067409",
+  "weight": 1,
+  "zip": "T4S 2H7"
+}, {
+  "latitude": "39.772000",
+  "longitude": "-76.597000",
+  "weight": 1,
+  "zip": "17363-8454"
+}, {
+  "latitude": "29.863500",
+  "longitude": "-95.197600",
+  "weight": 1,
+  "zip": "77044-1450"
+}, {
+  "latitude": "36.442900",
+  "longitude": "-100.523800",
+  "weight": 2,
+  "zip": "79005"
+}, {
+  "latitude": "40.329600",
+  "longitude": "-80.585000",
+  "weight": 1,
+  "zip": "26037-1334"
+}, {
+  "latitude": "45.959731",
+  "longitude": "-70.657138",
+  "weight": 1,
+  "zip": "G0M 1B0"
+}, {
+  "latitude": "38.928000",
+  "longitude": "-77.264900",
+  "weight": 1,
+  "zip": "22182-1308"
+}, {
+  "latitude": "48.113200",
+  "longitude": "-98.861600",
+  "weight": 2,
+  "zip": "58301-3216"
+}, {
+  "latitude": "26.266500",
+  "longitude": "-81.714600",
+  "weight": 1,
+  "zip": "34119-9792"
+}, {
+  "latitude": "45.574000",
+  "longitude": "-103.582600",
+  "weight": 1,
+  "zip": "57720"
+}, {
+  "latitude": "38.873300",
+  "longitude": "-94.775200",
+  "weight": 2,
+  "zip": "66062-6133"
+}, {
+  "latitude": "38.762200",
+  "longitude": "-90.547100",
+  "weight": 1,
+  "zip": "63303-1612"
+}, {
+  "latitude": "49.850445",
+  "longitude": "-100.933699",
+  "weight": 1,
+  "zip": "R0M 2C0"
+}, {
+  "latitude": "49.844131",
+  "longitude": "-119.486903",
+  "weight": 1,
+  "zip": "V1W 3G6"
+}, {
+  "latitude": "36.295600",
+  "longitude": "-115.241900",
+  "weight": 2,
+  "zip": "89131-1562"
+}, {
+  "latitude": "42.559200",
+  "longitude": "-83.002900",
+  "weight": 1,
+  "zip": "48312-5489"
+}, {
+  "latitude": "32.931000",
+  "longitude": "-97.284300",
+  "weight": 1,
+  "zip": "76244-6539"
+}, {
+  "latitude": "47.320300",
+  "longitude": "-122.311700",
+  "weight": 1,
+  "zip": "98003-3313"
+}, {
+  "latitude": "42.526900",
+  "longitude": "-82.884100",
+  "weight": 1,
+  "zip": "48082"
+}, {
+  "latitude": "53.050869",
+  "longitude": "-122.523291",
+  "weight": 1,
+  "zip": "V2J 6Z3"
+}, {
+  "latitude": "42.153700",
+  "longitude": "-72.769800",
+  "weight": 1,
+  "zip": "01085"
+}, {
+  "latitude": "33.344500",
+  "longitude": "-96.563900",
+  "weight": 1,
+  "zip": "75409-2517"
+}, {
+  "latitude": "38.467800",
+  "longitude": "-107.875200",
+  "weight": 1,
+  "zip": "81401-8829"
+}, {
+  "latitude": "46.388100",
+  "longitude": "-112.747600",
+  "weight": 3,
+  "zip": "59722-1259"
+}, {
+  "latitude": "41.744700",
+  "longitude": "-87.769900",
+  "weight": 1,
+  "zip": "60459-1362"
+}, {
+  "latitude": "33.003300",
+  "longitude": "-96.882000",
+  "weight": 3,
+  "zip": "75007-5012"
+}, {
+  "latitude": "56.263619",
+  "longitude": "-120.827778",
+  "weight": 1,
+  "zip": "V1J 6R6"
+}, {
+  "latitude": "40.369600",
+  "longitude": "-80.043900",
+  "weight": 2,
+  "zip": "15228-2551"
+}, {
+  "latitude": "49.920399",
+  "longitude": "-97.205236",
+  "weight": 1,
+  "zip": "R2R 0C4"
+}, {
+  "latitude": "39.814100",
+  "longitude": "-105.117700",
+  "weight": 2,
+  "zip": "80004-5315"
+}, {
+  "latitude": "37.464700",
+  "longitude": "-122.230400",
+  "weight": 1,
+  "zip": "94061-1209"
+}, {
+  "latitude": "37.316800",
+  "longitude": "-89.545900",
+  "weight": 2,
+  "zip": "63701-2323"
+}, {
+  "latitude": "27.731100",
+  "longitude": "-97.387700",
+  "weight": 1,
+  "zip": "78411-1451"
+}, {
+  "latitude": "40.810500",
+  "longitude": "-75.001900",
+  "weight": 1,
+  "zip": "07863-3033"
+}, {
+  "latitude": "43.637650",
+  "longitude": "-79.437521",
+  "weight": 3,
+  "zip": "M6K 2Z9"
+}, {
+  "latitude": "45.812366",
+  "longitude": "-66.617843",
+  "weight": 2,
+  "zip": "E3B 8Z4"
+}, {
+  "latitude": "40.722800",
+  "longitude": "-74.301500",
+  "weight": 1,
+  "zip": "07041-1327"
+}, {
+  "latitude": "31.902100",
+  "longitude": "-106.414900",
+  "weight": 3,
+  "zip": "79924-1751"
+}, {
+  "latitude": "40.673100",
+  "longitude": "-89.551400",
+  "weight": 1,
+  "zip": "61611-9208"
+}, {
+  "latitude": "48.209730",
+  "longitude": "-69.047614",
+  "weight": 1,
+  "zip": "G0L 4C0"
+}, {
+  "latitude": "30.408900",
+  "longitude": "-91.084200",
+  "weight": 1,
+  "zip": "70809-3506"
+}, {
+  "latitude": "43.267366",
+  "longitude": "-79.857410",
+  "weight": 1,
+  "zip": "L8L 3T4"
+}, {
+  "latitude": "39.061900",
+  "longitude": "-96.787300",
+  "weight": 1,
+  "zip": "66442-1728"
+}, {
+  "latitude": "51.351640",
+  "longitude": "-110.479746",
+  "weight": 1,
+  "zip": "T0J 2J0"
+}, {
+  "latitude": "37.817700",
+  "longitude": "-77.692400",
+  "weight": 1,
+  "zip": "23192-2468"
+}, {
+  "latitude": "41.585400",
+  "longitude": "-93.241000",
+  "weight": 1,
+  "zip": "50228"
+}, {
+  "latitude": "50.648467",
+  "longitude": "-120.353473",
+  "weight": 1,
+  "zip": "V2E 2B4"
+}, {
+  "latitude": "42.046700",
+  "longitude": "-87.885900",
+  "weight": 2,
+  "zip": "60016-3209"
+}, {
+  "latitude": "41.380500",
+  "longitude": "-83.335800",
+  "weight": 1,
+  "zip": "43431"
+}, {
+  "latitude": "53.553038",
+  "longitude": "-113.472931",
+  "weight": 1,
+  "zip": "T5H 4E8"
+}, {
+  "latitude": "36.292100",
+  "longitude": "-95.312900",
+  "weight": 1,
+  "zip": "74361-2830"
+}, {
+  "latitude": "32.817800",
+  "longitude": "-116.922300",
+  "weight": 5,
+  "zip": "92021-8813"
+}, {
+  "latitude": "32.792800",
+  "longitude": "-116.966500",
+  "weight": 1,
+  "zip": "92020-3390"
+}, {
+  "latitude": "29.969400",
+  "longitude": "-90.709700",
+  "weight": 1,
+  "zip": "70090-3014"
+}, {
+  "latitude": "33.601300",
+  "longitude": "-111.886700",
+  "weight": 1,
+  "zip": "85260-7044"
+}, {
+  "latitude": "50.445582",
+  "longitude": "-119.194125",
+  "weight": 1,
+  "zip": "V0E 1B0"
+}, {
+  "latitude": "29.570400",
+  "longitude": "-95.542300",
+  "weight": 1,
+  "zip": "77459-4044"
+}, {
+  "latitude": "37.403100",
+  "longitude": "-121.858500",
+  "weight": 1,
+  "zip": "95132-2367"
+}, {
+  "latitude": "33.802100",
+  "longitude": "-109.993700",
+  "weight": 1,
+  "zip": "85941-1268"
+}, {
+  "latitude": "41.678600",
+  "longitude": "-73.088600",
+  "weight": 1,
+  "zip": "06787-1260"
+}, {
+  "latitude": "45.784600",
+  "longitude": "-122.693400",
+  "weight": 1,
+  "zip": "98642-5550"
+}, {
+  "latitude": "38.280500",
+  "longitude": "-90.312200",
+  "weight": 1,
+  "zip": "62295-3146"
+}, {
+  "latitude": "40.684000",
+  "longitude": "-76.212300",
+  "weight": 1,
+  "zip": "17901-3740"
+}, {
+  "latitude": "41.684900",
+  "longitude": "-88.345300",
+  "weight": 1,
+  "zip": "60543-7750"
+}, {
+  "latitude": "27.731100",
+  "longitude": "-97.387700",
+  "weight": 1,
+  "zip": "78411-3318"
+}, {
+  "latitude": "36.050100",
+  "longitude": "-83.922600",
+  "weight": 2,
+  "zip": "37918-9751"
+}, {
+  "latitude": "49.763702",
+  "longitude": "-97.146880",
+  "weight": 1,
+  "zip": "R3V 1H7"
+}, {
+  "latitude": "44.536000",
+  "longitude": "-73.202200",
+  "weight": 2,
+  "zip": "05446-7096"
+}, {
+  "latitude": "54.725004",
+  "longitude": "-113.556495",
+  "weight": 1,
+  "zip": "T9S 1R7"
+}, {
+  "latitude": "36.073200",
+  "longitude": "-102.517700",
+  "weight": 1,
+  "zip": "79022-3110"
+}, {
+  "latitude": "38.795300",
+  "longitude": "-95.227600",
+  "weight": 1,
+  "zip": "66006-7345"
+}, {
+  "latitude": "41.140400",
+  "longitude": "-81.858400",
+  "weight": 1,
+  "zip": "44256"
+}, {
+  "latitude": "44.666500",
+  "longitude": "-84.135300",
+  "weight": 1,
+  "zip": "48647-8709"
+}, {
+  "latitude": "34.534400",
+  "longitude": "-96.216700",
+  "weight": 2,
+  "zip": "74538-9554"
+}, {
+  "latitude": "33.605900",
+  "longitude": "-86.111200",
+  "weight": 2,
+  "zip": "35096-6094"
+}, {
+  "latitude": "44.645473",
+  "longitude": "-63.591132",
+  "weight": 1,
+  "zip": "B3H 2M9"
+}, {
+  "latitude": "36.755000",
+  "longitude": "-101.078000",
+  "weight": 1,
+  "zip": "73901-0512"
+}, {
+  "latitude": "33.388900",
+  "longitude": "-112.095400",
+  "weight": 1,
+  "zip": "85041-6031"
+}, {
+  "latitude": "35.580000",
+  "longitude": "-78.790800",
+  "weight": 1,
+  "zip": "27526-9812"
+}, {
+  "latitude": "28.905900",
+  "longitude": "-82.061200",
+  "weight": 1,
+  "zip": "34484"
+}, {
+  "latitude": "33.498300",
+  "longitude": "-117.095800",
+  "weight": 1,
+  "zip": "92592-5619"
+}, {
+  "latitude": "40.620300",
+  "longitude": "-74.310600",
+  "weight": 1,
+  "zip": "07066-2225"
+}, {
+  "latitude": "29.740400",
+  "longitude": "-95.830400",
+  "weight": 1,
+  "zip": "77494-6211"
+}, {
+  "latitude": "33.659800",
+  "longitude": "-117.348500",
+  "weight": 1,
+  "zip": "92530-7292"
+}, {
+  "latitude": "33.498300",
+  "longitude": "-117.095800",
+  "weight": 1,
+  "zip": "92592-2850"
+}, {
+  "latitude": "35.480900",
+  "longitude": "-108.176700",
+  "weight": 2,
+  "zip": "87322-0046"
+}, {
+  "latitude": "37.437600",
+  "longitude": "-79.205000",
+  "weight": 1,
+  "zip": "24503-2163"
+}, {
+  "latitude": "27.587900",
+  "longitude": "-99.217600",
+  "weight": 1,
+  "zip": "78043-1405"
+}, {
+  "latitude": "30.293300",
+  "longitude": "-81.509200",
+  "weight": 1,
+  "zip": "32246-7463"
+}, {
+  "latitude": "28.730400",
+  "longitude": "-82.307700",
+  "weight": 1,
+  "zip": "34436-0387"
+}, {
+  "latitude": "45.073600",
+  "longitude": "-93.138000",
+  "weight": 1,
+  "zip": "55126-3107"
+}, {
+  "latitude": "48.448403",
+  "longitude": "-89.280897",
+  "weight": 1,
+  "zip": "P7G 1E5"
+}, {
+  "latitude": "40.557000",
+  "longitude": "-80.157800",
+  "weight": 2,
+  "zip": "15143-9128"
+}, {
+  "latitude": "49.722934",
+  "longitude": "-113.404573",
+  "weight": 2,
+  "zip": "T0L 0Z0"
+}, {
+  "latitude": "34.018300",
+  "longitude": "-117.854600",
+  "weight": 4,
+  "zip": "91789-2536"
+}, {
+  "latitude": "33.327400",
+  "longitude": "-91.282500",
+  "weight": 2,
+  "zip": "71653-9505"
+}, {
+  "latitude": "42.184500",
+  "longitude": "-71.304800",
+  "weight": 1,
+  "zip": "02052-1806"
+}, {
+  "latitude": "40.749200",
+  "longitude": "-86.068000",
+  "weight": 1,
+  "zip": "46970-8730"
+}, {
+  "latitude": "38.607400",
+  "longitude": "-82.827100",
+  "weight": 3,
+  "zip": "41169-1205"
+}, {
+  "latitude": "35.348100",
+  "longitude": "-83.203100",
+  "weight": 1,
+  "zip": "28779-0024"
+}, {
+  "latitude": "36.814900",
+  "longitude": "-119.710600",
+  "weight": 1,
+  "zip": "93612-5826"
+}, {
+  "latitude": "34.128100",
+  "longitude": "-84.571700",
+  "weight": 2,
+  "zip": "30189-1495"
+}, {
+  "latitude": "41.939400",
+  "longitude": "-88.121200",
+  "weight": 2,
+  "zip": "60133-6162"
+}, {
+  "latitude": "40.155900",
+  "longitude": "-105.162400",
+  "weight": 1,
+  "zip": "80503-7611"
+}, {
+  "latitude": "35.667600",
+  "longitude": "-109.078400",
+  "weight": 4,
+  "zip": "86515-3574"
+}, {
+  "latitude": "39.405900",
+  "longitude": "-84.522100",
+  "weight": 1,
+  "zip": "45011-2335"
+}, {
+  "latitude": "44.965400",
+  "longitude": "-89.706600",
+  "weight": 1,
+  "zip": "54401-9189"
+}, {
+  "latitude": "34.908500",
+  "longitude": "-110.143400",
+  "weight": 1,
+  "zip": "86025-1961"
+}, {
+  "latitude": "32.114900",
+  "longitude": "-81.252000",
+  "weight": 2,
+  "zip": "31322-9626"
+}, {
+  "latitude": "33.811000",
+  "longitude": "-117.849300",
+  "weight": 1,
+  "zip": "92867-3720"
+}, {
+  "latitude": "47.266600",
+  "longitude": "-122.243500",
+  "weight": 1,
+  "zip": "98047-1350"
+}, {
+  "latitude": "41.667000",
+  "longitude": "-88.538400",
+  "weight": 1,
+  "zip": "60545-2194"
+}, {
+  "latitude": "43.706900",
+  "longitude": "-116.362000",
+  "weight": 1,
+  "zip": "83616-5214"
+}, {
+  "latitude": "42.969000",
+  "longitude": "-72.435800",
+  "weight": 3,
+  "zip": "03467-4735"
+}, {
+  "latitude": "42.219000",
+  "longitude": "-71.530200",
+  "weight": 1,
+  "zip": "01748-1558"
+}, {
+  "latitude": "38.995000",
+  "longitude": "-92.311200",
+  "weight": 1,
+  "zip": "65202-1079"
+}, {
+  "latitude": "29.522400",
+  "longitude": "-95.187900",
+  "weight": 1,
+  "zip": "77546-3016"
+}, {
+  "latitude": "33.612800",
+  "longitude": "-117.662200",
+  "weight": 2,
+  "zip": "92691-6233"
+}, {
+  "latitude": "41.487600",
+  "longitude": "-71.327100",
+  "weight": 1,
+  "zip": "02840-1180"
+}, {
+  "latitude": "25.762900",
+  "longitude": "-80.189500",
+  "weight": 1,
+  "zip": "33131-2012"
+}, {
+  "latitude": "38.999300",
+  "longitude": "-82.060000",
+  "weight": 1,
+  "zip": "45760-1438"
+}, {
+  "latitude": "51.085985",
+  "longitude": "-114.128445",
+  "weight": 1,
+  "zip": "T2L 1K8"
+}, {
+  "latitude": "40.756500",
+  "longitude": "-96.694600",
+  "weight": 1,
+  "zip": "68512-2106"
+}, {
+  "latitude": "39.121300",
+  "longitude": "-90.333800",
+  "weight": 1,
+  "zip": "62052-0155"
+}, {
+  "latitude": "43.731734",
+  "longitude": "-79.796367",
+  "weight": 1,
+  "zip": "L6Z 2C4"
+}, {
+  "latitude": "33.391500",
+  "longitude": "-84.563500",
+  "weight": 1,
+  "zip": "30269-3650"
+}, {
+  "latitude": "43.320000",
+  "longitude": "-70.941300",
+  "weight": 1,
+  "zip": "03868"
+}, {
+  "latitude": "53.537793",
+  "longitude": "-113.444704",
+  "weight": 2,
+  "zip": "T6A 0C4"
+}, {
+  "latitude": "56.260075",
+  "longitude": "-120.830201",
+  "weight": 2,
+  "zip": "V1J 5J1"
+}, {
+  "latitude": "40.869900",
+  "longitude": "-73.044800",
+  "weight": 1,
+  "zip": "11784-3825"
+}, {
+  "latitude": "40.666900",
+  "longitude": "-76.473200",
+  "weight": 2,
+  "zip": "17938-9052"
+}, {
+  "latitude": "50.423452",
+  "longitude": "-104.621576",
+  "weight": 1,
+  "zip": "S4S 1E7"
+}, {
+  "latitude": "30.278400",
+  "longitude": "-89.771200",
+  "weight": 2,
+  "zip": "70458"
+}, {
+  "latitude": "50.014545",
+  "longitude": "-110.631312",
+  "weight": 1,
+  "zip": "T1B 2W6"
+}, {
+  "latitude": "30.000500",
+  "longitude": "-90.133100",
+  "weight": 1,
+  "zip": "70005-4204"
+}, {
+  "latitude": "42.995800",
+  "longitude": "-82.459900",
+  "weight": 1,
+  "zip": "48060-2909"
+}, {
+  "latitude": "46.494000",
+  "longitude": "-122.915800",
+  "weight": 1,
+  "zip": "98596-9303"
+}, {
+  "latitude": "49.785544",
+  "longitude": "-94.440897",
+  "weight": 1,
+  "zip": "P9N 4K1"
+}, {
+  "latitude": "55.136008",
+  "longitude": "-118.822609",
+  "weight": 1,
+  "zip": "T8W 0H5"
+}, {
+  "latitude": "46.772946",
+  "longitude": "-71.502140",
+  "weight": 1,
+  "zip": "G3A 1W8"
+}, {
+  "latitude": "41.011500",
+  "longitude": "-76.438400",
+  "weight": 1,
+  "zip": "17815-6928"
+}, {
+  "latitude": "42.302800",
+  "longitude": "-85.212800",
+  "weight": 1,
+  "zip": "49015-9364"
+}, {
+  "latitude": "32.882800",
+  "longitude": "-97.209800",
+  "weight": 1,
+  "zip": "76182-7523"
+}, {
+  "latitude": "40.571100",
+  "longitude": "-74.637700",
+  "weight": 1,
+  "zip": "08869-1320"
+}, {
+  "latitude": "33.007300",
+  "longitude": "-111.932400",
+  "weight": 6,
+  "zip": "85138-4326"
+}, {
+  "latitude": "41.439000",
+  "longitude": "-105.801000",
+  "weight": 1,
+  "zip": "82070-4160"
+}, {
+  "latitude": "42.211300",
+  "longitude": "-70.958200",
+  "weight": 2,
+  "zip": "02188-3951"
+}, {
+  "latitude": "40.087400",
+  "longitude": "-74.115200",
+  "weight": 1,
+  "zip": "08724-2350"
+}, {
+  "latitude": "37.405600",
+  "longitude": "-122.077500",
+  "weight": 1,
+  "zip": "94043-2650"
+}, {
+  "latitude": "36.859800",
+  "longitude": "-107.060200",
+  "weight": 1,
+  "zip": "87528"
+}, {
+  "latitude": "36.130400",
+  "longitude": "-109.603700",
+  "weight": 1,
+  "zip": "86503-1277"
+}, {
+  "latitude": "41.446700",
+  "longitude": "-82.020400",
+  "weight": 1,
+  "zip": "44011-4917"
+}, {
+  "latitude": "39.521400",
+  "longitude": "-78.091200",
+  "weight": 1,
+  "zip": "25427-4360"
+}, {
+  "latitude": "32.278700",
+  "longitude": "-101.457800",
+  "weight": 1,
+  "zip": "79720-3405"
+}, {
+  "latitude": "40.695200",
+  "longitude": "-74.267700",
+  "weight": 2,
+  "zip": "07083-8842"
+}, {
+  "latitude": "40.191900",
+  "longitude": "-75.665300",
+  "weight": 1,
+  "zip": "19465-7421"
+}, {
+  "latitude": "42.659300",
+  "longitude": "-83.122500",
+  "weight": 1,
+  "zip": "48307-4080"
+}, {
+  "latitude": "42.845800",
+  "longitude": "-106.316600",
+  "weight": 1,
+  "zip": "82601"
+}, {
+  "latitude": "37.602700",
+  "longitude": "-79.050600",
+  "weight": 1,
+  "zip": "24521-4804"
+}, {
+  "latitude": "33.920800",
+  "longitude": "-117.458900",
+  "weight": 1,
+  "zip": "92503-6205"
+}, {
+  "latitude": "34.304600",
+  "longitude": "-118.684400",
+  "weight": 1,
+  "zip": "93063-2714"
+}, {
+  "latitude": "43.608800",
+  "longitude": "-83.953000",
+  "weight": 1,
+  "zip": "48706-2239"
+}, {
+  "latitude": "53.492960",
+  "longitude": "-113.641446",
+  "weight": 1,
+  "zip": "T6M 1X9"
+}, {
+  "latitude": "42.263600",
+  "longitude": "-88.133300",
+  "weight": 1,
+  "zip": "60084-0596"
+}, {
+  "latitude": "41.782200",
+  "longitude": "-72.333200",
+  "weight": 1,
+  "zip": "06238-1409"
+}, {
+  "latitude": "38.770300",
+  "longitude": "-121.337200",
+  "weight": 1,
+  "zip": "95747-9760"
+}, {
+  "latitude": "41.185000",
+  "longitude": "-74.533200",
+  "weight": 1,
+  "zip": "07462-4594"
+}, {
+  "latitude": "27.635700",
+  "longitude": "-99.592300",
+  "weight": 1,
+  "zip": "78045-7131"
+}, {
+  "latitude": "38.737800",
+  "longitude": "-104.645900",
+  "weight": 1,
+  "zip": "80925"
+}, {
+  "latitude": "41.331200",
+  "longitude": "-73.224300",
+  "weight": 1,
+  "zip": "06468-1932"
+}, {
+  "latitude": "36.688300",
+  "longitude": "-110.265200",
+  "weight": 6,
+  "zip": "86033-3653"
+}, {
+  "latitude": "40.143400",
+  "longitude": "-74.861400",
+  "weight": 1,
+  "zip": "19057-1646"
+}, {
+  "latitude": "41.912100",
+  "longitude": "-94.932000",
+  "weight": 1,
+  "zip": "51463-5001"
+}, {
+  "latitude": "35.237500",
+  "longitude": "-109.523000",
+  "weight": 1,
+  "zip": "86504-0720"
+}, {
+  "latitude": "36.295600",
+  "longitude": "-115.241900",
+  "weight": 1,
+  "zip": "89131-1657"
+}, {
+  "latitude": "34.954900",
+  "longitude": "-78.740800",
+  "weight": 1,
+  "zip": "28312-7051"
+}, {
+  "latitude": "42.840600",
+  "longitude": "-106.280600",
+  "weight": 1,
+  "zip": "82609-4393"
+}, {
+  "latitude": "41.111900",
+  "longitude": "-76.742500",
+  "weight": 1,
+  "zip": "17772-9100"
+}, {
+  "latitude": "33.717300",
+  "longitude": "-84.929700",
+  "weight": 2,
+  "zip": "30180-7421"
+}, {
+  "latitude": "40.554100",
+  "longitude": "-111.953900",
+  "weight": 3,
+  "zip": "84095-5037"
+}, {
+  "latitude": "27.049800",
+  "longitude": "-82.128800",
+  "weight": 1,
+  "zip": "34288-8468"
+}, {
+  "latitude": "39.105100",
+  "longitude": "-121.620200",
+  "weight": 1,
+  "zip": "95991-9237"
+}, {
+  "latitude": "38.589200",
+  "longitude": "-121.405700",
+  "weight": 1,
+  "zip": "95825-7555"
+}, {
+  "latitude": "38.920200",
+  "longitude": "-77.037500",
+  "weight": 1,
+  "zip": "20009-2574"
+}, {
+  "latitude": "30.172000",
+  "longitude": "-97.878400",
+  "weight": 3,
+  "zip": "78739-2008"
+}, {
+  "latitude": "38.376300",
+  "longitude": "-97.670200",
+  "weight": 2,
+  "zip": "67460-3331"
+}, {
+  "latitude": "42.194900",
+  "longitude": "-83.485400",
+  "weight": 1,
+  "zip": "48111-4348"
+}, {
+  "latitude": "38.780200",
+  "longitude": "-90.622800",
+  "weight": 1,
+  "zip": "63376-5503"
+}, {
+  "latitude": "35.404100",
+  "longitude": "-81.202900",
+  "weight": 1,
+  "zip": "28077-0392"
+}, {
+  "latitude": "44.211300",
+  "longitude": "-75.801400",
+  "weight": 1,
+  "zip": "13691-3105"
+}, {
+  "latitude": "34.989000",
+  "longitude": "-79.222800",
+  "weight": 1,
+  "zip": "28376-5841"
+}, {
+  "latitude": "40.831900",
+  "longitude": "-74.242800",
+  "weight": 1,
+  "zip": "07044-1013"
+}, {
+  "latitude": "40.952000",
+  "longitude": "-72.834800",
+  "weight": 1,
+  "zip": "11792-2130"
+}, {
+  "latitude": "35.785200",
+  "longitude": "-83.980900",
+  "weight": 1,
+  "zip": "37701-1697"
+}, {
+  "latitude": "35.237500",
+  "longitude": "-109.523000",
+  "weight": 1,
+  "zip": "86545-0337"
+}, {
+  "latitude": "31.417000",
+  "longitude": "-101.542300",
+  "weight": 1,
+  "zip": "76932-4138"
+}, {
+  "latitude": "39.336100",
+  "longitude": "-76.501400",
+  "weight": 1,
+  "zip": "21237"
+}, {
+  "latitude": "42.849900",
+  "longitude": "-73.785100",
+  "weight": 1,
+  "zip": "12065-5519"
+}, {
+  "latitude": "41.062900",
+  "longitude": "-74.015900",
+  "weight": 1,
+  "zip": "10965-1406"
+}, {
+  "latitude": "28.909300",
+  "longitude": "-81.192200",
+  "weight": 2,
+  "zip": "32738-9502"
+}, {
+  "latitude": "45.131400",
+  "longitude": "-89.141900",
+  "weight": 1,
+  "zip": "54409-8774"
+}, {
+  "latitude": "41.171300",
+  "longitude": "-87.249100",
+  "weight": 1,
+  "zip": "46310-8990"
+}, {
+  "latitude": "40.699800",
+  "longitude": "-75.487400",
+  "weight": 1,
+  "zip": "18067-9650"
+}, {
+  "latitude": "32.655400",
+  "longitude": "-97.159900",
+  "weight": 1,
+  "zip": "76017-4431"
+}, {
+  "latitude": "36.397500",
+  "longitude": "-97.915700",
+  "weight": 1,
+  "zip": "73703-8543"
+}, {
+  "latitude": "40.011800",
+  "longitude": "-75.145600",
+  "weight": 1,
+  "zip": "19140-2612"
+}, {
+  "latitude": "33.998500",
+  "longitude": "-83.711500",
+  "weight": 2,
+  "zip": "30680-2842"
+}, {
+  "latitude": "42.335800",
+  "longitude": "-83.384600",
+  "weight": 1,
+  "zip": "48185-5606"
+}, {
+  "latitude": "41.749800",
+  "longitude": "-72.694700",
+  "weight": 2,
+  "zip": "06106-4105"
+}, {
+  "latitude": "38.815700",
+  "longitude": "-77.621600",
+  "weight": 1,
+  "zip": "20155-1438"
+}, {
+  "latitude": "40.059600",
+  "longitude": "-75.081800",
+  "weight": 1,
+  "zip": "19111-4935"
+}, {
+  "latitude": "47.112600",
+  "longitude": "-122.779400",
+  "weight": 6,
+  "zip": "98516"
+}, {
+  "latitude": "34.177400",
+  "longitude": "-118.935800",
+  "weight": 3,
+  "zip": "91320-3641"
+}, {
+  "latitude": "41.336100",
+  "longitude": "-75.730400",
+  "weight": 1,
+  "zip": "18641-1156"
+}, {
+  "latitude": "39.371600",
+  "longitude": "-76.674400",
+  "weight": 1,
+  "zip": "21209-1736"
+}, {
+  "latitude": "36.510700",
+  "longitude": "-87.275700",
+  "weight": 1,
+  "zip": "37043-3874"
+}, {
+  "latitude": "49.151450",
+  "longitude": "-122.324115",
+  "weight": 2,
+  "zip": "V2V 6H7"
+}, {
+  "latitude": "55.163800",
+  "longitude": "-118.794022",
+  "weight": 1,
+  "zip": "T8V 2K8"
+}, {
+  "latitude": "44.941400",
+  "longitude": "-93.010700",
+  "weight": 1,
+  "zip": "55119-3529"
+}, {
+  "latitude": "35.199000",
+  "longitude": "-97.484100",
+  "weight": 1,
+  "zip": "73072-4497"
+}, {
+  "latitude": "30.669800",
+  "longitude": "-87.179400",
+  "weight": 6,
+  "zip": "32571-8830"
+}, {
+  "latitude": "34.029000",
+  "longitude": "-118.400500",
+  "weight": 1,
+  "zip": "90034-7041"
+}, {
+  "latitude": "40.216600",
+  "longitude": "-75.256500",
+  "weight": 1,
+  "zip": "19454-4038"
+}, {
+  "latitude": "36.127700",
+  "longitude": "-80.653000",
+  "weight": 6,
+  "zip": "27055"
+}, {
+  "latitude": "44.784000",
+  "longitude": "-91.487700",
+  "weight": 1,
+  "zip": "54701-2929"
+}, {
+  "latitude": "41.923200",
+  "longitude": "-87.818500",
+  "weight": 1,
+  "zip": "60707"
+}, {
+  "latitude": "39.315300",
+  "longitude": "-77.769400",
+  "weight": 1,
+  "zip": "25425-3037"
+}, {
+  "latitude": "29.894100",
+  "longitude": "-95.648100",
+  "weight": 2,
+  "zip": "77095-2926"
+}, {
+  "latitude": "39.689500",
+  "longitude": "-105.090800",
+  "weight": 3,
+  "zip": "80232-7079"
+}, {
+  "latitude": "34.196300",
+  "longitude": "-118.638900",
+  "weight": 1,
+  "zip": "91307-3611"
+}, {
+  "latitude": "46.800948",
+  "longitude": "-71.237151",
+  "weight": 2,
+  "zip": "G1S 3A5"
+}, {
+  "latitude": "25.947600",
+  "longitude": "-80.277800",
+  "weight": 1,
+  "zip": "33055-2676"
+}, {
+  "latitude": "40.446700",
+  "longitude": "-79.684200",
+  "weight": 4,
+  "zip": "15668-1724"
+}, {
+  "latitude": "37.099500",
+  "longitude": "-84.113100",
+  "weight": 1,
+  "zip": "40744-8316"
+}, {
+  "latitude": "33.306600",
+  "longitude": "-87.453200",
+  "weight": 1,
+  "zip": "35482-0056"
+}, {
+  "latitude": "45.329600",
+  "longitude": "-96.459600",
+  "weight": 1,
+  "zip": "56278-1563"
+}, {
+  "latitude": "38.556800",
+  "longitude": "-121.492900",
+  "weight": 1,
+  "zip": "95818-3014"
+}, {
+  "latitude": "42.014400",
+  "longitude": "-88.093500",
+  "weight": 1,
+  "zip": "60193-3427"
+}, {
+  "latitude": "40.333900",
+  "longitude": "-75.660400",
+  "weight": 1,
+  "zip": "19512-1011"
+}, {
+  "latitude": "31.949400",
+  "longitude": "-89.809500",
+  "weight": 1,
+  "zip": "39114-3544"
+}, {
+  "latitude": "40.806300",
+  "longitude": "-96.654500",
+  "weight": 2,
+  "zip": "68510-1275"
+}, {
+  "latitude": "40.479800",
+  "longitude": "-92.391800",
+  "weight": 1,
+  "zip": "63536-9602"
+}, {
+  "latitude": "44.590400",
+  "longitude": "-123.272200",
+  "weight": 1,
+  "zip": "97330-6808"
+}, {
+  "latitude": "38.300600",
+  "longitude": "-76.531200",
+  "weight": 2,
+  "zip": "20619-4100"
+}, {
+  "latitude": "41.266300",
+  "longitude": "-76.903000",
+  "weight": 1,
+  "zip": "17754-8525"
+}, {
+  "latitude": "50.755751",
+  "longitude": "-112.089511",
+  "weight": 1,
+  "zip": "T0J 2W0"
+}, {
+  "latitude": "35.688400",
+  "longitude": "-84.076900",
+  "weight": 1,
+  "zip": "37801-9312"
+}, {
+  "latitude": "33.570100",
+  "longitude": "-117.708600",
+  "weight": 1,
+  "zip": "92656-2151"
+}, {
+  "latitude": "37.031300",
+  "longitude": "-122.119800",
+  "weight": 1,
+  "zip": "95060-3017"
+}, {
+  "latitude": "26.255600",
+  "longitude": "-98.230300",
+  "weight": 1,
+  "zip": "78504-5559"
+}, {
+  "latitude": "38.578100",
+  "longitude": "-90.425600",
+  "weight": 2,
+  "zip": "63122-2934"
+}, {
+  "latitude": "38.654800",
+  "longitude": "-78.459600",
+  "weight": 1,
+  "zip": "22835"
+}, {
+  "latitude": "27.845800",
+  "longitude": "-97.596000",
+  "weight": 1,
+  "zip": "78410-5775"
+}, {
+  "latitude": "30.495800",
+  "longitude": "-86.414500",
+  "weight": 1,
+  "zip": "32578-2392"
+}, {
+  "latitude": "35.199000",
+  "longitude": "-97.484100",
+  "weight": 1,
+  "zip": "73072-8039"
+}, {
+  "latitude": "56.729979",
+  "longitude": "-111.450298",
+  "weight": 1,
+  "zip": "T9H 4Z6"
+}, {
+  "latitude": "40.857000",
+  "longitude": "-73.314600",
+  "weight": 1,
+  "zip": "11731"
+}, {
+  "latitude": "43.593700",
+  "longitude": "-116.536000",
+  "weight": 1,
+  "zip": "83687-8471"
+}, {
+  "latitude": "40.551500",
+  "longitude": "-74.459000",
+  "weight": 1,
+  "zip": "08854-2036"
+}, {
+  "latitude": "41.717700",
+  "longitude": "-88.332000",
+  "weight": 1,
+  "zip": "60538-1832"
+}, {
+  "latitude": "38.166800",
+  "longitude": "-122.255300",
+  "weight": 1,
+  "zip": "94503"
+}, {
+  "latitude": "43.321568",
+  "longitude": "-80.832333",
+  "weight": 1,
+  "zip": "N0B 2R0"
+}, {
+  "latitude": "41.545400",
+  "longitude": "-88.129900",
+  "weight": 2,
+  "zip": "60435-6907"
+}, {
+  "latitude": "29.834500",
+  "longitude": "-90.004200",
+  "weight": 2,
+  "zip": "70037-1652"
+}, {
+  "latitude": "42.395800",
+  "longitude": "-83.377200",
+  "weight": 1,
+  "zip": "48154-4286"
+}, {
+  "latitude": "40.098500",
+  "longitude": "-83.153700",
+  "weight": 1,
+  "zip": "43016-8040"
+}, {
+  "latitude": "35.001900",
+  "longitude": "-78.936400",
+  "weight": 1,
+  "zip": "28306-7495"
+}, {
+  "latitude": "49.101556",
+  "longitude": "-121.947777",
+  "weight": 1,
+  "zip": "V2R 5T7"
+}, {
+  "latitude": "39.984500",
+  "longitude": "-75.596200",
+  "weight": 1,
+  "zip": "19380-1878"
+}, {
+  "latitude": "44.054500",
+  "longitude": "-85.682600",
+  "weight": 1,
+  "zip": "49656-8536"
+}, {
+  "latitude": "35.979600",
+  "longitude": "-86.910600",
+  "weight": 1,
+  "zip": "37069-6524"
+}, {
+  "latitude": "49.813321",
+  "longitude": "-97.104751",
+  "weight": 1,
+  "zip": "R2N 1L7"
+}, {
+  "latitude": "43.180000",
+  "longitude": "-95.481700",
+  "weight": 1,
+  "zip": "51346-1142"
+}];
+var styles = [{
+  "featureType": "road",
+  "elementType": "geometry",
+  "stylers": [{
+    "lightness": 100
+  }, {
+    "visibility": "on"
+  }]
+}, {
+  "featureType": "road",
+  "elementType": "labels",
+  "stylers": [{
+    "visibility": "off"
+  }]
+}, {
+  "featureType": "poi",
+  "elementType": "labels",
+  "stylers": [{
+    "visibility": "off"
+  }]
+}];
+        $.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyB3_IcswYStSYbmrCGAtQikjtI1zmqu8QM&libraries=visualization,geometry")
+            .done(function(script, textStatus){
+              var myLatLng = new google.maps.LatLng(latitude, longitude);
+              var map = new google.maps.Map(document.getElementById('googleMap'), {
+                zoom: 12,
+                center: myLatLng,
+                styles: styles
+              });
+              $.each(data, function(i, e) {
+                e.location = new google.maps.LatLng(e.latitude, e.longitude);
+              });
+              var starPosition
+              var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map
+              });
+              var heatmap = new google.maps.visualization.HeatmapLayer({
+                data: data,
+                dissipating: true
+              });
+              heatmap.setMap(map);
+              console.log(data);
+            });
+
+  });
+
+
+});

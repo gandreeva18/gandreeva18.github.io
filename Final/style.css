@@ -5,18 +5,39 @@ body {
 
 #info {
   text-align: center;
-  margin-top: 75px;
 }
 
 #googleMap {
-  width: 100%;
+  width: 60%;
   height: 590px;
   overflow: visible;
   position: fixed;
   visibility: visible;
+  margin: auto;
 }
 
 body {
   height: 100%;
   width: 100%;
+  background-image: url('skyline2.jpg');
+}
+
+h1 {
+  font-family: 'Gugi', sans-serif;
+  font-size: 75px;
+  text-align: center;
+  color: #263151;
+  margin-bottom: -5px;
+}
+
+p {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 60%;
+  font-family: "Open Sans";
+}
+
+p:hover {
+  background-color: white;
 }
